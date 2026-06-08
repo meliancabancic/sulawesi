@@ -4232,6 +4232,27 @@ function activateSection(s){
   const concBtn=document.getElementById('conc-btn');
   if(concBtn){concBtn.classList.toggle('has-content',!!(s&&CONCLUSIONS[s]?.length));concBtn.textContent=s?'S'+s+' Síntesis':'Síntesis';}
   document.querySelectorAll('.sec-btn').forEach(b=>b.classList.toggle('active',b.dataset.s===s));
+  if(!s)return;
+  Object.keys(layerObjs).forEach(k=>{
+    if(BASE_ALWAYS.includes(k))return;
+    if(!layerObjs[k])return;
+    layerObjs[k].setVisible(false);
+    document.querySelectorAll('[id^="chk-'+k+'"]').forEach(c=>{c.classList.remove('on');c.textContent='';});
+  });
+  (SECTION_KEYS[s]||[]).forEach(k=>{
+    if(!layerObjs[k])return;
+    layerObjs[k].setVisible(true);
+    document.querySelectorAll('[id^="chk-'+k+'"]').forEach(c=>{c.classList.add('on');c.textContent='✓';});
+    if(k==='seismicity'){
+      document.getElementById('seism-filters').style.display='block';
+      if(cmtLayer.getSource().getFeatures().length===0){
+        fetch('fuentes/cmt_events.json').then(r=>r.json()).then(d=>{cmtLayer.getSource().addFeatures(d.map(e=>new ol.Feature({geometry:new ol.geom.Point(fromLL([e.lo,e.la])),feat_id:'cmt',feat_type:'cmt',cmt_data:e,cmt_ft:e.ft||faultType(e.r1)})));}).catch(()=>{});
+        fetch('fuentes/gcmt55_sulawesi.json').then(r=>r.json()).then(d=>{cmtLayer.getSource().addFeatures(d.map(e=>new ol.Feature({geometry:new ol.geom.Point(fromLL([e.lo,e.la])),feat_id:'cmt',feat_type:'cmt',cmt_data:e,cmt_ft:e.ft||faultType(e.r1)})));}).catch(()=>{});
+      }
+    }
+    if(k==='slab_layer')loadSlabs();
+  });
+  updateFloatingLegend();
 }
 document.querySelectorAll('.sec-btn').forEach(b=>b.addEventListener('click',()=>activateSection(b.dataset.s)));
 document.getElementById('sb-all').classList.add('active');
@@ -5957,6 +5978,16 @@ document.getElementById('mgdraw-close')?.addEventListener('click',()=>{
   canonPreviewSource.clear();
   deactivateMgRefs();
 });
+const closeBtn = document.getElementById('mgdraw-close');
+
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    closeMgDrawModal();
+    stopMgDraw();
+    canonPreviewSource.clear();
+    deactivateMgRefs();
+  });
+}
 
 map.on('pointermove',evt=>{
   const ll=toLL(evt.coordinate);
