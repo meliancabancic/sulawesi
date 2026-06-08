@@ -31,9 +31,9 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 .h-title{font-size:.9rem;font-weight:700;color:var(--accent);white-space:nowrap;flex-shrink:0;margin-right:4px}
 .h-ver{display:none}
 .legend{display:flex;gap:5px;align-items:center;flex-shrink:1;min-width:0;overflow:hidden}
-.leg{display:flex;align-items:center;gap:4px;font-family:monospace;font-size:.5rem;color:var(--dim);text-transform:uppercase;cursor:pointer;user-select:none;white-space:nowrap;flex-shrink:0}
+.leg{display:flex;align-items:center;gap:4px;font-family:monospace;font-size:.62rem;color:var(--dim);text-transform:uppercase;cursor:pointer;user-select:none;white-space:nowrap;flex-shrink:0}
 .leg:hover{color:var(--text)}.leg.off{opacity:.2}
-.sec-btn{padding:4px 9px;border-radius:3px;border:1px solid transparent;transition:all .15s;min-height:28px;display:inline-flex;align-items:center}
+.sec-btn{padding:4px 9px;border-radius:3px;border:1px solid transparent;transition:all .15s;min-height:28px;display:inline-flex;align-items:center;font-size:.75rem}
 .sec-btn:hover{border-color:var(--border);color:var(--text)}
 .sec-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(204,120,92,.08)}
 .leg-sym{width:28px;height:14px;flex-shrink:0}
@@ -41,84 +41,84 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 #body{position:fixed;top:42px;left:0;right:0;bottom:0;display:flex;overflow:hidden}
 #map{flex:1;position:relative;background:#0a0d12;overflow:hidden;min-width:0;min-height:0}
 #map .ol-viewport{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important}
-.ol-attribution{font-family:monospace!important;font-size:.48rem!important;background:rgba(20,20,19,.9)!important;color:var(--dim)!important}
+.ol-attribution{font-family:monospace!important;font-size:.6rem!important;background:rgba(20,20,19,.9)!important;color:var(--dim)!important}
 .ol-attribution a{color:var(--dim)!important}
 .ol-zoom{top:auto!important;bottom:28px!important;left:12px!important}
 .ol-zoom button{background:var(--bg2)!important;color:var(--text)!important;border:none!important;width:28px!important;height:28px!important;font-size:.85rem!important}
 .ol-scale-line{background:transparent!important;border:none!important;bottom:28px!important;left:55px!important}
-.ol-scale-line-inner{font-family:monospace!important;font-size:.53rem!important;color:var(--dim)!important;border-color:var(--dim)!important}
-#coords{position:absolute;bottom:6px;right:8px;font-family:monospace;font-size:.53rem;color:var(--dim);background:rgba(20,20,19,.75);padding:2px 6px;border-radius:3px;pointer-events:none;z-index:100}
+.ol-scale-line-inner{font-family:monospace!important;font-size:.66rem!important;color:var(--dim)!important;border-color:var(--dim)!important}
+#coords{position:absolute;bottom:6px;right:8px;font-family:monospace;font-size:.66rem;color:var(--dim);background:rgba(20,20,19,.75);padding:2px 6px;border-radius:3px;pointer-events:none;z-index:100}
 #tip{position:absolute;background:var(--bg2);border:1px solid var(--border);padding:5px 10px;border-radius:4px;font-family:monospace;font-size:.6rem;color:var(--text);pointer-events:none;display:none;z-index:300;white-space:nowrap;max-width:300px;line-height:1.5}
 #panel{width:340px;flex-shrink:0;background:#1c1b1a;border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;transition:width .25s;min-height:0}
 @media(max-width:700px){#panel{width:260px}}
 #panel.closed{width:0;border:none}
 #ph{padding:14px 16px 11px;border-bottom:1px solid var(--border);flex-shrink:0;position:relative}
-#pt{font-family:monospace;font-size:.53rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
-#pti{font-size:1.05rem;font-weight:700;color:var(--accent);line-height:1.3;padding-right:24px}
+#pt{font-family:monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
+#pti{font-size:1.25rem;font-weight:700;color:var(--accent);line-height:1.3;padding-right:24px}
 #pc{position:absolute;top:11px;right:11px;background:transparent;border:none;color:var(--dim);width:28px;height:28px;border-radius:3px;cursor:pointer;font-size:.75rem;display:flex;align-items:center;justify-content:center}
 #pc:hover{color:var(--text)}
 #pb{flex:1;overflow-y:auto;padding:13px 16px 20px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
 #pb::-webkit-scrollbar{width:3px}
 #pb::-webkit-scrollbar-thumb{background:var(--border)}
 .ptags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:11px}
-.ptag{font-family:monospace;font-size:.5rem;text-transform:uppercase;padding:2px 7px;border-radius:3px;border:1px solid}
-.psec{font-family:monospace;font-size:.53rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin:13px 0 5px}
-.pdesc{font-size:.76rem;line-height:1.75;color:var(--text)}
+.ptag{font-family:monospace;font-size:.62rem;text-transform:uppercase;padding:2px 7px;border-radius:3px;border:1px solid}
+.psec{font-family:monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin:13px 0 5px}
+.pdesc{font-size:.9rem;line-height:1.75;color:var(--text)}
 .paper{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:9px 11px;margin-bottom:5px}
-.pref{font-family:monospace;font-size:.53rem;color:var(--accent);margin-bottom:2px}
+.pref{font-family:monospace;font-size:.66rem;color:var(--accent);margin-bottom:2px}
 .ptitle{font-size:.72rem;font-weight:500;line-height:1.4;margin-bottom:2px}
-.pjour{font-family:monospace;font-size:.52rem;color:var(--dim);font-style:italic;margin-bottom:4px}
+.pjour{font-family:monospace;font-size:.65rem;color:var(--dim);font-style:italic;margin-bottom:4px}
 .pfind{font-size:.69rem;line-height:1.5;color:var(--dim);padding-top:4px;border-top:1px solid var(--border)}
 .pempty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:8px;text-align:center;padding:24px}
 .pempty-icon{font-size:1.5rem;opacity:.15}
 .pempty-text{font-family:monospace;font-size:.6rem;color:var(--dim);line-height:1.7}
 #lb{position:absolute;top:10px;right:10px;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:4px 9px;border-radius:4px;font-family:monospace;font-size:.55rem;cursor:pointer;z-index:150;text-transform:uppercase}
-#gpb,#grav-profile-btn,#grav-finish-btn{width:100%;margin-top:7px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:4px 0;border-radius:4px;font-family:monospace;font-size:.52rem;cursor:pointer;text-transform:uppercase;display:block}
+#gpb,#grav-profile-btn,#grav-finish-btn{width:100%;margin-top:7px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:4px 0;border-radius:4px;font-family:monospace;font-size:.65rem;cursor:pointer;text-transform:uppercase;display:block}
 #gpb.active,#grav-profile-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(204,120,92,.08)}
 #edit-mode-btn.active{border-color:#f59e0b;color:#f59e0b;background:rgba(245,158,11,.10)}
 #map.edit-active{cursor:crosshair!important}
 #map.edit-active canvas{cursor:crosshair!important}
 #grav-finish-btn{border-color:#22c55e;color:#22c55e;background:rgba(34,197,94,.08)}
 #gpop{display:none;position:absolute;z-index:200;background:rgba(12,15,20,.93);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:9px 12px;font-family:monospace;pointer-events:none;min-width:155px}
-#gpop .gp-coord{font-size:.47rem;color:rgba(220,210,190,.5);margin-bottom:6px;text-transform:none}
-#gpop .gp-row{display:flex;justify-content:space-between;gap:14px;font-size:.51rem;color:#fff;margin-bottom:3px;text-transform:none}
+#gpop .gp-coord{font-size:.59rem;color:rgba(220,210,190,.5);margin-bottom:6px;text-transform:none}
+#gpop .gp-row{display:flex;justify-content:space-between;gap:14px;font-size:.64rem;color:#fff;margin-bottom:3px;text-transform:none}
 #gpop .gp-lbl{color:rgba(255,255,255,.5)}
 #gpop .gp-val{font-weight:600;text-align:right;letter-spacing:0;color:#fff}
-#gpop .gp-diff{font-size:.48rem;color:#fff;text-align:center;margin-top:5px;border-top:1px solid rgba(255,255,255,.12);padding-top:4px;text-transform:none}
+#gpop .gp-diff{font-size:.6rem;color:#fff;text-align:center;margin-top:5px;border-top:1px solid rgba(255,255,255,.12);padding-top:4px;text-transform:none}
 #lb:hover{background:var(--bg3)}
 #lp{position:absolute;top:38px;right:10px;background:#1c1b1a;border:1px solid var(--border);border-radius:5px;padding:8px 10px;z-index:150;display:none;width:220px;max-height:min(520px,calc(100vh - 55px));overflow-y:scroll;overscroll-behavior:contain}
-.mgdraw-group{font-size:.49rem;color:var(--dim);text-transform:uppercase;margin:8px 0 3px;padding-bottom:3px;border-bottom:1px solid var(--border)}
+.mgdraw-group{font-size:.61rem;color:var(--dim);text-transform:uppercase;margin:8px 0 3px;padding-bottom:3px;border-bottom:1px solid var(--border)}
 .mgdraw-item{display:flex;justify-content:space-between;align-items:center;padding:4px 6px;border-radius:3px;cursor:pointer;border:1px solid transparent;margin-bottom:2px;gap:6px}
 .mgdraw-item:hover{background:var(--bg3)}
 .mgdraw-item.selected{border-color:var(--accent);background:rgba(204,120,92,.08)}
 .mgdraw-item .mg-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.mgdraw-item .mg-meta{font-size:.48rem;color:var(--dim);white-space:nowrap;flex-shrink:0}
+.mgdraw-item .mg-meta{font-size:.6rem;color:var(--dim);white-space:nowrap;flex-shrink:0}
 #mgdraw-type-sel{margin-top:8px;padding:8px;background:var(--bg3);border-radius:4px;border:1px solid var(--border)}
 #mgdraw-type-sel .mg-sel-name{color:var(--accent);font-size:.55rem;margin-bottom:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #mgdraw-type-sel .mg-sel-btns{display:flex;gap:5px}
-#mgdraw-type-sel .mg-sel-btns button{font-family:monospace;font-size:.5rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg2);border:1px solid var(--border);color:var(--dim);flex:1}
+#mgdraw-type-sel .mg-sel-btns button{font-family:monospace;font-size:.63rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg2);border:1px solid var(--border);color:var(--dim);flex:1}
 #mgdraw-type-sel .mg-sel-btns button.suggested{border-color:var(--accent);color:var(--accent);background:rgba(204,120,92,.08)}
-.mg-sel-section{font-size:.46rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin:8px 0 4px;padding-bottom:3px;border-bottom:1px solid var(--border)}
-.mg-feat-item{padding:4px 6px;border-radius:3px;font-family:monospace;font-size:.52rem;margin-bottom:3px;background:var(--bg3)}
+.mg-sel-section{font-size:.58rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin:8px 0 4px;padding-bottom:3px;border-bottom:1px solid var(--border)}
+.mg-feat-item{padding:4px 6px;border-radius:3px;font-family:monospace;font-size:.65rem;margin-bottom:3px;background:var(--bg3)}
 .mg-feat-item:hover{background:rgba(255,255,255,.06)}
 .mg-feat-label{cursor:pointer;flex:1;min-width:0}
 .mg-feat-label:hover{text-decoration:underline}
 .mg-feat-actions{display:flex;gap:3px;flex-shrink:0}
-.mg-feat-actions button{font-family:monospace;font-size:.5rem;padding:1px 5px;border-radius:3px;cursor:pointer;background:var(--bg2);border:1px solid var(--border);color:var(--dim)}
+.mg-feat-actions button{font-family:monospace;font-size:.63rem;padding:1px 5px;border-radius:3px;cursor:pointer;background:var(--bg2);border:1px solid var(--border);color:var(--dim)}
 .mg-feat-actions button:hover{border-color:#ef4444;color:#ef4444}
 .mg-feat-actions button.move-btn:hover{border-color:#60a5fa;color:#60a5fa}
 .mg-move-input{display:none;margin-top:4px;display:flex;gap:3px}
-.mg-move-input input{flex:1;font-family:monospace;font-size:.5rem;background:var(--bg2);border:1px solid var(--border);color:var(--text);border-radius:3px;padding:2px 5px}
-.mg-move-input button{font-family:monospace;font-size:.5rem;padding:2px 6px;border-radius:3px;cursor:pointer;background:#166534;border:1px solid #22c55e;color:#22c55e}
+.mg-move-input input{flex:1;font-family:monospace;font-size:.63rem;background:var(--bg2);border:1px solid var(--border);color:var(--text);border-radius:3px;padding:2px 5px}
+.mg-move-input button{font-family:monospace;font-size:.63rem;padding:2px 6px;border-radius:3px;cursor:pointer;background:#166534;border:1px solid #22c55e;color:#22c55e}
 #mgdraw-controls{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:var(--bg2);border:1px solid var(--accent);border-radius:5px;padding:9px 16px;z-index:300;display:none;font-family:monospace;text-align:center;white-space:nowrap;box-shadow:0 2px 12px rgba(0,0,0,.5)}
 #mgdraw-ctrl-name{color:var(--accent);font-size:.58rem;margin-bottom:4px}
-#mgdraw-ctrl-hint{font-size:.48rem;color:var(--dim);margin-bottom:8px}
-#mgdraw-finish-btn,#mgdraw-cancel-btn{font-family:monospace;font-size:.52rem;padding:3px 12px;border-radius:3px;cursor:pointer;margin:0 3px}
+#mgdraw-ctrl-hint{font-size:.6rem;color:var(--dim);margin-bottom:8px}
+#mgdraw-finish-btn,#mgdraw-cancel-btn{font-family:monospace;font-size:.65rem;padding:3px 12px;border-radius:3px;cursor:pointer;margin:0 3px}
 #mgdraw-finish-btn{background:#166534;border:1px solid #22c55e;color:#22c55e}
 #mgdraw-cancel-btn{background:var(--bg3);border:1px solid var(--border);color:var(--dim)}
-.sup-depth-btn{font-family:monospace;font-size:.48rem;padding:3px 8px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim);width:100%;text-align:left}
+.sup-depth-btn{font-family:monospace;font-size:.6rem;padding:3px 8px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim);width:100%;text-align:left}
 .sup-depth-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(204,120,92,.1)}
-#mgdraw-btn{flex:1;font-family:monospace;font-size:.48rem;padding:3px 6px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer}
+#mgdraw-btn{flex:1;font-family:monospace;font-size:.6rem;padding:3px 6px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer}
 #mgdraw-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(204,120,92,.08)}
 #lp.open{display:block}
 #lp::-webkit-scrollbar{width:4px}
@@ -127,19 +127,19 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 #lp::-webkit-scrollbar-thumb:hover{background:var(--dim)}
 .lr{display:flex;align-items:center;gap:7px;margin-bottom:6px;cursor:pointer;font-family:monospace;font-size:.56rem;color:var(--text);text-transform:uppercase;user-select:none}
 .lr:last-child{margin-bottom:0}
-.lchk{width:12px;height:12px;border:1px solid var(--border);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.5rem;flex-shrink:0}
+.lchk{width:12px;height:12px;border:1px solid var(--border);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.63rem;flex-shrink:0}
 .lchk.on{border-color:var(--accent);background:rgba(204,120,92,.12);color:var(--accent)}
 .lsep{border-top:1px solid var(--border);margin:6px 0}
 #hypo-hw::-webkit-outer-spin-button,#hypo-hw::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-.lcat{font-family:monospace;font-size:.45rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);padding:6px 0 2px;opacity:.55}
-.bb-legend{margin-top:6px;font-family:monospace;font-size:.52rem;color:var(--dim)}
+.lcat{font-family:monospace;font-size:.56rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);padding:6px 0 2px;opacity:.55}
+.bb-legend{margin-top:6px;font-family:monospace;font-size:.65rem;color:var(--dim)}
 .bbl-title{text-transform:uppercase;margin-bottom:4px}
 .bbl-row{display:flex;align-items:center;gap:5px;margin-bottom:3px}
 .bbl-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 .bbl-line{width:18px;height:2px;border-radius:1px;flex-shrink:0}
 .bbl-sq{width:9px;height:9px;border-radius:2px;flex-shrink:0}
 /* Toggle beachball en mapa */
-.bb-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;font-size:.48rem;color:var(--dim);margin-left:auto;padding:2px 0;user-select:none}
+.bb-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;font-size:.6rem;color:var(--dim);margin-left:auto;padding:2px 0;user-select:none}
 .bb-toggle input{display:none}
 .bb-sw{width:26px;height:13px;background:var(--bg3);border:1px solid var(--border);border-radius:7px;position:relative;transition:background .2s,border-color .2s;flex-shrink:0}
 .bb-sw::after{content:'';position:absolute;width:9px;height:9px;background:var(--dim);border-radius:50%;top:1px;left:1px;transition:left .2s,background .2s}
@@ -156,9 +156,9 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 #conc-modal.open,#conc-overlay.open{display:flex}
 #conc-modal.open{display:flex}
 #conc-hdr{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);flex-shrink:0}
-#conc-sec-tag{font-size:.5rem;padding:2px 8px;border-radius:10px;background:rgba(204,120,92,.15);color:var(--accent);border:1px solid rgba(204,120,92,.3);flex-shrink:0}
+#conc-sec-tag{font-size:.63rem;padding:2px 8px;border-radius:10px;background:rgba(204,120,92,.15);color:var(--accent);border:1px solid rgba(204,120,92,.3);flex-shrink:0}
 #conc-title{font-size:.62rem;color:var(--text);flex:1;font-weight:600}
-#conc-hdr button{font-family:monospace;font-size:.5rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim)}
+#conc-hdr button{font-family:monospace;font-size:.63rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim)}
 #conc-body{overflow-y:auto;padding:12px 16px;flex:1}
 #conc-body::-webkit-scrollbar{width:4px}
 #conc-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
@@ -166,9 +166,9 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 .conc-item:last-child{border-bottom:none}
 .conc-num{font-size:.58rem;color:var(--accent);font-weight:700;flex-shrink:0;width:16px;text-align:right;padding-top:1px}
 .conc-text{font-size:.57rem;color:var(--text);line-height:1.6;flex:1}
-.conc-ref{font-size:.5rem;color:var(--accent);font-style:italic;display:block;margin-top:3px}
+.conc-ref{font-size:.63rem;color:var(--accent);font-style:italic;display:block;margin-top:3px}
 #conc-empty{font-size:.55rem;color:var(--dim);padding:20px 0;text-align:center}
-#conc-btn,#conc-gen-btn{font-family:monospace;font-size:.5rem;padding:3px 8px;background:var(--bg2);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer}
+#conc-btn,#conc-gen-btn{font-family:monospace;font-size:.63rem;padding:3px 8px;background:var(--bg2);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer}
 #conc-btn:hover,#conc-gen-btn:hover{border-color:var(--accent);color:var(--accent)}
 #conc-btn.has-content{border-color:rgba(204,120,92,.5);color:var(--accent)}
 #conc-gen-btn{margin-left:4px}
@@ -179,8 +179,8 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 #bib-modal.open{display:flex}
 #bib-hdr{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);flex-shrink:0}
 #bib-hdr-title{font-size:.65rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;flex:1}
-#bib-hdr-count{font-size:.5rem;color:var(--dim)}
-#bib-hdr button{font-family:monospace;font-size:.5rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim)}
+#bib-hdr-count{font-size:.63rem;color:var(--dim)}
+#bib-hdr button{font-family:monospace;font-size:.63rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim)}
 #bib-hdr button:hover{border-color:var(--accent);color:var(--accent)}
 #bib-search{padding:6px 14px;border-bottom:1px solid var(--border);flex-shrink:0}
 #bib-search input{width:100%;box-sizing:border-box;background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:4px;padding:4px 8px;font-family:monospace;font-size:.54rem;outline:none}
@@ -191,18 +191,18 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 .bib-entry{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .bib-entry:last-child{border-bottom:none}
 .bib-ref{font-size:.55rem;color:var(--text);line-height:1.5}
-.bib-title{font-size:.52rem;color:var(--accent);font-style:italic;line-height:1.4}
-.bib-journal{font-size:.5rem;color:var(--dim);line-height:1.4}
-#bib-btn{font-family:monospace;font-size:.5rem;padding:3px 8px;background:var(--bg2);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer;flex-shrink:0}
+.bib-title{font-size:.65rem;color:var(--accent);font-style:italic;line-height:1.4}
+.bib-journal{font-size:.63rem;color:var(--dim);line-height:1.4}
+#bib-btn{font-family:monospace;font-size:.63rem;padding:3px 8px;background:var(--bg2);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer;flex-shrink:0}
 #bib-btn:hover{border-color:var(--accent);color:var(--accent)}
-.op-val{font-family:monospace;font-size:.46rem;color:var(--dim);margin-left:4px;flex-shrink:0;min-width:2.4em;text-align:right}
+.op-val{font-family:monospace;font-size:.58rem;color:var(--dim);margin-left:4px;flex-shrink:0;min-width:2.4em;text-align:right}
 
 #fleg{position:absolute;bottom:100px;left:12px;z-index:120;display:none;max-width:206px;max-height:55vh;overflow-y:auto;pointer-events:none;overscroll-behavior:contain}
 #fleg::-webkit-scrollbar{width:3px}
 #fleg::-webkit-scrollbar-thumb{background:var(--border)}
 .fleg-sec{background:rgba(12,15,20,0.91);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:6px 9px;margin-bottom:4px}
-.fleg-title{font-family:monospace;font-size:.45rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin-bottom:4px;opacity:.8}
-.fleg-row{display:flex;align-items:center;gap:5px;margin-bottom:2px;font-family:monospace;font-size:.51rem;color:var(--text)}
+.fleg-title{font-family:monospace;font-size:.56rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin-bottom:4px;opacity:.8}
+.fleg-row{display:flex;align-items:center;gap:5px;margin-bottom:2px;font-family:monospace;font-size:.64rem;color:var(--text)}
 .fleg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
 .fleg-line{width:16px;height:2px;border-radius:1px;flex-shrink:0;display:inline-block}
 .fleg-sq{width:8px;height:8px;border-radius:2px;flex-shrink:0;display:inline-block}
@@ -212,12 +212,12 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 #welcome-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:28px 32px;max-width:380px;width:calc(100vw - 40px);font-family:monospace;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.6)}
 #welcome-box .wb-logo{font-size:1.6rem;margin-bottom:12px;opacity:.6}
 #welcome-box .wb-title{font-size:.85rem;font-weight:700;color:var(--accent);margin-bottom:6px;letter-spacing:.04em}
-#welcome-box .wb-sub{font-size:.52rem;color:var(--dim);margin-bottom:16px;letter-spacing:.08em;text-transform:uppercase}
+#welcome-box .wb-sub{font-size:.65rem;color:var(--dim);margin-bottom:16px;letter-spacing:.08em;text-transform:uppercase}
 #welcome-box .wb-body{font-size:.62rem;color:var(--text);line-height:1.75;margin-bottom:22px}
 #welcome-box .wb-body span{color:var(--accent)}
 #welcome-box .wb-btn{background:var(--accent);color:#0a0c0f;border:none;border-radius:4px;padding:8px 28px;font-family:monospace;font-size:.62rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.08em;min-height:36px}
 #welcome-box .wb-btn:hover{filter:brightness(1.1)}
-#welcome-box .wb-skip{font-size:.48rem;color:var(--dim);margin-top:10px;cursor:pointer;text-decoration:underline;display:block}
+#welcome-box .wb-skip{font-size:.6rem;color:var(--dim);margin-top:10px;cursor:pointer;text-decoration:underline;display:block}
 </style>
 </head>
 <body>
@@ -284,7 +284,7 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
       <div class="lr" data-t="seismicity"><div class="lchk" id="chk-seismicity"></div><span>Sismicidad GCMT</span><label class="bb-toggle" title="Mostrar beachballs GCMT" onclick="event.stopPropagation()"><input type="checkbox" id="toggle-bb"><span class="bb-sw"></span>⊕ BB</label></div>
       <div class="lr" data-t="gaps"><div class="lchk" id="chk-gaps"></div><span>Gaps sísmicos</span></div>
       <div class="lr" data-t="clusters"><div class="lchk" id="chk-clusters"></div><span>Regímenes Jibran</span></div>
-      <button id="hypo-profile-btn" onclick="startHypoProfileDraw()" style="width:100%;margin:3px 0 6px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:3px 0;border-radius:3px;font-family:monospace;font-size:.48rem;cursor:pointer;text-transform:uppercase">⏥ Trazar perfil de hipocentros</button>
+      <button id="hypo-profile-btn" onclick="startHypoProfileDraw()" style="width:100%;margin:3px 0 6px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:3px 0;border-radius:3px;font-family:monospace;font-size:.6rem;cursor:pointer;text-transform:uppercase">⏥ Trazar perfil de hipocentros</button>
       <div class="lsep"></div>
       <!-- S3 -->
       <div class="lcat">S3 — Estructura del manto</div>
@@ -296,7 +296,7 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
         <span>Tomo. Supendi</span>
       </div>
       <div id="supendi-depths" style="display:none;padding:4px 8px 6px 22px">
-        <div style="font-family:monospace;font-size:.44rem;color:var(--dim);margin-bottom:5px;text-transform:uppercase">Profundidad (km)</div>
+        <div style="font-family:monospace;font-size:.55rem;color:var(--dim);margin-bottom:5px;text-transform:uppercase">Profundidad (km)</div>
         <div style="display:flex;flex-direction:column;gap:2px" id="supendi-btns"></div>
       </div>
       <!-- Yuan anisotropy depth selector -->
@@ -305,10 +305,10 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
         <span>Anisotropía Yuan</span>
       </div>
       <div id="yuan-anis-depths" style="display:none;padding:4px 8px 6px 22px">
-        <div style="font-family:monospace;font-size:.44rem;color:var(--dim);margin-bottom:5px;text-transform:uppercase">Profundidad (km)</div>
+        <div style="font-family:monospace;font-size:.55rem;color:var(--dim);margin-bottom:5px;text-transform:uppercase">Profundidad (km)</div>
         <div style="display:flex;flex-direction:column;gap:2px" id="yuan-anis-btns"></div>
       </div>
-      <button onclick="openTomo3dModal('tomo3d_kesuma')" style="width:100%;margin-top:3px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:4px 0;border-radius:4px;font-family:monospace;font-size:.52rem;cursor:pointer;text-transform:uppercase;display:block">▶ Galería modelos 3D</button>
+      <button onclick="openTomo3dModal('tomo3d_kesuma')" style="width:100%;margin-top:3px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:4px 0;border-radius:4px;font-family:monospace;font-size:.65rem;cursor:pointer;text-transform:uppercase;display:block">▶ Galería modelos 3D</button>
       <div class="lsep"></div>
       <!-- S4 -->
       <div class="lcat">S4 — Campo gravitatorio</div>
@@ -348,21 +348,21 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
       <span style="font-size:.55rem;text-transform:uppercase;color:var(--dim)">Perfil de hipocentros</span>
       <div style="display:flex;gap:8px;align-items:center">
-        <span id="hypo-profile-info" style="font-size:.48rem;color:var(--accent)"></span>
-        <label style="display:flex;align-items:center;gap:4px;font-size:.47rem;color:var(--dim)">
+        <span id="hypo-profile-info" style="font-size:.6rem;color:var(--accent)"></span>
+        <label style="display:flex;align-items:center;gap:4px;font-size:.59rem;color:var(--dim)">
           corredor
-          <input id="hypo-hw" type="number" min="5" max="200" value="30" step="5" onkeydown="if(event.key==='Enter'&&lastHypoCoords)fetchHypoProfile(lastHypoCoords)" style="width:36px;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:1px 4px;border-radius:3px;font-family:monospace;font-size:.5rem;text-align:center;-moz-appearance:textfield;appearance:textfield">
+          <input id="hypo-hw" type="number" min="5" max="200" value="30" step="5" onkeydown="if(event.key==='Enter'&&lastHypoCoords)fetchHypoProfile(lastHypoCoords)" style="width:36px;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:1px 4px;border-radius:3px;font-family:monospace;font-size:.63rem;text-align:center;-moz-appearance:textfield;appearance:textfield">
           km
-          <button onclick="if(lastHypoCoords)fetchHypoProfile(lastHypoCoords)" style="background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:1px 6px;border-radius:3px;font-family:monospace;font-size:.47rem;cursor:pointer">↵</button>
+          <button onclick="if(lastHypoCoords)fetchHypoProfile(lastHypoCoords)" style="background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:1px 6px;border-radius:3px;font-family:monospace;font-size:.59rem;cursor:pointer">↵</button>
         </label>
-        <button onclick="exportHypoProfile()" style="background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:2px 7px;border-radius:3px;font-family:monospace;font-size:.47rem;cursor:pointer;text-transform:uppercase">↓ PNG</button>
+        <button onclick="exportHypoProfile()" style="background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:2px 7px;border-radius:3px;font-family:monospace;font-size:.59rem;cursor:pointer;text-transform:uppercase">↓ PNG</button>
         <button onclick="closeHypoModal()" style="background:none;border:none;color:var(--dim);font-size:.7rem;cursor:pointer;padding:0 2px">✕</button>
       </div>
     </div>
     <div style="position:relative;height:240px">
       <canvas id="hypo-chart-canvas"></canvas>
     </div>
-    <div style="font-size:.43rem;color:var(--dim);margin-top:6px;display:flex;gap:14px;flex-wrap:wrap">
+    <div style="font-size:.54rem;color:var(--dim);margin-top:6px;display:flex;gap:14px;flex-wrap:wrap">
       <span><span style="color:rgba(255,221,44,0.92)">■</span> &lt;33 km</span>
       <span><span style="color:rgba(228,120,32,0.92)">■</span> 33–70 km</span>
       <span><span style="color:rgba(40,180,96,0.92)">■</span> 70–150 km</span>
@@ -376,12 +376,12 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
       <span style="font-family:monospace;font-size:.55rem;text-transform:uppercase;color:var(--dim)">Perfil gravimétrico</span>
       <div style="display:flex;gap:8px;align-items:center">
-        <button id="grav-dl" style="font-family:monospace;font-size:.5rem;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:2px 7px;border-radius:3px;cursor:pointer">⬇ PNG</button>
+        <button id="grav-dl" style="font-family:monospace;font-size:.63rem;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:2px 7px;border-radius:3px;cursor:pointer">⬇ PNG</button>
         <button id="grav-close" style="font-family:monospace;font-size:.7rem;background:none;border:none;color:var(--dim);cursor:pointer">✕</button>
       </div>
     </div>
     <canvas id="grav-chart" height="160"></canvas>
-    <div id="grav-info" style="font-family:monospace;font-size:.48rem;color:var(--dim);margin-top:6px;text-align:center"></div>
+    <div id="grav-info" style="font-family:monospace;font-size:.6rem;color:var(--dim);margin-top:6px;text-align:center"></div>
   </div>
 
   <div id="panel" class="closed">
@@ -426,9 +426,9 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
 
   <div id="tomo3d-modal" style="display:none;position:fixed;top:50px;left:50%;transform:translateX(-50%);width:min(700px,93vw);max-height:calc(100vh - 58px);background:var(--bg2);border:1px solid var(--border);border-radius:6px;z-index:902;flex-direction:column;font-family:monospace;overflow:hidden">
     <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);flex-shrink:0">
-      <span style="font-size:.5rem;padding:2px 8px;border-radius:10px;background:rgba(167,139,250,.15);color:#a78bfa;border:1px solid rgba(167,139,250,.3);flex-shrink:0">S3</span>
+      <span style="font-size:.63rem;padding:2px 8px;border-radius:10px;background:rgba(167,139,250,.15);color:#a78bfa;border:1px solid rgba(167,139,250,.3);flex-shrink:0">S3</span>
       <span id="tomo3d-ref" style="font-size:.6rem;font-weight:600;color:var(--text);flex:1"></span>
-      <button onclick="document.getElementById('tomo3d-modal').style.display='none'" style="font-family:monospace;font-size:.5rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim)">✕</button>
+      <button onclick="document.getElementById('tomo3d-modal').style.display='none'" style="font-family:monospace;font-size:.63rem;padding:3px 9px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px solid var(--border);color:var(--dim)">✕</button>
     </div>
     <div id="tomo3d-nav" style="display:flex;gap:4px;padding:6px 14px;border-bottom:1px solid var(--border);flex-shrink:0;flex-wrap:wrap"></div>
     <div id="tomo3d-body" style="flex:1;overflow-y:auto;padding:12px 14px 20px"></div>
@@ -1888,10 +1888,10 @@ function _tomoSaveDrafts(arr){localStorage.setItem('tomo_drafts',JSON.stringify(
 function _tomoRenderNav(activeId){
   const drafts=_tomoGetDrafts();
   const nav=document.getElementById('tomo3d-nav');
-  const btnStyle=(active,draft)=>`font-family:monospace;font-size:.47rem;padding:2px 7px;border-radius:3px;cursor:pointer;background:${active?(draft?'rgba(251,191,36,.15)':'rgba(167,139,250,.15)'):'var(--bg3)'};border:1px solid ${active?(draft?'rgba(251,191,36,.5)':'rgba(167,139,250,.5)'):'var(--border)'};color:${active?(draft?'#fbbf24':'#a78bfa'):'var(--dim)'}`;
+  const btnStyle=(active,draft)=>`font-family:monospace;font-size:.59rem;padding:2px 7px;border-radius:3px;cursor:pointer;background:${active?(draft?'rgba(251,191,36,.15)':'rgba(167,139,250,.15)'):'var(--bg3)'};border:1px solid ${active?(draft?'rgba(251,191,36,.5)':'rgba(167,139,250,.5)'):'var(--border)'};color:${active?(draft?'#fbbf24':'#a78bfa'):'var(--dim)'}`;
   const staticBtns=TOMO3D_STUDIES.map(x=>`<button onclick="openTomo3dModal('${x.id}')" style="${btnStyle(x.id===activeId,false)}">${x.short}</button>`).join('');
   const draftBtns=drafts.map(d=>`<button onclick="openTomoDraft('${d.id}')" style="${btnStyle(d.id===activeId,true)}" title="Borrador — ${d.ref}">✦${d.short}</button>`).join('');
-  const addBtn=`<button onclick="openTomoAddForm()" style="font-family:monospace;font-size:.47rem;padding:2px 7px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px dashed var(--border);color:var(--dim);margin-left:4px" title="Agregar estudio">+</button>`;
+  const addBtn=`<button onclick="openTomoAddForm()" style="font-family:monospace;font-size:.59rem;padding:2px 7px;border-radius:3px;cursor:pointer;background:var(--bg3);border:1px dashed var(--border);color:var(--dim);margin-left:4px" title="Agregar estudio">+</button>`;
   nav.innerHTML=staticBtns+draftBtns+addBtn;
 }
 
@@ -1899,8 +1899,8 @@ function openTomo3dModal(studyId){
   const s=TOMO3D_STUDIES.find(x=>x.id===studyId)||TOMO3D_STUDIES[0];
   document.getElementById('tomo3d-ref').textContent=s.ref;
   _tomoRenderNav(s.id);
-  const imgs=s.imgs.map(img=>`<div style="margin-bottom:12px"><img src="${img.url}" style="max-width:100%;border-radius:4px;border:1px solid var(--border);cursor:zoom-in" onclick="window.open(this.src,'_blank')" onerror="this.parentNode.style.display='none'"><div style="font-size:.52rem;color:var(--dim);margin-top:4px;line-height:1.5">${img.cap}</div></div>`).join('');
-  document.getElementById('tomo3d-body').innerHTML=`${imgs}<div style="margin-top:8px;padding:8px 10px;background:rgba(167,139,250,.06);border-left:3px solid rgba(167,139,250,.5);border-radius:3px"><div style="font-size:.48rem;color:#a78bfa;text-transform:uppercase;margin-bottom:4px">Conclusión</div><div style="font-size:.72rem;line-height:1.75;color:var(--text)">${s.conc}</div></div>`;
+  const imgs=s.imgs.map(img=>`<div style="margin-bottom:12px"><img src="${img.url}" style="max-width:100%;border-radius:4px;border:1px solid var(--border);cursor:zoom-in" onclick="window.open(this.src,'_blank')" onerror="this.parentNode.style.display='none'"><div style="font-size:.65rem;color:var(--dim);margin-top:4px;line-height:1.5">${img.cap}</div></div>`).join('');
+  document.getElementById('tomo3d-body').innerHTML=`${imgs}<div style="margin-top:8px;padding:8px 10px;background:rgba(167,139,250,.06);border-left:3px solid rgba(167,139,250,.5);border-radius:3px"><div style="font-size:.6rem;color:#a78bfa;text-transform:uppercase;margin-bottom:4px">Conclusión</div><div style="font-size:.72rem;line-height:1.75;color:var(--text)">${s.conc}</div></div>`;
   document.getElementById('tomo3d-modal').style.display='flex';
 }
 
@@ -1908,7 +1908,7 @@ function openTomoAddForm(){
   document.getElementById('tomo3d-ref').textContent='Nuevo estudio — borrador';
   _tomoRenderNav('__add__');
   const inp=(id,ph,extra='')=>`<input id="${id}" placeholder="${ph}" ${extra} style="font-family:monospace;font-size:.62rem;padding:4px 7px;background:var(--bg3);border:1px solid var(--border);border-radius:3px;color:var(--text);width:100%;box-sizing:border-box">`;
-  const lbl=(t)=>`<div style="font-size:.48rem;color:var(--dim);text-transform:uppercase;margin:10px 0 3px">${t}</div>`;
+  const lbl=(t)=>`<div style="font-size:.6rem;color:var(--dim);text-transform:uppercase;margin:10px 0 3px">${t}</div>`;
   document.getElementById('tomo3d-body').innerHTML=`
     <div style="font-size:.62rem;color:var(--dim);margin-bottom:10px;line-height:1.6">Completá los campos disponibles. Claude configurará bibliografía, conclusión y trazo canónico a partir de estos datos.</div>
     ${lbl('Referencia del paper')}${inp('td-ref','Autor et al. (año) — título corto')}
@@ -1916,7 +1916,7 @@ function openTomoAddForm(){
     ${lbl('Imagen 1 — ruta relativa')}${inp('td-img0-url','data/sections/autor_año/fig1.png')}
     ${lbl('Caption imagen 1')}${inp('td-img0-cap','Fig. N — descripción')}
     <div id="td-extra-imgs"></div>
-    <button onclick="tomoAddImgRow()" style="font-family:monospace;font-size:.48rem;padding:2px 8px;margin-top:6px;background:var(--bg3);border:1px dashed var(--border);color:var(--dim);border-radius:3px;cursor:pointer">+ imagen</button>
+    <button onclick="tomoAddImgRow()" style="font-family:monospace;font-size:.6rem;padding:2px 8px;margin-top:6px;background:var(--bg3);border:1px dashed var(--border);color:var(--dim);border-radius:3px;cursor:pointer">+ imagen</button>
     ${lbl('Trazo en el mapa — coordenadas JSON')}
     <textarea id="td-coords" placeholder='[[lon1,lat1],[lon2,lat2]]  ← inicio y fin del perfil (o array completo)' style="font-family:monospace;font-size:.58rem;padding:5px 7px;background:var(--bg3);border:1px solid var(--border);border-radius:3px;color:var(--text);width:100%;box-sizing:border-box;height:54px;resize:vertical"></textarea>
     ${lbl('Nombre del trazo en el mapa')}${inp('td-tname','Perfil A-A\' — descripción')}
@@ -1933,7 +1933,7 @@ function tomoAddImgRow(){
   const n=c.children.length+1;
   const inp=(id,ph)=>`<input id="${id}" placeholder="${ph}" style="font-family:monospace;font-size:.62rem;padding:4px 7px;background:var(--bg3);border:1px solid var(--border);border-radius:3px;color:var(--text);width:100%;box-sizing:border-box;margin-top:4px">`;
   const div=document.createElement('div');
-  div.innerHTML=`<div style="font-size:.48rem;color:var(--dim);text-transform:uppercase;margin-top:10px">Imagen ${n+1} — ruta</div>${inp('td-img'+n+'-url','data/sections/autor_año/fig'+n+'.png')}<div style="font-size:.48rem;color:var(--dim);text-transform:uppercase;margin-top:4px">Caption imagen ${n+1}</div>${inp('td-img'+n+'-cap','Fig. — descripción')}`;
+  div.innerHTML=`<div style="font-size:.6rem;color:var(--dim);text-transform:uppercase;margin-top:10px">Imagen ${n+1} — ruta</div>${inp('td-img'+n+'-url','data/sections/autor_año/fig'+n+'.png')}<div style="font-size:.6rem;color:var(--dim);text-transform:uppercase;margin-top:4px">Caption imagen ${n+1}</div>${inp('td-img'+n+'-cap','Fig. — descripción')}`;
   c.appendChild(div);
 }
 
@@ -1966,18 +1966,18 @@ function openTomoDraft(draftId){
   if(!d){openTomo3dModal(TOMO3D_STUDIES[0].id);return;}
   document.getElementById('tomo3d-ref').textContent=d.ref+' [borrador]';
   _tomoRenderNav(draftId);
-  const imgs=d.imgs.length?d.imgs.map(img=>`<div style="margin-bottom:12px"><img src="${img.url}" style="max-width:100%;border-radius:4px;border:1px solid var(--border);cursor:zoom-in" onclick="window.open(this.src,'_blank')" onerror="this.style.display='none'"><div style="font-size:.52rem;color:var(--dim);margin-top:4px">${img.cap}</div></div>`).join(''):'<div style="font-size:.6rem;color:var(--dim);margin-bottom:12px">Sin imágenes cargadas</div>';
+  const imgs=d.imgs.length?d.imgs.map(img=>`<div style="margin-bottom:12px"><img src="${img.url}" style="max-width:100%;border-radius:4px;border:1px solid var(--border);cursor:zoom-in" onclick="window.open(this.src,'_blank')" onerror="this.style.display='none'"><div style="font-size:.65rem;color:var(--dim);margin-top:4px">${img.cap}</div></div>`).join(''):'<div style="font-size:.6rem;color:var(--dim);margin-bottom:12px">Sin imágenes cargadas</div>';
   const resumen=`BORRADOR TOMOGRAFÍA\nPaper: ${d.ref}\nShort: ${d.short}\nImágenes:\n${d.imgs.map((x,i)=>`  [${i+1}] ${x.url}\n       ${x.cap}`).join('\n')}\nTrazo: ${d.coordsRaw||'(sin trazo)'}\nNombre trazo: ${d.tname||'(sin nombre)'}\nNotas: ${d.notes||'(sin notas)'}\nID borrador: ${d.id}`;
   document.getElementById('tomo3d-body').innerHTML=`
     ${imgs}
     <div style="margin-top:12px;padding:8px 10px;background:rgba(251,191,36,.06);border-left:3px solid rgba(251,191,36,.4);border-radius:3px">
-      <div style="font-size:.48rem;color:#fbbf24;text-transform:uppercase;margin-bottom:6px">Resumen para Claude</div>
+      <div style="font-size:.6rem;color:#fbbf24;text-transform:uppercase;margin-bottom:6px">Resumen para Claude</div>
       <pre id="tomo-resumen-txt" style="font-family:monospace;font-size:.58rem;color:var(--text);white-space:pre-wrap;margin:0;line-height:1.6">${resumen}</pre>
-      <button onclick="navigator.clipboard.writeText(document.getElementById('tomo-resumen-txt').textContent)" style="margin-top:8px;font-family:monospace;font-size:.48rem;padding:2px 10px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer">Copiar</button>
+      <button onclick="navigator.clipboard.writeText(document.getElementById('tomo-resumen-txt').textContent)" style="margin-top:8px;font-family:monospace;font-size:.6rem;padding:2px 10px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer">Copiar</button>
     </div>
     <div style="margin-top:10px;display:flex;gap:8px">
-      <button onclick="openTomoAddForm()" style="font-family:monospace;font-size:.48rem;padding:3px 10px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer">Editar</button>
-      <button onclick="deleteTomoDraft('${d.id}')" style="font-family:monospace;font-size:.48rem;padding:3px 10px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);color:#ef4444;border-radius:3px;cursor:pointer">Eliminar borrador</button>
+      <button onclick="openTomoAddForm()" style="font-family:monospace;font-size:.6rem;padding:3px 10px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer">Editar</button>
+      <button onclick="deleteTomoDraft('${d.id}')" style="font-family:monospace;font-size:.6rem;padding:3px 10px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);color:#ef4444;border-radius:3px;cursor:pointer">Eliminar borrador</button>
     </div>`;
   document.getElementById('tomo3d-modal').style.display='flex';
 }
@@ -2407,90 +2407,90 @@ function buildTooltipHtml(hit){
       const e=hit.get('cmt_data'),ft=faultType(e.r1);
       const c=depthHex(e.de);
       const fN={T:'Thrust',N:'Normal',S:'Transcurrente',O:'Oblicua'};
-      html=`<span style="color:${c};font-size:.5rem">SISMO · ${fN[ft]} · ${e.de}km</span><br><b style="color:${c}">M${e.mw}</b>`;
+      html=`<span style="color:${c};font-size:.63rem">SISMO · ${fN[ft]} · ${e.de}km</span><br><b style="color:${c}">M${e.mw}</b>`;
     }else if(type==='volcano'){
       const pt=hit.get('volc_pvmbg')||'C';
       const c=pt==='A'?'#ef4444':pt==='B'?'#f97316':'#94a3b8';
-      html=`<span style="color:${c};font-size:.5rem">VOLCÁN PVMBG-${pt} · ${hit.get('volc_arc')}</span><br><b style="color:${c}">${hit.get('volc_name')}</b> · ${hit.get('volc_elev')}m`;
+      html=`<span style="color:${c};font-size:.63rem">VOLCÁN PVMBG-${pt} · ${hit.get('volc_arc')}</span><br><b style="color:${c}">${hit.get('volc_name')}</b> · ${hit.get('volc_elev')}m`;
     }else if(type==='slab'){
-      html=`<span style="color:#00cfff;font-size:.5rem">SLAB2 · ${hit.get('slab_region')}</span><br><b style="color:#00cfff">${hit.get('slab_depth')} km</b>`;
+      html=`<span style="color:#00cfff;font-size:.63rem">SLAB2 · ${hit.get('slab_region')}</span><br><b style="color:#00cfff">${hit.get('slab_depth')} km</b>`;
     }else if(type==='key_fault'){
       const c=DB[id]?DB[id].color:'#c89040';
       const ttl=DB[id]?DB[id].title:hit.get('feat_name')||'Falla';
       const typ=DB[id]?DB[id].type:'Falla activa';
-      html=`<span style="color:${c};font-size:.5rem;text-transform:uppercase">${typ}</span><br><b style="color:${c}">${ttl}</b>`;
+      html=`<span style="color:${c};font-size:.63rem;text-transform:uppercase">${typ}</span><br><b style="color:${c}">${ttl}</b>`;
     }else if(type==='subduction'){
       const sz=hit.get('subzone')||'generic';
       const si=SUBZONE_INFO[sz]||SUBZONE_INFO['generic'];
       const c='#60a5fa';
-      html=`<span style="color:${c};font-size:.5rem">${si.name}</span><br><b style="color:${c}">${si.subducting} → ${si.overriding}</b>`;
+      html=`<span style="color:${c};font-size:.63rem">${si.name}</span><br><b style="color:${c}">${si.subducting} → ${si.overriding}</b>`;
     }else if(type==='new_fault'||type==='new_thrust'||type==='hazard_zone'){
       const db=DB[id];
-      if(db){const c=db.color||'#c89040';html=`<span style="color:${c};font-size:.5rem;text-transform:uppercase">${db.type}</span><br><b style="color:${c}">${db.title}</b>`;}
-      else html=`<span style="color:#c84070;font-size:.5rem">FALLA — Serhalawan & Chen 2024</span>`;
+      if(db){const c=db.color||'#c89040';html=`<span style="color:${c};font-size:.63rem;text-transform:uppercase">${db.type}</span><br><b style="color:${c}">${db.title}</b>`;}
+      else html=`<span style="color:#c84070;font-size:.63rem">FALLA — Serhalawan & Chen 2024</span>`;
     }else if(type==='core'&&DB[id]){
       const c=DB[id].color;
-      html=`<span style="color:${c};font-size:.5rem;text-transform:uppercase">${DB[id].type}</span><br><b style="color:${c}">${DB[id].title}</b>`;
+      html=`<span style="color:${c};font-size:.63rem;text-transform:uppercase">${DB[id].type}</span><br><b style="color:${c}">${DB[id].title}</b>`;
     }else if((type==='hikmy_fault'||type==='hikmy_belt')&&DB[id]){
       const c=DB[id].color||'#ff8844';
-      html=`<span style="color:${c};font-size:.5rem;text-transform:uppercase">${DB[id].type}</span><br><b style="color:${c}">${DB[id].title}</b>`;
+      html=`<span style="color:${c};font-size:.63rem;text-transform:uppercase">${DB[id].type}</span><br><b style="color:${c}">${DB[id].title}</b>`;
     }else if(type==='hikmy_point'){
       const ur=hit.get('uplift_rate');
       const nm=hit.get('feat_name')||'';
-      html=`<span style="color:#60a5fa;font-size:.5rem">UPLIFT — Hikmy 2025</span><br><b style="color:#60a5fa">${ur!=null?ur+' mm/año · ':''}${nm}</b>`;
+      html=`<span style="color:#60a5fa;font-size:.63rem">UPLIFT — Hikmy 2025</span><br><b style="color:#60a5fa">${ur!=null?ur+' mm/año · ':''}${nm}</b>`;
     }else if(type==='yuan_flow'||type==='yuan_point'){
       const nm=hit.get('feat_name')||'';
-      html=`<span style="color:#7060b0;font-size:.5rem">FLUJO MANTÉLICO — Yuan 2024</span><br><b style="color:#7060b0">${nm}</b>`;
+      html=`<span style="color:#7060b0;font-size:.63rem">FLUJO MANTÉLICO — Yuan 2024</span><br><b style="color:#7060b0">${nm}</b>`;
     }else if(type==='dileo_sks'){
       const dt=hit.get('delay_time_s'),deg=hit.get('fast_axis_deg'),sta=hit.get('station_name')||'';
       const degStr=deg!=null?` · φ=${deg}°`:'';
-      html=`<span style="color:#7060b0;font-size:.5rem">SPLITTING SKS — Di Leo 2012</span><br><b style="color:#7060b0">${sta}</b> · dt=${dt} s${degStr}`;
+      html=`<span style="color:#7060b0;font-size:.63rem">SPLITTING SKS — Di Leo 2012</span><br><b style="color:#7060b0">${sta}</b> · dt=${dt} s${degStr}`;
     }else if(type==='kesuma_tomo'){
       const vt=hit.get('ktomo_vtype'),lbl=hit.get('ktomo_label')||'';
       const c=vt==='high'?'#60a5fa':'#f87171';
       const vtxt=vt==='high'?'ALTA Vp — slab':'BAJA Vp — zona caliente';
-      html=`<span style="color:${c};font-size:.5rem">${vtxt} — Kesumastuti 2025</span><br><b style="color:${c}">${lbl}</b>`;
+      html=`<span style="color:${c};font-size:.63rem">${vtxt} — Kesumastuti 2025</span><br><b style="color:${c}">${lbl}</b>`;
     }else if(type==='pratama_manif'){
       const mt=hit.get('manif_type'),nm=hit.get('manif_name')||'',arm=hit.get('manif_arm')||'';
       const isFum=mt==='fumarole_hotspring';
       const c=isFum?'#ef4444':'#60a5fa';
       const lbl=isFum?'FUMAROLA + TERMA':'TERMA';
-      html=`<span style="color:${c};font-size:.5rem">${lbl} — Pratama 2025 · brazo ${arm.toUpperCase()}</span><br><b style="color:${c}">${nm}</b>`;
+      html=`<span style="color:${c};font-size:.63rem">${lbl} — Pratama 2025 · brazo ${arm.toUpperCase()}</span><br><b style="color:${c}">${nm}</b>`;
     }else if(type==='jibran_cluster'&&DB[id]){
       const c=DB[id].color,r=hit.get('tectonic_regime')||'';
-      html=`<span style="color:${c};font-size:.5rem">RÉGIMEN ${r.toUpperCase()} — Jibran 2025</span><br><b style="color:${c}">${DB[id].title}</b>`;
+      html=`<span style="color:${c};font-size:.63rem">RÉGIMEN ${r.toUpperCase()} — Jibran 2025</span><br><b style="color:${c}">${DB[id].title}</b>`;
     }else if(type==='hua_feature'&&DB[id]){
-      html=`<span style="color:#7060b0;font-size:.5rem">TOMOGRAFÍA BANDA — Hua 2023</span><br><b style="color:#7060b0">${DB[id].title}</b>`;
+      html=`<span style="color:#7060b0;font-size:.63rem">TOMOGRAFÍA BANDA — Hua 2023</span><br><b style="color:#7060b0">${DB[id].title}</b>`;
     }else if(type==='hall_feature'&&DB[id]){
-      html=`<span style="color:#7060b0;font-size:.5rem">LOSAS / MANTO — Hall 2015</span><br><b style="color:#7060b0">${DB[id].title}</b>`;
+      html=`<span style="color:#7060b0;font-size:.63rem">LOSAS / MANTO — Hall 2015</span><br><b style="color:#7060b0">${DB[id].title}</b>`;
     }else if((type==='fat25_h2seep'||type==='fat25_fault'||type==='fat25_area')&&DB[id]){
       const h2=hit.get('h2_ppm');
-      html=`<span style="color:#22c55e;font-size:.5rem">H2 NATURAL — Faturrakhman 2025</span><br><b style="color:#22c55e">${h2?h2+' ppm · ':''}${DB[id].title}</b>`;
+      html=`<span style="color:#22c55e;font-size:.63rem">H2 NATURAL — Faturrakhman 2025</span><br><b style="color:#22c55e">${h2?h2+' ppm · ':''}${DB[id].title}</b>`;
     }else if(type==='station'){
-      html=`<span style="color:#60a5fa;font-size:.5rem">ESTACIÓN · ${hit.get('sta_net')||''}</span><br><b style="color:#60a5fa">${hit.get('sta_code')||''}</b> · ${hit.get('sta_name')||''}`;
+      html=`<span style="color:#60a5fa;font-size:.63rem">ESTACIÓN · ${hit.get('sta_net')||''}</span><br><b style="color:#60a5fa">${hit.get('sta_code')||''}</b> · ${hit.get('sta_name')||''}`;
     }else if(type==='plate_vel'){
       const mag=hit.get('pv_mag'),lbl=hit.get('pv_label')||hit.get('pv_name')||'';
-      html=`<span style="color:${PLATE_COL};font-size:.5rem">MORVEL56 — ${hit.get('pv_plate')||''}</span><br><b style="color:${PLATE_COL}">${lbl} · ${mag} mm/yr</b>`;
+      html=`<span style="color:${PLATE_COL};font-size:.63rem">MORVEL56 — ${hit.get('pv_plate')||''}</span><br><b style="color:${PLATE_COL}">${lbl} · ${mag} mm/yr</b>`;
     }else if(type==='geoth_field'){
       const st=hit.get('geoth_status')||'';
       const c=st==='operacional'?'#f59e0b':st==='prospecto'?'#a78bfa':'#22d3ee';
       const mwe=hit.get('geoth_mwe');
-      html=`<span style="color:${c};font-size:.5rem">GEOTÉRMICO · ${st.toUpperCase()}</span><br><b style="color:${c}">${hit.get('geoth_name')||''}</b>${mwe?' · '+mwe+' MW':''}`;
+      html=`<span style="color:${c};font-size:.63rem">GEOTÉRMICO · ${st.toUpperCase()}</span><br><b style="color:${c}">${hit.get('geoth_name')||''}</b>${mwe?' · '+mwe+' MW':''}`;
     }else if(type==='gps_vel'){
       const ve=hit.get('gps_ve'),vn=hit.get('gps_vn');
       const mag=ve!=null&&vn!=null?Math.round(Math.sqrt(ve*ve+vn*vn))+'mm/yr':'';
       const sta=hit.get('gps_station')||'';
-      html=`<span style="color:${GPS_COL};font-size:.5rem">GPS · ${hit.get('gps_source')||''}</span><br><b style="color:${GPS_COL}">${sta}${mag?' · '+mag:''}</b>`;
+      html=`<span style="color:${GPS_COL};font-size:.63rem">GPS · ${hit.get('gps_source')||''}</span><br><b style="color:${GPS_COL}">${sta}${mag?' · '+mag:''}</b>`;
     }else if(type==='serhalawan_feature'&&DB[id]){
       const cat=hit.get('category')||'';
       const catLbl=cat==='fault'?'FALLA':cat==='subduction_zone'?'SUBDUCCIÓN':cat==='earthquake'?'SISMO':cat==='hazard_zone'?'GAP SÍSMICO':cat==='seismicity_cluster'?'CLUSTER':cat==='cross_section'?'SECCIÓN':'';
       const c=DB[id].color;
-      html=`<span style="color:${c};font-size:.5rem">SERHALAWAN 2024 · ${catLbl}</span><br><b style="color:${c}">${DB[id].title}</b>`;
+      html=`<span style="color:${c};font-size:.63rem">SERHALAWAN 2024 · ${catLbl}</span><br><b style="color:${c}">${DB[id].title}</b>`;
     }else if(type==='tomo_profile'&&DB[id]){
       const c='#7060b0';
-      html=`<span style="color:${c};font-size:.5rem">PERFIL TOMOGRÁFICO · ${DB[id].type}</span><br><b style="color:${c}">${DB[id].title}</b>`;
+      html=`<span style="color:${c};font-size:.63rem">PERFIL TOMOGRÁFICO · ${DB[id].type}</span><br><b style="color:${c}">${DB[id].title}</b>`;
     }else if(type==='hazard_zone'&&DB[id]){
-      html=`<span style="color:#ffaa00;font-size:.5rem">GAP SÍSMICO — SERHALAWAN 2024</span><br><b style="color:#ffaa00">${DB[id].title}</b>`;
+      html=`<span style="color:#ffaa00;font-size:.63rem">GAP SÍSMICO — SERHALAWAN 2024</span><br><b style="color:#ffaa00">${DB[id].title}</b>`;
     }else if(type==='canonical'){
       const nm=hit.get('name')||id||'';
       const lt=hit.get('layer_type')||'';
@@ -2512,7 +2512,7 @@ function buildTooltipHtml(hit){
       };
       const cc=CANON_TIP_COL[lt]||'#c89040';
       const lbl=CANON_TIP_LBL[lt]||lt.toUpperCase();
-      html=`<span style="color:${cc};font-size:.5rem">${lbl}</span><br><b style="color:${cc}">${nm}</b>`;
+      html=`<span style="color:${cc};font-size:.63rem">${lbl}</span><br><b style="color:${cc}">${nm}</b>`;
     }
   return html;
 }
@@ -2706,20 +2706,20 @@ function openGPSPanel(feat){
     ${az!=null?`<span class="ptag" style="color:#444;border-color:#44444440;background:#44444412">${az}° (azimut)</span>`:''}
   </div>
   <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin:6px 0 8px;font-family:monospace">
-    <div style="font-size:.47rem;color:var(--dim)">Ve (E)</div><div style="font-size:.47rem;color:var(--text)">${ve!=null?ve+' mm/yr':'—'}</div>
-    <div style="font-size:.47rem;color:var(--dim)">Vn (N)</div><div style="font-size:.47rem;color:var(--text)">${vn!=null?vn+' mm/yr':'—'}</div>
-    <div style="font-size:.47rem;color:var(--dim)">Fuente</div><div style="font-size:.47rem;color:var(--text)">${src}</div>
+    <div style="font-size:.59rem;color:var(--dim)">Ve (E)</div><div style="font-size:.59rem;color:var(--text)">${ve!=null?ve+' mm/yr':'—'}</div>
+    <div style="font-size:.59rem;color:var(--dim)">Vn (N)</div><div style="font-size:.59rem;color:var(--text)">${vn!=null?vn+' mm/yr':'—'}</div>
+    <div style="font-size:.59rem;color:var(--dim)">Fuente</div><div style="font-size:.59rem;color:var(--text)">${src}</div>
   </div>
   <div style="margin:0 0 8px;padding:5px 8px;background:rgba(34,197,94,.07);border-left:3px solid rgba(34,197,94,.5);border-radius:3px">
-    <div style="font-size:.46rem;color:rgba(34,197,94,.9);font-weight:bold;margin-bottom:2px">Marco: Sunda-fijo</div>
-    <div style="font-size:.46rem;color:var(--dim);line-height:1.55">La rotación de la placa de Sunda fue substraída de todas las mediciones. Sulawesi occidental queda en cero por definición — lo que se ve es movimiento <em>relativo a la placa anfitriona</em>. Por eso no es directamente comparable con los vectores MORVEL56 (azules), que usan marco NNR donde Sunda sí se mueve (~29 mm/yr SE).</div>
+    <div style="font-size:.58rem;color:rgba(34,197,94,.9);font-weight:bold;margin-bottom:2px">Marco: Sunda-fijo</div>
+    <div style="font-size:.58rem;color:var(--dim);line-height:1.55">La rotación de la placa de Sunda fue substraída de todas las mediciones. Sulawesi occidental queda en cero por definición — lo que se ve es movimiento <em>relativo a la placa anfitriona</em>. Por eso no es directamente comparable con los vectores MORVEL56 (azules), que usan marco NNR donde Sunda sí se mueve (~29 mm/yr SE).</div>
   </div>`;
 
   if(ctx){
     html+=`<div class="psec">Interpretación geodinámica</div>
-      <div class="pdesc" style="font-size:.5rem;line-height:1.6">${ctx.interp}</div>`;
+      <div class="pdesc" style="font-size:.63rem;line-height:1.6">${ctx.interp}</div>`;
     if(ctx.nota){
-      html+=`<div style="margin:4px 0 6px;padding:4px 8px;background:rgba(204,120,92,.08);border-left:3px solid rgba(204,120,92,.5);border-radius:3px;font-size:.46rem;color:var(--dim);line-height:1.5">${ctx.nota}</div>`;
+      html+=`<div style="margin:4px 0 6px;padding:4px 8px;background:rgba(204,120,92,.08);border-left:3px solid rgba(204,120,92,.5);border-radius:3px;font-size:.58rem;color:var(--dim);line-height:1.5">${ctx.nota}</div>`;
     }
   }
 
@@ -2749,24 +2749,24 @@ function openPlateVelPanel(feat){
     ${az!=null?`<span class="ptag" style="color:#444;border-color:#44444440;background:#44444412">${(az+360)%360}° azimut</span>`:''}
   </div>
   <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin:6px 0 8px;font-family:monospace">
-    <div style="font-size:.47rem;color:var(--dim)">Ve (E)</div><div style="font-size:.47rem;color:var(--text)">${ve!=null?ve+' mm/yr':'—'}</div>
-    <div style="font-size:.47rem;color:var(--dim)">Vn (N)</div><div style="font-size:.47rem;color:var(--text)">${vn!=null?vn+' mm/yr':'—'}</div>
-    <div style="font-size:.47rem;color:var(--dim)">Marco ref.</div><div style="font-size:.47rem;color:var(--text)">Sundaland-fijo (NNR-MORVEL56)</div>
-    <div style="font-size:.47rem;color:var(--dim)">Período datos</div><div style="font-size:.47rem;color:var(--text)">~3.2 Ma (promedio geológico)</div>
+    <div style="font-size:.59rem;color:var(--dim)">Ve (E)</div><div style="font-size:.59rem;color:var(--text)">${ve!=null?ve+' mm/yr':'—'}</div>
+    <div style="font-size:.59rem;color:var(--dim)">Vn (N)</div><div style="font-size:.59rem;color:var(--text)">${vn!=null?vn+' mm/yr':'—'}</div>
+    <div style="font-size:.59rem;color:var(--dim)">Marco ref.</div><div style="font-size:.59rem;color:var(--text)">Sundaland-fijo (NNR-MORVEL56)</div>
+    <div style="font-size:.59rem;color:var(--dim)">Período datos</div><div style="font-size:.59rem;color:var(--text)">~3.2 Ma (promedio geológico)</div>
   </div>`;
 
   if(ctx){
     html+=`<div class="psec">Interpretación para Sulawesi</div>
-      <div class="pdesc" style="font-size:.5rem;line-height:1.6">${ctx.interp}</div>`;
+      <div class="pdesc" style="font-size:.63rem;line-height:1.6">${ctx.interp}</div>`;
     html+=`<div style="margin:6px 0;padding:5px 8px;background:rgba(56,189,248,.07);border-left:3px solid rgba(56,189,248,.5);border-radius:3px">
-      <div style="font-size:.46rem;color:rgba(56,189,248,.9);font-weight:bold;margin-bottom:2px">Qué es este dato</div>
-      <div style="font-size:.46rem;color:var(--dim);line-height:1.55">${ctx.advertencia}</div>
+      <div style="font-size:.58rem;color:rgba(56,189,248,.9);font-weight:bold;margin-bottom:2px">Qué es este dato</div>
+      <div style="font-size:.58rem;color:var(--dim);line-height:1.55">${ctx.advertencia}</div>
     </div>`;
   }
 
   html+=`<div style="margin:6px 0;padding:5px 8px;background:rgba(56,189,248,.07);border-left:3px solid rgba(56,189,248,.5);border-radius:3px">
-    <div style="font-size:.46rem;color:rgba(56,189,248,.9);font-weight:bold;margin-bottom:2px">Marco Sundaland-fijo — ¿comparable con el GPS verde?</div>
-    <div style="font-size:.46rem;color:var(--dim);line-height:1.55">Ambos marcos restan la rotación de Sunda, por lo que los vectores azules (MORVEL56) y verdes (GPS) son directamente comparables en dirección y orden de magnitud. La diferencia residual refleja: (a) que el GPS promedia <em>décadas</em>, MORVEL56 promedia <em>3.2 Ma</em>; (b) deformación interna de Sulawesi no capturada por el modelo de placas rígidas.</div>
+    <div style="font-size:.58rem;color:rgba(56,189,248,.9);font-weight:bold;margin-bottom:2px">Marco Sundaland-fijo — ¿comparable con el GPS verde?</div>
+    <div style="font-size:.58rem;color:var(--dim);line-height:1.55">Ambos marcos restan la rotación de Sunda, por lo que los vectores azules (MORVEL56) y verdes (GPS) son directamente comparables en dirección y orden de magnitud. La diferencia residual refleja: (a) que el GPS promedia <em>décadas</em>, MORVEL56 promedia <em>3.2 Ma</em>; (b) deformación interna de Sulawesi no capturada por el modelo de placas rígidas.</div>
   </div>`;
 
   html+=`<div class="psec">Fuente</div>`;
@@ -2787,7 +2787,7 @@ function openStationPanel(feat){
     <span class="ptag" style="color:#60a5fa;border-color:#60a5fa40;background:#60a5fa12">${net}</span>
   </div>
   <div class="psec">Red</div>
-  <div class="pdesc" style="font-size:.52rem">Red: ${net} &nbsp;·&nbsp; Código: ${code}</div>
+  <div class="pdesc" style="font-size:.65rem">Red: ${net} &nbsp;·&nbsp; Código: ${code}</div>
   <div class="psec">Fuente</div>
   ${renderPaper({ref:'BMKG / GEOFON (2024)',title:'Jaringan Seismografi BMKG + GEOFON Indonesia',journal:'iris.edu/fdsnws/station — recuperado vía IRIS FDSN Station WS',find:'Estaciones sismológicas activas en Sulawesi. Red BMKG Indonesia + red GEOFON Germany. Datos de posición y red desde IRIS FDSN /fdsnws/station/1/query.'})}`;
   document.getElementById('pb').innerHTML=html;
@@ -2807,7 +2807,7 @@ function openGeothPanel(feat){
     <span class="ptag" style="color:${col};border-color:${col}40;background:${col}12">${status}</span>
     ${mwe?`<span class="ptag" style="color:#444;border-color:#44444440;background:#44444412">${mwe} MWe</span>`:''}
   </div>
-  ${note?`<div class="psec">Descripción</div><div class="pdesc" style="font-size:.52rem">${note}</div>`:''}
+  ${note?`<div class="psec">Descripción</div><div class="pdesc" style="font-size:.65rem">${note}</div>`:''}
   <div class="psec">Fuente</div>
   ${renderPaper({ref:'Pratama, B. B. et al. (2025)',title:'Probabilistic Feasibility Assessment (PFA) of Geothermal Resources in Sulawesi, Indonesia',journal:'SSRN preprint. doi:10.2139/ssrn.5104034',find:'Inventario de campos geotérmicos operacionales y prospectos en Sulawesi. Capacidad instalada, operador y estado de desarrollo. Fig. 4b/4c.'})}`;
   document.getElementById('pb').innerHTML=html;
@@ -2851,7 +2851,7 @@ function openDileoSKSPanel(feat){
     ${fast!=null?`<span class="ptag" style="color:#444;border-color:#44444440;background:#44444412">φ = ${fast}°</span>`:''}
   </div>
   <div class="psec">Interpretación</div>
-  <div class="pdesc" style="font-size:.52rem">${name}<br><span style="color:var(--dim)">${styleLabels[style]||style}</span></div>
+  <div class="pdesc" style="font-size:.65rem">${name}<br><span style="color:var(--dim)">${styleLabels[style]||style}</span></div>
   <div class="psec">Fuente</div>
   ${renderPaper({ref:'Di Leo et al. (2012)',title:'Mantle flow in regions of complex tectonics: Insights from Indonesia',journal:'Geochem. Geophys. Geosyst., 13, Q12008. doi:10.1029/2012GC004417',find:`Splitting SKS estación ${sta}: φ=${fast!=null?fast+'°':'nd'}, dt=${dt!=null?dt+' s':'nd'}. Patrón de flujo mantélico = ${styleLabels[style]||style}.`})}`;
   document.getElementById('pb').innerHTML=html;
@@ -2944,7 +2944,7 @@ function openPanel(id){
     html+=`<div style="margin:6px 0 2px;text-align:center">
       <img src="${imgPath}?t=${Date.now()}" style="max-width:100%;border-radius:4px;border:1px solid var(--border);cursor:zoom-in" onclick="window.open('${imgPath}','_blank')" title="Click para abrir en nueva pestaña" id="panel-img-${imgPath.replace(/[^a-z0-9]/gi,'_')}">
     </div>`;
-    if(db.section_caption){html+=`<div style="font-family:monospace;font-size:.48rem;color:var(--dim);text-align:center;margin-bottom:4px">${db.section_caption}</div>`;}
+    if(db.section_caption){html+=`<div style="font-family:monospace;font-size:.6rem;color:var(--dim);text-align:center;margin-bottom:4px">${db.section_caption}</div>`;}
   }
   html+='<div class="psec">Descripción</div>';
   html+=`<div class="pdesc">${db.desc}</div>`;
@@ -3495,13 +3495,13 @@ async function openCanonicalPanel(featId, fallbackFn){
     if(debate){
       // "Este mapa adopta" — interpretación principal
       html+=`<div class="psec" style="color:#22c55e;border-color:#22c55e40">Este mapa adopta</div>
-        <div class="pdesc" style="font-size:.5rem;line-height:1.6;margin-bottom:6px">${debate.adopta.desc}</div>`;
+        <div class="pdesc" style="font-size:.63rem;line-height:1.6;margin-bottom:6px">${debate.adopta.desc}</div>`;
 
       if(debate.adopta.data?.length){
         html+=`<div style="display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin:6px 0 8px;font-family:monospace">`;
         debate.adopta.data.forEach(d=>{
-          html+=`<div style="font-size:.47rem;color:var(--dim)">${d.lbl}</div>
-            <div style="font-size:.47rem;color:var(--text);font-weight:bold">${d.val}</div>`;
+          html+=`<div style="font-size:.59rem;color:var(--dim)">${d.lbl}</div>
+            <div style="font-size:.59rem;color:var(--text);font-weight:bold">${d.val}</div>`;
         });
         html+=`</div>`;
       }
@@ -3515,7 +3515,7 @@ async function openCanonicalPanel(featId, fallbackFn){
         html+=`<div class="psec" style="color:#f97316;border-color:#f9731640">En debate</div>`;
         debate.debate.forEach((d,i)=>{
           html+=`<div style="margin-bottom:10px;padding:6px 8px;background:rgba(249,115,22,0.06);border-radius:4px;border-left:3px solid #f97316">
-            <div style="font-size:.5rem;color:var(--text);line-height:1.6;margin-bottom:5px">${d.desc}</div>`;
+            <div style="font-size:.63rem;color:var(--text);line-height:1.6;margin-bottom:5px">${d.desc}</div>`;
           d.refs?.forEach(r=>html+=renderPaper(r));
           html+=`</div>`;
         });
@@ -3529,7 +3529,7 @@ async function openCanonicalPanel(featId, fallbackFn){
       sources.forEach((src,i)=>{
         const col=COLS[i%7];
         html+=`<div style="margin-bottom:4px;padding:4px 8px;background:var(--bg3);border-radius:4px;border-left:3px solid ${col}">
-          <div style="font-size:.48rem;color:${col};font-family:monospace">${src}</div>
+          <div style="font-size:.6rem;color:${col};font-family:monospace">${src}</div>
         </div>`;
       });
     }
@@ -4837,7 +4837,7 @@ function openProfileDrawPanel(){
   // Todos los perfiles con category=cross_section del source unificado
   const profiles=tomoProfileSource.getFeatures().filter(f=>f.get('category')==='cross_section');
   if(profiles.length===0){
-    sel.innerHTML='<span style="font-size:.44rem;color:var(--dim)">No hay perfiles cargados aún (esperá que cargue el fetch de Serhalawan).</span>';
+    sel.innerHTML='<span style="font-size:.55rem;color:var(--dim)">No hay perfiles cargados aún (esperá que cargue el fetch de Serhalawan).</span>';
     return;
   }
   // Ordenar por feat_name
@@ -4845,7 +4845,7 @@ function openProfileDrawPanel(){
   profiles.forEach(f=>{
     const nm=f.get('feat_name')||f.get('feat_id')||'?';
     const btn=document.createElement('button');
-    btn.style.cssText='width:100%;text-align:left;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:3px 6px;border-radius:3px;font-family:monospace;font-size:.46rem;cursor:pointer';
+    btn.style.cssText='width:100%;text-align:left;background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:3px 6px;border-radius:3px;font-family:monospace;font-size:.58rem;cursor:pointer';
     btn.textContent=nm;
     btn.onclick=()=>startProfileDraw(f, btn);
     sel.appendChild(btn);
@@ -4998,7 +4998,7 @@ function saveNewProfile(){
   // Mostrar resumen en elemento separado (no en el textarea de coords)
   if(_addProfileDrawInter){map.removeInteraction(_addProfileDrawInter);_addProfileDrawInter=null;}
   const resumen=`NUEVO PERFIL\nNombre: ${name}\nImagen: ${img||'(sin imagen)'}\nCoords: ${JSON.stringify(coords)}\nID: ${id}`;
-  document.getElementById('pa-draw-status').innerHTML=`✓ Guardado — <button onclick="navigator.clipboard.writeText(${JSON.stringify(resumen)}).then(()=>this.textContent='copiado')" style="font-family:monospace;font-size:.43rem;padding:1px 6px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer">copiar resumen</button>`;
+  document.getElementById('pa-draw-status').innerHTML=`✓ Guardado — <button onclick="navigator.clipboard.writeText(${JSON.stringify(resumen)}).then(()=>this.textContent='copiado')" style="font-family:monospace;font-size:.54rem;padding:1px 6px;background:var(--bg3);border:1px solid var(--border);color:var(--dim);border-radius:3px;cursor:pointer">copiar resumen</button>`;
   document.getElementById('pa-name').value='';
   document.getElementById('pa-img').value='';
   document.getElementById('pa-coords').value='';
@@ -5504,11 +5504,11 @@ function collectBib(){
 }
 function renderBibList(papers){
   const list=document.getElementById('bib-list');
-  if(!papers.length){list.innerHTML='<div style="font-size:.52rem;color:var(--dim);padding:12px 0">Sin resultados.</div>';return;}
+  if(!papers.length){list.innerHTML='<div style="font-size:.65rem;color:var(--dim);padding:12px 0">Sin resultados.</div>';return;}
   list.innerHTML=papers.map(p=>{
     const url=paperUrl(p);
     const t=url?`<a href="${url}" target="_blank" rel="noopener" class="plink">${p.title}</a>`:p.title;
-    const badge=p._uses?`<span style="font-size:.44rem;background:rgba(204,120,92,.15);color:var(--accent);border:1px solid rgba(204,120,92,.3);border-radius:10px;padding:1px 6px;margin-left:6px;vertical-align:middle">${p._uses}×</span>`:'';
+    const badge=p._uses?`<span style="font-size:.55rem;background:rgba(204,120,92,.15);color:var(--accent);border:1px solid rgba(204,120,92,.3);border-radius:10px;padding:1px 6px;margin-left:6px;vertical-align:middle">${p._uses}×</span>`:'';
     return`<div class="bib-entry"><div class="bib-ref">${p.ref}${badge}</div>${p.title?`<div class="bib-title">${t}</div>`:''}${p.journal?`<div class="bib-journal">${p.journal}</div>`:''}</div>`;
   }).join('');
 }
@@ -5629,10 +5629,10 @@ function activateMgRefs(sources){
   const container=document.createElement('div');
   container.id='mgdraw-ref-btns';
   container.style.cssText='margin-top:8px;padding:6px 8px;background:var(--bg3);border-radius:4px;border:1px solid var(--border)';
-  container.innerHTML='<div style="font-size:.46rem;color:var(--dim);text-transform:uppercase;margin-bottom:5px">Referencias activas — click para calibrar</div>'
+  container.innerHTML='<div style="font-size:.58rem;color:var(--dim);text-transform:uppercase;margin-bottom:5px">Referencias activas — click para calibrar</div>'
     +_mgRefActive.map(k=>`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
-      <span style="font-size:.5rem;color:var(--text)">${REF_LABELS[k]||k}</span>
-      <button onclick="calibrateMgRef('${k}')" style="font-family:monospace;font-size:.46rem;padding:2px 6px;background:var(--bg2);border:1px solid var(--accent);color:var(--accent);border-radius:3px;cursor:pointer">✏ Calibrar</button>
+      <span style="font-size:.63rem;color:var(--text)">${REF_LABELS[k]||k}</span>
+      <button onclick="calibrateMgRef('${k}')" style="font-family:monospace;font-size:.58rem;padding:2px 6px;background:var(--bg2);border:1px solid var(--accent);color:var(--accent);border-radius:3px;cursor:pointer">✏ Calibrar</button>
     </div>`).join('');
   document.getElementById('mgdraw-list').appendChild(container);
 }
@@ -5697,7 +5697,7 @@ async function loadMgDrawList(){
     html='<div style="color:var(--dim);font-size:.55rem;padding:8px 0;text-align:center">✓ Todos los canonicals tienen merged_geom</div>';
   } else {
     const label=_mgDrawAll?`${canonicals.length} canonicals (modo redibujar)`:`${canonicals.length} canonicals sin geometría canónica`;
-    html+=`<div style="color:var(--dim);font-size:.5rem;margin-bottom:8px">${label}</div>`;
+    html+=`<div style="color:var(--dim);font-size:.63rem;margin-bottom:8px">${label}</div>`;
     Object.entries(groups).forEach(([type,items])=>{
       html+=`<div class="mgdraw-group">${TYPE_LABELS[type]||type}</div>`;
       items.forEach(c=>{
@@ -5723,7 +5723,7 @@ async function selectMgCanonical(el,id,name,layerType,geomHint){
   if(old)old.remove();
   const sel=document.createElement('div');
   sel.id='mgdraw-type-sel';
-  sel.innerHTML=`<div class="mg-sel-name">${name}</div><div style="font-size:.48rem;color:var(--dim);margin:4px 0 6px">Cargando features…</div>`;
+  sel.innerHTML=`<div class="mg-sel-name">${name}</div><div style="font-size:.6rem;color:var(--dim);margin:4px 0 6px">Cargando features…</div>`;
   document.getElementById('mgdraw-list').appendChild(sel);
   sel.scrollIntoView({behavior:'smooth',block:'nearest'});
 
@@ -5767,7 +5767,7 @@ async function selectMgCanonical(el,id,name,layerType,geomHint){
           <div style="display:flex;align-items:center;gap:4px">
             <div class="mg-feat-label" onclick="adoptExistingFeature('${id}',${fid})" title="Adoptar esta geometría">
               <span style="color:${col};font-weight:bold">${label}</span>
-              ${fname?`<span style="color:var(--dim);font-size:.48rem"> — ${fname}</span>`:''}
+              ${fname?`<span style="color:var(--dim);font-size:.6rem"> — ${fname}</span>`:''}
             </div>
             <div class="mg-feat-actions">
               <button class="move-btn" onclick="toggleMoveInput(${fid})" title="Mover a otro canonical">→</button>
@@ -5784,7 +5784,7 @@ async function selectMgCanonical(el,id,name,layerType,geomHint){
 
     sel.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
         <div class="mg-sel-name" style="margin:0">${name}</div>
-        <button onclick="deleteCanonical('${id}','${name}')" style="font-family:monospace;font-size:.48rem;padding:2px 6px;border-radius:3px;cursor:pointer;background:var(--bg2);border:1px solid #ef4444;color:#ef4444" title="Borrar canonical y desasignar todos sus features">🗑</button>
+        <button onclick="deleteCanonical('${id}','${name}')" style="font-family:monospace;font-size:.6rem;padding:2px 6px;border-radius:3px;cursor:pointer;background:var(--bg2);border:1px solid #ef4444;color:#ef4444" title="Borrar canonical y desasignar todos sus features">🗑</button>
       </div>
       ${featListHtml}
       <div class="mg-sel-section">Geometría canónica</div>
