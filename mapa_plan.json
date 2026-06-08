@@ -897,6 +897,14 @@
           "prioridad": 2,
           "responsable": "sistema",
           "nota_completado": "10 marcadores violeta en mapa (abreviaturas 3 letras). Modal con navegación entre estudios, imágenes de data/sections/ y conclusión por estudio. Click en imagen abre en pestaña nueva. onerror oculta imágenes faltantes. 2026-06-03."
+        },
+        {
+          "id": "s3_g3",
+          "tipo": "contenido_cientifico",
+          "descripcion": "Debate dip del slab — Sangihe (W-dipping) y Halmahera (E-dipping): distintas propuestas de geometría entre Hall & Spakman 2015, Yuan 2024, Supendi 2024 y Di Leo 2012",
+          "estado": "implementado",
+          "responsable": "sistema",
+          "nota_completado": "Agregado adopta+debate en CANONICAL_DEBATES para canon_369 y canon_805. adopta: modelo W/E-dipping estándar con 3 refs cada uno. debate: 2 items por slab — (1) Hall/Spakman vs Yuan sobre geometría rectilínea vs. inflexión a profundidad; (2) incertidumbre hipocentral en Supendi para 369 / fragmento detached norte en Yuan vs SKS Di Leo para 805. 2026-06-08."
         }
       ]
     },

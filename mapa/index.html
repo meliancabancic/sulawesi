@@ -1471,8 +1471,69 @@ const CANON_KIN={
   'canon_1928':{sym:'thrust',w:1.6,flip:false}, // Buton — N→S, vergencia W
   // Subducción — sub_flip pasado a subductionStyle
   'canon_364': {sym:'subduction',sub_flip:false}, // NST — coords W→E, dientes al S (placa cabalgante S)
-  'canon_369': {sym:'subduction',sub_flip:true},  // Sangihe — dientes al O (arco Sangihe)
-  'canon_805': {sym:'subduction',sub_flip:false}, // Halmahera — dientes al E (arco Halmahera)
+  'canon_369': {sym:'subduction',sub_flip:true,  // Sangihe — dientes al O (arco Sangihe)
+    adopta:{
+      desc:'El piso oceánico del Mar de Molucas subducta hacia el OESTE bajo el arco volcánico de Sangihe. Es una de las dos losas del sistema de doble subducción del Mar de Molucas — el mismo piso oceánico atrapado entre dos arcos convergentes subducta simultáneamente en direcciones opuestas. La losa de Sangihe es sismicamente activa hasta ~450 km de profundidad. A 100–200 km el flujo mantélico es trench-normal (subducción 2D, entrained), consistente con una geometría de dip relativamente simple en ese rango.',
+      data:[
+        {lbl:'Polaridad',val:'W-dipping — piso Molucas subducta al oeste bajo arco Sangihe'},
+        {lbl:'Profundidad máx. sismicidad',val:'~450 km (Hall & Spakman 2015)'},
+        {lbl:'Ángulo estimado',val:'~50–65°, varía con la profundidad'},
+        {lbl:'Estado',val:'Colisión arc-arc activa; compresión vertical del Mar de Molucas'},
+      ],
+      refs:[
+        {ref:'Yuan, L. et al. (2024)',title:'Mantle flow and deformation anisotropy beneath the Molucca Sea',journal:'Earth and Planetary Science Letters. doi:10.1016/j.epsl.2024.118986',find:'A 100–200 km: flujo trench-normal entrained, consistente con W-dipping simple. A 300–500 km el patrón cambia, sugiriendo inflexión del slab a mayor profundidad.'},
+        {ref:'Supendi, P. et al. (2024)',title:'Slab geometry beneath Sulawesi from regional seismicity',journal:'JGR: Solid Earth. doi:10.1029/2023JB027989',find:'Perfiles tomográficos a 10–200 km documentan geometría del slab desde sismicidad y velocidad P; sismicidad W-dipping bien definida en zona de Wadati-Benioff.'},
+        {ref:'Hall, R. & Spakman, W. (2015)',title:'Mantle structure and tectonic history of SE Asia',journal:'Tectonophysics, 658. doi:10.1016/j.tecto.2015.07.003',find:'Tomografía P-wave: slab de Sangihe W-dipping, relativamente rectilíneo, activo hasta ~450 km.'},
+      ]
+    },
+    debate:[
+      {
+        desc:'Hall & Spakman (2015) proponen, bajo el norte de Sulawesi, un slab de dirección N-dipping independiente ("Sula slab"), distinto del slab de Sangihe (W-dipping). Este slab northward-dipping subduciría hacia el norte bajo el brazo noreste de Sulawesi, relacionado con la colisión del Microcontinente Banggai-Sula; su Fig. 15 lo muestra evolucionando de N-dipping a casi vertical al presente. Cao et al. (2024) adoptan el mismo modelo en su cartoon 3D: representan el Sula slab como un cuerpo separado con dip y orientación distintos al slab de Sangihe (W-dipping) y al Celebes slab (S-dipping). Kesumastuti et al. (2025), en cambio, no encuentran evidencia tomográfica de un slab N-dipping al oeste de 122.5°E: la anomalía H2 (N-dipping) que su modelo detecta podría ser una flexión del slab de Sangihe a profundidad o estar por debajo del umbral de resolución. Si el Sula slab N-dipping existe (Hall & Spakman, Cao), hay dos slabs en el mismo sector con direcciones de subducción opuestas (W-dipping vs. N-dipping); si no existe (Kesumastuti), el slab de Sangihe es simplemente W-dipping hasta su terminación meridional.',
+        refs:[
+          {ref:'Hall, R. & Spakman, W. (2015)',title:'Mantle structure and tectonic history of SE Asia',journal:'Tectonophysics, 658. doi:10.1016/j.tecto.2015.07.003',find:'Fig. 15 (cross-section N-S): Sula slab evoluciona de N-dipping a casi vertical al presente, como estructura independiente del slab de Sangihe.'},
+          {ref:'Cao, L. et al. (2024)',title:'Slab subduction and mantle dynamics beneath Sulawesi',journal:'JGR: Solid Earth. doi:10.1029/2024JB029012',find:'Fig. 7 (cartoon 3D): Sula slab como cuerpo separado con dirección diferente al slab de Sangihe; ambos coexisten bajo N. Sulawesi.'},
+          {ref:'Kesumastuti, A. et al. (2025)',title:'Multiple slab subduction beneath Sulawesi',journal:'Geophysical Research Letters. doi:10.1029/2025GL115393',find:'Sin evidencia tomográfica de slab N-dipping al oeste de 122.5°E. H2 (N-dipping) es posiblemente flexión del slab de Sangihe o artefacto; slab principal (H3) es W-dipping.'},
+        ]
+      },
+      {
+        desc:'Supendi et al. (2024) mapean el slab de Sangihe como W-dipping en perfiles E-O que atraviesan el Mar de Molucas (Figs. 3A–B y 3C–D), con zona de Wadati-Benioff bien definida dipping hacia el oeste bajo el arco de Sangihe. Esta dirección es consistente con el modelo estándar y con el slab H3 de Kesumastuti et al. (2025), pero no resuelve si existe una componente N-dipping separada más al sur (el "Sula slab" de Hall & Spakman), ya que los perfiles de Supendi están orientados E-O y no capturarían un slab de dirección N-S.',
+        refs:[
+          {ref:'Supendi, P. et al. (2024)',title:'Slab geometry beneath Sulawesi from regional seismicity',journal:'JGR: Solid Earth. doi:10.1029/2023JB027989',find:'Perfiles Fig. 3A-B y 3C-D (E-O): slab de Sangihe W-dipping confirmado. Sin perfiles N-S para el sector del posible Sula slab.'},
+        ]
+      },
+    ]
+  },
+  'canon_805': {sym:'subduction',sub_flip:false, // Halmahera — dientes al E (arco Halmahera)
+    adopta:{
+      desc:'El piso oceánico del Mar de Molucas subducta hacia el ESTE bajo el arco volcánico de Halmahera. Contraparte E-dipping del mismo sistema de doble subducción. La losa está sismicamente definida hasta ~400 km de profundidad. Yuan et al. (2024) documenta flujo toroidal alrededor del extremo norte del slab, consistente con un fragmento detached o con rollback irregular en ese segmento, lo que distingue la geometría de Halmahera de un slab simple.',
+      data:[
+        {lbl:'Polaridad',val:'E-dipping — piso Molucas subducta al este bajo arco Halmahera'},
+        {lbl:'Profundidad máx. sismicidad',val:'~400 km'},
+        {lbl:'Estado',val:'Slab activo; flujo toroidal en extremo N documentado (Yuan 2024)'},
+      ],
+      refs:[
+        {ref:'Yuan, L. et al. (2024)',title:'Mantle flow and deformation anisotropy beneath the Molucca Sea',journal:'Earth and Planetary Science Letters. doi:10.1016/j.epsl.2024.118986',find:'Flujo toroidal alrededor del extremo norte del slab de Halmahera; patrón de fast-axes de SKS diagnóstico de slab con extremo libre o fragmento detached.'},
+        {ref:'Hall, R. & Spakman, W. (2015)',title:'Mantle structure and tectonic history of SE Asia',journal:'Tectonophysics, 658. doi:10.1016/j.tecto.2015.07.003',find:'Modelo tomográfico estándar: slab de Halmahera E-dipping continuo.'},
+        {ref:'Di Leo, J. F. et al. (2012)',title:'Mantle flow in regions of complex tectonics: Insights from Indonesia',journal:'Geochemistry, Geophysics, Geosystems, 13(12). doi:10.1029/2012GC004417',find:'Estación TERN (NE Sulawesi): ejes rápidos trench-paralelos compatibles con flujo lateral inducido por el slab de Halmahera.'},
+      ]
+    },
+    debate:[
+      {
+        desc:'La dirección de subducción del slab de Halmahera es E-dipping en el modelo estándar (Molucas → este, bajo el arco de Halmahera). Yuan et al. (2024) documentan que en el segmento norte del slab existe un fragmento detached o con slab edge libre, lo que genera flujo toroidal que rodea el extremo del slab. La presencia de este fragmento implica que la dirección de subducción del slab no es uniforme a lo largo de todo el arco: el segmento central es E-dipping canónico, pero el segmento norte tiene una geometría diferente donde la dirección de hundimiento ya no es puramente hacia el este sino más compleja (componente hacia el sur o hacia abajo lateralmente). En contraste, Hall & Spakman (2015) modelan el slab como continuo y E-dipping a lo largo de toda su longitud.',
+        refs:[
+          {ref:'Yuan, L. et al. (2024)',title:'Mantle flow and deformation anisotropy beneath the Molucca Sea',journal:'Earth and Planetary Science Letters. doi:10.1016/j.epsl.2024.118986',find:'Fragmento detached o slab edge en segmento N de Halmahera; flujo toroidal alrededor del extremo implica que la dirección de hundimiento del slab varía entre el segmento central y el norte.'},
+          {ref:'Hall, R. & Spakman, W. (2015)',title:'Mantle structure and tectonic history of SE Asia',journal:'Tectonophysics, 658. doi:10.1016/j.tecto.2015.07.003',find:'Slab de Halmahera continuo E-dipping; no distingue variación de dirección entre segmentos.'},
+        ]
+      },
+      {
+        desc:'Di Leo et al. (2012) registran en la estación TERN (NE de Sulawesi) ejes rápidos SKS orientados trench-parallel respecto al arco de Halmahera. Si el slab fuera puramente E-dipping y recto, el flujo mantélico esperado sería trench-normal (entrained). El patrón trench-parallel observado es más consistente con flujo de escape lateral alrededor de un slab con terminación libre o con una componente de subducción oblicua — lo que implica una dirección de dip que no es ortogonal al strike del arco, en desacuerdo con el modelo estrictamente E-dipping de Hall & Spakman (2015). Liu et al. (2026), con tomografía S-wave de alta resolución, muestran la isosuperficie 3D de los slabs en Indonesia: los cross-sections N-S a 127°E–131°E y E-O a 4°S–8°S revelan que la anomalía de alta velocidad asociada al slab de Halmahera tiene una geometría tridimensional compleja que no se captura con el simple descriptor "E-dipping", con variaciones laterales de dirección evidentes entre segmentos.',
+        refs:[
+          {ref:'Di Leo, J. F. et al. (2012)',title:'Mantle flow in regions of complex tectonics: Insights from Indonesia',journal:'Geochemistry, Geophysics, Geosystems, 13(12). doi:10.1029/2012GC004417',find:'TERN: fast axes trench-parallel en zona Halmahera; incompatible con subducción E-dipping ortogonal simple.'},
+          {ref:'Liu, H. et al. (2026)',title:'S-wave tomography of the Indonesian subduction system',journal:'JGR: Solid Earth. doi:10.1029/2025JB031000',find:'Fig. 13: isosuperficie 3D — cross-sections N-S y E-O muestran variaciones laterales de dirección en el slab de Halmahera que exceden el descriptor simple E-dipping.'},
+        ]
+      },
+    ]
+  },
   'canon_1919':{sym:'subduction',sub_flip:false}, // Philippine Trench
   'canon_1934':{sym:'subduction',sub_flip:true},  // Banda SZ — coords W→E, dientes al N
 };
