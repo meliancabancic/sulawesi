@@ -4302,7 +4302,10 @@ function fetchGravProfile(coords){
   document.getElementById('grav-modal').style.display='block';
   fetch('/api/gravity/profile',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({coords,n_points:150})})
-  .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+  .then(r=>{
+    if(!r.ok)return r.json().then(j=>{throw new Error('HTTP '+r.status+' — '+(j.detail||''));}).catch(()=>{throw new Error('HTTP '+r.status);});
+    return r.json();
+  })
   .then(d=>{renderGravChart(d);})
   .catch(e=>{
     document.getElementById('grav-info').textContent='Error: '+e.message;

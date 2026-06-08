@@ -25,7 +25,6 @@ def _haversine_km(p1, p2):
 
 
 def _interpolate_line(coords, n):
-    """Interpola n puntos equidistantes a lo largo de una polilínea."""
     segs = []
     total = 0.0
     for i in range(len(coords)-1):
@@ -57,17 +56,18 @@ def gravity_profile(req: ProfileRequest):
     if len(req.coords) < 2:
         raise HTTPException(400, "Se necesitan al menos 2 puntos")
     if not BOUGUER_TIF.exists() or not FREEAIR_TIF.exists():
-        raise HTTPException(503, "TIFFs de gravedad no encontrados en fuentes/")
+        missing = []
+        if not BOUGUER_TIF.exists(): missing.append(BOUGUER_TIF.name)
+        if not FREEAIR_TIF.exists(): missing.append(FREEAIR_TIF.name)
+        raise HTTPException(503, f"TIFFs faltantes en {FUENTES}: {', '.join(missing)}")
 
     try:
         import rasterio
-        from rasterio.sample import sample_gen
-    except ImportError:
-        raise HTTPException(503, "rasterio no disponible")
+    except Exception as e:
+        raise HTTPException(503, f"rasterio no disponible: {type(e).__name__}: {e}")
 
     pts = _interpolate_line(req.coords, min(req.n_points, 200))
 
-    # Distancias acumuladas en km
     dists = [0.0]
     for i in range(1, len(pts)):
         dists.append(dists[-1] + _haversine_km(pts[i-1], pts[i]))
@@ -75,16 +75,13 @@ def gravity_profile(req: ProfileRequest):
     xy = [(p[0], p[1]) for p in pts]
 
     def sample_tif(path):
-        with rasterio.open(path) as src:
-            vals = [v[0] for v in src.sample(xy)]
-        nodata = None
         try:
             with rasterio.open(path) as src:
+                vals = [v[0] for v in src.sample(xy)]
                 nodata = src.nodata
-        except Exception:
-            pass
-        # Reemplazar nodata con None
-        return [None if (nodata is not None and v == nodata) else round(float(v), 2) for v in vals]
+            return [None if (nodata is not None and v == nodata) else round(float(v), 2) for v in vals]
+        except Exception as e:
+            raise HTTPException(500, f"Error leyendo {path.name}: {type(e).__name__}: {e}")
 
     bouguer  = sample_tif(BOUGUER_TIF)
     freeair  = sample_tif(FREEAIR_TIF)
