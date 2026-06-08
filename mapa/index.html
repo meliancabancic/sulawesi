@@ -4225,7 +4225,7 @@ function activateSection(s){
     layerObjs[k].setVisible(true);
     document.querySelectorAll('[id^="chk-'+k+'"]').forEach(c=>{c.classList.add('on');c.textContent='✓';});
     if(k==='seismicity'){
-      document.getElementById('seism-filters').style.display='block';
+      const sf=document.getElementById('seism-filters'); if(sf)sf.style.display='block';
       if(cmtLayer.getSource().getFeatures().length===0){
         fetch('fuentes/cmt_events.json').then(r=>r.json()).then(d=>{cmtLayer.getSource().addFeatures(d.map(e=>new ol.Feature({geometry:new ol.geom.Point(fromLL([e.lo,e.la])),feat_id:'cmt',feat_type:'cmt',cmt_data:e,cmt_ft:e.ft||faultType(e.r1)})));}).catch(()=>{});
         fetch('fuentes/gcmt55_sulawesi.json').then(r=>r.json()).then(d=>{cmtLayer.getSource().addFeatures(d.map(e=>new ol.Feature({geometry:new ol.geom.Point(fromLL([e.lo,e.la])),feat_id:'cmt',feat_type:'cmt',cmt_data:e,cmt_ft:e.ft||faultType(e.r1)})));}).catch(()=>{});
@@ -5941,16 +5941,16 @@ async function saveMergedGeom(feature,geomType){
   }
 }
 
-document.getElementById('mgdraw-finish-btn').addEventListener('click',()=>{
+document.getElementById('mgdraw-finish-btn')?.addEventListener('click',()=>{
   if(mgDrawInter)mgDrawInter.finishDrawing();
 });
-document.getElementById('mgdraw-cancel-btn').addEventListener('click',()=>{
+document.getElementById('mgdraw-cancel-btn')?.addEventListener('click',()=>{
   stopMgDraw();
   canonPreviewSource.clear();
   deactivateMgRefs();
   openMgDrawModal();
 });
-document.getElementById('mgdraw-close').addEventListener('click',()=>{
+document.getElementById('mgdraw-close')?.addEventListener('click',()=>{
   closeMgDrawModal();
   stopMgDraw();
   canonPreviewSource.clear();
