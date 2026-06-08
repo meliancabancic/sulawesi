@@ -5889,12 +5889,16 @@ document.getElementById('mgdraw-cancel-btn').addEventListener('click',()=>{
   deactivateMgRefs();
   openMgDrawModal();
 });
-document.getElementById('mgdraw-close').addEventListener('click',()=>{
-  closeMgDrawModal();
-  stopMgDraw();
-  canonPreviewSource.clear();
-  deactivateMgRefs();
-});
+const closeBtn = document.getElementById('mgdraw-close');
+
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    closeMgDrawModal();
+    stopMgDraw();
+    canonPreviewSource.clear();
+    deactivateMgRefs();
+  });
+}
 
 map.on('pointermove',evt=>{
   const ll=toLL(evt.coordinate);
