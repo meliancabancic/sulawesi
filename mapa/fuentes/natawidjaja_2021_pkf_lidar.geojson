@@ -1,0 +1,316 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Natawidjaja, D. H., Daryono, M. R., Prasetya, G., Udrekh, Liu, P. L.-F., Hananto, N. D., Kongko, W., Triyoso, W., Puji, A. R., Meilano, I., Gunawan, E., Supendi, P., Pamumpuni, A., Irsyam, M., Faizal, L., Hidayati, S., Sapiie, B., Kusuma, M. A., & Tawil, S. (2021). The 2018 Mw 7.5 Palu 'supershear' earthquake ruptures geological fault's multisegment separated by large bends: results from integrating field measurements, LiDAR, swath bathymetry and seismic-reflection data. Geophysical Journal International, 224(2), 985–1002. https://doi.org/10.1093/gji/ggaa498",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "REGIONAL",
+    "region": "Central Sulawesi — Palu-Koro Fault zone",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["fault", "earthquake", "cross_section"],
+    "comprehension_summary": "LiDAR + swath bathymetry + seismic reflection post-2018 earthquake survey confirms the PKF as a mature 4-segment fault (Tanimbaya, Donggala, Palu, Saluki) separated by releasing bends. The Mw 7.5 rupture was supershear (~4.9 km/s), propagating ~180 km from Skm67 to Nkm110, controlled by two large releasing bends (3.5 km Palu Bay; 12 km Palu-Saluki) and a 4.2 km restraining stepover (Donggala-Tanimbaya). Slip: 4–6 m left-lateral onshore (Skm0-Skm21), up to 5 m normal dip-slip at bend (Skm34-35).",
+    "main_conclusions": [
+      "PKF is a mature geological fault (not hidden/secondary) — rupture occurred on mappable fault line including offshore",
+      "4-segment model: Tanimbaya (N offshore) — Donggala — Palu — Saluki (S inland), separated by large releasing bends",
+      "3.5 km width releasing bend at ~Nkm15 (Donggala-Palu junction, Palu Bay) → dominant normal faulting, submarine pull-apart",
+      "12 km width releasing bend at Skm33-Skm45 (Palu-Saluki junction) → large normal fault scarps up to 5 m vertical",
+      "4.2 km restraining stepover at Nkm55-70 (Donggala-Tanimbaya junction) → compressional, potential nucleation zone of 2018 event",
+      "Supershear rupture velocity ~4.9 km/s consistent with high pre-existing stress on Donggala segment",
+      "Submarine fault movement (significant dip-slip component) contributed substantially to tsunami generation",
+      "Previous 1968 Mw 7.4 and 1998 Mw 6.6 events also on PKF (Tanimbaya and Donggala segments respectively)"
+    ],
+    "total_features": 6,
+    "figures_used": ["Fig. 3", "Fig. 4", "Fig. 5", "Fig. 6"],
+    "note_vs_natawidjaja2020": "Este GeoJSON (2021 GJI) complementa natawidjaja_2020_palu_rupture. Mismos 4 segmentos pero con geometría más precisa de LiDAR+bathymetría, traza de ruptura superficial 2018 específica, y perfil sísmico X-Y."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.300, 1.210],
+          [119.600, 0.700],
+          [119.750, 0.400],
+          [119.800, 0.100],
+          [119.820, -0.050]
+        ]
+      },
+      "properties": {
+        "id": "fault_natawidjaja_2021_1",
+        "name": "PKF — Tanimbaya Segment (LiDAR+bathymetry)",
+        "full_name": "Palu-Koro Fault — Segmento Tanimbaya (offshore N) — Natawidjaja et al. 2021",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "natawidjaja_2021_pkf_lidar",
+        "canonical_id": "canon_5",
+        "kinematics": "sinistral",
+        "depth_class": "superficial",
+        "segment": "Tanimbaya",
+        "segment_notes": "Segmento offshore norte. Se extiende desde la junction con NST (Sulawesi Trench) hasta ~Nkm70 (restraining stepover con Donggala). Mapeado en swath bathymetry (TGS data + Baruna Jaya survey). 1998 Mw 6.6 event ocurrió en este segmento.",
+        "km_start_from_palu_beach": "Nkm110",
+        "km_end_from_palu_beach": "Nkm70",
+        "source_apa": "Natawidjaja et al. (2021). GJI 224(2), 985–1002. https://doi.org/10.1093/gji/ggaa498",
+        "source_short": "Natawidjaja et al. (2021)",
+        "paper_finding": "Tanimbaya segment mapped on swath bathymetry; site of 1998 Mw 6.6 earthquake; bounded to south by 4.2 km restraining stepover with Donggala segment",
+        "coord_quality": "approximate",
+        "extraction_notes": "Coordenadas aproximadas desde texto y referencia a fid=209 (natawidjaja_2020). Extremo norte en junction PKF-NST [119.30, 1.21] según GPlates topology. Trazo offshore interpolado entre puntos conocidos.",
+        "conclusions": [
+          {
+            "text": "1998 Mw 6.6 event occurred on Tanimbaya segment just north of Donggala, possibly contributing to stress increase on Donggala segment prior to 2018",
+            "type": "kinematics",
+            "geodyn_implication": "Interacción entre segmentos PKF: ruptura en segmento N puede cargar segmento S — implicancias para evaluación de peligrosidad",
+            "confidence": "medium",
+            "figure_ref": "Fig. 3, text p.998"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.820, -0.050],
+          [119.840, -0.266],
+          [119.855, -0.500],
+          [119.862, -0.630],
+          [119.865, -0.761]
+        ]
+      },
+      "properties": {
+        "id": "fault_natawidjaja_2021_2",
+        "name": "PKF — Donggala Segment (LiDAR+bathymetry)",
+        "full_name": "Palu-Koro Fault — Segmento Donggala — Natawidjaja et al. 2021",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "natawidjaja_2021_pkf_lidar",
+        "canonical_id": "canon_5",
+        "kinematics": "sinistral",
+        "depth_class": "superficial",
+        "segment": "Donggala",
+        "segment_notes": "Zona de transición entre regímenes compresional (N, restraining stepover con Tanimbaya) y extensional (S, releasing bend con Palu). Portrayals both regimes. High asperities due to mixed stress → probable zona de nucleación del evento 2018. 1968 Mw 7.4 ocurrió en este segmento.",
+        "km_start_from_palu_beach": "Nkm70",
+        "km_end_from_palu_beach": "Nkm15",
+        "source_apa": "Natawidjaja et al. (2021). GJI 224(2), 985–1002. https://doi.org/10.1093/gji/ggaa498",
+        "source_short": "Natawidjaja et al. (2021)",
+        "paper_finding": "Donggala segment is transition zone between compressional (N) and extensional (S) regimes; high pre-existing stress due to mixed tectonics; 1968 Mw 7.4 epicenter here; probable rupture nucleation site for 2018",
+        "coord_quality": "approximate",
+        "extraction_notes": "Coordenadas derivadas de posiciones km desde Palu Beach (1 km ≈ 0.009°). Restraining stepover sur (4.2 km wide) en Nkm55-70.",
+        "conclusions": [
+          {
+            "text": "Donggala segment has high asperities from mixed compressional-extensional stress regime, probable nucleation site of 2018 Mw 7.5 supershear rupture",
+            "type": "kinematics",
+            "geodyn_implication": "Los releasing bends como barreras/nucleadores en fallas sinistras de alta velocidad — control geométrico sobre ruptura supershear",
+            "confidence": "high",
+            "figure_ref": "Fig. 3, text p.998"
+          },
+          {
+            "text": "1968 Mw 7.4 earthquake occurred on Donggala segment, likely increasing stress on adjacent segments",
+            "type": "kinematics",
+            "geodyn_implication": "Transferencia de estrés entre segmentos PKF; comportamiento sísmico del sistema segmentado",
+            "confidence": "medium",
+            "figure_ref": "Text p.998"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.865, -0.761],
+          [119.866, -0.800],
+          [119.868, -0.896]
+        ]
+      },
+      "properties": {
+        "id": "fault_natawidjaja_2021_3",
+        "name": "PKF — Palu Segment (LiDAR+bathymetry)",
+        "full_name": "Palu-Koro Fault — Segmento Palu — Natawidjaja et al. 2021",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "natawidjaja_2021_pkf_lidar",
+        "canonical_id": "canon_5",
+        "kinematics": "sinistral",
+        "depth_class": "superficial",
+        "segment": "Palu",
+        "segment_notes": "Segmento Palu Bay (offshore) + borde norte del Valle de Palu. Separado de Donggala por releasing bend de 3.5 km (Nkm15-20, dominado por fallas normales submarinas). Ruptura 2018 NNW-SSE a N-S desde Nkm15 hacia el sur.",
+        "km_start_from_palu_beach": "Nkm15",
+        "km_end_from_palu_beach": "Skm0 (Palu Beach)",
+        "releasing_bend_n": "3.5 km width at Nkm15-20, separates Donggala-Palu, dominated by submarine normal faulting — Palu Pull-Apart Basin genesis",
+        "source_apa": "Natawidjaja et al. (2021). GJI 224(2), 985–1002. https://doi.org/10.1093/gji/ggaa498",
+        "source_short": "Natawidjaja et al. (2021)",
+        "paper_finding": "Palu segment includes the 3.5 km releasing bend in Palu Bay; bifurcates at Nkm10 (Palu River mouth vs. main fault trace); left-lateral slip 4-6 m observed in 2018 rupture",
+        "coord_quality": "approximate",
+        "extraction_notes": "Segmento corto (~15 km). Coordenadas de Palu Beach [119.868, -0.896] bien conocidas.",
+        "conclusions": [
+          {
+            "text": "3.5 km releasing bend (Nkm15-20) in Palu Bay: submarine normal faulting dominated, large dip-slip component contributed significantly to tsunami generation",
+            "type": "kinematics",
+            "geodyn_implication": "Los releasing bends en fallas transformes sublacustres/submarinas son fuentes tsunamigénicas importantes — factor subestimado en modelos anteriores",
+            "confidence": "high",
+            "figure_ref": "Fig. 4, text p.997"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.868, -0.896],
+          [119.870, -0.950],
+          [119.875, -1.050],
+          [119.840, -1.194],
+          [119.820, -1.350],
+          [119.800, -1.499]
+        ]
+      },
+      "properties": {
+        "id": "fault_natawidjaja_2021_4",
+        "name": "PKF — Saluki Segment (LiDAR inland)",
+        "full_name": "Palu-Koro Fault — Segmento Saluki (onshore S) — Natawidjaja et al. 2021",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "natawidjaja_2021_pkf_lidar",
+        "canonical_id": "canon_5",
+        "kinematics": "sinistral",
+        "depth_class": "superficial",
+        "segment": "Saluki",
+        "segment_notes": "Segmento sur, 100% onshore, mapeado con LiDAR. Separado de Palu por releasing bend de 12 km (Skm33-Skm45, dominado por fallas normales con scarps de hasta 5 m). Ruptura 2018 terminó en restraining stepover de 1.5 km a Skm67. Horse-tail splays en el extremo sur.",
+        "km_start_from_palu_beach": "Skm0",
+        "km_end_from_palu_beach": "Skm67",
+        "releasing_bend_s": "12 km width at Skm33-Skm45, normal fault scarps up to 5 m vertical displacement",
+        "rupture_endpoint": "Restraining stepover 1.5 km width at Skm67 — arrested 2018 rupture propagation",
+        "source_apa": "Natawidjaja et al. (2021). GJI 224(2), 985–1002. https://doi.org/10.1093/gji/ggaa498",
+        "source_short": "Natawidjaja et al. (2021)",
+        "paper_finding": "Saluki segment: left-lateral slip 4-6 m (Skm0-Skm21), 12 km releasing bend (Skm33-45) with 5 m normal scarps, rupture arrested at 1.5 km restraining stepover at Skm67",
+        "coord_quality": "approximate",
+        "extraction_notes": "Endpoint calculado: Palu Beach lat=-0.896, Skm67 → lat = -0.896 - 67*0.009 = -1.499. Longitud varía ligeramente al oeste siguiendo la traza N-S a NNW-SSE.",
+        "conclusions": [
+          {
+            "text": "2018 rupture terminated at 1.5 km wide restraining stepover at Skm67 — fault geometry controlled rupture arrest",
+            "type": "kinematics",
+            "geodyn_implication": "Los restraining stepovers controlan el arresto de rupturas en el PKF — longitud máxima de ruptura bounded por la geometría del sistema de fallas",
+            "confidence": "high",
+            "figure_ref": "Fig. 3, Fig. 6, text p.999"
+          },
+          {
+            "text": "Left-lateral slip 4-6 m over Skm0-Skm21, decreasing with distance; normal component increases approaching bends",
+            "type": "slip_rate",
+            "geodyn_implication": "Partición de deformación en el PKF: slip lateral vs. componente normal controlado localmente por la geometría del releasing bend",
+            "confidence": "high",
+            "figure_ref": "Fig. 6b"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.800, -1.499],
+          [119.840, -1.194],
+          [119.868, -0.896],
+          [119.865, -0.761],
+          [119.862, -0.630],
+          [119.855, -0.500],
+          [119.840, -0.266],
+          [119.820, -0.050],
+          [119.800, 0.094]
+        ]
+      },
+      "properties": {
+        "id": "earthquake_natawidjaja_2021_5",
+        "name": "PKF Ruptura 2018 Mw 7.5 — traza LiDAR+bathymetry",
+        "full_name": "Palu-Koro Fault — Traza de ruptura superficial 2018 Mw 7.5 (LiDAR + field + bathymetry)",
+        "category": "earthquake",
+        "layer_type": "fault",
+        "source": "natawidjaja_2021_pkf_lidar",
+        "canonical_id": "canon_5",
+        "depth_class": "superficial",
+        "magnitude": 7.5,
+        "magnitude_type": "Mw",
+        "year": 2018,
+        "depth_km": 10,
+        "fault_type": "S",
+        "rake_deg": -10,
+        "rupture_length_km": 180,
+        "rupture_velocity_kms": 4.9,
+        "rupture_type": "supershear",
+        "slip_max_m": 6.0,
+        "slip_lateral_m": "4-6 m left-lateral (Skm0-Skm21)",
+        "slip_normal_max_m": "5 m at Skm34-35",
+        "km_extent": "Skm67 (S) to Nkm110 (N offshore) — ~177 km total",
+        "source_apa": "Natawidjaja et al. (2021). GJI 224(2), 985–1002. https://doi.org/10.1093/gji/ggaa498",
+        "source_short": "Natawidjaja et al. (2021)",
+        "paper_finding": "2018 Mw 7.5 supershear rupture (~4.9 km/s) on mature PKF, multisegment ~180 km, LiDAR-mapped surface trace; submarine fault movement contributed to tsunami",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza de ruptura derivada combinando posiciones de segmentos. Tipo G (evento sísmico) — no reemplaza la geometría canónica del PKF sino documenta el evento específico.",
+        "conclusions": [
+          {
+            "text": "2018 rupture propagated ~180 km at supershear velocity ~4.9 km/s on mature geological fault, not on hidden fault as previously proposed by InSAR studies",
+            "type": "kinematics",
+            "geodyn_implication": "Confirmación que el PKF maduro es capaz de supershear — implica alta conductividad de ruptura en segmentos rectos; los releasing bends no detienen la propagación supershear",
+            "confidence": "high",
+            "figure_ref": "Fig. 3, Fig. 6"
+          },
+          {
+            "text": "Submarine fault movement with significant dip-slip component at Palu Bay releasing bend contributed substantially to tsunami generation — not solely submarine landslides",
+            "type": "kinematics",
+            "geodyn_implication": "Tsunamis asociados a fallas transformes deben considerar la componente de dip-slip en releasing bends, no solo la cosismicidad de landslides submarinos",
+            "confidence": "high",
+            "figure_ref": "Fig. 4, text p.997-998"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.760, -0.720],
+          [119.868, -0.720],
+          [119.980, -0.720]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_natawidjaja_2021_6",
+        "name": "Perfil X-Y — Sísmica reflexión Palu Bay",
+        "full_name": "Cross-section X-Y — Sparker seismic reflection across Palu Bay (Natawidjaja et al. 2021)",
+        "category": "cross_section",
+        "layer_type": "structure",
+        "source": "natawidjaja_2021_pkf_lidar",
+        "depth_class": "cortical",
+        "section_label": "X-Y",
+        "section_type": "seismic_reflection",
+        "depth_range_km": [0, 2],
+        "orientation": "W-E across Palu Bay",
+        "image_file": null,
+        "image_path": null,
+        "key_features_in_section": ["PKF principal fault zone", "pull-apart graben geometry", "normal fault network", "Palu Bay sedimentary fill"],
+        "seismic_profiles_used": ["PAL22-12", "PAL22-04", "PAL23-01", "PAL23-03"],
+        "velocity_assumption_ms": 1000,
+        "source_apa": "Natawidjaja et al. (2021). GJI 224(2), 985–1002. https://doi.org/10.1093/gji/ggaa498",
+        "source_short": "Natawidjaja et al. (2021)",
+        "paper_finding": "Sparker (single channel) seismic profiles across Palu Bay show sharp main fault boundary, wide normal fault graben, principal fault zone with deformed plateau block, and broad extensional fracture zone on east side",
+        "coord_quality": "approximate",
+        "extraction_notes": "Perfil E-W a latitud aproximada de Palu Bay central (~0.72°S). Longitud estimada de costa a costa de la bahía. La traza exacta en Fig. 5a (index map) no accesible sin ver la figura directamente.",
+        "conclusions": [
+          {
+            "text": "Seismic profiles confirm Palu Bay is a pull-apart basin controlled by PKF; principal fault zone shows sharp boundary with deformed plateau block; broad extensional fracture zone on east margin",
+            "type": "genesis",
+            "geodyn_implication": "El releasing bend de 3.5 km genera una cuenca pull-apart activa — la batimetría y la sísmica confirman extensión activa en el contexto de una falla sinistral",
+            "confidence": "high",
+            "figure_ref": "Fig. 5"
+          }
+        ]
+      }
+    }
+  ]
+}

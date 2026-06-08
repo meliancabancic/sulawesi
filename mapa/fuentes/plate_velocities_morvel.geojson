@@ -1,0 +1,220 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "description": "Velocidades de placa relativas a Sundaland \u2014 NNR-MORVEL56 (DeMets et al. 2010)",
+    "frame": "Sundaland",
+    "reference": "DeMets, C., Gordon, R.G., Argus, D.F. (2010). Geophysical Journal International, 181, 1-80."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127,
+          -9
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "AU",
+        "pv_label": "Indo-Australian \u2014 Timor",
+        "pv_name": "Indo-Australian",
+        "pv_ve": 21.8,
+        "pv_vn": 68.5,
+        "pv_mag": 71.9,
+        "pv_az": 17.7,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124,
+          -6
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "AU",
+        "pv_label": "Indo-Australian \u2014 Banda Sea",
+        "pv_name": "Indo-Australian",
+        "pv_ve": 21.7,
+        "pv_vn": 67.8,
+        "pv_mag": 71.2,
+        "pv_az": 17.7,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120,
+          -9
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "AU",
+        "pv_label": "Indo-Australian \u2014 Flores",
+        "pv_name": "Indo-Australian",
+        "pv_ve": 23.1,
+        "pv_vn": 66.6,
+        "pv_mag": 70.5,
+        "pv_az": 19.1,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115,
+          3
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "EU",
+        "pv_label": "Sundaland \u2014 Borneo",
+        "pv_name": "Sundaland",
+        "pv_ve": 0.0,
+        "pv_vn": 0.0,
+        "pv_mag": 0.0,
+        "pv_az": 0,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115,
+          -3
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "EU",
+        "pv_label": "Sundaland \u2014 W Sulawesi",
+        "pv_name": "Sundaland",
+        "pv_ve": 0.0,
+        "pv_vn": 0.0,
+        "pv_mag": 0.0,
+        "pv_az": 0,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140,
+          6
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "PA",
+        "pv_label": "Pacific \u2014 W Pacific",
+        "pv_name": "Pacific",
+        "pv_ve": -89.6,
+        "pv_vn": 27.7,
+        "pv_mag": 93.8,
+        "pv_az": 287.2,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128,
+          7
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "PS",
+        "pv_label": "Philippine Sea \u2014 Mindanao",
+        "pv_name": "Philippine Sea",
+        "pv_ve": -33.3,
+        "pv_vn": 81.4,
+        "pv_mag": 87.9,
+        "pv_az": 337.8,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140,
+          1
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "CA",
+        "pv_label": "Caroline \u2014 E Sulawesi",
+        "pv_name": "Caroline",
+        "pv_ve": 4.1,
+        "pv_vn": 6.8,
+        "pv_mag": 7.9,
+        "pv_az": 31.1,
+        "pv_ref": "NNR-MORVEL56 relativo a Sundaland \u2014 DeMets et al. (2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116,
+          3
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "EU",
+        "pv_label": "Sundaland \u2014 N Borneo",
+        "pv_name": "Sundaland",
+        "pv_ve": 0,
+        "pv_vn": 0,
+        "pv_mag": 0,
+        "pv_az": 0,
+        "pv_ref": "Referencia \u2014 Sundaland fijo en este marco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116,
+          -2
+        ]
+      },
+      "properties": {
+        "feat_type": "plate_vel",
+        "pv_plate": "EU",
+        "pv_label": "Sundaland \u2014 W Sulawesi",
+        "pv_name": "Sundaland",
+        "pv_ve": 0,
+        "pv_vn": 0,
+        "pv_mag": 0,
+        "pv_az": 0,
+        "pv_ref": "Referencia \u2014 Sundaland fijo en este marco"
+      }
+    }
+  ]
+}

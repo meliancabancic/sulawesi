@@ -1,0 +1,250 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Godang, S., Saputro, S. P., Li, H., Satyana, A. H., & Srichan, W. (2025). Geochemistry of the Adang Volcanics in Western Sulawesi: Unveiling the tectonic evolution of the opening of the Makassar Strait. Solid Earth Sciences, 10, 100228. https://doi.org/10.1016/j.sesci.2025.100228",
+    "extraction_date": "2026-05-18",
+    "extractor": "Claude paper-extractor v3",
+    "region": "Western Sulawesi / Makassar Strait, Indonesia",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": [
+      "volcanic_arc",
+      "basin",
+      "geophysical_point"
+    ],
+    "custom_categories": {
+      "volcanic_complex": "Complejo volcánico poligonal con edad, mineralogía y geoquímica específicas; subtype dentro de volcanic_arc"
+    },
+    "figures_used": [
+      "Fig. 1A",
+      "Fig. 1B",
+      "Fig. 13"
+    ],
+    "comprehension_summary": "Estudio geoquímico (XRF + ICP-MS) de 12 drill cores del Adang Volcanic Complex (Mamuju, Western Sulawesi, ~820 km², K/Ar: 5.4–2.4 Ma). Demuestra que el magmatismo alcalino ultra-potásico (leucita >60%) deriva del SCLM enriquecido por extensión continental (rift inicial), NO por subducción ni rifting maduro con pluma. Esto implica que el Estrecho de Makassar fue un rift continental fallido sin spreading oceánico.",
+    "main_conclusions": [
+      "Adang Volcanics = extensión continental (rift inicial), fuente SCLM enriquecido, NO subducción ni pluma — [volcanic_complex_godang2025_01]",
+      "Makassar Strait = rift continental fallido Paleógeno-Neógeno Temprano, sin corteza oceánica — [basin_godang2025_01]",
+      "Magmatismo activo hasta Mioceno Tardío (5.4–2.4 Ma) en el margen oriental del Makassar — [geophysical_point_godang2025_01]"
+    ],
+    "alert_discrimination": "⚠️ Los autores reconocen explícitamente que la discriminación geoquímica continental extension vs. arco alcalino profundo es difícil; faltan datos isotópicos (Sr, Nd, Pb) para resolver la ambigüedad. La interpretación de extensión continental es la más parsimoniosa pero no es definitiva solo con geoquímica de elementos mayores y trazas.",
+    "alert_coordinates": "⚠️ COORD_QUALITY=approximate para todas las features: Fig. 1B está en UTM Zone 50S y pyproj no pudo convertir correctamente. Las coordenadas WGS84 fueron estimadas usando Mamuju city (118.89°E, 2.68°S) como referencia geográfica. Precisión estimada ±5–10 km. Para producción, verificar contra el Mapa Geológico de Mamuju (Ratman & Atmawinata 1993)."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.93,
+              -2.82
+            ],
+            [
+              119.27,
+              -2.82
+            ],
+            [
+              119.27,
+              -2.48
+            ],
+            [
+              118.93,
+              -2.48
+            ],
+            [
+              118.93,
+              -2.82
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "volcanic_complex_godang2025_01",
+        "name": "Adang Volcanic Complex — extensión continental Mioceno",
+        "full_name": "Adang Volcanic Complexes (Tma) — Mamuju Regency, Western Sulawesi. Rocas alcalinas ultra-potásicas (leucita >60%, diópsido, flogopita) de ~820 km², Mioceno Medio-Tardío (K/Ar: 5.4–2.4 Ma). Producto de extensión continental (rift inicial) con fusión parcial de SCLM enriquecido; NO relacionado con subducción ni rifting maduro con pluma mantélica (Godang et al. 2025, Fig. 1B)",
+        "category": "volcanic_arc",
+        "source_apa": "Godang, S., Saputro, S. P., Li, H., Satyana, A. H., & Srichan, W. (2025). Geochemistry of the Adang Volcanics in Western Sulawesi: Unveiling the tectonic evolution of the opening of the Makassar Strait. Solid Earth Sciences, 10, 100228. https://doi.org/10.1016/j.sesci.2025.100228",
+        "source_short": "Godang et al. (2025)",
+        "paper_finding": "12 muestras de drill core con SiO₂=48.8–49.9%, K₂O=6.82–9.41%, Nb/Y=0.92–1.25 (>0.6561, alcalino), La/Yb=43.95–49.56 (LREE enriquecido), Nb/Zr>0.0627, Th/Nb>0.67, Nb/La<0.6 (fuente litosférica); δTa=0.36–0.41 (anomalía Ta negativa baja). Fuente: SCLM enriquecido garnet-DMM. Tectónica: extensión continental (rift inicial), NO subducción",
+        "conclusions": [
+          {
+            "text": "Los Adang Volcanics son magmas alcalinos ultra-potásicos generados por descompresión melting durante extensión continental (rift inicial), derivados de fusión parcial (<0.1% volumen) del SCLM enriquecido (garnet-DMM), sin participación de manto astenosférico; la discriminación geoquímica (Nb/La<0.6, δTa=0.36–0.41, Nb/Zr>0.0627, La/Yb>20) los ubica en extensión continental en contraste con rifts maduros (Guangxi, Piton de la Fournaise) que tienen fuente astenosférica",
+            "type": "genesis",
+            "geodyn_implication": "La presencia de extensión continental con fuente litosférica implica que el Estrecho de Makassar no llegó a la etapa de rifting maduro con ascenso astenosférico; el magmatismo Adang registra la fase final de la actividad extensional (Mioceno Tardío) de un rift que falló en generar corteza oceánica",
+            "confidence": "high",
+            "figure_ref": "Figs. 7-10"
+          },
+          {
+            "text": "La geoquímica de los Adang Volcanics es incompatible con un ambiente de arco de subducción o back-arc: la firma alta TiO₂ relativo a Al₂O₃ [TiO₂>(-1.161+0.1935×Al₂O₃)] descarta subducción; la baja anomalía δTa (0.36–0.41 vs >0.8 para interacción astenosfera-litosfera) descarta rifting maduro con pluma",
+            "type": "tectonic_setting",
+            "geodyn_implication": "Contrasta con la hipótesis previa de Hamilton (1979) y Hall (1996) de que el Makassar generó un MOR y doble subducción; los datos geoquímicos apoyan la interpretación de Satyana et al. (2012) y Satyana (2015) de rift continental fallido basada en perfiles sísmicos",
+            "confidence": "high",
+            "figure_ref": "Fig. 7, Fig. 13"
+          },
+          {
+            "text": "La edad K/Ar de los Adang Volcanics (5.4–2.4 Ma, Mioceno Medio-Tardío) indica que el magmatismo relacionado a la extensión del Makassar continuó activo hasta el Mioceno Tardío en el margen oriental, aunque la apertura principal del estrecho fue en el Paleógeno-Neógeno Temprano",
+            "type": "age",
+            "geodyn_implication": "La continuidad del magmatismo extensional en el Mioceno Tardío es contemporánea con la colisión Banggai-Sula (~5-6 Ma) y el inicio de la subducción del Mar de Célebes bajo el Brazo Norte de Sulawesi (~5 Ma), sugiriendo que las deformaciones del Mioceno Tardío en el Este de Sulawesi tuvieron repercusión en el margen occidental",
+            "confidence": "medium",
+            "figure_ref": "Fig. 1B, texto Sec. 2"
+          },
+          {
+            "text": "⚠️ La discriminación geoquímica entre extensión continental (interpretación de este estudio) y arco alcalino de subducción profunda (e.g., Provincia Romana, Italia) es intrínsecamente difícil porque ambos ambientes derivan del mismo SCLM enriquecido y tienen composiciones similares de trazas y REE",
+            "type": "other",
+            "geodyn_implication": "La interpretación de extensión continental es la más parsimoniosa dado el contexto geológico regional (ausencia de zona de subducción documentada hacia el este del Makassar en el Mioceno), pero no puede excluirse completamente sin datos isotópicos (Sr, Nd, Pb) o evidencia de campo adicional",
+            "confidence": "low",
+            "figure_ref": "Sec. 4.2, Sec. 5.1"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono aproximado de ~820 km² georeferenciado de Fig. 1B (mapa en UTM Zone 50S) usando Mamuju city (~118.89°E, 2.68°S) como referencia geográfica. Las coordenadas UTM del mapa no pudieron convertirse automáticamente; posición estimada con precisión de ±10 km. Para coordenadas exactas consultar Ratman & Atmawinata (1993) Geological Map of the Mamuju Quadrangle.",
+        "age_ma_min": 2.4,
+        "age_ma_max": 5.4,
+        "age_method": "K/Ar (Bergman et al. 1996)",
+        "age_period": "Middle to Late Miocene",
+        "area_km2": 820,
+        "rock_types": [
+          "leucite-bearing trachytic tuff",
+          "agglomerate volcanic breccia",
+          "lavas",
+          "peralkaline dykes",
+          "leucitic intrusions",
+          "lamprophyres to lamproites"
+        ],
+        "mineralogy": {
+          "leucite_pct": ">60",
+          "diopside_pct": "~25",
+          "phlogopite_pct": "~15"
+        },
+        "geochemistry": {
+          "SiO2_pct": "48.80-49.92",
+          "K2O_pct": "6.82-9.41",
+          "K2O_Na2O": "6.47-15.43",
+          "TiO2_pct": "1.45-1.52",
+          "Nb_Y": "0.92-1.25",
+          "La_Yb": "43.95-49.56",
+          "Nb_Zr": ">0.0627",
+          "Th_Nb": ">0.67",
+          "Nb_La": "<0.6",
+          "delta_Ta": "0.36-0.41",
+          "delta_Nb": "0.11-0.18",
+          "delta_Eu": "0.68-0.58"
+        },
+        "mantle_source": "enriched SCLM (garnet-DMM), NO asthenospheric",
+        "tectonic_setting_interpreted": "continental_extension_initial_rift",
+        "subtype": "volcanic_complex",
+        "marine_environment": true,
+        "note_pillow_lavas": "Presencia de pillow lavas e intercalaciones de caliza cristalina confirman ambiente marino durante la deposición"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.5,
+              -7.0
+            ],
+            [
+              118.5,
+              -7.0
+            ],
+            [
+              119.5,
+              -5.0
+            ],
+            [
+              119.0,
+              0.0
+            ],
+            [
+              117.5,
+              1.5
+            ],
+            [
+              115.5,
+              1.5
+            ],
+            [
+              114.5,
+              -1.0
+            ],
+            [
+              115.5,
+              -5.0
+            ],
+            [
+              116.5,
+              -7.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "basin_godang2025_01",
+        "name": "Makassar Strait Basin — rift continental fallido Paleógeno",
+        "full_name": "Cuenca del Estrecho de Makassar — rift continental fallido que separó la región oriental del Sundaland (Sulawesi Occidental) de Borneo/Kalimantan durante el Paleógeno al Neógeno Temprano. Sin spreading oceánico según geoquímica de los Adang Volcanics; basamento continental con half-grabens, grabens y horsts (Godang et al. 2025; Satyana et al. 2012)",
+        "category": "basin",
+        "source_apa": "Godang, S., Saputro, S. P., Li, H., Satyana, A. H., & Srichan, W. (2025). Geochemistry of the Adang Volcanics in Western Sulawesi: Unveiling the tectonic evolution of the opening of the Makassar Strait. Solid Earth Sciences, 10, 100228. https://doi.org/10.1016/j.sesci.2025.100228",
+        "source_short": "Godang et al. (2025)",
+        "paper_finding": "La geoquímica de los Adang Volcanics (SCLM enriquecido, sin firma astenosférica) es incompatible con spreading oceánico en el Makassar; el rift abrió durante el Paleógeno-Neógeno Temprano sin generar corteza oceánica. El basamento del North Makassar es continental (datos de pozos: lacustrine source rocks, Nur'Aini et al. 2005)",
+        "conclusions": [
+          {
+            "text": "El Estrecho de Makassar se formó por extensión continental (rift inicial) durante el Paleógeno al Neógeno Temprano sin generar spreading oceánico; el magmatismo de los Adang Volcanics (Mioceno Medio-Tardío) registra la fase final de esta extensión derivada del SCLM, descartando tanto MOR como rifting maduro con pluma mantélica",
+            "type": "genesis",
+            "geodyn_implication": "Contrasta con Hamilton (1979) y Hall (1996) que propusieron MOR + doble subducción; apoya el modelo de rift continental fallido de Satyana et al. (2012) y Satyana (2015). Las estructuras de semi-graben, graben y horst en el basamento del Makassar Norte y Sur son consistentes con corteza continental adelgazada, no oceánica",
+            "confidence": "high",
+            "figure_ref": "Fig. 13, Sec. 5.3"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono del Estrecho de Makassar georeferenciado de Fig. 1A (mapa regional) y conocimiento geográfico. Los límites exactos dependen de la definición del rift — aquí se usa el polígono del cuerpo de agua principal.",
+        "basin_type": "failed_continental_rift",
+        "rift_onset_age": "Paleogene",
+        "rift_cessation_age": "Early Neogene",
+        "basement_type": "thinned_continental",
+        "opening_rate_note": "Apertura más rápida en North Makassar vs South Makassar (Satyana et al. 2012)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.05,
+          -2.72
+        ]
+      },
+      "properties": {
+        "id": "geophysical_point_godang2025_01",
+        "name": "Adang Volcanics drill core — 12 muestras nuevas Mamuju",
+        "full_name": "Localización del drill core de donde provienen las 12 nuevas muestras del Adang Volcanic Complex analizadas en este estudio (Godang et al. 2025, Fig. 1B, círculo rojo). Muestras frescas sin alteración, textura trachítica, leucita-rich",
+        "category": "geophysical_point",
+        "source_apa": "Godang, S., Saputro, S. P., Li, H., Satyana, A. H., & Srichan, W. (2025). Geochemistry of the Adang Volcanics in Western Sulawesi: Unveiling the tectonic evolution of the opening of the Makassar Strait. Solid Earth Sciences, 10, 100228. https://doi.org/10.1016/j.sesci.2025.100228",
+        "source_short": "Godang et al. (2025)",
+        "paper_finding": "12 muestras de drill core con análisis XRF + ICP-MS completos; leucita >60%, K/Ar ages 5.4–2.4 Ma; geoquímica define extensión continental SCLM",
+        "conclusions": [
+          {
+            "text": "Las 12 muestras de drill core del Adang Volcanic Complex exhiben características geoquímicas diagnósticas de extensión continental con fuente SCLM: high K₂O (6.82–9.41%), high K₂O/Na₂O (6.47–15.43), high Nb/Y (0.92–1.25), high La/Yb (43.95–49.56), low Nb/La (<0.6), low δTa (0.36–0.41)",
+            "type": "genesis",
+            "geodyn_implication": "Estas 12 muestras proveen la primera caracterización geoquímica integral (XRF + ICP-MS) de drill core fresco del complejo, mejorando la robustez respecto a estudios previos de afloramiento",
+            "confidence": "high",
+            "figure_ref": "Fig. 1B, Appendix A"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Posición estimada del círculo rojo en Fig. 1B (mapa UTM Zone 50S), convertida a WGS84 usando Mamuju city como referencia. Precisión estimada ±5 km.",
+        "n_samples": 12,
+        "sample_type": "drill_core",
+        "analysis": [
+          "XRF",
+          "ICP-MS",
+          "petrography"
+        ],
+        "preservation": "fresh, unaltered"
+      }
+    }
+  ]
+}

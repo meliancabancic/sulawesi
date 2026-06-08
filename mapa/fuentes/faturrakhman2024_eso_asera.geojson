@@ -1,0 +1,204 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Faturrakhman, M. L., Novita, D., Cita, A., Rohman, & Triguri, I. (2024). Tectonic Geomorphology of Ultramafic Complex in Asera, North Konawe Regency. Jurnal Geologi dan Sumberdaya Mineral, 25(3), 161-168. https://doi.org/10.33332/jgsm.geologi.v25i3.853",
+    "extraction_date": "2026-05-18",
+    "extractor": "Claude paper-extractor v3",
+    "region": "Asera, North Konawe Regency, SE Sulawesi (Brazo Sureste)",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": [
+      "ophiolite",
+      "fault"
+    ],
+    "figures_used": [
+      "Fig. 1",
+      "Fig. 2"
+    ],
+    "comprehension_summary": "Estudio morfométrico (71 sub-cuencas, índices Smf+Bs+Dd→IAT) del complejo ultramáfico de Asera como parte del East Sulawesi Ophiolite (ESO). IAT predominantemente clase 3 (64% del área = actividad tectónica moderada). La Falla Lasolo controla la actividad neotectónica en el sector sur. No hay correlación entre densidad de fracturas y IAT — las fracturas son de actividad más antigua. Valor principal para el mapa: localiza el ESO en el Brazo Sureste como entidad ofiolítica Cretácica con actividad neotectónica documentada.",
+    "main_conclusions": [
+      "ESO Asera: actividad neotectónica moderada predominante (IAT clase 3, 64%); Falla Lasolo como control tectónico sur — [ophiolite_faturrakhman2024_01]",
+      "Sin correlación densidad de fracturas ↔ IAT: fracturas de actividad tectónica más antigua → implicancia para CCS — [ophiolite_faturrakhman2024_01]",
+      "Meteorización 'continua' del complejo ultramáfico → potencial de laterita niquelífera — [ophiolite_faturrakhman2024_01]",
+      "Falla Lasolo strike-slip: principal control neotectónico del sector sur — [fault_faturrakhman2024_01]"
+    ],
+    "alert_fault_coords": "⚠️ Las trazas de las fallas (Lasolo, Matarombue, Lawehopo) tienen coord_quality=approximate. El paper cita Soehaimi et al. (2021) como fuente original de las fallas — para trazas precisas incorporar ese dataset directamente al mapa.",
+    "paper_scope_note": "Paper de alcance local (Brazo Sureste) y metodológico; no aporta nuevas interpretaciones tectónicas regionales. Su aporte principal al mapa es la caracterización del ESO en el Brazo Sureste y la documentación de la Falla Lasolo como falla neotectónica activa."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              122.042,
+              -3.292
+            ],
+            [
+              122.208,
+              -3.292
+            ],
+            [
+              122.208,
+              -3.458
+            ],
+            [
+              122.042,
+              -3.458
+            ],
+            [
+              122.042,
+              -3.292
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ophiolite_faturrakhman2024_01",
+        "name": "ESO Asera — complejo ultramáfico Cretácico Konawe Utara",
+        "full_name": "East Sulawesi Ophiolite (ESO) segmento Asera — Complejo Ultramáfico Cretácico (Ku), compuesto por peridotita, dunita, piroxenita y peridotita serpentinizada; parte del ESO que se extiende desde la Bahía de Gorontalo a través del Brazo Este hacia el Brazo Sureste. Emplazado durante la colisión SE Asia-Australia. Actividad tectónica neotectónica documentada por índices morfométricos (IAT predominantemente clase 3 = actividad moderada) (Faturrakhman et al. 2024, Fig. 2)",
+        "category": "ophiolite",
+        "source_apa": "Faturrakhman, M. L., Novita, D., Cita, A., Rohman, & Triguri, I. (2024). Tectonic Geomorphology of Ultramafic Complex in Asera, North Konawe Regency. Jurnal Geologi dan Sumberdaya Mineral, 25(3), 161-168. https://doi.org/10.33332/jgsm.geologi.v25i3.853",
+        "source_short": "Faturrakhman et al. (2024)",
+        "paper_finding": "71 sub-cuencas analizadas con IAT: clase 1 (2%), clase 2 (28%), clase 3 (64%), clase 4 (6%); IAT 1.5–2.6. Morfología: colinas de falla (faulted hills) con pendientes 20°–45°, valles en V, facetas triangulares en el Cerro Hialu hacia el oeste. Densidad de fracturas: 32–278 juntas/m². Meteorización continua de peridotita y peridotita serpentinizada (Jahidin et al. 2020)",
+        "conclusions": [
+          {
+            "text": "El complejo ultramáfico de Asera muestra actividad tectónica neotectónica moderada predominante (IAT clase 3 en 64% del área), con balance entre actividad tectónica y meteorización intensa; la Falla Lasolo strike-slip es el principal control de la actividad tectónica en el sector sur donde se observan frentes de montaña rectos (IAT clase 2)",
+            "type": "kinematics",
+            "geodyn_implication": "La actividad neotectónica moderada del ESO en Asera es consistente con el régimen extensional del Brazo Sureste de Sulawesi posterior a la colisión Banggai-Sula; la Falla Lasolo como falla strike-slip activa en este sector es relevante para la evaluación del riesgo sísmico en la región minera",
+            "confidence": "medium",
+            "figure_ref": "Fig. 3D, Fig. 1"
+          },
+          {
+            "text": "No existe correlación clara entre la densidad de fracturas medida en campo (32–278 juntas/m²) y la clase IAT neotectónica, porque las fracturas son de actividad tectónica más antigua (pre-Neógeno Superior); esto limita el uso de índices geomorfológicos como proxy de fracturamiento para exploración de CCS en rocas ultramáficas",
+            "type": "other",
+            "geodyn_implication": "Las ultramafitas del ESO tienen historia de deformación polifásica; el fracturamiento heredado (pre-Neógeno) es más relevante para CCS que la actividad neotectónica; para exploración de nickel laterítico la distribución de la meteorización sí correlaciona con la geomorfología",
+            "confidence": "high",
+            "figure_ref": "Sec. Discusión, Fig. 3A-D"
+          },
+          {
+            "text": "La meteorización de las rocas ultramáficas (peridotita, dunita, piroxenita) en este complejo está en estado 'continuo' según susceptibilidad magnética; el efecto de la meteorización domina la forma de las sub-cuencas (predominio circular) y la densidad de drenaje",
+            "type": "other",
+            "geodyn_implication": "La meteorización activa del ESO genera el potencial de depósitos de laterita niquelífera; la susceptibilidad de olivino y piroxeno a la meteorización (serie de disolución de Goldich) explica la forma circular de las sub-cuencas a pesar de la actividad tectónica moderada",
+            "confidence": "high",
+            "figure_ref": "Fig. 3B, Fig. 3C"
+          }
+        ],
+        "coord_quality": "accurate",
+        "extraction_notes": "Polígono georeferenciado de Fig. 2 (Mapa Regional de Asera) que muestra coordenadas explícitas: 122°2'30\"E–122°12'30\"E, 3°17'30\"S–3°27'30\"S. Convertidas a decimales. El polígono cubre toda el área de estudio incluyendo las unidades Ku, Kud, Kup, Kupy, Kusp más las formaciones encajonantes (Km, Nmpco, Qa).",
+        "age": "Cretaceous",
+        "rock_types": [
+          "peridotite",
+          "dunite",
+          "pyroxenite",
+          "serpentinized peridotite"
+        ],
+        "units": {
+          "Ku": "Undifferentiated Ultramafic Complex",
+          "Kud": "Dunite",
+          "Kup": "Peridotite",
+          "Kupy": "Pyroxenite",
+          "Kusp": "Serpentinized Peridotite",
+          "Km": "Matano Formation (Upper Cretaceous — calcilutite, chert, shale)",
+          "Nmpco": "Pandua Formation / Celebes Molasse (Upper Miocene — conglomerate, mudstone)"
+        },
+        "iat_distribution": {
+          "class_1_very_high": "2% of area",
+          "class_2_high": "28% of area",
+          "class_3_moderate": "64% of area",
+          "class_4_low": "6% of area"
+        },
+        "joint_density_range": "32-278 joints/m2",
+        "weathering_level": "continuous (Jahidin et al. 2020)",
+        "economic_potential": [
+          "nickel_laterite",
+          "carbon_capture_storage"
+        ],
+        "eso_extent_note": "El ESO se extiende desde la Bahía de Gorontalo a través del Brazo Este e ingresa al Brazo Sureste (Kadarusman et al. 2004; Surono 2010)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5,
+            -3.8
+          ],
+          [
+            122.0,
+            -3.7
+          ],
+          [
+            122.5,
+            -3.6
+          ],
+          [
+            123.0,
+            -3.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_faturrakhman2024_01",
+        "name": "Lasolo Fault — strike-slip control neotectónico Konawe Utara",
+        "full_name": "Falla Lasolo — falla strike-slip mayor en el Konawe Utara (Brazo Sureste de Sulawesi); identificada como principal control de los frentes de montaña rectos en el sector sur del complejo ultramáfico de Asera; actividad neotectónica documentada por índices morfométricos (IAT clase 2 en el sector sur) (Faturrakhman et al. 2024, Fig. 1; fuente original: Soehaimi et al. 2021)",
+        "category": "fault",
+        "source_apa": "Faturrakhman, M. L., Novita, D., Cita, A., Rohman, & Triguri, I. (2024). Tectonic Geomorphology of Ultramafic Complex in Asera, North Konawe Regency. Jurnal Geologi dan Sumberdaya Mineral, 25(3), 161-168. https://doi.org/10.33332/jgsm.geologi.v25i3.853",
+        "source_short": "Faturrakhman et al. (2024)",
+        "paper_finding": "Los frentes de montaña rectos (Smf clase 1–2) en el sector sur del área de estudio, cerca del borde entre el Complejo Ultramáfico Cretácico (Ku) y el depósito aluvial (Qa), son atribuidos al control de la Falla Lasolo strike-slip; densidad de fracturas en ese sector: 35–278 juntas/m²",
+        "conclusions": [
+          {
+            "text": "La Falla Lasolo strike-slip es el principal factor de control de la actividad tectónica neotectónica en el sector sur del complejo ultramáfico de Asera, generando frentes de montaña rectos (IAT clase 2 = alta actividad) cerca del borde Ku/Qa",
+            "type": "kinematics",
+            "geodyn_implication": "La actividad neotectónica de la Falla Lasolo en el Brazo Sureste de Sulawesi es consistente con el régimen de deformación activo del sistema de fallas que controla la morfología del brazo sureste; esta falla puede estar relacionada con el sistema de fallas de Sulawesi Oriental que acumoda el movimiento de los microbloques post-colisión",
+            "confidence": "medium",
+            "figure_ref": "Fig. 1, Sec. Discusión"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza georeferenciada aproximadamente de Fig. 1 (mapa de localización con sistema de fallas, fuente: Soehaimi et al. 2021). La Falla Lasolo no tiene coordenadas explícitas en este paper; posición estimada visualmente. Para coordenadas precisas consultar Soehaimi et al. (2021) Mapa de Fallas Activas de Indonesia 1:5.000.000.",
+        "fault_type": "strike_slip",
+        "neotectonic_activity": true,
+        "iat_class_associated": 2,
+        "data_source_original": "Soehaimi et al. (2021) Active Faults Map of Indonesia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.8,
+            -3.3
+          ],
+          [
+            122.3,
+            -3.5
+          ],
+          [
+            122.8,
+            -3.7
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_faturrakhman2024_02",
+        "name": "Matarombue–Lawehopo Faults — sistema de fallas Konawe Utara",
+        "full_name": "Sistema de fallas Matarombue y Lawehopo — fallas mayores identificadas en el área de Konawe Utara (Brazo Sureste de Sulawesi) que forman parte del contexto tectónico del complejo ultramáfico de Asera (Faturrakhman et al. 2024, Fig. 1; fuente original: Soehaimi et al. 2021)",
+        "category": "fault",
+        "source_apa": "Faturrakhman, M. L., Novita, D., Cita, A., Rohman, & Triguri, I. (2024). Tectonic Geomorphology of Ultramafic Complex in Asera, North Konawe Regency. Jurnal Geologi dan Sumberdaya Mineral, 25(3), 161-168. https://doi.org/10.33332/jgsm.geologi.v25i3.853",
+        "source_short": "Faturrakhman et al. (2024)",
+        "paper_finding": "Las fallas Matarombue y Lawehopo son visibles en el mapa de localización (Fig. 1) como fallas mayores en el entorno del área de estudio; no se discuten en detalle en el texto del paper",
+        "conclusions": [],
+        "coord_quality": "approximate",
+        "extraction_notes": "⚠️ Coordenadas muy aproximadas — estas fallas están apenas mencionadas visualmente en Fig. 1 del paper. No tienen descripción cinemática ni datos cuantitativos en este estudio. Para información detallada usar Soehaimi et al. (2021) directamente. La traza aquí representada es una estimación de la geometría visible en Fig. 1.",
+        "fault_type": "unknown",
+        "data_source_original": "Soehaimi et al. (2021) Active Faults Map of Indonesia"
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Surono, M. (2012). Tectonostratigraphy of the eastern part of Sulawesi, Indonesia: in relation to the terrane origins. Jurnal Sumber Daya Geologi, 22(4), 197–210.",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "REGIONAL",
+    "region": "East and Southeast Arms Sulawesi — terrane structure",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["ophiolite", "terrane", "structure"],
+    "comprehension_summary": "Tectonostratigraphic synthesis of Eastern Sulawesi identifying 3 provinces: (1) Western Volcanic Arc (W Sulawesi), (2) Eastern Sulawesi Ophiolite Belt (ESO — mid-oceanic ridge origin, ~17-24°S palaeolatitude, formed Late Cretaceous ~93-79 Ma, obducted onto continental terranes Early Oligocene-Middle Miocene ~33-26 Ma), (3) Continental fragments from Australian Continent (SE Arm/East Arm: Meluhu Fm Triassic ~20°S, similar to Kubor Anticline PNG; Banggai-Sula similar to N margin Australia). Molasse deposited Early Miocene-Pliocene post-collision.",
+    "main_conclusions": [
+      "ESO formed in mid-oceanic ridge at ~17-24°S palaeolatitude (within Pacific Plate), Late Cretaceous",
+      "ESO obducted onto continental terranes during Early Oligocene-Middle Miocene (~33-26 Ma based on melange dates)",
+      "Continental terranes of Australian Continent origin: Meluhu Fm deposited at ~20°S, Late Triassic",
+      "Banggai-Sula stratigraphy correlates with Kubor Anticline, N margin Australia",
+      "ESO palaeolatitude 17-24°S from radiolarian dating (Valanginian-Early Cretaceous pelagic cover) and palaeomagnetic data",
+      "60° clockwise rotation of ESO block post-Cretaceous (palaeomagnetic, Mubroto 1988)",
+      "Sulawesi molasse basin: Early Miocene-Pliocene, unconformable on collision complex"
+    ],
+    "total_features": 3,
+    "figures_used": ["Fig. 1 (simplified geological map E Sulawesi)", "Fig. 3 (stratigraphic correlation continental terranes)", "Fig. 4 (tectonostratigraphy E Arm)"]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.500, -0.500],
+          [123.500, -0.500],
+          [124.500, -1.000],
+          [124.000, -2.500],
+          [122.500, -3.200],
+          [121.000, -2.500],
+          [121.500, -0.500]
+        ]]
+      },
+      "properties": {
+        "id": "ophiolite_surono_2012_1",
+        "name": "East Sulawesi Ophiolite Belt (ESO) — síntesis tectonoestratigráfica",
+        "full_name": "Eastern Sulawesi Ophiolite Belt — mid-oceanic ridge origin, ~17-24°S palaeolatitude, Late Cretaceous–Early Tertiary",
+        "category": "ophiolite",
+        "layer_type": "structure",
+        "source": "surono_2012_tectonoestratigrafia",
+        "canonical_id": "canon_eso",
+        "formation_age": "Late Cretaceous (K-Ar: 93-79 Ma for basalt/gabbro)",
+        "palaeolatitude_deg_S": "17-24",
+        "obduction_age": "Early Oligocene-Middle Miocene (~33-26 Ma from melange dates)",
+        "obduction_target": "Continental terranes of Australian origin (SE and East Arms)",
+        "rotation_post_cretaceous": "~60° clockwise (palaeomagnetic, Mubroto 1988)",
+        "depth_class": "superficial",
+        "source_apa": "Surono (2012). JSD.Geol. 22(4), 197–210.",
+        "source_short": "Surono (2012)",
+        "paper_finding": "ESO formed at 17-24°S palaeolatitude in Pacific Plate mid-oceanic ridge; obducted onto Australian-derived terranes in Early Oligocene-Middle Miocene; subsequent 60° clockwise rotation",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono regional ESO sobre el brazo este de Sulawesi. Coincide con canon_eso ya existente; este feature aporta contexto temporal y de origen.",
+        "conclusions": [
+          {
+            "text": "ESO formed in mid-oceanic ridge at ~17-24°S (Pacific Plate), Late Cretaceous; obducted onto Australian-derived continental terranes ~33-26 Ma (Early Oligocene-Middle Miocene)",
+            "type": "genesis",
+            "geodyn_implication": "El ESO viajó desde latitudes del Pacífico S (~20°S) hasta su posición actual en el brazo este de Sulawesi — implica desplazamiento ~2000 km durante ~60-70 Ma de deriva antes de la obducción",
+            "confidence": "high",
+            "figure_ref": "Text p.3-4, Fig. 3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.800, -1.600],
+          [125.000, -1.600],
+          [125.500, -2.500],
+          [124.500, -3.500],
+          [123.500, -3.000],
+          [122.500, -2.500],
+          [122.800, -1.600]
+        ]]
+      },
+      "properties": {
+        "id": "terrane_surono_2012_2",
+        "name": "Banggai-Sula Microcontinent — afinidad australiana",
+        "full_name": "Banggai-Sula Microcontinent — Australian Continent origin, similar to Kubor Anticline PNG, N margin Australia",
+        "category": "terrane",
+        "layer_type": "structure",
+        "source": "surono_2012_tectonoestratigrafia",
+        "canonical_id": "canon_terrane_bsm",
+        "affinity": "continental_australian",
+        "basement_description": "Mesozoic sedimentary sequence (Tampakura/Tobelo/Salodik formations), Triassic continental clastics",
+        "palaeogeographic_analogue": "Kubor Anticline, N margin Papua New Guinea",
+        "collision_timing": "Late Neogene (Late Oligocene-Middle Miocene for ESO obduction; Late Miocene-Pliocene for final collision)",
+        "depth_class": "superficial",
+        "source_apa": "Surono (2012). JSD.Geol. 22(4), 197–210.",
+        "source_short": "Surono (2012)",
+        "paper_finding": "Banggai-Sula stratigraphy (Eo-Oligocene Tampakura Fm, Triassic continental clastics) correlates with Kubor Anticline PNG and N margin Australia — confirms Australian-derived origin",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono regional Banggai-Sula incluyendo las islas. Límites aproximados basados en descripción general del paper.",
+        "conclusions": [
+          {
+            "text": "Banggai-Sula stratigraphy (Tampakura Fm Eo-Oligocene + Triassic clastics) is correlatable with Kubor Anticline PNG — both derived from N margin of Australian Continent",
+            "type": "genesis",
+            "geodyn_implication": "Confirma el origen australiano del microcontinente Banggai-Sula — implica que la colisión con el brazo este de Sulawesi fue una colisión continente-continente, no oceánica",
+            "confidence": "high",
+            "figure_ref": "Fig. 3, text p.4-5"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.500, -2.500],
+          [123.000, -2.500],
+          [124.000, -3.500],
+          [123.500, -5.000],
+          [122.000, -5.000],
+          [121.000, -4.000],
+          [121.500, -2.500]
+        ]]
+      },
+      "properties": {
+        "id": "terrane_surono_2012_3",
+        "name": "SE Arm Continental Terrane (Meluhu) — afinidad australiana",
+        "full_name": "Southeast Arm Continental Terrane — Meluhu Formation (Late Triassic), Australian Continent origin at ~20°S palaeolatitude",
+        "category": "terrane",
+        "layer_type": "structure",
+        "source": "surono_2012_tectonoestratigrafia",
+        "canonical_id": "canon_terrane_btb",
+        "affinity": "continental_australian",
+        "key_unit": "Meluhu Formation (Late Triassic continental clastics + reefal limestones, deposited ~20°S)",
+        "palaeolatitude_deg_S": "~20",
+        "palaeogeographic_analogue": "N margin Australian Continent, Late Triassic",
+        "post_cretaceous_rotation": "~60° clockwise (shared with ESO block)",
+        "depth_class": "superficial",
+        "source_apa": "Surono (2012). JSD.Geol. 22(4), 197–210.",
+        "source_short": "Surono (2012)",
+        "paper_finding": "Meluhu Fm palaeoclimate (warm, high rainfall) and palaeolatitude (~20°S) consistent with Late Triassic N margin of Australian Continent; Early Jurassic separation from Gondwana",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono aproximado del brazo SE de Sulawesi, cubriendo el área de distribución de la Formación Meluhu y terrenos continentales asociados.",
+        "conclusions": [
+          {
+            "text": "SE Arm continental terrane (Meluhu Fm) deposited at ~20°S palaeolatitude during Late Triassic on N margin of Australian Continent; separated Early Jurassic",
+            "type": "genesis",
+            "geodyn_implication": "El brazo SE de Sulawesi es un fragmento continental australiano separado en el Jurásico Temprano — la colisión con Sulawesi en el Neógeno fue continental y no oceánica",
+            "confidence": "high",
+            "figure_ref": "Fig. 5, text p.5-6"
+          }
+        ]
+      }
+    }
+  ]
+}

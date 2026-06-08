@@ -1,0 +1,348 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+    "extraction_date": "2026-05-18",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "REGIONAL",
+    "region": "Molucca Sea / Sangihe Arc, NE Indonesia",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": [
+      "volcano",
+      "deformation_zone"
+    ],
+    "custom_categories": {},
+    "figures_used": [
+      "Table 1",
+      "Fig. 1"
+    ],
+    "sections_present": [],
+    "comprehension_summary": "Primera survey arc-wide de gases volcánicos e isótopos de N del Arco Sangihe (6 centros volcánicos, 0.7–3.7°N). El gradiente latitudinal en δ¹⁵N y N₂/He (%S: Ambang 84% → Ruang 26% de S→N) refleja el desacoplamiento progresivo de sedimentos del frente de arco de la placa oceánica descendente, controlado por el avance de norte a sur de la colisión Sangihe-Halmahera. Awu (norte) es anómalo: δ¹⁵N negativo + N₂/He alto → slab melting por detención de subducción.",
+    "main_conclusions": [
+      "Gradiente latitudinal %S (0–87%) refleja desacoplamiento sedimento-slab controlado por el zipper de colisión Sangihe-Halmahera (S→N desde ~10 Ma)",
+      "Awu anómalo: δ¹⁵N = −3.3‰ + N₂/He = 2852 → slab melting bajo colisión avanzada, contribución de corteza oceánica alterada",
+      "Norte Sangihe: < 35% N₂ sedimentario, análogo a Costa Rica donde off-scraping reduce %S",
+      "Mecanismo de transferencia de volatiles cambia de fluido-dominado a melt-dominado conforme la colisión progresa (Elburg & Foden 1998)",
+      "PENDIENTE: cross_section Fig. 2 (E-W a través del Mar de Molucas) no extraída — traza no georeferenciada en el mapa de Fig. 1"
+    ],
+    "total_features": 6,
+    "air_contaminated_samples_excluded": [
+      "IND-13, IND-14 (Soputan) — He bajo detección, N₂/He > 20000",
+      "IND-15, IND-16 (Awu fumarolas) — He bajo detección",
+      "IND-19 (Ruang difuso) — baja temperatura, contaminación superficial"
+    ],
+    "bibliography": {
+      "clor_2005": {
+        "apa": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+        "short": "Clor et al. (2005)",
+        "journal": "Geochemistry, Geophysics, Geosystems",
+        "year": 2005,
+        "doi": "10.1029/2004GC000825",
+        "paper_scale": "REGIONAL",
+        "topic": "Geoquímica de volatiles y δ¹⁵N Arco Sangihe — desacoplamiento sedimento-slab colisión Molucas",
+        "region": "Molucca Sea / Sangihe Arc, NE Indonesia",
+        "categories_extracted": [
+          "volcano",
+          "deformation_zone"
+        ],
+        "sections_extracted": [],
+        "geojson_file": "clor2005_sangihe_molucca.geojson",
+        "section_images": []
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.454,
+          3.675
+        ]
+      },
+      "properties": {
+        "id": "volcano_clor2005_01",
+        "name": "Awu Volcano — slab melting anómalo norte",
+        "full_name": "Awu — Estratovolcán masivo, caldera 4.5 km, extremo norte Arco Sangihe (Sangihe Is.). Anómalo: δ¹⁵N = −3.3‰ (MORB-like) con N₂/He = 2852 (alto sedimento-like). Interpretado como slab melting por detención de la subducción bajo colisión avanzada. ³He/⁴He hasta 6.22 Ra (lago). Erupciones históricas: 1711, 1812, 1856, 1892, 1966, 1992.",
+        "category": "volcano",
+        "source_apa": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+        "source_short": "Clor et al. (2005)",
+        "paper_finding": "N₂/He = 2852, δ¹⁵N = -3.3±0.4‰, %S = 0% (end-member −15‰), ³He/⁴He = 6.22 Ra",
+        "conclusions": [
+          {
+            "text": "Awu exhibe δ¹⁵N = −3.3‰ (MORB-like) combinado con N₂/He = 2852 (valor anómalamente alto para señal negativa de N): interpretado como transferencia de N y CO₂ desde corteza oceánica alterada del slab en proceso de fusión parcial, no desde sedimentos hemipelágicos",
+            "type": "genesis",
+            "geodyn_implication": "La colisión avanzada en el norte del Mar de Molucas ha detenido/ralentizado la subducción, permitiendo que el slab se caliente y funda. Esto cambia el mecanismo de transferencia de volatiles de fluido-dominado a melt-dominado (consistente con Elburg & Foden 1998). Implicancia: en colisiones arco-arco avanzadas, la firma geoquímica del arco puede reflejar corteza oceánica alterada en lugar de sedimentos pelágicos",
+            "confidence": "medium",
+            "figure_ref": "Figs. 4, 5, 6; Sec. 7.4"
+          }
+        ],
+        "coord_quality": "accurate",
+        "extraction_notes": "δ¹⁵N negativo + N₂/He alto: anómalo para arco. Interpretado como contribución de corteza oceánica alterada del slab bajo slab melting. Muestra IND-17 (lago crater). IND-15/-16 (fumarolas) descartadas por contaminación de aire (N₂/He > 20000, He bajo detección).",
+        "volcano_type": "stratovolcano",
+        "status": "active",
+        "last_eruption": "1992",
+        "vei_max": null,
+        "related_arc": "Sangihe Arc",
+        "volatile_data": {
+          "n2_he": 2852,
+          "d15N_permil": -3.3,
+          "d15N_uncertainty": 0.4,
+          "He3_He4_Ra": 6.22,
+          "pct_S_sediment": 0,
+          "mantle_end_member_used": "d15N = -15‰ (Mohapatra & Murty 2004)"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.369,
+          2.303
+        ]
+      },
+      "properties": {
+        "id": "volcano_clor2005_02",
+        "name": "Ruang Volcano — bajo %S sedimentario norte",
+        "full_name": "Ruang — Estratovolcán insular entre NE Sulawesi y Sangihe. Volcán más al sur del arco offshore norte. δ¹⁵N = −3.1 a −2.7‰, N₂/He = 542–786, %S = 18–34% (end-member −15‰). ³He/⁴He = 6.99–7.0 Ra. Última erupción: 2002.",
+        "category": "volcano",
+        "source_apa": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+        "source_short": "Clor et al. (2005)",
+        "paper_finding": "N₂/He = 542-786, δ¹⁵N = -3.1±0.4‰, %S = 26% (end-member −15‰), ³He/⁴He = 6.99 Ra",
+        "conclusions": [
+          {
+            "text": "Ruang muestra %S = 18–34% (promedio ~26%), consistente con contribución sedimentaria reducida por desacoplamiento parcial de la cuña de mezcla del frente de arco de la placa oceánica descendente en el norte del Mar de Molucas",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La colisión Sangihe-Halmahera está más avanzada en el norte: los sedimentos del frente de arco están siendo obducidos y desacoplados del slab, reduciendo el aporte de N hemipelágico al manto subarco",
+            "confidence": "high",
+            "figure_ref": "Fig. 6"
+          }
+        ],
+        "coord_quality": "accurate",
+        "extraction_notes": "IND-19 descartada (contaminación aire); IND-20/-20a válidas.",
+        "volcano_type": "stratovolcano",
+        "status": "active",
+        "last_eruption": "2002",
+        "vei_max": null,
+        "related_arc": "Sangihe Arc",
+        "volatile_data": {
+          "n2_he": "542-786",
+          "d15N_permil": -3.1,
+          "d15N_uncertainty": 0.4,
+          "He3_He4_Ra": 6.99,
+          "pct_S_sediment": 26,
+          "mantle_end_member_used": "d15N = -15‰ (Mohapatra & Murty 2004)"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124.8,
+          1.364
+        ]
+      },
+      "properties": {
+        "id": "volcano_clor2005_03",
+        "name": "Lokon-Empung Volcanoes — %S intermedio",
+        "full_name": "Lokon-Empung — Volcanes gemelos NE Sulawesi, brazo norte. Cráter activo: Tompaluan (entre los picos). δ¹⁵N = −4.0 a −2.1‰, N₂/He = 359–949, %S = 19–43%. ³He/⁴He = 7.12 Ra.",
+        "category": "volcano",
+        "source_apa": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+        "source_short": "Clor et al. (2005)",
+        "paper_finding": "N₂/He = 359-949, δ¹⁵N = -4.0±0.5‰, %S = 31% (end-member −15‰), ³He/⁴He = 7.12 Ra",
+        "conclusions": [
+          {
+            "text": "Lokon exhibe %S promedio ~31%, intermedio entre norte (<26%) y sur (>70%), coherente con el modelo de zipper de la colisión Molucas que progresa de norte a sur",
+            "type": "tectonic_setting",
+            "geodyn_implication": "Posición geográfica en el segmento central del arco, donde la colisión está menos avanzada que en Ruang pero la obducción de sedimentos ya es parcialmente operativa",
+            "confidence": "medium",
+            "figure_ref": "Fig. 6"
+          }
+        ],
+        "coord_quality": "accurate",
+        "extraction_notes": "IND-1 y IND-2 muestran diferencia en He/Ar (0.24 vs 0.08): IND-2 con más contaminación aérea, δ¹⁵N elevado hacia 0‰. Se usa IND-1 como más representativo.",
+        "volcano_type": "stratovolcano",
+        "status": "active",
+        "last_eruption": "2002",
+        "vei_max": null,
+        "related_arc": "Sangihe Arc",
+        "volatile_data": {
+          "n2_he": "359-949",
+          "d15N_permil": -4.0,
+          "d15N_uncertainty": 0.5,
+          "He3_He4_Ra": 7.12,
+          "pct_S_sediment": 31,
+          "mantle_end_member_used": "d15N = -15‰ (Mohapatra & Murty 2004)"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124.822,
+          1.269
+        ]
+      },
+      "properties": {
+        "id": "volcano_clor2005_04",
+        "name": "Lahendong geothermal — campo hidrotermmal Sulawesi",
+        "full_name": "Lahendong — Campo geotérmico maar cerca de Lokon-Mahawu, NE Sulawesi. Fumarolas, manantiales, piscinas burbujeantes. δ¹⁵N = −0.73 a +1.7‰, N₂/He = 646–1123, %S = 58–80%. ³He/⁴He = 6.91–7.33 Ra.",
+        "category": "volcano",
+        "source_apa": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+        "source_short": "Clor et al. (2005)",
+        "paper_finding": "N₂/He = 646-1123, δ¹⁵N = 1.7±0.4‰, %S = 70% (end-member −15‰), ³He/⁴He = 7.33 Ra",
+        "conclusions": [
+          {
+            "text": "Lahendong muestra %S = 58–80%, indicando contribución sedimentaria significativa al manto subarco en el segmento central-sur del arco, donde el desacoplamiento de sedimentos aún no es pronunciado",
+            "type": "tectonic_setting",
+            "geodyn_implication": "Transición hacia el sur donde los sedimentos del Molucca Sea permanecen acoplados a la placa descendente y son subducidos normalmente",
+            "confidence": "high",
+            "figure_ref": "Fig. 6"
+          }
+        ],
+        "coord_quality": "accurate",
+        "extraction_notes": "Sistema hidrotermal de maar. IND-6 contaminada con agua del manantial durante muestreo. Alta interacción con agua hidrotermal (CO₂ elevado). Punto de muestreo para campo geotérmico — no volcán edificio propio.",
+        "volcano_type": "monogenetic",
+        "status": "active",
+        "last_eruption": null,
+        "vei_max": null,
+        "related_arc": "Sangihe Arc",
+        "volatile_data": {
+          "n2_he": "646-1123",
+          "d15N_permil": 1.7,
+          "d15N_uncertainty": 0.4,
+          "He3_He4_Ra": 7.33,
+          "pct_S_sediment": 70,
+          "mantle_end_member_used": "d15N = -15‰ (Mohapatra & Murty 2004)"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124.421,
+          0.748
+        ]
+      },
+      "properties": {
+        "id": "volcano_clor2005_05",
+        "name": "Ambang Volcano — máximo %S sedimentario sur",
+        "full_name": "Ambang — Volcán compuesto, brazo oeste de Sulawesi, múltiples bocas. Sur del arco Sangihe. δ¹⁵N = +2.1‰ (positivo), N₂/He = 1034–2000, ⚠️ ³He/⁴He = 3.8–4.6 Ra (< promedio arco 5.4 Ra → contaminación He crustal). %S = 81–87%.",
+        "category": "volcano",
+        "source_apa": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+        "source_short": "Clor et al. (2005)",
+        "paper_finding": "N₂/He = 1034-2000, δ¹⁵N = 2.1±0.4‰, %S = 84% (end-member −15‰), ³He/⁴He = 4.2 Ra",
+        "conclusions": [
+          {
+            "text": "Ambang exhibe %S = 81–87%, el máximo del arco, consistente con subducción normal de sedimentos hemipelágicos en el sur donde la colisión Sangihe-Halmahera aún no ha comenzado y los sedimentos permanecen acoplados a la placa oceánica",
+            "type": "tectonic_setting",
+            "geodyn_implication": "Según Hamilton (1979), la colisión progresa como un 'zipper' de norte a sur: en el sur (Ambang, ~0.75°N) la colisión no ha comenzado, los sedimentos se subducen normalmente y transfieren abundante N hemipelágico al manto subarco",
+            "confidence": "high",
+            "figure_ref": "Figs. 1, 6; Sec. 7.4"
+          }
+        ],
+        "coord_quality": "accurate",
+        "extraction_notes": "⚠️ ALERTA CIENTÍFICA: ³He/⁴He = 3.8–4.6 Ra, por debajo del promedio mundial de arcos (5.4 Ra), indicando adición de ⁴He radiogénico crustal. Sin embargo, las sistemáticas de N no parecen susceptibles a la misma contaminación (no hay correlación N₂/He ~ CH₄). El valor de %S = 84% se mantiene como representativo del aporte sedimentario real, pero debe tomarse con cautela. La última erupción conocida fue en los 1840s.",
+        "volcano_type": "stratovolcano",
+        "status": "active",
+        "last_eruption": "1840s",
+        "vei_max": null,
+        "related_arc": "Sangihe Arc",
+        "volatile_data": {
+          "n2_he": "1034-2000",
+          "d15N_permil": 2.1,
+          "d15N_uncertainty": 0.4,
+          "He3_He4_Ra": 4.2,
+          "pct_S_sediment": 84,
+          "mantle_end_member_used": "d15N = -15‰ (Mohapatra & Murty 2004)"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              124.5,
+              0.5
+            ],
+            [
+              125.5,
+              0.5
+            ],
+            [
+              127.5,
+              1.5
+            ],
+            [
+              128.0,
+              3.0
+            ],
+            [
+              127.5,
+              5.0
+            ],
+            [
+              126.5,
+              6.0
+            ],
+            [
+              125.5,
+              5.5
+            ],
+            [
+              124.0,
+              4.0
+            ],
+            [
+              123.5,
+              2.5
+            ],
+            [
+              124.0,
+              1.0
+            ],
+            [
+              124.5,
+              0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "deformation_zone_clor2005_01",
+        "name": "Molucca Sea collision complex — mezcla obducted forearc",
+        "full_name": "Complejo colisional del Mar de Molucas: dos cuñas de mezcla sedimentaria del frente de arco (Sangihe + Halmahera) comprimidas, ~150 km de ancho y ~20 km de espesor. Demasiado boyante para subducir: obductado sobre los arcos enfrentados. Los sedimentos están desacoplados de la placa oceánica descendente en el norte (colisión avanzada) pero acoplados en el sur (colisión no iniciada). Relevante para el mapa: explica por qué el N isotópico del Arco Sangihe varía latitudinalmente.",
+        "category": "deformation_zone",
+        "source_apa": "Clor, L. E., Fischer, T. P., Hilton, D. R., Sharp, Z. D., & Hartono, U. (2005). Volatile and N isotope chemistry of the Molucca Sea collision zone: Tracing source components along the Sangihe Arc, Indonesia. Geochemistry, Geophysics, Geosystems, 6(3), Q03J14. https://doi.org/10.1029/2004GC000825",
+        "source_short": "Clor et al. (2005)",
+        "paper_finding": "Complejo colisional ~150 km ancho, ~20 km espesor (Silver & Moore 1978; Hamilton 1979). Sedimentos obducidos desacoplados del slab en norte (colisión desde Mioceno Temprano-10 Ma). Sur: colisión aún no iniciada (Hamilton 1979).",
+        "conclusions": [
+          {
+            "text": "El complejo colisional de mezcla del Mar de Molucas (~150 km ancho, ~20 km espesor) es demasiado boyante para subducir: está siendo obducido sobre ambos arcos, desacoplando los sedimentos del frente de arco de la placa oceánica descendente más densa. Este desacoplamiento progresa de norte a sur siguiendo el avance de la colisión Sangihe-Halmahera (zipper desde el Mioceno Temprano).",
+            "type": "tectonic_setting",
+            "geodyn_implication": "Mecanismo directo para el gradiente latitudinal observado en δ¹⁵N y N₂/He del Arco Sangihe: norte = sedimentos desacoplados (no subducen) → menos N hemipelágico al manto; sur = sedimentos acoplados (subducen normalmente) → más N hemipelágico. El modelo predice que con el tiempo el gradiente migrará hacia el sur conforme la colisión progresa.",
+            "confidence": "high",
+            "figure_ref": "Figs. 1, 2; Sec. 7.4"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono del complejo colisional del Mar de Molucas georeferenciado de Fig. 1 (mapa WGS84). Los límites exactos son difusos por naturaleza del complejo de mezcla; el polígono representa el cuerpo del Mar de Molucas entre las trincheras Sangihe y Halmahera. La sección esquemática Fig. 2 (E-W) NO fue extraída como cross_section porque la traza georreferenciada no está marcada en el mapa de la Fig. 1 — pendiente de confirmación del usuario.",
+        "deformation_style": "compressional",
+        "age_ma": null,
+        "width_km": 150
+      }
+    }
+  ]
+}

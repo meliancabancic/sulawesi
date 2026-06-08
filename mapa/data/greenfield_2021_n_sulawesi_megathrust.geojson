@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "greenfield_2021_n_sulawesi_megathrust",
+    "source": "Greenfield et al. (2021)",
+    "title": "Crustal Deformation and Fault Strength of the Sulawesi Subduction Zone",
+    "journal": "Tectonics",
+    "volume": "40",
+    "article": "e2020TC006573",
+    "doi": "10.1029/2020TC006573",
+    "year_published": 2021,
+    "authors": ["Greenfield, T.", "Copley, A.C.", "Caplan, C.", "Supendi, P.", "Widiyantoro, S.", "Rawlinson, N."],
+    "study_area": "North Sulawesi subduction zone — North Arm of Sulawesi and Celebes Sea",
+    "method": "Teleseismic body-wave focal mechanism modeling (MT5 + WKBJ depth-phase); flexure modeling; force balance analysis; GPS data from prior studies",
+    "conclusions": [
+      "North Sulawesi megathrust is WEAK: average shear stress ~13 MPa (range 7-21 MPa), effective friction coefficient ~0.03 — among the weakest megathrusts globally",
+      "Slip vectors of megathrust earthquakes radiate outward from Sulawesi's topography (azimuths vary from -15° in west to +15° in east), inconsistent with rigid plate convergence — deformation driven by gravitational potential energy (GPE) contrasts",
+      "Deformation driven by lithosphere-transmitted stresses from GPE contrasts between continental Sulawesi and old oceanic Celebes Sea, NOT by mantle tractions",
+      "Arc-parallel normal-faulting earthquakes in northern Sulawesi accommodate E-W extension driven by the same GPE gradient",
+      "Celebes Sea subducting plate is STRONG: elastic thickness Te=24 km (comparable to cratonic lithosphere), plate age 35-45 Ma; outer-rise faults have friction 0.02-0.08",
+      "Slab2 model overestimates megathrust depth by 7-20 km at shallow depths",
+      "Subduction onset at 8 Ma (after Hall 2011); slab reaches ~250 km depth (Slab2); at least 300 km subducted",
+      "Western end of N. Sulawesi Trench terminates at PKF; eastern end near Manado; deformation pattern implies lateral rheology contrasts govern seismic hazard around entire Sulawesi perimeter"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.5, 1.55],
+          [120.2, 1.75],
+          [121.0, 1.85],
+          [122.0, 1.9],
+          [123.0, 1.85],
+          [124.0, 1.7],
+          [124.8, 1.5]
+        ]
+      },
+      "properties": {
+        "id": "greenfield_2021_n_sulawesi_megathrust",
+        "category": "fault",
+        "name": "North Sulawesi Megathrust",
+        "canonical_name": "NST",
+        "fault_type": "subduction_megathrust",
+        "kinematics": "convergent_south_dipping",
+        "subducting_plate": "Celebes Sea oceanic lithosphere",
+        "overriding_plate": "North Arm of Sulawesi (North Sula Block)",
+        "subduction_onset_Ma": 8,
+        "slab_depth_km": 250,
+        "megathrust_dip_deg": 9,
+        "megathrust_dip_range_deg": [5, 32],
+        "megathrust_depth_km": 22,
+        "megathrust_depth_range_km": [10, 30],
+        "shear_stress_MPa": 13,
+        "shear_stress_range_MPa": [7, 21],
+        "effective_friction": 0.03,
+        "fault_strength": "very_weak",
+        "slip_vector_pattern": "radiating_outward_from_topography",
+        "slip_vector_azimuth_w": -15,
+        "slip_vector_azimuth_e": 15,
+        "driving_force": "gravitational_potential_energy_contrasts",
+        "western_terminus": "Palu-Koro Fault offshore extension",
+        "eastern_terminus": "Near Manado (~124.8°E)",
+        "large_earthquakes": [
+          {"year": 1990, "magnitude": "Mw7+"},
+          {"year": 1991, "magnitude": "Mw7+"},
+          {"year": 1996, "magnitude": "Mw7.9"},
+          {"year": 1997, "magnitude": "Mw7+"},
+          {"year": 2008, "magnitude": "Mw7+"}
+        ],
+        "normal_faults_overriding_plate": "E-W-striking arc-parallel normal faults in North Arm accommodate arc-parallel extension driven by GPE gradient; ~14 events in GCMT catalog",
+        "slab2_depth_error_note": "Slab2 model overestimates megathrust depth by 7-20 km at shallow depths",
+        "source_figure": "Figures 1, 3, 4, 8",
+        "source_short": "Greenfield et al. 2021",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["north_sulawesi_trench"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.5, 4.5]
+      },
+      "properties": {
+        "id": "greenfield_2021_celebes_sea_plate",
+        "category": "geophysical_point",
+        "name": "Celebes Sea Subducting Plate — Elastic Properties",
+        "anomaly_type": "high_velocity",
+        "description": "Physical properties of the Celebes Sea oceanic lithosphere subducting beneath North Sulawesi. Estimated from flexure modeling (SRTM15+ bathymetry) and outer-rise seismicity.",
+        "plate_age_Ma": 40,
+        "plate_age_range_Ma": [35, 45],
+        "elastic_thickness_km": 24,
+        "elastic_thickness_range_km": [14, 30],
+        "elastic_thickness_note": "Best-fit Te = 24 +6/-10 km; comparable to cratonic continental lithosphere, suggesting a relatively strong oceanic plate",
+        "outer_rise_yield_stress_MPa": [20, 110],
+        "outer_rise_friction": [0.02, 0.21],
+        "outer_rise_friction_preferred": [0.02, 0.08],
+        "outer_rise_seismicity_note": "No teleseismically recorded normal-faulting earthquakes in outer rise; likely due to long repeat time relative to observation period. Compressional outer-rise events at 20-33 km depth.",
+        "most_negative_curvature": [-0.20e-6, -0.12e-6],
+        "curvature_units": "m-1",
+        "context": "Strong subducting plate spreads its weight under weaker continental Sulawesi crust. Plate strength contrast between oceanic Celebes Sea (strong) and continental Sulawesi arc (weak) is the primary control on deformation style and rate.",
+        "source_figure": "Figures 6, 7; Table 1",
+        "source_short": "Greenfield et al. 2021",
+        "approx": true
+      }
+    }
+  ]
+}

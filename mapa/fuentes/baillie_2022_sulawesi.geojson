@@ -1,0 +1,1189 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+    "extraction_date": "2026-05-21",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "SYNTHESIS",
+    "region": "Sulawesi, Indonesia Oriental",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["fault", "subduction_zone", "fold_thrust_belt", "basin", "terrane", "ophiolite", "metamorphic_complex", "volcanic_arc", "cross_section", "volcano", "igneous_body", "structure"],
+    "custom_categories": {},
+    "figures_used": ["Fig. 2", "Fig. 3", "Fig. 4", "Fig. 6", "Fig. 7", "Fig. 9", "Fig. 11", "Fig. 12"],
+    "sections_present": [
+      "REGIONAL GEOLOGY",
+      "STRUCTURAL ELEMENTS",
+      "West Sulawesi (including South Arm)",
+      "West Sulawesi Fold Belt",
+      "The Neck and North Arm",
+      "North Sulawesi Fold & Thrust Belt",
+      "Gorontalo Bay",
+      "East Arm",
+      "Southeast Arm",
+      "Bone Bay",
+      "SYNTHESIS AND TECTONIC EVOLUTION",
+      "Rotation",
+      "Wrench Faulting",
+      "Fission Track and Fault Kinematics",
+      "Neogene Extension",
+      "CONCLUSIONS"
+    ],
+    "comprehension_summary": "Síntesis regional comprensiva de la geología offshore y onshore de Sulawesi que enfatiza el rol dominante de la extensión Neogena frente al paradigma previo de tectónica puramente compresiva. El paper integra batiimetría, sísmica de exploración, GPS y geocronología reciente para caracterizar el ensamblaje de terrenos dispares a través de procesos de strike-slip, extensión y rollback de subducción que culminaron en la forma en K de la isla durante el Plioceno–Presente.",
+    "main_conclusions": [
+      "Early Miocene collisions in eastern Sulawesi did NOT cause orogeny in western Sulawesi — sólo en el Plioceno cambió el carácter sedimentario de toda la isla.",
+      "La extensión Neogena ha sido subestimada históricamente; muchas estructuras consideradas contraccionistas serán reclasificadas como extensionales.",
+      "La yuxtaposición final de los elementos tectónicos ocurrió entre el Plioceno y el presente, mediante un sistema de fallas enlazadas cuya cinemática sigue siendo controversial.",
+      "La evolución N de Sulawesi involucra: subducción W inicial → colisión con microcontiente Sula → rotación horaria del North Arm → back-arc thrusting → subducción S a lo largo del North Sulawesi Trench → uplift rápido + subsidencia offshore.",
+      "Sulawesi provee un ejemplo primario de cómo la colisión puede ser acomodada por rotación de bloques en lugar de construcción de montañas (Socquet et al. 2006)."
+    ],
+    "total_features": 25,
+    "bibliography": {
+      "baillie_decker_2022": {
+        "apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "short": "Baillie & Decker (2022)",
+        "journal": "Berita Sedimentologi",
+        "year": 2022,
+        "doi": "10.51835/bsed.2022.48.1.388",
+        "paper_scale": "SYNTHESIS",
+        "topic": "Geología y evolución tectónica integral de Sulawesi — síntesis regional",
+        "region": "Sulawesi, Indonesia Oriental",
+        "categories_extracted": ["fault", "subduction_zone", "fold_thrust_belt", "basin", "terrane", "ophiolite", "metamorphic_complex", "volcanic_arc", "cross_section", "volcano", "igneous_body", "structure"],
+        "sections_extracted": ["seccionAB_WSFB", "seccionCD_BoneBay"],
+        "geojson_file": "baillie_2022_sulawesi.geojson",
+        "section_images": ["baillie_2022_fig6_seccionAB.png", "baillie_2022_fig11_seccionCD.png"]
+      },
+      "bellier_2006": {
+        "apa": "Bellier, O., Sebrier, M., Seward, D., Beaudouin, T., Villeneuve, M., & Putranto, E. (2006). Fission track and fault kinematics analyses for new insight into the Late Cenozoic tectonic regime changes in West-Central Sulawesi (Indonesia). Tectonophysics, 413, 201–220.",
+        "short": "Bellier et al. (2006)",
+        "journal": "Tectonophysics",
+        "year": 2006,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "Cinemática de fallas y fission-track, régimenes tectónicos Cenozoico tardío, Sulawesi centro-occidental",
+        "region": "Central-West Sulawesi",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "socquet_2006": {
+        "apa": "Socquet, A., Simons, W., Vigny, C., McCaffrey, R., Subarya, C., Sarsito, D., Ambrosius, B., & Spakman, W. (2006). Microblock rotations and fault coupling in SE Asia triple junction (Sulawesi, Indonesia) from GPS and earthquake slip vector data. Journal of Geophysical Research: Solid Earth, 111, 1–15.",
+        "short": "Socquet et al. (2006)",
+        "journal": "Journal of Geophysical Research: Solid Earth",
+        "year": 2006,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "Rotación de micro-bloques y acoplamiento de fallas, GPS + vectores de slip sísmico",
+        "region": "Sulawesi, SE Asia triple junction",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "walpersdorf_vigny_1998": {
+        "apa": "Walpersdorf, A., & Vigny, C. (1998). Monitoring of the Palu-Koro Fault (Sulawesi) by GPS. Geophysical Research Letters, 25(13), 2313–2316.",
+        "short": "Walpersdorf & Vigny (1998)",
+        "journal": "Geophysical Research Letters",
+        "year": 1998,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "GPS monitoring Palu-Koro Fault — slip rate directo",
+        "region": "Sulawesi central",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "hall_2011": {
+        "apa": "Hall, R. (2011). Australia-SE Asia collision: plate tectonics and crustal flow. Geological Society of London Special Publication, 355, 75–109.",
+        "short": "Hall (2011)",
+        "journal": "Geological Society of London Special Publication",
+        "year": 2011,
+        "doi": null,
+        "paper_scale": "SYNTHESIS",
+        "topic": "Colisión Australia–SE Asia, reconstrucciones tectónicas, flujo cortical",
+        "region": "SE Asia – Indonesia",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "hall_2012b": {
+        "apa": "Hall, R. (2012). Late Jurassic–Cenozoic reconstructions of the Indonesian region and the Indian Ocean. Tectonophysics, 570–571, 1–41.",
+        "short": "Hall (2012b)",
+        "journal": "Tectonophysics",
+        "year": 2012,
+        "doi": null,
+        "paper_scale": "SYNTHESIS",
+        "topic": "Reconstrucciones tectónicas región Indonesia y Océano Índico 120 Ma–presente",
+        "region": "Indonesia, Océano Índico",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "parkinson_1998": {
+        "apa": "Parkinson, C.D. (1998). An outline of the petrology, structure and age of the Pompangano Schist Complex of central Sulawesi, Indonesia. Island Arc, 7, 231–245.",
+        "short": "Parkinson (1998)",
+        "journal": "Island Arc",
+        "year": 1998,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "Petrología, estructura y edad Pompangeo Schist Complex, Sulawesi Central",
+        "region": "Sulawesi Central",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "kadarusman_2004": {
+        "apa": "Kadarusman, A., Miyashita, S., Maruyama, S., Parkinson, C.C., & Ishikawa, A. (2004). Petrology, geochemistry and paleogeographic reconstruction of the East Sulawesi Ophiolite, Indonesia. Tectonophysics, 392, 55–83.",
+        "short": "Kadarusman et al. (2004)",
+        "journal": "Tectonophysics",
+        "year": 2004,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "Petrología, geoquímica y paleogeografía ESO",
+        "region": "East Arm, Sulawesi",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "zhang_2020": {
+        "apa": "Zhang, X., Tien, C-Y., Chung, S-L., Maulana, A., Mawaleda, M., Chu, M-F., & Lee, H-Y. (2020). A Late Miocene magmatic flare-up in West Sulawesi triggered by Banda slab rollback. Bulletin Geological Society of America, 132, 2517–2528.",
+        "short": "Zhang et al. (2020)",
+        "journal": "Bulletin Geological Society of America",
+        "year": 2020,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "Magmatismo flare-up Mioceno Tardío West Sulawesi — rollback slab Banda",
+        "region": "West Sulawesi",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "camplin_hall_2014": {
+        "apa": "Camplin, D.J., & Hall, R. (2014). Neogene history of Bone Gulf, Sulawesi, Indonesia. Marine and Petroleum Geology, 57, 88–108.",
+        "short": "Camplin & Hall (2014)",
+        "journal": "Marine and Petroleum Geology",
+        "year": 2014,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "Historia Neogena Golfo de Bone, Sulawesi",
+        "region": "Bone Bay, Sulawesi",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      },
+      "hennig_2017": {
+        "apa": "Hennig, J., Hall, R., Forster, M.A., Kohn, B.P., & Lister, G.S. (2017). Rapid cooling and exhumation as a consequence of extension and crustal thinning: Inferences from the Late Miocene to Pliocene Palu Metamorphic Complex, Sulawesi, Indonesia. Tectonophysics, 712–713, 600–622.",
+        "short": "Hennig et al. (2017)",
+        "journal": "Tectonophysics",
+        "year": 2017,
+        "doi": null,
+        "paper_scale": "REGIONAL",
+        "topic": "Exhumación rápida PMC — extensión y adelgazamiento cortical",
+        "region": "Sulawesi Neck, West-Central",
+        "categories_extracted": [],
+        "sections_extracted": [],
+        "geojson_file": null,
+        "section_images": []
+      }
+    }
+  },
+  "features": [
+
+    {
+      "type": "Feature",
+      "id": "fault_baillie_2022_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.85, 0.90], [120.05, 0.20], [120.20, -0.10], [120.35, -0.50],
+          [120.55, -0.90], [120.70, -1.40], [120.85, -1.90], [121.00, -2.40]
+        ]
+      },
+      "properties": {
+        "name": "Palu-Koro Fault (PKF)",
+        "category": "fault",
+        "depth_class": "superficial",
+        "fault_type": "sinistral",
+        "slip_rate_mmyr": 34.0,
+        "slip_rate_uncertainty": null,
+        "length_km": 420,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "sinistral",
+        "neotectonic": true,
+        "data_source_original": "Walpersdorf & Vigny (1998); mapa de fallas base White et al. (2014) vía Fig. 2",
+        "description": "Falla de rumbo sinistral mayor, alineamiento crustal NNW-SSE. Límite occidental de la extensión Neogena en el Neck y North Arm. Componente normal de 4 mm/yr. Forma parte del mayor sistema Sorong Fault. Controla la extrusión N del bloque Central Sulawesi.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Slip rate GPS (5 años): 34 mm/yr izquierdo, componente normal 4 mm/yr. N del PKF: acomodación 11–42 mm/yr (bloque NE Sulawesi); S del PKF: movimiento relativo Sundaland-Sulawesi <2 mm/yr.",
+            "type": "slip_rate",
+            "confidence": "high"
+          },
+          {
+            "text": "Tres regímenes tectónicos sucesivos en el Cenozoico tardío: (1) Mioceno Tardío–Plioceno temprano: acortamiento WNW transpresional a lo largo del PKF por colisión Sula Spur; (2) Plioceno: colapso extensional W; (3) Cuaternario: transtensión por combinación de movimiento N del bloque Central Sulawesi + extensión back-arc NSZ (Bellier et al. 2006).",
+            "type": "kinematics",
+            "confidence": "high"
+          },
+          {
+            "text": "El PKF es la frontera principal entre el bloque SW Sulawesi (rotación antihoraria 1.4°/Myr) y los bloques NE Sulawesi (rotación horaria 2.5–3°/Myr) según GPS (Socquet et al. 2006).",
+            "type": "kinematics",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Traza inferida de Fig. 2 y Fig. 3 del paper, basada en mapas White et al. (2014) y Nugraha & Hall (2018). Resolución estimada ±10–20 km. La componente N del PKF continúa como lineamiento prominente hasta la Península Mangkalihat. No hay evidencia de cruce al Borneo."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "fault_baillie_2022_2",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [121.50, -1.80], [121.80, -2.10], [122.20, -2.40],
+          [122.60, -2.70], [123.00, -2.90], [123.30, -3.10]
+        ]
+      },
+      "properties": {
+        "name": "Matano Fault Zone",
+        "category": "fault",
+        "depth_class": "superficial",
+        "fault_type": "sinistral",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 220,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "sinistral",
+        "neotectonic": true,
+        "data_source_original": "White et al. (2014) vía Fig. 2 del paper",
+        "description": "Falla sinistral E-W que junto con el PKF define el dominio de deformación activa de Sulawesi. Límite S de la zona de deformación activa definida por Socquet et al. (2006).",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "La deformación activa de Sulawesi está confinada principalmente a la región N del sistema Palu-Koro y Lawanopo (Socquet et al. 2006).",
+            "type": "kinematics",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Estructura referenciada como elemento estructural mayor en Fig. 2. Sin datos cuantitativos propios del paper para esta falla específica. Traza aproximada de Fig. 2."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "fault_baillie_2022_3",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.20, -3.50], [120.50, -3.80], [120.80, -4.10],
+          [121.00, -4.40], [121.20, -4.70], [121.40, -5.00]
+        ]
+      },
+      "properties": {
+        "name": "Walanae Fault Zone",
+        "category": "fault",
+        "depth_class": "superficial",
+        "fault_type": "sinistral",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 200,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "sinistral",
+        "neotectonic": true,
+        "data_source_original": "White et al. (2014); Guritno et al. (1996) vía Fig. 2 del paper",
+        "description": "Sistema de falla sinistral NNW-SSE en el South Arm que ha producido pull-apart basin (Walanae Depression) con hombros de rift elevados (Western y Eastern Divide ranges). Yuxtapone dos terrenos dispares del South Arm. Se extiende hacia Bone Bay. Hospeda pórfido Cu-Au de Sassak (10.6–11.9 Ma).",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "La falla Walanae produce cuenca pull-apart (Walanae Depression) con hombros de rift elevados — registra extensión N-S Neogena en SW Sulawesi que inició ~14–13 Ma y alcanzó su pico ~1 Ma después.",
+            "type": "kinematics",
+            "confidence": "high"
+          },
+          {
+            "text": "Mineralización Cu-Au (Sassak) en intrusión de cuarzo-sienita dentro de la zona Walanae. Edades K-Ar 10.6–11.9 Ma.",
+            "type": "age",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "El paper describe una falla sinistral NNW-SSE mayor en el South Arm. Traza aproximada de Fig. 2 y Fig. 3."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "fault_baillie_2022_4",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [121.70, -1.60], [122.00, -2.00], [122.30, -2.40],
+          [122.60, -2.80], [122.80, -3.20]
+        ]
+      },
+      "properties": {
+        "name": "Lawanopo Fault Zone",
+        "category": "fault",
+        "depth_class": "superficial",
+        "fault_type": "sinistral",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 190,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "sinistral",
+        "neotectonic": true,
+        "data_source_original": "White et al. (2014) vía Fig. 2 del paper",
+        "description": "Falla sinistral mayor en Sulawesi Central. Junto con el Matano Fault constituye el límite S de la deformación activa de Sulawesi según Socquet et al. (2006).",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "La deformación activa de Sulawesi está confinada principalmente a la región N del sistema PKF y Lawanopo (Socquet et al. 2006). El bloque SW Sulawesi (S del sistema) es relativamente estático respecto a Sundaland.",
+            "type": "kinematics",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Estructura referenciada como contexto de deformación activa. Traza aproximada de Fig. 2."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "fault_baillie_2022_5",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.50, -1.20], [122.70, -1.50], [122.90, -1.80],
+          [123.10, -2.10], [123.30, -2.40]
+        ]
+      },
+      "properties": {
+        "name": "Kolaka Fault",
+        "category": "fault",
+        "depth_class": "superficial",
+        "fault_type": "oblique",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 150,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "unknown",
+        "neotectonic": true,
+        "data_source_original": "White et al. (2014) vía Fig. 2 del paper",
+        "description": "Falla en el East Arm. Hospeda intrusiones dacíticas cuya edad es relevante para la cronología tectónica del SE Sulawesi.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [],
+        "extraction_notes": "Estructura referenciada como contexto. Sin datos cuantitativos propios en este paper. White et al. (2014) data intrusiones dacíticas dentro de la zona. Traza aproximada de Fig. 2."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "subduction_zone_baillie_2022_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.30, 3.50], [122.70, 3.20], [123.10, 2.90], [123.50, 2.60],
+          [124.00, 2.30], [124.50, 2.00], [124.90, 1.70], [125.30, 1.40]
+        ]
+      },
+      "properties": {
+        "name": "North Sulawesi Trench (NST)",
+        "category": "subduction_zone",
+        "depth_class": "mayor",
+        "depth_range_km": "0-400",
+        "depth_max_km": null,
+        "depth_extent_km": null,
+        "flat_section_km": null,
+        "dip_direction": "S",
+        "slab_name": "Celebes Sea Slab",
+        "onset_ma": 8.0,
+        "convergence_rate_cmyr": null,
+        "convergence_total_km": null,
+        "mtz_stagnation": false,
+        "spoon_shape_depth_km": null,
+        "rollback_onset_ma": 5.0,
+        "curvature_deg": null,
+        "includes_delaminated_continental": false,
+        "tectonic_affinity": "oceanic",
+        "description": "Subducción del Mar de Célebes hacia el S bajo el North Arm, iniciada ~8 Ma. Subducción complicada: tanto hacia el S como al E, con volcanismo asociado en toda la longitud del North Arm. Rollback del slab (iniciado ~5 Ma) causó extensión back-arc en N Sulawesi, activa hasta el presente. 10 volcanes activos sobre la zona de subducción.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Subducción del Mar de Célebes bajo el North Arm interpretada como iniciada ~8 Ma (Hall 2011). Rollback del slab (~5 Ma) generó nueva fase de extensión en N Sulawesi, activa hasta el presente — subsidiencia rápida de Gorontalo Bay + uplift rápido en tierra.",
+            "type": "age",
+            "confidence": "high"
+          },
+          {
+            "text": "El rollback del NSZ inició un proceso de subsidence de Gorontalo Bay que excedió la producción carbonática (~5 Ma), hundiendo arrecifes a 1800–2000 m en sus partes más profundas.",
+            "type": "genesis",
+            "confidence": "high"
+          },
+          {
+            "text": "GPS muestran movimiento rápido N del North Arm respecto al Mar de Célebes, indicando que el rollback es un proceso en curso (Advokaat et al. 2017).",
+            "type": "velocity",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Traza inferida de Fig. 2 y Fig. 3. El paper describe subducción doble S y E bajo el North Arm. Coordenadas ±15–20 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "fold_thrust_belt_baillie_2022_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [117.80, -0.50], [118.20, -0.50], [118.60, -1.00],
+          [119.00, -1.80], [119.30, -3.00], [119.50, -4.00],
+          [119.40, -4.80], [119.20, -4.80], [118.90, -4.00],
+          [118.60, -3.00], [118.30, -1.80], [117.90, -1.00],
+          [117.80, -0.50]
+        ]]
+      },
+      "properties": {
+        "name": "West Sulawesi Fold Belt (WSFB)",
+        "category": "fold_thrust_belt",
+        "depth_class": "mayor",
+        "vergence": "W",
+        "age_deformation_ma": 5.3,
+        "shortening_km": null,
+        "description": "Cinturón de pliegues y corrimientos offshore al W de Sulawesi en el Estrecho de Makassar. Tres provincias estructurales: Southern Structural Province (SSP, thin-skinned, vergencia W), Central Structural Province (CSP, menos deformada), Northern Structural Province (NSP, fuertemente deformada). La deformación es ongoing: folding sin-deposicional en la Formación Pasangkayu. Resultado de transpresión y colisión por movimientos del PKF. Contiene un paleo-cañón espectacular del sistema Palu.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "El WSFB es resultado directo de transpresión y colisión producida por movimientos del PKF. La edad del plegamiento está bien constrañida onshore por la Formación Pasangkayu Plio-Pleistoceno ('Celebes Molasse'), formada en respuesta al uplift del hinterland. Deformación ongoing registrada en sísmica offshore.",
+            "type": "age",
+            "confidence": "high"
+          },
+          {
+            "text": "El WSFB no es un cinturón único sino tres provincias estructurales. CSP no desarrolló un detachment Terciario (a diferencia de SSP y NSP) y toda la compresión offshore fue tomada por thrust basement-involved onshore.",
+            "type": "tectonic_setting",
+            "confidence": "high"
+          },
+          {
+            "text": "Durante el Plioceno, el setting extensional previo del Estrecho de Makassar devino compresional por la colisión del Sulu Spur con el borde SE de Sundaland — contribuyendo al ensamblaje en K de Sulawesi.",
+            "type": "genesis",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono offshore aproximado basado en Fig. 7 (batiimetría) y descripción de Fraser et al. (2003). Límite E = posición aproximada del PKF. Límite W = frente de deformación visible en batiimetría."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "fold_thrust_belt_baillie_2022_2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [120.80, 1.20], [121.30, 1.20], [122.00, 1.00],
+          [122.50, 0.80], [122.80, 0.50], [122.50, 0.20],
+          [122.00, 0.30], [121.30, 0.50], [120.80, 0.80],
+          [120.80, 1.20]
+        ]]
+      },
+      "properties": {
+        "name": "North Sulawesi Fold & Thrust Belt (NSFTB)",
+        "category": "fold_thrust_belt",
+        "depth_class": "mayor",
+        "vergence": "N",
+        "age_deformation_ma": 5.3,
+        "shortening_km": null,
+        "description": "Cinturón de pliegues y corrimientos offshore al N del North Arm, en la parte S del Mar de Célebes. Límite N = North Sulawesi Trench. Deformación relacionada con movimientos de la zona de falla Palu-Koro y subducción del Mar de Célebes bajo el North Arm. Geometrías fold-and-thrust belt clásicas en batiimetría. Contiene cuencas ovoidales extensionales (o transtensionales) al N del North Arm relacionadas con rollback del slab.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Deformación del NSFTB ocurrió desde el Mioceno tardío o Plioceno hasta el presente, con subducción del Mar de Célebes en el NST y movimiento en el PKF (Tiranda & Hall, in prep).",
+            "type": "age",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Polígono aproximado basado en Fig. 9 (batiimetría NW North Arm) y descripción textual. ±20 km de precisión."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "basin_baillie_2022_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.20, 0.30], [122.00, 0.20], [122.80, 0.00],
+          [123.00, -0.50], [122.80, -1.00], [122.00, -1.20],
+          [121.20, -1.00], [120.80, -0.50], [121.00, 0.00],
+          [121.20, 0.30]
+        ]]
+      },
+      "properties": {
+        "name": "Gorontalo Bay (Gulf of Tomini)",
+        "category": "basin",
+        "depth_class": "cortical",
+        "basin_type": "back_arc",
+        "rift_onset_age": 5.0,
+        "rift_cessation_age": null,
+        "basement_type": "continental",
+        "age_ma": 5.0,
+        "depth_km": 2.0,
+        "opening_rate_note": "Subsidence inició ~5 Ma; excedió producción carbonática hundiendo arrecifes a 1800–2000 m. Espesor sedimentario >10 km.",
+        "description": "Cuenca inter-arm profunda. Basement = corteza continental de Sundaland. Sucesión estratigráfica: (1) bajo unconformity Eoceno Medio o Mioceno Temprano: carbonatos marinos ricos en cuarzo; (2) sobre unconformity: sucesión carbonática de aguas someras; (3) arrecifes sumergidos + depósitos deep-water Plioceno-Reciente. Rollback del NSZ causó extensión back-arc y subsidencia rápida desde ~5 Ma.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Subsidencia rápida en Gorontalo Bay inició ~5 Ma (rollback-driven) y excedió tasas de producción carbonática, matando todos los arrecifes excepto raros pinnáculos. Los arrecifes están ahora a 1800–2000 m de profundidad.",
+            "type": "age",
+            "confidence": "high"
+          },
+          {
+            "text": "El espesor sedimentario en la bahía supera los 10 km (Jablonski et al. 2007). El basement propuesto es corteza continental de Sundaland.",
+            "type": "genesis",
+            "confidence": "medium"
+          },
+          {
+            "text": "Uplift rápido en tierra con subsidencia sincrónica offshore interpretado como linked al rollback N del NSZ durante Plioceno–presente. GPS confirman movimiento rápido N del North Arm vs Mar de Célebes (proceso ongoing).",
+            "type": "genesis",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono aproximado de contorno de la bahía (Fig. 2, 3). El paper describe evidencia extensional en Fig. 10A (arrecifes sumergidos). Precisión ±15 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "basin_baillie_2022_2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [120.00, -3.50], [120.80, -3.50], [121.20, -3.80],
+          [121.40, -4.50], [121.20, -5.20], [120.50, -5.50],
+          [119.80, -5.30], [119.50, -4.60], [119.60, -3.90],
+          [120.00, -3.50]
+        ]]
+      },
+      "properties": {
+        "name": "Bone Bay (Gulf of Bone)",
+        "category": "basin",
+        "depth_class": "cortical",
+        "basin_type": "pull_apart",
+        "rift_onset_age": null,
+        "rift_cessation_age": null,
+        "basement_type": "continental",
+        "age_ma": null,
+        "depth_km": null,
+        "opening_rate_note": "Sección Neogena synrift gruesa no deformada. Unconformity probable Early Plioceno registra uplift mayor de Sulawesi y subsidencia de la bahía.",
+        "description": "Cuenca transtensional entre los brazos S y SE de Sulawesi. Trend principal N-S, dividida en sub-cuencas y altos. Geometrías sísmicas: half-graben clásico + secciones 'bath-tub' con lados escarpados. Canal axial prominente (ancho hasta 3 km) presente solo sobre la unconformity Early Plioceno. El wrench faulting sinistral NNW es importante: sistema que se extiende desde Bone Bay a través del South Arm.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Bone Bay es en su mayor parte transtensional en origen: algunas secciones sísmicas muestran geometría half-graben clásica, otras geometría 'bath-tub' con lados escarpados a E y W. El sistema de fallas sinistral NNW produye múltiples depocentros y altos estructurales (Camplin & Hall 2014).",
+            "type": "genesis",
+            "confidence": "high"
+          },
+          {
+            "text": "La unconformidad probable del Early Plioceno registra uplift mayor de Sulawesi y subsidencia del Golfo de Bone, con influx clástico masivo del N, desarrollo de sistema de cañones hacia el S y retrogradación/ahogamiento de carbonatos en los márgenes de la cuenca.",
+            "type": "age",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono del contorno de la bahía. Fig. 11 provee la imagen sísmica (perfil C-D). Precisión ±15 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "basin_baillie_2022_3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [117.50, 0.00], [118.50, 0.50], [119.20, 0.30],
+          [119.30, -0.80], [119.00, -1.80], [118.50, -2.50],
+          [118.00, -2.50], [117.50, -1.50], [117.50, 0.00]
+        ]]
+      },
+      "properties": {
+        "name": "North Makassar Basin (Lariang-Karama region)",
+        "category": "basin",
+        "depth_class": "cortical",
+        "basin_type": "rift",
+        "rift_onset_age": 45.0,
+        "rift_cessation_age": null,
+        "basement_type": "continental",
+        "age_ma": 45.0,
+        "depth_km": null,
+        "opening_rate_note": "Rift inicial Eoceno Temprano (~45 Ma) cuando W Sulawesi se separó de Borneo. 3500 m de rocas sedimentarias Eoceno–Oligoceno en región Lariang/Karama.",
+        "description": "Margen continental oriental de Sundaland (rift). W Sulawesi se separó de Borneo en el Eoceno Temprano formando el Estrecho de Makassar simultáneamente con el spreading oceánico del Mar de Célebes. La parte onshore (región Lariang-Karama) contiene 3500 m de rocas terrestres y marino-marginales Eoceno–Oligoceno, sobreyacidas por carbonatos y limos marinos Mioceno, luego por sedimentos de plataforma Early Plioceno y la Formación Pasangkayu Plio-Pleistoceno ('Celebes Molasse').",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "En el Plioceno, el setting extensional previo del Estrecho de Makassar devino compresional con la colisión del Sulu Spur con el borde SE de Sundaland — oscureciendo progresivamente el sistema de rift Eoceno original (Fraser et al. 2003).",
+            "type": "tectonic_setting",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono offshore approximado del North Makassar Basin + región onshore Lariang-Karama. Precisión ±20 km. La presencia de petróleo (oil seeps >100 años de conocimiento) indica sistema petrolífero activo."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "terrane_baillie_2022_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.50, 2.00], [120.50, 2.00], [121.20, 1.50],
+          [121.20, -1.00], [120.50, -2.50], [119.80, -3.50],
+          [119.00, -4.50], [118.50, -4.50], [118.80, -3.00],
+          [119.30, -1.50], [119.30, 0.00], [119.50, 2.00]
+        ]]
+      },
+      "properties": {
+        "name": "West Sulawesi Province (including South Arm)",
+        "category": "terrane",
+        "depth_class": "superficial",
+        "age_ma": 100.0,
+        "tectonic_affinity": "continental",
+        "collision_age_ma": 65.0,
+        "terrane_name": "West Sulawesi Province",
+        "description": "Margen continental oriental de Sundaland. Basement metamórfico sobreyacido por turbiditas del Cretácico Tardío (setting de forearc), luego por sucesiones volcano-sedimentarias Eoceno Medio–Mioceno Temprano. Fragmentos microcontinentales de origen Gondwana (rifted from Australia in Jurassic, accreted to Sundaland in Cretaceous). Edad Cretácico–Triásico dominante en poblaciones de zircón detrítico, pequeña población Proterozoica. Hipótesis: origen en región Bird's Head (Inner Banda Block). Cubierta por Formación Tonasa Carbonate Platform (Paleógeno–Mioceno Medio).",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Distribuciones de zircón detrítico en rocas del basamento del South Arm muestran poblaciones predominantemente Mesozoicas (Cretácico y Triásico) y Paleozoicas con pequeña población Proterozoica — apoya origen en región Bird's Head (Inner Banda Block) (Jaya et al. 2017).",
+            "type": "tectonic_setting",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono aproximado del terreno W Sulawesi incluyendo el South Arm, basado en Fig. 2 (West Sulawesi Province, gris claro). Precisión ±20 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "terrane_baillie_2022_2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [123.00, -1.40], [123.50, -1.40], [124.20, -1.80],
+          [124.50, -2.20], [124.20, -2.60], [123.50, -2.60],
+          [123.00, -2.20], [122.80, -1.80], [123.00, -1.40]
+        ]]
+      },
+      "properties": {
+        "name": "Banggai-Sula Microcontinent",
+        "category": "terrane",
+        "depth_class": "superficial",
+        "age_ma": 250.0,
+        "tectonic_affinity": "continental",
+        "collision_age_ma": 23.0,
+        "terrane_name": "Banggai-Sula",
+        "description": "Fragmento microcontinental de origen australiano, parte del Sula Spur. Islas Banggai-Sula con esquistos, pizarras y gneis Pérmico-Triásico intruidos por granitoides Pérmico-Triásico. Previamente interpretado como fragmentos separados del N de Nueva Guinea y transportados al W por el sistema Sorong. Actualmente interpretado como parte del Sula Spur que colisionó con el North Arm en el Mioceno Temprano y luego se fragmentó (Spakman & Hall 2010; Hall 2011).",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "El Banggai-Sula es parte del Sula Spur que colisionó con el North Arm en el Mioceno Temprano (~25 Ma) — este es el primer choque Australia–SE Asia — y se fragmentó posteriormente. No se extiende el sistema Sorong más allá de las islas Sula (Rudyawan & Hall 2012).",
+            "type": "genesis",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono aproximado de las islas Banggai-Sula según Fig. 2 (Microcontinental Fragments, naranja). Precisión ±10 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "terrane_baillie_2022_3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.50, -4.80], [122.80, -4.80], [123.30, -5.10],
+          [123.50, -5.50], [123.20, -5.80], [122.60, -5.70],
+          [122.20, -5.40], [122.20, -5.00], [122.50, -4.80]
+        ]]
+      },
+      "properties": {
+        "name": "Buton-Tukang Besi Microcontinent",
+        "category": "terrane",
+        "depth_class": "superficial",
+        "age_ma": null,
+        "tectonic_affinity": "continental",
+        "collision_age_ma": 11.0,
+        "terrane_name": "Tukang Besi-Buton",
+        "description": "Fragmento microcontinental de afinidad australiana en el SE Arm. Sucesiones Mesozoicas y Terciarias similares a Banggai-Sula. Colisionó con el microcontiente en el Mioceno Medio (~11 Ma) — ~8 m.y. antes del flare-up magmático en W Sulawesi y ~2 m.y. antes del docking del Banggai-Sula en el Early Plioceno.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "El flare-up magmático en W Sulawesi ocurrió ~8 m.y. después de la colisión del Tukang Besi-Buton (Mioceno Medio) y ~2 m.y. antes del docking del Banggai-Sula (Early Plioceno) — no hay evidencia geofísica/geológica de subducción oceánica en el Mioceno Tardío en W Sulawesi. El magmatismo se atribuye a rollback del slab Banda reanudado (Zhang et al. 2020).",
+            "type": "tectonic_setting",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono de Buton + islas Tukang Besi, basado en Fig. 2. Precisión ±15 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ophiolite_baillie_2022_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.50, -2.00], [122.30, -1.80], [123.00, -2.00],
+          [123.20, -2.80], [122.80, -3.50], [122.00, -3.80],
+          [121.30, -3.60], [121.00, -2.80], [121.50, -2.00]
+        ]]
+      },
+      "properties": {
+        "name": "East Sulawesi Ophiolite (ESO)",
+        "category": "ophiolite",
+        "depth_class": "superficial",
+        "age_ma": 100.0,
+        "emplacement_age_ma": 28.0,
+        "rock_types": ["residual mantle peridotite", "mafic-ultramafic cumulate", "layered gabbro", "isotropic gabbro", "sheeted dolerites", "basaltic volcanic rocks MORB"],
+        "units": {
+          "base": "residual mantle peridotite + mafic-ultramafic cumulate",
+          "middle": "layered to isotropic gabbro",
+          "top": "sheeted dolerites + basaltic volcanics MORB composition"
+        },
+        "iat_distribution": null,
+        "joint_density_range": null,
+        "weathering_level": null,
+        "economic_potential": [],
+        "eso_extent_note": "Uno de los tres ofiolitos más grandes del mundo. Se extiende desde Sulawesi Central al E y SE, incluyendo islas Buton y Muna. Dismembered pero suite completa.",
+        "description": "Ofiolita tectonicamente dismembrada con suite completa de litologías (base a tope). Composición MORB para lavas y dolerites. Datos de elementos traza (depleción en Nb vs elementos incompatibles vecinos) sugieren ambiente de zona de subducción para su origen. Intercalada con rocas sedimentarias pelágicas Cretácicas o Mesozoicas. Posible origen en plateau oceánico Cretácico. Obducción dirigida N→S sobre el basement oriental de Sulawesi (probablemente de origen australiano), no obducción westward de Australia sobre margen euroasiática.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Edades metamórficas (28–32 Ma) de rocas sobreyacidas por el ESO sugieren emplazamiento durante o después del Oligoceno medio-tardío (Parkinson 1998). En el Early Miocene, el ESO fue emplazado por obducción dirigida al NW durante la colisión del Sula Spur con el North Arm.",
+            "type": "age",
+            "confidence": "high"
+          },
+          {
+            "text": "Las variaciones geoquímicas y disparidades entre peridotita y basalto, y la relación no-cogenética corteza-manto en varios sitios, sugieren que el ESO se formó en un setting tectónico y fue sobreimpreso por magmatismo en diferentes ambientes. Posible origen como plateau oceánico Cretácico (Kadarusman et al. 2004).",
+            "type": "genesis",
+            "confidence": "medium"
+          },
+          {
+            "text": "La obducción no involucró thrust westward de Australia sobre el margen euroasiático sino obducción N→S del margen de la placa euroasiática (representada por el Mar de Célebes) sobre el basement de E Sulawesi (probablemente de origen australiano) (Monnier et al. 1995).",
+            "type": "kinematics",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Polígono del East Arm (East Sulawesi Ophiolite, azul en Fig. 2). El ESO también se extiende hacia el SE Arm e islas Buton/Muna — este polígono cubre la exposición principal en el East Arm. Precisión ±20 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "metamorphic_complex_baillie_2022_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [120.10, -1.50], [120.50, -1.50], [121.00, -1.80],
+          [121.20, -2.50], [121.00, -3.20], [120.50, -3.50],
+          [120.00, -3.20], [119.80, -2.50], [120.00, -1.80],
+          [120.10, -1.50]
+        ]]
+      },
+      "properties": {
+        "name": "Central Sulawesi Metamorphic Belt (CSMB / Pompangeo Schist Complex)",
+        "category": "metamorphic_complex",
+        "depth_class": "cortical",
+        "age_ma": 28.0,
+        "metamorphic_grade": "HP",
+        "pt_peak_kbar": null,
+        "pt_peak_celsius": null,
+        "exhumation_mechanism": "extensional_detachment",
+        "tectonic_affinity": "mixed",
+        "description": "Cinturón metamórfico confinado a la parte central del East Arm. Incluye el Pompangeo Schist Complex y un complejo de mélange. Resultado de colisión entre fragmentos de origen Gondwana y el margen asiático activo en el Late Oligoceno o Early Mioceno. Complejo accrecionario formado durante el Cretácico y Paleógeno — sutura entre las partes W y E de Sulawesi. Afloramientos en forma de masifs corrugados tipo core complex (Pompangeo Mountains y Tokorondo Mountains) visibles en SRTM. Landforms son footwalls desnudos de fallas de detachment extensional.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Análisis SRTM revela masifs corrugados tipo dome (Tokorondo y Pompangeo) interpretados como footwalls desnudos de fallas de detachment extensional — core complexes activos similares a otros en el mundo (Spencer 2010, 2011). Extensión Neogena, no colisión, es el mecanismo de formación.",
+            "type": "genesis",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono aproximado del CSMB incluyendo el Pompangeo Schist (marrón oscuro en Fig. 2). El complejo se extiende de Sulawesi Central al E. Precisión ±20 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "metamorphic_complex_baillie_2022_2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.95, 0.70], [120.35, 0.65], [120.65, 0.35],
+          [120.55, -0.10], [120.20, -0.25], [119.90, -0.05],
+          [119.80, 0.35], [119.95, 0.70]
+        ]]
+      },
+      "properties": {
+        "name": "Malino Metamorphic Complex (MMC)",
+        "category": "metamorphic_complex",
+        "depth_class": "cortical",
+        "age_ma": 17.0,
+        "metamorphic_grade": "amphibolite",
+        "pt_peak_kbar": null,
+        "pt_peak_celsius": null,
+        "exhumation_mechanism": "core_complex",
+        "tectonic_affinity": "continental",
+        "description": "Complejo metamórfico en la parte occidental del North Arm. Predominantemente esquisto y gneis cuarzo-feldespático con intercalaciones de cuarcita, esquisto grafítico, marga y anfibolita. Greenschists forman selvage discontinuo alrededor del complejo. Interpretado como metamorphic core complex con extensión litosférica en Early–Middle Miocene. Segunda fase de uplift extensional acomodada por fallas frágiles desde el Late Miocene–Pliocene en adelante. Protolitos ígneos y sedimentarios son corteza continental antigua, probablemente de derivación australiana. Edad metamorfismo: 23–11 Ma.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "El MMC es un metamorphic core complex que sufrió extensión litosférica en el Early–Middle Miocene (23–11 Ma), con segunda fase de uplift extensional acomodada por fallas frágiles desde el Late Miocene–Pliocene. Protolitos son corteza continental antigua de probable derivación australiana (Advokaat et al. 2017).",
+            "type": "genesis",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Posición indicada en Fig. 3 con label 'MMC' (Malino Metamorphic Complex) en la parte W del North Arm. Polígono aproximado. Precisión ±15 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "metamorphic_complex_baillie_2022_3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.75, 0.65], [120.05, 0.60], [120.25, 0.35],
+          [120.15, 0.00], [119.85, -0.15], [119.55, 0.05],
+          [119.55, 0.40], [119.75, 0.65]
+        ]]
+      },
+      "properties": {
+        "name": "Palu Metamorphic Complex (PMC)",
+        "category": "metamorphic_complex",
+        "depth_class": "cortical",
+        "age_ma": 3.5,
+        "metamorphic_grade": "amphibolite",
+        "pt_peak_kbar": null,
+        "pt_peak_celsius": null,
+        "exhumation_mechanism": "extensional_detachment",
+        "tectonic_affinity": "mixed",
+        "description": "Cinturón metamórfico de presión media (clorita a estaurolita) expuesto adyacente a la Falla Palu. Litologías dominantes: gneis y esquisto de biotita, con anfibolita, granulita, migmatita, peridotita, rocas calc-silicato y meta-granitoides subordinados. Rocas metamórficas fuertemente deformadas, algunas fundidas parcialmente para formar migmatitas. Edades de enfriamiento Early a Late Plioceno. Granitos tipo-S intruidos con edades Plioceno similares. Ambos muestran tasas de enfriamiento muy rápidas → exhumación rápida. Tasa de exhumación: 0.75–0.9 mm/yr → ~2 km de corteza superior removidos desde el Plioceno Medio.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Tasas de exhumación por termocrononología de apatito: 0.75–0.9 mm/yr → remoción de ~2 km de corteza superior desde el Plioceno Medio. Proceso muy rápido consecuente de extensión + adelgazamiento cortical asociado al PKF y rollback del NSZ.",
+            "type": "slip_rate",
+            "confidence": "high"
+          },
+          {
+            "text": "El PMC representa un cinturón metamórfico de presión media con edades de enfriamiento Early a Late Plioceno y granitos intrusos con edades Plioceno similares — ambas características implican alta velocidad de los procesos tectónicos incluido el magmatismo, la exhumación y el retrabajamiento en sedimento (Hennig et al. 2017).",
+            "type": "age",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Posición indicada en Fig. 3 como 'PMC' adyacente a la Falla Palu en el Neck. Polígono aproximado basado en Fig. 3. Precisión ±10 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "volcanic_arc_baillie_2022_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.80, 0.90], [120.20, 0.80], [120.60, 0.70],
+          [121.00, 0.60], [121.50, 0.50], [122.00, 0.40],
+          [122.50, 0.30], [123.00, 0.20], [123.50, 0.15],
+          [124.00, 0.10], [124.50, 0.05], [125.00, 0.00]
+        ]
+      },
+      "properties": {
+        "name": "North Arm Volcanic Arc (North Sulawesi Arc)",
+        "category": "volcanic_arc",
+        "depth_class": "superficial",
+        "arc_type": "island",
+        "age_ma_start": 51.0,
+        "age_ma_end": 2.0,
+        "related_subduction": "North Sulawesi Trench (Celebes Sea slab); antes subducción del Océano Índico",
+        "status": "active",
+        "description": "Arco volcano-plutónico intra-oceánico de composición tholeiítica a calc-alcalina, construido sobre corteza oceánica Eocena. Dos provincias geoquímicas distintas: W con afinidad continental; E con afinidad oceánica. Serie Antigua calc-alcalina/tholeiítica 51–17 Ma; Serie Joven (14–5 Ma) magmas máficos-intermedios alto-K + magmas félsicos K-ricos calc-alcalinos (9–2 Ma). Alto-K magmatismo en el W inició ~14 Ma con firma isotópica que solo puede explicarse por fuente de larga historia geoquímica variada, probablemente el manto litosférico subcontinental australiano.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "El North Arm fue parte de un sistema de arco entre 51 y 18 Ma, con subducción de magmas relacionados a la subducción con afinidad continental en la parte W y oceánica en el E (Elburg et al. 2003). La subducción del Mar de Célebes bajo el North Arm inició ~8 Ma (reactivación).",
+            "type": "age",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Traza lineal del North Arm a lo largo de toda su extensión. Basado en la descripción del arco y posición en Fig. 2 y 3. Precisión ±15 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "volcanic_arc_baillie_2022_2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.00, 0.00], [120.00, 0.50], [120.50, 0.00],
+          [120.50, -2.00], [120.00, -3.50], [119.50, -4.50],
+          [119.00, -5.00], [118.50, -4.50], [118.80, -3.00],
+          [119.20, -1.50], [119.00, 0.00]
+        ]]
+      },
+      "properties": {
+        "name": "Western Sulawesi Igneous Province (WSIP)",
+        "category": "volcanic_arc",
+        "depth_class": "superficial",
+        "arc_type": "continental",
+        "age_ma_start": 14.0,
+        "age_ma_end": 1.8,
+        "related_subduction": "Post-subducción — setting extensional; rollback slab Banda",
+        "status": "inactive",
+        "description": "Provincia ígnea de composición casi exclusivamente potásica a ultrapotásica. Subdivisión: serie shoshonítica a ultra-potásica (HK) y serie alto-K calc-alcalina (CAK). Interpretada como formada en setting post-subducción (extensional). Magmatismo flare-up 7.2–6.1 Ma (pico ~7–6 Ma) que forma un cinturón magmático continuo en W Sulawesi. La geoquímica indica significativa participación de materiales corticales continentales en la petrogénesis. Amplia actividad magmática desde ~14 Ma en SW Sulawesi con block-faulting y volcanismo potásico.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "El magmatic flare-up del Mioceno Tardío en W Sulawesi (7.2–6.1 Ma, pico ~7–6 Ma) y la extensión regional coeva en Indonesia Oriental se atribuyen a un episodio reanudado de rollback del slab Banda (Zhang et al. 2020). No hay evidencia geofísica/geológica de subducción oceánica activa en W Sulawesi durante el Mioceno Tardío.",
+            "type": "genesis",
+            "confidence": "high"
+          },
+          {
+            "text": "La geoquímica indica participación significativa de materiales corticales continentales en la petrogénesis, consistente con la presencia común de zircones Precámbricos a Mesozoicos en las rocas ígneas del Mioceno Tardío.",
+            "type": "tectonic_setting",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono del West Sulawesi Province (gris oscuro en Fig. 2) como proxy de la distribución de la provincia ígnea. El Fig. 4 muestra la distribución de granitoides individuales con edades. Precisión ±20 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "cross_section_baillie_2022_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [118.60, 0.10], [118.90, -0.20], [119.20, -0.50],
+          [119.50, -0.80], [119.80, -1.10], [120.10, -1.50]
+        ]
+      },
+      "properties": {
+        "name": "Perfil A-B — West Sulawesi Fold Belt",
+        "category": "cross_section",
+        "depth_class": "cortical",
+        "section_type": "seismic_reflection",
+        "section_label": "A-B",
+        "depth_range_km": "0-15",
+        "length_km": 120,
+        "orientation_deg": 315,
+        "image_file": "baillie_2022_fig6_seccionAB.png",
+        "image_caption": "Onshore and offshore geological seismic section West Sulawesi Fold Belt (modified after Isis, 2005); location of section shown on Figure 2 as line A-B.",
+        "key_features_in_section": [
+          "Pasangkayu Formation (Celebes Molasse) — Plio-Pleistocene synorogenic, onshore",
+          "Libu Formation — intermediate Tertiary",
+          "Toraja Group — base Tertiary",
+          "Major unconformity (base of section)",
+          "Basement-involved thrusting onshore near basin margin",
+          "Deformation decreasing seaward (distal fold belt) — deformación ongoing",
+          "Bathyal outer shelf gravity flow units (offshore)",
+          "Bathyal shelfbreak gravity flow units (offshore)"
+        ],
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "La sección compuesta sísmica-geológica muestra tectónica basement-involved onshore cerca del margen de la cuenca y disminución de la intensidad de la deformación hacia las partes distales del cinturón donde la deformación aparece ongoing. Similitud contracción en las 3 provincias estructurales; en la CSP la compresión no rampeó en un detachment Terciario (como en SSP y NSP) y toda la compresión offshore fue tomada por thrust basement-involved onshore.",
+            "type": "tectonic_setting",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Sección modificada de Isis (2005). Imagen extraída de página 9 del PDF (página completa — la Fig. 6 ocupa la parte superior de la página). La posición del perfil A-B está trazada en Fig. 2 y Fig. 3 del paper. Orientación estimada NW→SE. Imagen exportada automáticamente."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "cross_section_baillie_2022_2",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.10, -3.60], [120.20, -4.00], [120.30, -4.40],
+          [120.50, -4.80], [120.70, -5.20]
+        ]
+      },
+      "properties": {
+        "name": "Perfil C-D — Bone Bay (sísmica de reflexión)",
+        "category": "cross_section",
+        "depth_class": "cortical",
+        "section_type": "seismic_reflection",
+        "section_label": "C-D",
+        "depth_range_km": "0-8",
+        "length_km": 90,
+        "orientation_deg": 200,
+        "image_file": "baillie_2022_fig11_seccionCD.png",
+        "image_caption": "Bone Bay bathymetric and seismic images. (A) bathymetry image of Bone Bay. (B) seismic image of basin infill, location of line shown as line C-D on Figure 2. (C) detailed bathymetric image of main channel. (D) Seismic image showing channel development of main channel.",
+        "key_features_in_section": [
+          "Probable Early Pliocene unconformity (major regional event)",
+          "Half-graben geometry (en algunas secciones) o 'bath-tub' (otras)",
+          "Canal axial prominente — solo presente encima de la unconformity Early Plioceno",
+          "Sección synrift Neogena gruesa y no deformada",
+          "Buildups carbonáticos en flancos de la cuenca (Neogeno)",
+          "Sedimentos marinos profundos en partes axiales"
+        ],
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "La sección sísmica muestra la unconformidad probable del Early Plioceno que registra el mayor evento de uplift de Sulawesi y subsidencia de Bone Bay. El canal prominente (hasta 3 km de ancho) se forma solo encima de esta unconformidad, alimentado por density flows de aguas fluviales estacionales.",
+            "type": "age",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "La Fig. 11 incluye varias sub-imágenes (A batiimetría bahía completa, B sísmica perfil, C batiimetría del canal, D sísmica del canal). La imagen exportada (página 17 completa) incluye texto del paper a los costados — recortar manualmente para separar las sub-imágenes si se necesita presentación limpia. Posición del perfil C-D trazada en Fig. 2. Orientación estimada WSW→ENE."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "volcano_baillie_2022_1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.61, -0.17]
+      },
+      "properties": {
+        "name": "Una-Una Volcano",
+        "category": "volcano",
+        "depth_class": "superficial",
+        "volcano_type": "stratovolcano",
+        "status": "active",
+        "last_eruption": null,
+        "vei_max": null,
+        "related_arc": "North Arm Arc — extensión Gorontalo Bay",
+        "description": "Volcán calc-alcalino shoshonítico aislado en Gorontalo Bay. Propuesto como producto de extensión joven de Gorontalo Bay por rollback del slab (Broom-Fendley et al. 2011). Relacionado con las islas Tongian (~2 Ma).",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "Una-Una y las islas Tongian (~2 Ma) son el producto de la extensión joven de Gorontalo Bay debida al rollback del slab (Broom-Fendley et al. 2011).",
+            "type": "genesis",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Coordenadas estimadas de la posición de Una-Una en el mapa Fig. 2 (indicada con círculo en la bahía Gorontalo). Precisión ±5 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "volcano_baillie_2022_2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [124.83, 1.33]
+      },
+      "properties": {
+        "name": "Tondano Caldera",
+        "category": "volcano",
+        "depth_class": "superficial",
+        "volcano_type": "caldera",
+        "status": "dormant",
+        "last_eruption": null,
+        "vei_max": null,
+        "related_arc": "North Sulawesi subduction zone arc (Sangihe)",
+        "description": "Caldera elíptica NE-SW de 15×30 km al S inmediato de Manado. Formada por erupciones explosivas de gran volumen y colapso caldera. Contiene pequeños volcanes post-caldera inactivos y un sistema geotérmico activo. Rodeada por depósitos de ignimbrita débilmente soldada e intensamente disectada.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "La caldera Tondano (15×30 km) fue formada por erupciones explosivas de gran volumen y colapso caldera — es parte del volcanismo activo sobre la zona de subducción que subyace N Sulawesi y las islas Sangihe.",
+            "type": "genesis",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Coordenadas aproximadas al S inmediato de Manado según posición en Fig. 2. Precisión ±10 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "igneous_body_baillie_2022_1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.90, -2.00]
+      },
+      "properties": {
+        "name": "Sassak Cu-Au Porphyry",
+        "category": "igneous_body",
+        "depth_class": "cortical",
+        "body_type": "pluton",
+        "age_ma": 11.25,
+        "composition": "quartz syenite (shoshonitic affinity)",
+        "emplacement_context": "Within Walanae Fault Zone — post-subduction extensional setting",
+        "description": "Intrusión de cuarzo sienita de afinidad shoshonítica con la más significativa mineralización Cu-Au del área. Edades K-Ar de rocas asociadas cercanas: 10.6–11.9 Ma. Ubicado dentro de la zona de falla Walanae.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [
+          {
+            "text": "La mineralización Cu-Au más significativa de West Sulawesi está en Sassak (cuarzo sienita, afinidad shoshonítica); edades K-Ar 10.6–11.9 Ma. Ubicado dentro de la zona Walanae. Representa el potencial metalogénico de la Provincia Ígnea Occidental.",
+            "type": "tectonic_setting",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Posición 'Sassak' indicada con label en el mapa Fig. 3 (South Arm, dentro de la zona Walanae). Coordenadas aproximadas ±15 km."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "structure_baillie_2022_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.72, 0.88], [119.55, 0.60], [119.40, 0.30],
+          [119.20, 0.00], [119.00, -0.30], [118.80, -0.70]
+        ]
+      },
+      "properties": {
+        "name": "Palu Canyon (paleo-sistema, inactivo)",
+        "category": "structure",
+        "depth_class": "superficial",
+        "structure_type": "other",
+        "orientation": "NNW-SSE",
+        "length_km": 150,
+        "age_ma": null,
+        "depth_km": null,
+        "description": "Cañón espectacular ya no activo, erosionado en el WSFB por el paleo-sistema depositacional Palu (Baillie et al. 2008). Visible en imágenes batimétricas del sector N del WSFB. Relacionado con el sistema de transporte profundo del PKF. Evidencia de depósitos turbidíticos contrastantes entre sistemas del W y E de Sulawesi.",
+        "coord_quality": "approximate",
+        "source_apa": "Baillie, P., & Decker, J. (2022). Enigmatic Sulawesi: The Tectonic Collage. Berita Sedimentologi, 48(1), 1–30. https://doi.org/10.51835/bsed.2022.48.1.388",
+        "conclusions": [],
+        "extraction_notes": "Estructura referenciada como feature sedimentario notable en la Fig. 8 (batiimetría N del WSFB). Sin conclusiones tectónicas propias en el paper más allá de su asociación con el sistema PKF. Traza aproximada del eje del cañón desde la desembocadura del río Palu hacia el offshore. Precisión ±20 km."
+      }
+    }
+
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Shih, H.-C., Heliani, L. S., Hsiao, Y.-S., Hwang, C., & Pahlevi, A. M. (2026). A case study of geoid modeling in Sulawesi and accuracy verification strategies for accommodating diverse MSL vertical datums. Terrestrial, Atmospheric and Oceanic Sciences, 37, 1. https://doi.org/10.1007/s44195-025-00119-4",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4 (Fig. 1 lectura visual)",
+    "paper_scale": "REGIONAL",
+    "region": "Sulawesi — geoid modeling study area 118-126°E, 6°S-6°N",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["geophysical_point", "structure"],
+    "comprehension_summary": "Geoid modeling para Sulawesi usando gravimetria aerea BIG+DTU (2008-2019) + 57 puntos de gravedad absoluta (A10 gravimeter). Mejora precision geoidal de nivel metro (INAGEOID2020) a nivel decimetro. Residuos >0.5 m en NE offshore. Fig. 1 muestra distribucion de estaciones en Indonesia.",
+    "main_conclusions": [
+      "Geoid accuracy improved from meter-level to decimeter-level for Sulawesi",
+      "57 absolute gravity points (A10 gravimeter, BIG) distributed across Indonesia",
+      "Airborne gravity surveys 2008-2019 (BIG+DTU) fill gaps in complex terrain",
+      "Residual geoid differences >0.5 m in nearshore/offshore NE Sulawesi — complex gravity field in collision zone",
+      "Study area: 118-126°E, 6°S-6°N"
+    ],
+    "total_features": 3,
+    "figures_used": ["Fig. 1 (distribution absolute + terrestrial + airborne gravity datasets)"],
+    "nota_estaciones": "57 estaciones A10 distribuidas en toda Indonesia. ~14-15 visibles en Sulawesi en Fig. 1 (escala Indonesia-wide, precision +/-0.3 grados). Posiciones en ciudades principales accesibles por carretera."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [118.0, 6.0], [126.0, 6.0], [126.0, -6.0], [118.0, -6.0], [118.0, 6.0]
+        ]]
+      },
+      "properties": {
+        "id": "structure_shih_2026_1",
+        "name": "Area de estudio — Modelado geoidal Sulawesi (Shih 2026)",
+        "full_name": "Geoid modeling study area Sulawesi — 118-126E, 6S-6N",
+        "category": "structure",
+        "layer_type": "structure",
+        "source": "shih_2026_geoid_sulawesi",
+        "canonical_id": null,
+        "structure_type": "geodetic_study_area",
+        "depth_class": "cortical",
+        "survey_period": "2008-2019",
+        "survey_agencies": ["BIG (Badan Informasi Geospasial)", "DTU (Technical University of Denmark)"],
+        "absolute_gravity_points_total": 57,
+        "gravimeter": "A10 absolute gravimeter",
+        "geoid_accuracy": "decimeter-level (improved from meter-level INAGEOID2020)",
+        "airborne_survey_sulawesi": "2008 (BIG+DTU)",
+        "source_apa": "Shih et al. (2026). TAO 37:1. https://doi.org/10.1007/s44195-025-00119-4",
+        "source_short": "Shih et al. (2026)",
+        "paper_finding": "Sulawesi geoid improved to decimeter accuracy; 57 A10 stations across Indonesia; airborne surveys 2008-2019",
+        "coord_quality": "accurate",
+        "extraction_notes": "Extent del area de estudio tomado del texto del paper.",
+        "conclusions": [
+          {
+            "text": "Geoid height residuals >0.5 m in nearshore/offshore NE Sulawesi reflect extreme density contrasts in the collision zone",
+            "type": "other",
+            "geodyn_implication": "Los residuos geoidales en el NE offshore reflejan la complejidad gravitatoria de la doble subduccion Molucas — variaciones de densidad cortical extremas dificultan el modelado geoidal",
+            "confidence": "high",
+            "figure_ref": "Fig. 12, text"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [119.41, -5.14], [119.60, -4.01], [118.89, -2.68],
+          [119.87, -0.90], [119.72, -0.55], [120.79, 1.01],
+          [122.47,  0.54], [124.84,  1.49], [125.18,  1.44],
+          [122.52, -3.97], [122.79, -1.03], [120.75, -1.39],
+          [121.58, -4.06], [120.20, -2.98]
+        ]
+      },
+      "properties": {
+        "id": "geophysical_point_shih_2026_2",
+        "name": "Estaciones gravedad absoluta BIG — Sulawesi (~14 de 57 totales)",
+        "full_name": "BIG Absolute Gravity Stations A10 — Sulawesi subset (~14 stations), read from Fig. 1",
+        "category": "geophysical_point",
+        "layer_type": "structure",
+        "source": "shih_2026_geoid_sulawesi",
+        "canonical_id": null,
+        "depth_class": "superficial",
+        "point_type": "gravity_station",
+        "gravimeter": "A10 absolute gravimeter",
+        "n_stations_sulawesi": 14,
+        "n_stations_total_indonesia": 57,
+        "station_names": [
+          "Makassar", "Pare-Pare", "Mamuju",
+          "Palu", "Donggala", "Toli-Toli",
+          "Gorontalo", "Manado", "Bitung",
+          "Kendari", "Luwuk", "Poso",
+          "Kolaka", "Palopo"
+        ],
+        "source_apa": "Shih et al. (2026). TAO 37:1.",
+        "source_short": "Shih et al. (2026)",
+        "paper_finding": "~14 A10 stations visible in Sulawesi from Fig. 1; distributed at major cities accessible by road",
+        "coord_quality": "approximate",
+        "extraction_notes": "Coordenadas de ciudades principales leidas visualmente de Fig. 1 (escala Indonesia-wide). Precision ~0.2-0.3 grados. Las 57 coordenadas exactas no estan en el texto del paper.",
+        "conclusions": [
+          {
+            "text": "~14 A10 absolute gravity stations in Sulawesi distributed at major accessible cities — coverage limited by complex terrain and infrastructure gaps",
+            "type": "other",
+            "geodyn_implication": "La cobertura de estaciones absolutas sigue el patron de accesibilidad (ciudades costeras y centros urbanos) — el interior montanoso de Sulawesi queda cubierto solo por la gravimetria aerea",
+            "confidence": "medium",
+            "figure_ref": "Fig. 1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [118.0, 5.0], [126.0, 5.0], [126.0, -6.0], [118.0, -6.0], [118.0, 5.0]
+        ]]
+      },
+      "properties": {
+        "id": "structure_shih_2026_3",
+        "name": "Cobertura gravimetria aerea Sulawesi 2008 (BIG+DTU)",
+        "full_name": "Airborne gravity survey coverage Sulawesi Island 2008 — BIG + Technical University of Denmark",
+        "category": "structure",
+        "layer_type": "structure",
+        "source": "shih_2026_geoid_sulawesi",
+        "canonical_id": null,
+        "structure_type": "survey_coverage",
+        "depth_class": "superficial",
+        "survey_year": 2008,
+        "agencies": ["BIG", "DTU"],
+        "purpose": "Fill gravity data gaps in complex terrain of Sulawesi; input to geoid modeling",
+        "source_apa": "Shih et al. (2026). TAO 37:1.",
+        "source_short": "Shih et al. (2026)",
+        "paper_finding": "2008 airborne gravity survey covers entire Sulawesi Island — visible as blue shaded area in Fig. 1",
+        "coord_quality": "approximate",
+        "extraction_notes": "Poligono de cobertura aerogravimetrica aproximado desde Fig. 1 (zona azul sombreada sobre Sulawesi).",
+        "conclusions": [
+          {
+            "text": "2008 airborne gravity survey (BIG+DTU) provides complete coverage of Sulawesi terrain inaccessible to ground surveys",
+            "type": "other",
+            "geodyn_implication": "La cobertura aerogravimetrica de Sulawesi es el dataset de referencia para la estructura gravimetrica regional — base para S4 del mapa",
+            "confidence": "high",
+            "figure_ref": "Fig. 1"
+          }
+        ]
+      }
+    }
+  ]
+}

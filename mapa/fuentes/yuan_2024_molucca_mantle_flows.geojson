@@ -1,0 +1,221 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+    "extraction_date": "2025-05-17",
+    "extractor": "Claude geo-comprehension + paper-extractor",
+    "region": "Molucca Sea, Indonesia oriental",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": [
+      "anisotropy",
+      "geophysical_point"
+    ],
+    "notes": "Tomografia anisotropa Vp tilting-axis. Features representan patrones de flujo mantelico inferidos de Fast Velocity Planes (FVPs). No contiene trazas de fallas nuevas ni mecanismos focales."
+  },
+  "bibliography": {
+    "yuan_2024": {
+      "apa": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+      "short": "Yuan et al. (2024)",
+      "journal": "Geochemistry, Geophysics, Geosystems",
+      "year": 2024,
+      "doi": "10.1029/2024GC011500",
+      "topic": "Anisotropic tomography, mantle dynamics",
+      "region": "Molucca Sea, Indonesia oriental"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.0,
+          1.5
+        ]
+      },
+      "properties": {
+        "id": "aniso_yuan_2024_featureA",
+        "name": "Flujo Sangihe — trench-normal",
+        "category": "anisotropy",
+        "fvp_orientation": "vertical, perpendicular al Sangihe trench",
+        "fvp_azimuth_deg": 90,
+        "depth_km": 200,
+        "depth_range_km": "100-400",
+        "flow_type": "2D_entrained",
+        "interpretation": "Flujo 2D entrained generado por acoplamiento de la losa Sangihe con el manto circundante. A 400-500 km cambia de trench-normal a trench-parallel bajo influencia de la losa Indo-Australiana.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Posicion aproximada del centro del Big Mantle Wedge W de la losa Sangihe segun Fig. 9b y 10a",
+        "source_apa": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+        "source_short": "Yuan et al. (2024)",
+        "paper_finding": "FVPs verticales normales al Sangihe trench en la cuña mantelica a 200 km — caracteristico de flujo entrained 2D. A 400-500 km cambia a trench-parallel. Similar a NE Japan, Cascadia y Alaska.",
+        "full_name": "Flujo mantélico trench-normal en cuña del Sangihe (Feature A)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            129.0,
+            -4.5
+          ],
+          [
+            127.5,
+            -2.5
+          ],
+          [
+            126.5,
+            -1.0
+          ],
+          [
+            125.5,
+            0.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "aniso_yuan_2024_featureB",
+        "name": "Flujo NW — extrusión Banda arc",
+        "category": "anisotropy",
+        "fvp_orientation": "vertical, NW-SE",
+        "fvp_azimuth_deg": 315,
+        "depth_km": 250,
+        "depth_range_km": "200-300",
+        "flow_type": "extrusion_toroidal",
+        "interpretation": "Material mantelico extruido desde la bahia del Banda arc por compresion N-S creciente desde ~4 Ma. La losa del Mar de Celebes (~250 km) actua como barrera impidiendo que afecte al manto W de la losa Sangihe.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza aproximada segun Fig. 9b y 9c del paper. Conecta apertura del arco Banda con extremo sur de la losa Sangihe.",
+        "source_apa": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+        "source_short": "Yuan et al. (2024)",
+        "paper_finding": "FVPs verticales NW-SE conectando apertura del arco Banda con extremo sur de la losa Sangihe a 200-300 km. Interpretado como flujo de material extruido por bending de la losa Banda. Consistente con Hua et al. (2023) y Cao et al. (2021).",
+        "full_name": "Flujo mantélico NW extruido desde la bahía del Banda arc hacia la losa Sangihe (Feature B)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            130.5,
+            -3.5
+          ],
+          [
+            129.0,
+            -2.5
+          ],
+          [
+            127.5,
+            -1.5
+          ],
+          [
+            126.0,
+            -0.5
+          ],
+          [
+            124.5,
+            0.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "aniso_yuan_2024_featureC",
+        "name": "Flujo E-W — Seram-Buru-Sulawesi",
+        "category": "anisotropy",
+        "fvp_orientation_300km": "subhorizontal E-W",
+        "fvp_orientation_400km": "transicion a vertical N-S",
+        "depth_km": 350,
+        "depth_range_km": "300-400",
+        "flow_type": "extrusion_horizontal",
+        "olivine_fabric": "C-type (100)[001] predominante a 300 km",
+        "interpretation": "Zona de baja velocidad continua bajo Seram-Buru-Sulawesi. Flujo extruido que bypasea el extremo norte de la losa Banda y escapa hacia el NO por compresion N-S entre la placa Indo-Australiana y el manto norte. Olivino tipo C predominante a 300 km.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza aproximada segun Fig. 9c, 9d y 10b. Zona low-V desde SE de Seram hasta W de la losa Sangihe.",
+        "source_apa": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+        "source_short": "Yuan et al. (2024)",
+        "paper_finding": "Zona low-V continua bajo Seram-Buru-Sulawesi a 300-400 km. FVPs alineados con la direccion de extension. Flujo E-W bajo dominio de olivino C-type. Consistente con SKS WNW-ESE de Cao et al. (2021) y flujo semi-toroidal de Hua et al. (2023).",
+        "full_name": "Flujo mantélico E-W extruido bajo la losa Banda: Seram → Buru → Sulawesi (Feature C)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0,
+          -1.5
+        ]
+      },
+      "properties": {
+        "id": "aniso_yuan_2024_featureD",
+        "name": "Convección BMW — Java a Sangihe",
+        "category": "anisotropy",
+        "fvp_orientation": "vertical, normal al Java trench (N-S)",
+        "fvp_azimuth_deg": 0,
+        "depth_km": 500,
+        "depth_range_km": "500",
+        "flow_type": "remote_bmw_convection",
+        "interpretation": "FVPs N-S normales al Java trench en el BMW bajo Java y manto W de la losa Sangihe. Ambos afectados por ambiente extensional del rollback Indo-Australiano. Control remoto de la subduccion Java sobre la dinamica del Mar de Molucas.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Punto aproximado bajo el Java Sea-Sulawesi segun Fig. 9e y 10d",
+        "source_apa": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+        "source_short": "Yuan et al. (2024)",
+        "paper_finding": "A 500 km, FVPs bajo Java son verticales y normales al Java trench. Los FVPs en el manto W de la losa Sangihe son casi identicos — control remoto de la subduccion Indo-Australiana sobre la dinamica del Mar de Molucas occidental.",
+        "full_name": "Convección del Big Mantle Wedge de Java controlando remotamente la losa Sangihe (Feature D)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5,
+          1.0
+        ]
+      },
+      "properties": {
+        "id": "aniso_yuan_2024_featureE",
+        "name": "Flujo toroidal — losa Halmahera",
+        "category": "anisotropy",
+        "fvp_orientation": "patron toroidal alrededor del high-V anomaly",
+        "depth_km": 300,
+        "depth_range_km": "200-400",
+        "flow_type": "toroidal_slab_rollback",
+        "halmahera_slab_length_km": "500-550",
+        "halmahera_prev_estimate_km": "400-450",
+        "halmahera_dip_deg": 45,
+        "interpretation": "FVPs con patron toroidal alrededor del fragmento asismico desprendido del extremo norte de la losa Halmahera. Consistente con rollback de la losa. Losa Halmahera alcanza 500-550 km — 100 km mas que estimaciones previas.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Posicion aproximada de la losa Halmahera segun Fig. 9c y S2d. Fragmento aseismico al norte de la losa principal.",
+        "source_apa": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+        "source_short": "Yuan et al. (2024)",
+        "paper_finding": "Patron toroidal de FVPs alrededor del high-V anomaly bajo la losa Halmahera — evidencia de slab rollback y fragmento aseismico desprendido. Longitud maxima de subduccion: 500-550 km (supera estimados previos en ~100 km). Consistente con Yuan et al. (2024, Tectonophysics).",
+        "full_name": "Flujo toroidal alrededor del fragmento aseísmico desprendido de la losa Halmahera (Feature E)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124.2,
+          1.8
+        ]
+      },
+      "properties": {
+        "id": "geo_yuan_2024_celebes_barrier",
+        "name": "Losa Célebes — barrera mantélica",
+        "category": "geophysical_point",
+        "depth_km": 250,
+        "interpretation": "La losa del Mar de Celebes (~250 km profundidad) actua como barrera fisica para el flujo mantelico NW extruido del Banda arc (Feature B), impidiendo que afecte al manto W de la losa Sangihe. Confirma subduccion southward iniciada ~5 Ma.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Posicion del frente de la losa Celebes segun distribucion de sismicidad intraslab y Hall & Spakman (2015)",
+        "source_apa": "Yuan, T., Wang, Z., Zhao, D., Gao, R., & Chen, X. (2024). Multiple slabs and complex mantle flows in the Molucca Sea subduction zone. Geochemistry, Geophysics, Geosystems, 25, e2024GC011500. https://doi.org/10.1029/2024GC011500",
+        "source_short": "Yuan et al. (2024)",
+        "paper_finding": "La losa del Mar de Celebes (~250 km) obstruye el flujo NW extruido del Banda arc (Feature B). Inicio de subduccion southward a ~5 Ma (Socquet et al., 2006). Consistente con Hall & Spakman (2015).",
+        "full_name": "Losa del Mar de Célebes como barrera física para el flujo mantélico NW del Banda arc"
+      }
+    }
+  ]
+}

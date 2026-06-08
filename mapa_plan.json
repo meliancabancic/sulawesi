@@ -1,0 +1,3086 @@
+{
+  "meta": {
+    "descripcion": "Plan de trabajo del mapa tectónico — organizado por sección de la monografía",
+    "last_updated": "2026-06-03 — checklist aplicado: fuentes, flip thrusts, sub_flip subduccion, interactividad mergedGeomLayer",
+    "checklist_por_cambio": {
+      "descripcion": "Verificar ante CADA modificación al mapa, sin excepción",
+      "items": [
+        "INTERACTIVIDAD: feat_type seteado + case en singleclick (panel) Y pointermove (tooltip + cursor manito)",
+        "FUENTES: toda feature visible tiene cita en DB[id].papers o properties.source",
+        "DIRECCIÓN IUGS: sym + flip/sub_flip explícitos en CANON_KIN — no usar heurísticas automáticas para vergencia conocida",
+        "REGISTRO: layerObjs + SECTION_KEYS actualizados para capas nuevas",
+        "PLAN: tarea marcada implementado + nota_completado + fecha",
+        "ESTÉTICA: paleta Claude (--bg/--bg2/--bg3/--accent:#cc785c/--text/--dim), monospace, rem consistente — ningún color, borde o estilo ad-hoc que rompa la unidad visual del mapa"
+      ]
+    },
+    "responsables": {
+      "sistema": "Claude Code — digitalización, scripts, DB, frontend",
+      "usuario": "definición de merged_geom en el panel UI"
+    },
+    "principios_frontend": {
+      "version": "2026-05-29",
+      "A_capas": {
+        "base_fondo": {
+          "regla": "Sentinel y GEBCO son mutuamente alternantes — no pueden estar los dos OFF",
+          "sentinel": "default ON. Solo se puede apagar si GEBCO está activo. Si GEBCO está OFF, el botón de Sentinel queda deshabilitado (no clickeable).",
+          "gebco": "default OFF. Al activarse, habilita el apagado de Sentinel. Incluye hillshade + batimetría color como sub-opciones.",
+          "implementacion": "Al toggle de Sentinel: verificar GEBCO.getVisible() antes de permitir setVisible(false). Al toggle de GEBCO: si se activa, habilitar botón Sentinel; si se desactiva y Sentinel está OFF, forzar Sentinel ON."
+        },
+        "base_toggleable": [
+          "Límites de placa/microplacas — default ON, apagables, grupo 'Base'"
+        ],
+        "tematicas": "S1–S8 — cada capa individual apagable de forma independiente, todas OFF por defecto al abrir el mapa",
+        "nota": "Los límites de placa son apagables para no generar ruido visual al explorar capas temáticas"
+      },
+      "B_sismicidad": {
+        "modelo": "Una sola capa unificada con múltiples fuentes (GCMT, CMT, USGS, ISC, live)",
+        "deduplicacion": "Por proximidad espaciotemporal antes de renderizar — evitar el mismo sismo de dos catálogos",
+        "filtros": [
+          "magnitud (slider min-max)",
+          "profundidad (superficial <33km / cortical 33-70 / intermedia 70-300 / profunda >300)",
+          "período temporal",
+          "fuente (checkbox por catálogo)"
+        ],
+        "estado": "pendiente — reemplaza la arquitectura actual de múltiples capas"
+      },
+      "C_panel_canonico": {
+        "estructura": [
+          "1. Nombre + tipo + cinemática del canonical",
+          "2. 'Este mapa adopta:' → autores que apoyan + imagen representativa de uno de ellos (figura extraída del PDF)",
+          "3. 'En debate:' → por cada posición alternativa: autores + imagen de su figura",
+          "4. Datos cuantitativos (slip rate, edad, profundidad) con cita APA inline"
+        ],
+        "contradiccion": "Mostrar ambas posiciones con imágenes — NO colapsar en una sola descripción. Denominar explícitamente qué autores apoyan cada interpretación.",
+        "cita_obligatoria": "Todo feature debe tener source_apa. Sin cita = no va al mapa.",
+        "estado": "pendiente — requiere rediseño del panel lateral"
+      },
+      "D_citas": {
+        "regla": "Todo elemento visual (feature, polígono, vector, raster) debe tener cita explícita",
+        "auditoria_pendiente": [
+          "tectSubLayer (Sangihe + Halmahera hardcodeados) — verificar fuente",
+          "coreLayer (PMC, MMC, Bantimala, Tokorondo) — hardcodeados sin source_apa",
+          "seismicGapLayer — gap NST hardcodeado, verificar si viene de Serhalawan 2024",
+          "HUSEIN_2014 vectores mantélicos inline — verificar source_apa completo",
+          "NEW_FAULTS hardcoded — revisar cada estructura tiene cita",
+          "GVP_VOLCANOES inline — citar GVP Holocene como fuente",
+          "PVMBG_TYPE lookup — citar Pratama et al. (2025)"
+        ],
+        "estado": "pendiente — auditoría completa antes de P5 frontend"
+      },
+      "E_zoom": {
+        "zoom_4_6": "Capas base + estructuras Tipo A (límites placa/microplaca) + volcanes activos",
+        "zoom_7_8": "Tipo B (estructuras secundarias) + epicentros Mw≥6 + campos geotérmicos",
+        "zoom_9_plus": "Tipo B detalles + epicentros Mw≥5 + fallas locales + estaciones sismológicas + GPS",
+        "estado": "pendiente — implementar con minResolution/maxResolution en OL VectorLayer"
+      }
+    },
+    "protocolo_incorporacion_papers": {
+      "version": "2026-06-03",
+      "descripcion": "Pasos obligatorios al incorporar un paper nuevo al corpus",
+      "pasos": [
+        "1. RENOMBRAR el PDF antes de cualquier otra operación: [S{n}] Autor et al. (año) - descripción corta.pdf — para papers con múltiples secciones: [S1,S3,S7] Autor et al. (año) - descripción.pdf",
+        "2. AGREGAR entrada en project_state.json: clave snake_case, file con ruta actualizada, status=pendiente, db_source, sections_relevant, nota",
+        "3. ACTUALIZAR tabla de papers en CLAUDE.md (sección Papers del proyecto)",
+        "4. DIGITALIZAR: extraer features geográficos al GeoJSON + importar a sulawesi.db",
+        "5. ACTUALIZAR project_state.json: status=digitalizado, features_en_db=N",
+        "6. AGREGAR tarea en mapa_plan.json bajo la sección correspondiente (s{n}_d{N})",
+        "7. MARCAR tarea como implementado con nota_completado y fecha"
+      ],
+      "convencion_nombre": "[S{secciones}] Primer_autor et al. (año) - descripción.pdf",
+      "ejemplos": [
+        "[S2] Natawidjaja et al. (2020) - ruptura PKF 2018.pdf",
+        "[S1,S7] Satyana et al. (2011) - evolución tectónica IAGI.pdf",
+        "[S3] Hall & Spakman (2015) - estructura manto SE Asia.pdf"
+      ],
+      "nota": "Nunca dejar el nombre de descarga automática (1357-4638-3-PB.pdf, S0040195115003698_main.pdf, etc.)"
+    }
+  },
+  "secciones": {
+    "s1_descripcion_general": {
+      "titulo": "1. Descripción general del área",
+      "cobertura_actual": "media",
+      "nota": "Límites de placa con nombres + arcos volcánicos principales. Cuencas, complejos metamórficos y ofiolitas van en S6.",
+      "canonicals_requeridos": [
+        {
+          "tipo": "A",
+          "id": "canon_5",
+          "nombre": "PKF",
+          "merged_geom": false,
+          "critico": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_19",
+          "nombre": "Matano",
+          "merged_geom": false,
+          "critico": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_364",
+          "nombre": "NST",
+          "merged_geom": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_369",
+          "nombre": "Sangihe SZ",
+          "merged_geom": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_805",
+          "nombre": "Halmahera SZ",
+          "merged_geom": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_286-289",
+          "nombre": "MST (4 segmentos)",
+          "merged_geom": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_1920",
+          "nombre": "SST",
+          "merged_geom": true,
+          "estado": "implementado",
+          "nota": "SST creado en DB con merged_geom (2 segmentos GPlates unidos, 8 pts). CANON_KIN: dextral w:1.8. 2026-06-03"
+        },
+        {
+          "tipo": "A",
+          "id": "canon_1921",
+          "nombre": "Sorong",
+          "merged_geom": true,
+          "critico": true,
+          "estado": "implementado",
+          "nota": "Sorong creado en DB con merged_geom (GEM fid=153, 15 pts W→E). CANON_KIN: sinistral w:2.2. 2026-06-03"
+        },
+        {
+          "tipo": "A",
+          "id": "canon_1922",
+          "nombre": "Sula/NE Transform",
+          "merged_geom": false
+        },
+        {
+          "tipo": "A",
+          "id": "canon_1923",
+          "nombre": "Flores-Banda SZ",
+          "merged_geom": false
+        },
+        {
+          "tipo": "A",
+          "id": "canon_1924",
+          "nombre": "N Halmahera Transform",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_nsarc",
+          "nombre": "North Arm Volcanic Arc",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_wsip",
+          "nombre": "WSIP",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_adang",
+          "nombre": "Adang Volcanic Complex",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_terrane_wsp",
+          "nombre": "West Sulawesi Province",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_terrane_bsm",
+          "nombre": "Banggai-Sula Microcontinent",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_terrane_btb",
+          "nombre": "Buton-Tukang Besi",
+          "merged_geom": false
+        }
+      ],
+      "tareas": [
+        {
+          "id": "s1_d1",
+          "tipo": "digitalizacion",
+          "paper": "satyana_iagi_2011",
+          "archivo": "Papers/2011_IAGI_Makassar_Tectonic-Evolution-of-Sulawesi.pdf",
+          "aporte_esperado": "trazas estructurales Sulawesi, reconstrucción tectónica",
+          "estado": "implementado",
+          "nota_completado": "2026-06-02. satyana_2011_iagi_evolution en DB: 5 features (NSARC, WSIP, Gorontalo Basin, Bone Basin, PMC). DB_source: satyana_2011_iagi_evolution.",
+          "prioridad": 2,
+          "responsable": "sistema"
+        },
+        {
+          "id": "s1_d2",
+          "tipo": "digitalizacion",
+          "paper": "satyana_ipa_2011",
+          "archivo": "Papers/satyana_ipa11-g-219.pdf",
+          "aporte_esperado": "colisión microplacas, terrazas arrecife",
+          "estado": "implementado",
+          "nota_completado": "2026-06-02. satyana_2011_ipa_collision en DB: 4 features (Banggai-Sula, Buton-TK, Buton Strait, Banggai Basin). DB_source: satyana_2011_ipa_collision.",
+          "prioridad": 2,
+          "responsable": "sistema"
+        },
+        {
+          "id": "s1_d3",
+          "tipo": "digitalizacion",
+          "paper": "surono_2012",
+          "archivo": "Papers/adminjurnal,+02_Surono.pdf",
+          "aporte_esperado": "terrenos E Sulawesi, mintakat",
+          "estado": "implementado",
+          "nota_completado": "2026-06-02. surono_2012_tectonoestratigrafia en DB: 3 features (ESO, Banggai-Sula, SE Arm Meluhu). DB_source: surono_2012_tectonoestratigrafia.",
+          "prioridad": 2,
+          "responsable": "sistema"
+        },
+        {
+          "id": "s1_api1",
+          "tipo": "integracion_api",
+          "descripcion": "Velocidades GPS/GNSS actuales (2010-2025) desde NGL para estaciones en Sulawesi",
+          "fuente": "Nevada Geodetic Laboratory — geodesy.unr.edu/NGLStationPages/GlobalStationList",
+          "flujo": [
+            "1. Descargar lista global NGL (CSV con lon/lat/estación)",
+            "2. Filtrar bbox [117-130°E, -5-5°N] → ~15-20 estaciones CORS en Sulawesi",
+            "3. Para cada estación: descargar velocidad horizontal (Ve, Vn en mm/año ref. ITRF2014)",
+            "4. Guardar como fuentes/gps_velocities_sulawesi_ngl.geojson con campos: station, Ve_mmyr, Vn_mmyr, Vz_mmyr, lat, lon"
+          ],
+          "simbolizacion": "flechas proporcionales a magnitud; estilo igual al de Socquet 2006 / Walpersdorf 1998 en DB — permite comparación visual",
+          "aporte": "actualiza el campo de velocidades GPS de Socquet (2006) y Walpersdorf (1998) con 20 años adicionales de datos; permite visualizar la deformación interseísmica actual en PKF y MST",
+          "backend_nueva_ruta": "GET /api/gps_velocities → GeoJSON estático precacheado (no necesita proxy dinámico — velocidades promedio son estables)",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "fuentes/gps_velocities_sulawesi.geojson — 12 estaciones BMKG compiladas de Socquet 2006 + Walpersdorf 1998 + Irsyam 2020. gpsLayer en index.html con flechas proporcionales a magnitud, toggle 'gps_vel'."
+        },
+        {
+          "id": "s1_g1",
+          "tipo": "merged_geom",
+          "canonical": "canon_5",
+          "nombre": "PKF",
+          "instruccion": "Definir en panel luego de digitalizar Natawidjaja 2021 (s2_d1)",
+          "estado": "implementado",
+          "dependencias": [
+            "s2_d1"
+          ],
+          "responsable": "usuario",
+          "nota_completado": "canon_5 (PKF) tiene merged_geom definida desde 2026-06-05 (Natawidjaja 2021, 6 features). Tarea desbloqueada por s2_d1. Marcado implementado 2026-06-08."
+        },
+        {
+          "id": "s1_g2",
+          "tipo": "merged_geom",
+          "canonical": "canon_19",
+          "nombre": "Matano",
+          "instruccion": "Definir en panel — usar fid=19 (Baillie) como referencia base",
+          "estado": "implementado",
+          "responsable": "usuario",
+          "nota_completado": "canon_19 Matano tiene merged_geom (8 pts, fid=19 Baillie + Serhalawan). 2026-06-03"
+        },
+        {
+          "id": "s1_g3",
+          "tipo": "merged_geom",
+          "canonical": "canon_1921",
+          "nombre": "Sorong",
+          "instruccion": "Definir en panel — GPlates seg 1/5 a 5/5 como referencia",
+          "estado": "implementado",
+          "responsable": "usuario",
+          "nota_completado": "canon_1921 Sorong creado con merged_geom desde GEM fid=153 (15 pts). 2026-06-03"
+        },
+        {
+          "id": "s1_fe1",
+          "tipo": "frontend",
+          "descripcion": "Unificar gpsLayer y plateVelLayer en una sola capa de velocidades S1",
+          "detalle": "Medidas (GPS): flechas verdes #22c55e. Teóricas (MORVEL56): flechas grises #6b7280. Un solo toggle en el panel. Una entrada en LEGEND_DEF. multiLayer([gpsLayer, plateVelLayer]) como velLayer en layerObjs.",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-03. velLayer = multiLayer([gpsLayer, plateVelLayer]). GPS flechas verdes (#22c55e), MORVEL56 flechas grises (#6b7280). Panel unificado. LEGEND_DEF y THEMATIC_KEYS actualizados."
+        },
+        {
+          "id": "s1_fe2",
+          "tipo": "frontend",
+          "descripcion": "Paneles GPS y MORVEL56 especificos por elemento con explicacion de marcos de referencia",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-03. GPS_STATION_CONTEXT 12 estaciones con interpretacion geodinamica individual. PLATE_CONTEXT AUST/SUND/PHIL con contexto Sulawesi y advertencia. MORVEL56 color intermedio rgba(56,189,248,0.84). Bloque marco Sunda-fijo en GPS y NNR en MORVEL56 explicando incomparabilidad directa."
+        },
+        {
+          "id": "fe_15",
+          "descripcion": "Herramienta interactiva de dibujo de merged_geom para canonicals (ol.interaction.Draw)",
+          "estado": "implementado",
+          "prioridad": "critica",
+          "nota_completado": "Implementado: panel fe_15 con Draw interaction, guardado en backend via PATCH /api/geodata/canonical/{id}, preview layer, herramienta de edicion de geometrias canonicas. Ya en uso para digitalizar canonicals."
+        },
+        {
+          "id": "fe_16",
+          "descripcion": "Panel de conclusiones cientificas por seccion S1-S8 y sintesis general",
+          "estado": "implementado",
+          "prioridad": "critica",
+          "nota_completado": "Implementado: objeto CONCLUSIONS con 3-7 items por seccion S1-S8 + sintesis general. Modal #conc-modal con boton Sintesis en header. Boton cambia de texto segun seccion activa. Contenido cientifico completo con referencias a papers del corpus."
+        },
+        {
+          "id": "fe_17",
+          "descripcion": "Modal de bibliografia completa en formato APA accesible desde el mapa",
+          "estado": "implementado",
+          "prioridad": "critica",
+          "nota_completado": "Implementado: modal #bib-modal con funcion collectBib() que agrega papers de DB[], BIB_STATIC (datasets externos) y CONCLUSIONS. Ordenado alfabeticamente, badge de uso, links DOI. BIB_STATIC incluye GEBCO, GVP, GEM, Bird 2003, Slab2, WGM2012, GPlates, EIGEN-6C4, Argus 2011, Advokaat 2017."
+        },
+        {
+          "id": "s7_fix1",
+          "titulo": "Corregir feat_type faturrakhman_feature → faturrakhman_geo / faturrakhman_fault",
+          "estado": "implementado",
+          "descripcion": "FATURRAKHMAN_2024: ophiolite_01 → faturrakhman_geo; fault_01 y fault_02 → faturrakhman_fault. Ahora tienen handler en buildTooltipHtml y faturrakhmanStyleFn.",
+          "nota_completado": "3 features corregidos en index.html. 2026-06-08"
+        },
+        {
+          "id": "fe_optim1",
+          "titulo": "Optimización: caching de style functions OpenLayers",
+          "estado": "implementado",
+          "descripcion": "Cachear estilos OL para eliminar creación masiva de objetos por frame. Targets: cmtDotStyle (3867 features), volcStyleFn (3 categorías), profileLabelLayer (labels por texto), mergedGeomStyleFn polígonos (canonicals S7/S8).",
+          "nota_completado": "4 caches implementados: _cmtCache (Map, bucket depth×radius), _volcCache (obj PVMBG A/B/C), _plCache (Map por texto label), _canonPolyCache (Map por canonical_id). Braces balanceados. 2026-06-08"
+        },
+        {
+          "id": "fe_cleanup1",
+          "titulo": "Limpieza de código muerto en index.html",
+          "estado": "implementado",
+          "descripcion": "Eliminar código muerto: datasets inline reemplazados por API (HIKMY_2025, GODANG_2025, FATURRAKHMAN_2024, HUSEIN_2014, YANG_OBS), capa gebcoRelief no añadida al mapa, cálculo gapFeatures nunca usado, dead store _origSingleClick.",
+          "nota_completado": "575.8KB → 569.2KB (−6.6KB), 6809 → 6780 líneas (−29). Braces balanceados. 2026-06-08"
+        }
+      ]
+    },
+    "s2_sismicidad": {
+      "titulo": "2. Distribución de la sismicidad",
+      "cobertura_actual": "media",
+      "nota": "Núcleo visual: catálogo de epicentros + mecanismos focales GCMT + clusters Jibran. Slab2 es contexto analítico (no capa visual) — la geometría de slabs explica la distribución en profundidad pero se visualiza en S3.",
+      "capas_visuales": {
+        "epicentros_gcmt": {
+          "fuente": "GCMT (jan76_dec17.ndk.txt)",
+          "estado": "EN DB",
+          "n": 2657,
+          "rango": "Mw 4.6-7.4",
+          "periodo": "1976-2026",
+          "nota": "con mecanismos focales strike/dip/rake"
+        },
+        "epicentros_cmt": {
+          "fuente": "CMT catalog",
+          "estado": "EN DB",
+          "n": 501,
+          "rango": "Mw 6.0-8.3",
+          "periodo": "1976-2018"
+        },
+        "epicentros_usgs": {
+          "fuente": "USGS NEIC",
+          "estado": "EN DB",
+          "n": 709,
+          "rango": "Mw 5.5-5.9",
+          "periodo": "1996-2026"
+        },
+        "catalog_live": {
+          "fuente": "USGS FDSN API",
+          "estado": "endpoint /api/catalog/live",
+          "nota": "eventos recientes en tiempo real"
+        },
+        "catalog_isc": {
+          "fuente": "ISC REST API (isc.ac.uk/fdsnws/event/1/)",
+          "estado": "pendiente_integrar",
+          "nota": "catálogo histórico 2000-presente; ~40% más eventos Mw≥4.5 que USGS en el área; soporta filtro mindepth/maxdepth; cubre gap Mw 4.5-5.5 entre GCMT y USGS. Reemplaza/complementa catálogo estático.",
+          "bbox": "[117-130°E, -5-5°N]"
+        },
+        "estaciones_sismologicas": {
+          "fuente": "IRIS FDSN Station (service.iris.edu/fdsnws/station/1/)",
+          "estado": "pendiente_integrar",
+          "nota": "redes BMKG (IA), GEOFON (GE) — coordenadas + nombre + periodo operación. Layer de estaciones activas para contextualizar cobertura del catálogo."
+        },
+        "clusters_regimen": {
+          "fuente": "jibran_2025",
+          "estado": "implementado_en_frontend",
+          "layer_js": "jibranLayer (visible:true — 10 polígonos de régimen)",
+          "canonicals": "canon_jib_01 a canon_jib_10"
+        },
+        "fallas_activas": {
+          "nota": "mismas Tipo A de S1, ahora con info sismológica en panel",
+          "layer_js_existing": [
+            "newFaultLayer (20+ trazas Serhalawan/Watkinson/Hall)",
+            "srhSecLayer (secciones Serhalawan 2024)",
+            "tectKeyLayer (GEM key faults)",
+            "tectGemLayer (GEM otros)",
+            "birdKeyFaultLayer (Bird 2003 PKF/Matano)"
+          ]
+        },
+        "seismic_gaps": {
+          "fuente": "serhalawan_2024_sulawesi",
+          "estado": "implementado_en_frontend",
+          "layer_js": "srhGapLayer (polígono gap sísmico NST) + seismicGapLayer"
+        },
+        "serhalawan_clusters": {
+          "fuente": "serhalawan_2024_sulawesi",
+          "estado": "implementado_en_frontend",
+          "layer_js": "srhClusterLayer (zonas de actividad Serhalawan)"
+        },
+        "beachballs_gcmt": {
+          "fuente": "GCMT",
+          "estado": "implementado_en_frontend",
+          "layer_js": "cmtLayer (renderizado makeBeachballCanvas — lower hemisphere, azimuthal equidistant)"
+        }
+      },
+      "slab2_rol": "contexto analítico únicamente — la distribución en profundidad de epicentros se explica por geometría de slabs (Sangihe, Halmahera, Banda, Sula). Visualización de slabs va en S3.",
+      "canonicals_requeridos": [
+        {
+          "tipo": "A",
+          "id": "canon_5",
+          "nombre": "PKF",
+          "merged_geom": false,
+          "critico": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_364",
+          "nombre": "NST",
+          "merged_geom": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_369",
+          "nombre": "Sangihe SZ",
+          "merged_geom": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_805",
+          "nombre": "Halmahera SZ",
+          "merged_geom": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_1923",
+          "nombre": "Flores-Banda SZ",
+          "merged_geom": false
+        },
+        {
+          "tipo": "B",
+          "id": "canon_205",
+          "nombre": "Batui Thrust",
+          "merged_geom": false
+        },
+        {
+          "tipo": "D",
+          "id": "canon_jib_01 a canon_jib_10",
+          "nombre": "Jibran clusters (10)",
+          "merged_geom": true
+        }
+      ],
+      "tareas": [
+        {
+          "id": "s2_d1",
+          "tipo": "digitalizacion",
+          "paper": "natawidjaja_2021",
+          "archivo": "Papers/The_2018_Mw75_Palu_supershear_earthquake_rupture.pdf",
+          "aporte_esperado": "segmentación PKF LiDAR — geometría canónica definitiva",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota": "PRIORITARIO — desbloquea merged_geom de canon_5",
+          "nota_completado": "natawidjaja_2021_pkf_lidar — 6 feats"
+        },
+        {
+          "id": "s2_d2",
+          "tipo": "digitalizacion",
+          "paper": "isbram_2025",
+          "archivo": "Papers/01.+Isbram+Upload.pdf",
+          "aporte_esperado": "Batui Thrust rate, uplift Luwuk",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "hikmy_isbram_2025_batui_geomorph — 4 feats"
+        },
+        {
+          "id": "s2_api1",
+          "tipo": "integracion_api",
+          "descripcion": "Integrar ISC earthquake catalog como fuente adicional al catálogo actual",
+          "api": "ISC FDSN Event (isc.ac.uk/fdsnws/event/1/)",
+          "endpoint_ejemplo": "https://www.isc.ac.uk/fdsnws/event/1/query?format=json&starttime=2000-01-01&minlat=-5&maxlat=5&minlon=117&maxlon=130&mindepth=0&maxdepth=700&minmag=4.5",
+          "backend_nueva_ruta": "GET /api/catalog/isc?minmag=4.5&mindepth=0&maxdepth=700",
+          "aporte": "~40% más eventos que USGS para Mw 4.5-5.5; filtrado por rango de profundidad (superficial/intermedia/profunda)",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-02. /api/catalog/isc en catalog_proxy.py. loadISC() en index.html (~linea 2241). Toggle sf-isc en panel S2. Integrado en capa unificada cmtLayer como tipo isc_eq."
+        },
+        {
+          "id": "s2_api2",
+          "tipo": "integracion_api",
+          "descripcion": "Capa de estaciones sismológicas activas en Sulawesi",
+          "api": "IRIS FDSN Station (service.iris.edu/fdsnws/station/1/)",
+          "endpoint_ejemplo": "https://service.iris.edu/fdsnws/station/1/query?network=IA,GE&minlat=-5&maxlat=5&minlon=117&maxlon=130&level=station&format=json",
+          "backend_nueva_ruta": "GET /api/stations → proxy o GeoJSON estático precacheado",
+          "simbolizacion": "triángulo invertido azul; popup con código, nombre, red",
+          "aporte": "contextualiza cobertura del catálogo sísmico; muestra dónde hay datos densos vs. sparse",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "backend/routers/stations.py — proxy IRIS FDSN con fallback estático 15 estaciones BMKG/GEOFON. stationLayer en frontend v71, toggle 'stations' en panel."
+        },
+        {
+          "id": "s2_d3",
+          "tipo": "digitalizacion",
+          "paper": "jayadi_2023",
+          "archivo": "Papers/[S2] Jayadi et al. (2023) - tomografía PKF.pdf",
+          "aporte_esperado": "tomografía sísmica PKF",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "jayadi_2023_pkf_tomo — 3 features: perfil C-C' (inferred), área estudio BMKG, zona anomalía Vp negativa PKF 5-25km. PRELIMINAR — conference proceedings. coord_quality=inferred. 2026-05-30."
+        },
+        {
+          "id": "s2_depth_filter_5ranges",
+          "tipo": "frontend",
+          "descripcion": "Ampliar filtro de profundidad de 4 a 5 rangos: separar 70-300 en 70-150 (verde) y 150-300 (azul), agregar >300 violeta (#aa44c8). Actualizar checkboxes, seismFilters, seismPassFilter y leyenda flotante S2.",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-07. 5 rangos: <33 amarillo, 33-70 naranja, 70-150 verde, 150-300 azul, >300 violeta. depthColor/depthColorArr ya tenia 5 rangos - se alinearon filtros y leyenda. Nuevo campo med:true en seismFilters."
+        },
+        {
+          "id": "s2_frohlich_classification",
+          "tipo": "data_pipeline",
+          "descripcion": "Unificar clasificacion de mecanismos focales entre cmt_events.json y gcmt55_sulawesi.json aplicando Frohlich (1992) por eje dominante (P/T/B plunge). Eliminar categoria O de cmt_events.",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-07. Frohlich (1992) criterio eje dominante: T>P>B->N, P>T>B->T, B>P>T->S. Tie-break por signo rake para casos pure dip-slip. cmt_events: 53 O reclasificados, 134 total cambiados. gcmt55: 145 cambiados. Sin swaps N<->T. Categoria O eliminada."
+        },
+        {
+          "id": "s2_g1",
+          "tipo": "merged_geom",
+          "canonical": "canon_5",
+          "nombre": "PKF",
+          "estado": "implementado",
+          "dependencias": [
+            "s2_d1"
+          ],
+          "responsable": "usuario",
+          "nota_completado": "canon_5 (PKF) tiene merged_geom definida desde 2026-06-05 (Natawidjaja 2021, 6 features). Tarea desbloqueada por s2_d1. Marcado implementado 2026-06-08."
+        },
+        {
+          "id": "s2_g2",
+          "tipo": "merged_geom",
+          "canonical": "canon_205",
+          "nombre": "Batui Thrust",
+          "estado": "implementado",
+          "responsable": "usuario",
+          "nota_completado": "canon_205 Batui tiene merged_geom (4 pts, new_faults). 2026-06-03"
+        },
+        {
+          "id": "s2_g3",
+          "tipo": "merged_geom",
+          "canonical": "canon_1923",
+          "nombre": "Flores-Banda SZ",
+          "estado": "implementado",
+          "responsable": "usuario",
+          "nota_completado": "canon_1923 Flores Back-arc Thrust tiene merged_geom (Bird 2003, 33 pts). Renombrada desde Flores-Banda SZ. 2026-06-03"
+        },
+        {
+          "id": "s2_jibran_geom",
+          "tipo": "digitalizacion",
+          "seccion": "S2",
+          "descripcion": "Corregir geometrias de los 10 clusters de Jibran et al. (2025): reemplazar bboxes rectangulares por poligonos calibrados sobre figura del paper",
+          "estado": "implementado",
+          "responsable": "usuario — requiere dibujo manual en panel UI del mapa",
+          "nota": "IDs geo_features 96-105. Todos tienen 5 puntos (bbox). Calibrar figura Jibran en georef_extents.json y trazar los contornos reales de cada cluster.",
+          "nota_completado": "2026-06-06. Usuario ya trazó merged_geom para los 10 canonicals (canon_jib_01 a canon_jib_10). Geometrias verificadas en DB con contenido (geom_len 426-864 bytes). geo_features 96-105 retienen bboxes originales — correcto, el mapa renderiza desde merged_geom canonical."
+        },
+        {
+          "id": "s2_jibran_merged_render",
+          "tipo": "frontend",
+          "seccion": "S2",
+          "descripcion": "Mostrar merged_geom trazadas de Jibran al activar capa clusters",
+          "estado": "implementado",
+          "nota_completado": "2026-06-06. Dos fixes: (1) feat_id de features Jibran se construia como ID numerico (96-105), no coincidia con claves FEAT_TO_CANONICAL (structure_jibran_2025_clusterXX) -> ahora se arma desde cluster_id property. COVERED_BY_CANON los incluye correctamente y jibranStyleFn oculta los bboxes originales cuando hay merged_geom. (2) mergedGeomStyleFn: filtro de seccion ahora se omite para canonicals con CANON_HOST_LAYER explicito (no cuencas), para que sean visibles cuando el toggle del host esta activo aunque la seccion activa sea otra."
+        }
+      ]
+    },
+    "s3_estructura_manto": {
+      "titulo": "3. Estructura del manto",
+      "cobertura_actual": "alta",
+      "nota": "Slabs, tomografía, anisotropía SKS. El desafío central es visualizar estructuras 3D en mapa 2D.",
+      "estrategias_visualizacion_3d": {
+        "A_perfiles_corte": {
+          "descripcion": "Marcar línea A-A' en el mapa. Click → imagen del perfil en panel interactivo.",
+          "papers_aplicables": [
+            "Yang et al. (2025) — perfiles OBS a lo largo del PKF (espesor cortical)",
+            "Hall & Spakman (2015) — sección mantélica SE Asia",
+            "Baillie & Decker (2022) — perfiles sísmicos reflexión Bone Bay / WSFB",
+            "Kesumastuti et al. (2025) — perfiles verticales de slabs",
+            "Hua et al. (2023) — perfiles A-A' tomografía Banda"
+          ],
+          "implementacion": {
+            "datos_en_db": "9 features cross_section ya en DB con trazas de línea",
+            "almacenamiento_imagenes": "mapa/data/sections/ (directorio ya creado por setup.sh)",
+            "flujo": "extraer figura del PDF → guardar en data/sections/ → agregar ruta en properties del feature → panel muestra imagen al click",
+            "herramientas": "PyMuPDF para extracción de figuras; OpenLayers click handler existente en ui.js",
+            "estado": "pendiente implementar"
+          }
+        },
+        "B_z_slices_slider": {
+          "descripcion": "Georreferenciar imágenes de cortes horizontales a distintas profundidades. Slider en UI controla qué profundidad se muestra.",
+          "papers_aplicables": [
+            "Kesumastuti et al. (2025) — slices de velocidad P a 100/200/400/600 km",
+            "Liu et al. (2026) — tomografía S-wave slices por profundidad",
+            "Supendi et al. (2024) — slices tomográficos",
+            "Hua et al. (2023) — slices anisotropía P y S",
+            "Heryandoko et al. (2024) — estructura cortical ANT (shallower)"
+          ],
+          "implementacion": {
+            "flujo": "extraer slice del PDF → definir bounding box lat/lon → OpenLayers ImageStatic layer por profundidad → slider UI activa/desactiva capa",
+            "georeferenciacion": "manual: definir esquinas lat/lon de cada imagen usando la escala/grilla del paper",
+            "formato": "PNG por depth level; metadata JSON con {paper, depth_km, extent:[minLon,minLat,maxLon,maxLat], opacity}",
+            "almacenamiento": "mapa/data/sections/tomography/{paper_id}/slice_{depth}km.png",
+            "backend": "endpoint GET /api/tomo/slices?paper=X → lista de profundidades disponibles",
+            "estado": "pendiente implementar — mayor complejidad que A"
+          }
+        },
+        "C_slab_contours": {
+          "descripcion": "Iso-líneas de profundidad de slab coloreadas. Ya disponibles en Slab2.",
+          "archivos": {
+            "sulawesi.csv": "contornos slab Sulawesi/Sangihe",
+            "halmahera.csv": "contornos slab Halmahera",
+            "sumatrajava.csv": "contexto regional sur"
+          },
+          "implementacion": {
+            "estado": "datos disponibles — falta parsear CSVs y cargar como VectorLayer en OpenLayers",
+            "estilo": "líneas coloreadas por profundidad (colormap azul→rojo)"
+          }
+        },
+        "D_vectores_anisotropia": {
+          "descripcion": "Ejes rápidos SKS como segmentos orientados sobre el mapa.",
+          "features_en_db": "29 features tipo anisotropy (Cao 2024, Yuan 2024, Di Leo 2012, Hua 2023)",
+          "estado": "en DB sin canonical — Tipo E, no necesitan canonical estructural",
+          "implementacion": "VectorLayer con estilo de segmento orientado por azimut; longitud proporcional a delay time"
+        },
+        "F_vectores_velocidad_placa": {
+          "descripcion": "Flechas de movimiento de placa (mm/año) calculadas desde GPlates Web Service en tiempo presente.",
+          "api": "GPlates Web Service (gws.gplates.org/velocity)",
+          "endpoint": "POST /velocity — cuerpo: {points: [[lon,lat],...], model: 'MULLER2019', time: 0}",
+          "output": "vectores {lon, lat, azimuth_deg, magnitude_mm_yr} para una grilla o para puntos específicos (ej. centros de bloques)",
+          "datos_sugeridos": [
+            "Grilla ~1°×1° sobre Sulawesi y mar adyacente → campo de velocidades regionales",
+            "Puntos en centros de microplacas (Sulawesi N, Sulawesi S, Bird's Head) → vectores de bloque"
+          ],
+          "simbolizacion": "flechas proporcionales a magnitud; color por placa (IA=azul, Filipinas=verde, Eurasia/Sunda=naranja, Bird's Head=rojo)",
+          "aporte": "visualiza la cinemática del marco geodinámico directamente en el mapa sin hardcodear valores — complementa S1 y GPS de Socquet/Walpersdorf",
+          "estado": "implementado",
+          "backend_nueva_ruta": "GET /api/plate_velocity?lon=X&lat=Y → proxy a gws.gplates.org",
+          "prioridad": 3,
+          "nota_completado": "Implementado con NNR-MORVEL56 (DeMets et al. 2010) calculado analíticamente desde polos de Euler. GPlates WS no tiene endpoint /velocity funcional. 9 vectores: AU x3, EU x2 (referencia Sundaland=0), PS x1, PA x1, CA x1 + 2 dots Sundaland. Marco: relativo a Sundaland-fijo (resta Euler EU en cada punto). Archivo: fuentes/plate_velocities_morvel.geojson. Fetch corregido en index.html; PLATE_CONTEXT actualizado con claves AU/EU/PS/PA/CA; estilo con punta de flecha.",
+          "fecha_completado": "2026-06-03"
+        },
+        "E_deckgl_3d": {
+          "descripcion": "Deck.gl como overlay WebGL sobre OpenLayers — visualización 3D de estructuras mantélicas sin reemplazar el mapa 2D.",
+          "justificacion": "Menor footprint de todas las opciones 3D (~300-400KB tree-shakeable). No modifica OL6. Costo cero cuando está inactivo. GPU-accelerated.",
+          "layers_a_implementar": {
+            "ScatterplotLayer_hipocentros": {
+              "datos": "tabla earthquakes DB — 3867 eventos lon/lat/depth/magnitude",
+              "visual": "esferas coloreadas por profundidad (colormap azul=superficial → rojo=profundo), radio proporcional a magnitud",
+              "toggle": "activable desde panel S3"
+            },
+            "LineLayer_slab_contours": {
+              "datos": "sulawesi.csv + halmahera.csv (Slab2) — iso-líneas de profundidad",
+              "visual": "líneas coloreadas por profundidad de slab",
+              "toggle": "activable por subducción (Sangihe, Halmahera, Banda, Sula)"
+            },
+            "LineLayer_vectores_SKS": {
+              "datos": "29 features anisotropy en DB",
+              "visual": "segmentos orientados por azimut, longitud proporcional a delay time",
+              "toggle": "activable por paper fuente"
+            }
+          },
+          "vista_3d": {
+            "modo": "pitch ~45° activable por toggle — muestra geometría de subducción con perspectiva",
+            "sincronizacion": "viewport OL6 ↔ Deck.gl sincronizado (pan/zoom compartido)",
+            "default": "pitch=0 (vista 2D normal), el toggle activa la perspectiva inclinada"
+          },
+          "implementacion_tecnica": {
+            "integracion": "canvas Deck.gl superpuesto al canvas OL6; sync via ol map.on('postrender')",
+            "dependencia": "@deck.gl/core + @deck.gl/layers (CDN o npm)",
+            "endpoint_datos": "GET /api/earthquakes → hipocentros; GET /api/slabs/contours → Slab2; GET /api/anisotropy → SKS vectors",
+            "nuevo_endpoint_necesario": "/api/slabs/contours — parsear CSVs Slab2 y servir GeoJSON por zona",
+            "estado": "pendiente implementar"
+          }
+        }
+      },
+      "canonicals_requeridos": [
+        {
+          "id": "canon_slab_banda",
+          "nombre": "Banda Slab",
+          "merged_geom": false
+        },
+        {
+          "id": "canon_slab_sula",
+          "nombre": "Sula Slab",
+          "merged_geom": false
+        },
+        {
+          "id": "canon_369",
+          "nombre": "Sangihe SZ",
+          "merged_geom": true
+        },
+        {
+          "id": "canon_805",
+          "nombre": "Halmahera SZ",
+          "merged_geom": true
+        }
+      ],
+      "papers_ya_digitalizados": [
+        "cao_2024",
+        "yuan_2024",
+        "hua_2023",
+        "di_leo_2012",
+        "kesumastuti_2025",
+        "liu_2026",
+        "heryandoko_2024",
+        "supendi_2024",
+        "yang_2025",
+        "hall_spakman_2015"
+      ],
+      "layers_ya_en_frontend": {
+        "slabLayer": {
+          "endpoint": "/api/slabs/slab2",
+          "visible": false,
+          "nota": "Slab2 (Hayes 2018) — contornos de slab Sangihe, Halmahera, Banda, Sula"
+        },
+        "huaLayer": {
+          "fuente": "hua2023_banda_sulawesi",
+          "visible": false,
+          "nota": "Hua 2023 — features tomografía Banda (8+4 feats)"
+        },
+        "hallLayer": {
+          "fuente": "hall_spakman_2015",
+          "visible": false,
+          "nota": "Hall & Spakman 2015 — slab features SE Asia (7 feats)"
+        },
+        "yuanFlowLayer": {
+          "fuente": "yuan_2024_molucca_mantle_flow",
+          "visible": false,
+          "nota": "Yuan 2024 — flujos mantélicos vectores (5 entradas)"
+        },
+        "yuanPointLayer": {
+          "fuente": "yuan_2024_molucca_mantle_flow",
+          "visible": false,
+          "nota": "Yuan 2024 — puntos asociados"
+        },
+        "pendiente_di_leo": {
+          "nota": "Di Leo 2012 en DB (5 feats) pero sin layer dedicado en layers.js — falta implementar vectores SKS"
+        }
+      },
+      "tareas": [
+        {
+          "id": "s3_d1",
+          "tipo": "digitalizacion",
+          "paper": "lestari_2021",
+          "archivo": "Papers/sisfo-lppm101.pdf",
+          "aporte_esperado": "tomografía P-wave Kalimantan-Makassar-Sulawesi",
+          "estado": "implementado",
+          "prioridad": 1,
+          "responsable": "sistema",
+          "nota_completado": "lestari_2021_pwave_tomo — 2 feats"
+        },
+        {
+          "id": "s3_g1",
+          "tipo": "merged_geom",
+          "canonical": "canon_slab_banda",
+          "nombre": "Banda Slab",
+          "instruccion": "Contorno de slab — usar Slab2 data disponible en Slab2Distribute_Mar2018/",
+          "estado": "implementado",
+          "responsable": "usuario",
+          "prioridad": 3,
+          "nota_completado": "canon_slab_banda creado: Polygon 23 verts, layer_type=slab_geometry, fuentes Hua2023+Slab2. CANON_LT_SECTION[S3]. Estilo purpura semitransparente. 2026-06-03"
+        },
+        {
+          "id": "s3_g2",
+          "tipo": "merged_geom",
+          "canonical": "canon_slab_sula",
+          "nombre": "Sula Slab",
+          "estado": "implementado",
+          "responsable": "usuario",
+          "prioridad": 3,
+          "nota_completado": "canon_slab_sula creado: Polygon 9 verts, layer_type=slab_geometry, fuente Kesumastuti2025. CANON_LT_SECTION[S3]. 2026-06-03"
+        },
+        {
+          "id": "s3_api1",
+          "tipo": "integracion_api",
+          "descripcion": "Vectores de velocidad de placa desde GPlates Web Service",
+          "api": "GPlates Web Service — gws.gplates.org/velocity",
+          "flujo": "backend llama a GWPS con grilla de puntos → devuelve vectores → frontend renderiza flechas proporcionales con OL ArrowLayer o canvas custom",
+          "backend_nueva_ruta": "GET /api/plate_velocity → proxy GWPS o GeoJSON precacheado",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "plateVelLayer carga fuentes/plate_velocities_morvel.geojson — 11 vectores NNR-MORVEL56 (IA, Filipinas, Sunda, Bird's Head, etc.). Flechas proporcionales a magnitud coloreadas por placa. Toggle 'plate_vel' en S1. 2026-06-02."
+        },
+        {
+          "id": "s3_fe1",
+          "tipo": "frontend",
+          "descripcion": "Implementar Deck.gl overlay — hipocentros 3D + contornos slab + vectores SKS",
+          "subtareas": [
+            "Parsear sulawesi.csv + halmahera.csv → endpoint /api/slabs/contours",
+            "Agregar @deck.gl/core + @deck.gl/layers al proyecto",
+            "Sincronizar viewport OL6 ↔ Deck.gl",
+            "ScatterplotLayer hipocentros (depth colormap + magnitude radius)",
+            "LineLayer contornos slab (colormap por profundidad)",
+            "LineLayer vectores SKS (azimut + delay time)",
+            "Toggle pitch 0°↔45° para vista perspectiva",
+            "Controles de toggle por capa en panel S3"
+          ],
+          "estado": "descartado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "dependencias": [
+            "s3_d1"
+          ],
+          "nota_completado": "2026-06-02. Deck.gl overhead demasiado alto para la etapa actual (sincronizacion viewport OL6<->Deck.gl, WebGL overlay). La visualizacion de hipocentros por profundidad ya esta cubierta por cmtLayer con escala de color por profundidad. Alternativa: perfil de sismicidad en cross-section (pendiente aprobacion usuario)."
+        },
+        {
+          "id": "s3_fe2",
+          "tipo": "frontend",
+          "descripcion": "Perfiles A-A' — extracción de figuras de PDFs + panel imagen al click",
+          "subtareas": [
+            "Extraer figuras de Yang 2025, Hall & Spakman 2015, Hua 2023, Kesumastuti 2025 con PyMuPDF",
+            "Guardar en mapa/data/sections/{paper_id}/",
+            "Agregar path imagen a properties de cada cross_section feature en DB",
+            "Panel lateral: mostrar imagen al hacer click en línea de perfil"
+          ],
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "PyMuPDF extrae páginas con figuras de Hua 2023 (p5→AA, p7→BB), Yang 2025 (p12→fig6, p9→fig4), Kesumastuti 2025 (p6→fig3, p7→fig4). Guardadas en data/sections/{source}/. section_img_url en DB (ids 91,92,196-200,238-247) y en features hardcodeados HUA_2023. openPanel() extendido con bloque <img> + caption cuando db.section_img_url existe (click abre en nueva pestaña). DB entries yang_2025_fig6_pkf + kesumastuti_slab_config con imágenes. Hall 2015 PDF no disponible — sin imagen. 2026-05-30."
+        },
+        {
+          "id": "s3_fe3",
+          "tipo": "frontend",
+          "descripcion": "Z-slices tomográficos con slider de profundidad",
+          "subtareas": [
+            "Extraer slices de Kesumastuti 2025, Liu 2026, Supendi 2024 con PyMuPDF",
+            "Georreferenciar manualmente cada slice (definir bounding box lat/lon)",
+            "Endpoint /api/tomo/slices?paper=X → lista de profundidades disponibles",
+            "OpenLayers ImageStatic layer por profundidad",
+            "Slider UI en panel S3"
+          ],
+          "estado": "implementado",
+          "prioridad": 1,
+          "responsable": "sistema",
+          "nota_completado": "Toggle 'Tomografía Supendi et al. (2024)' en panel S3. Al activar, muestra selector de 9 profundidades (10/20/40/60/80/100/120/150/200 km) como botones horizontales. Usa directamente los refSup*Layer ya calibrados (sin duplicar capas). Default: 40 km. Mutex: solo una profundidad visible a la vez. 2026-06-01."
+        },
+        {
+          "id": "s3_fe4",
+          "tipo": "frontend",
+          "descripcion": "Galería modelos 3D — capa vectorial con marcadores por paper; modal con figuras + conclusión",
+          "subtareas": [
+            "TOMO3D_STUDIES: 10 estudios (Kesumastuti, Supendi, Hua, Lestari, Liu, Heryandoko, Cao, Yang, Di Leo, Jayadi)",
+            "tomo3dLayer: marcadores circulares violeta con abreviatura (KES, SUP, HUA…)",
+            "Modal #tomo3d-modal: nav horizontal entre estudios, imágenes scrollables, conclusión",
+            "Click handler: type==='tomo3d' → openTomo3dModal(id)",
+            "Toggle 'Galería modelos 3D' en panel S3; incluida en SECTION_KEYS['3']"
+          ],
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "10 marcadores violeta en mapa (abreviaturas 3 letras). Modal con navegación entre estudios, imágenes de data/sections/ y conclusión por estudio. Click en imagen abre en pestaña nueva. onerror oculta imágenes faltantes. 2026-06-03."
+        }
+      ]
+    },
+    "s4_campo_gravitatorio": {
+      "titulo": "4. Campo gravitatorio",
+      "cobertura_actual": "alta",
+      "nota": "Capas ya cargadas en el mapa. WGM2012 (Bonvalot et al. 2012) como base global; Shih et al. (2026) agrega resolución aérea sobre tierra.",
+      "capas_ya_en_mapa": {
+        "grav_bouguer": {
+          "archivo": "fuentes/grav_bouguer.png",
+          "fuente": "WGM2012 — EGM2008, resolución 2' (~3.7 km)",
+          "estado": "cargado en layers.js"
+        },
+        "grav_freeair": {
+          "archivo": "fuentes/grav_freeair.png",
+          "fuente": "WGM2012 — EGM2008",
+          "estado": "cargado en layers.js"
+        },
+        "bouguer_tif": {
+          "archivo": "fuentes/sulawesi_bouguer_completa.tif",
+          "fuente": "WGM2012 full-res recortado",
+          "estado": "disponible, no cargado aún"
+        },
+        "freeair_tif": {
+          "archivo": "fuentes/sulawesi_freeair_recortada.tif",
+          "fuente": "WGM2012 full-res recortado",
+          "estado": "disponible, no cargado aún"
+        },
+        "height_anomaly": {
+          "archivo": "fuentes/height_anomaly.png",
+          "fuente": "EIGEN-6C4 — anomalía de altura geoidal",
+          "estado": "disponible"
+        }
+      },
+      "api_icgem": {
+        "nombre": "ICGEM Calculation Service",
+        "url": "http://icgem.gfz-potsdam.de/calc",
+        "descripcion": "REST API del GFZ que computa valores de gravedad a demanda desde modelos esférico-armónicos. Permite calcular Bouguer, Free-air, gravity disturbance, geoid height en cualquier punto o grilla.",
+        "modelos_disponibles": [
+          "EGM2008 (resolución ~10 km)",
+          "GOCO06s (satélite puro)",
+          "XGM2019e_2159 (combinado actualizado)"
+        ],
+        "uso_en_proyecto": [
+          "Complementar TIFFs estáticos de WGM2012 con cálculos de mayor resolución bajo demanda",
+          "Herramienta de perfil gravitatorio (s4_fe2): en vez de samplear TIF local, llamar ICGEM para puntos exactos sobre la traza dibujada por el usuario",
+          "Comparar modelos (EGM2008 vs. GOCO06s) como capa extra"
+        ],
+        "backend_nueva_ruta": "POST /api/gravity/profile_icgem — recibe LineString, genera puntos a 10 km de intervalo, llama ICGEM, devuelve arrays {dist_km, bouguer_mgal, freeair_mgal}",
+        "ventaja_vs_tif": "No requiere rasterio ni TIFFs locales; resolución configurable; siempre modelo actualizado",
+        "estado": "pendiente_integrar"
+      },
+      "canonicals_requeridos": [],
+      "tareas": [
+        {
+          "id": "s4_d1",
+          "tipo": "digitalizacion",
+          "paper": "shih_2026_sulawesi_geoid",
+          "archivo": "Papers/[S4] Shih et al. (2026) - gravimetría aérea Sulawesi.pdf",
+          "aporte_esperado": "puntos de gravedad absoluta BIG (57 estaciones A10), modelo geoidal de alta resolución aérea — complementa WGM2012 en tierra",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "shih_2026_geoid_sulawesi — 2 feats"
+        },
+        {
+          "id": "s4_fe1",
+          "tipo": "frontend",
+          "descripcion": "Capa de geoide (height anomaly EIGEN-6C4) como capa togglable en S4",
+          "archivos": [
+            "fuentes/height_anomaly.png",
+            "fuentes/height_anomaly_ell_EIGEN-6C4_...tiff"
+          ],
+          "estado": "implementado",
+          "prioridad": 1,
+          "responsable": "sistema",
+          "nota_completado": "heightAnomLayer — ImageStatic extent=[114.5,-10.5,130.5,10.5], 1°×1° EIGEN-6C4. Toggle 'height_anom' en S4 con slider opacidad + ⓘ. DB entry con citas Förste 2014 + Barthelmes 2013. 2026-05-30."
+        },
+        {
+          "id": "s4_fe2",
+          "tipo": "frontend",
+          "descripcion": "Herramienta de perfil gravitatorio — trazar recta en el mapa y comparar Bouguer vs Aire Libre en gráfico",
+          "detalle": {
+            "interaccion": "usuario dibuja una línea sobre el mapa (OL Draw interaction)",
+            "backend_opcion_a": {
+              "ruta": "POST /api/gravity/profile_icgem",
+              "fuente": "ICGEM Calculation Service (icgem.gfz-potsdam.de/calc)",
+              "flujo": "interpolar LineString a puntos cada 10 km → llamar ICGEM → devolver {dist_km, bouguer_mgal, freeair_mgal}",
+              "ventaja": "sin TIFFs locales; modelo EGM2008 actualizado; sin dependencia rasterio",
+              "nota": "ICGEM puede ser lento para muchos puntos — cachear resultados por traza"
+            },
+            "backend_opcion_b": {
+              "ruta": "POST /api/gravity/profile",
+              "fuente": "TIFFs locales WGM2012",
+              "flujo": "rasterio samplea fuentes/sulawesi_bouguer_completa.tif + sulawesi_freeair_recortada.tif",
+              "ventaja": "rápido, offline, sin latencia API",
+              "dependencia": "rasterio (pip install rasterio)"
+            },
+            "recomendacion": "opcion_b como default (rápido), opcion_a como toggle 'modelo EGM2008 de referencia'",
+            "frontend_chart": "Chart.js — líneas Bouguer (azul) y Aire Libre (rojo) sobre el mismo eje Y (mGal) vs distancia (km)",
+            "panel": "gráfico aparece en panel lateral al completar la traza; exportable como imagen PNG",
+            "utilidad_monografia": "permite correlacionar anomalías con estructuras tectónicas (NST, PKF, MST, cuencas) directamente sobre el mapa"
+          },
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-02. Boton #grav-profile-btn con startGravDraw(). POST /api/gravity/profile. Modal de resultado con Chart.js. Exportacion PNG del perfil. Linea ~3496 en index.html."
+        },
+        {
+          "id": "s4_r1",
+          "tipo": "relevamiento_bibliografico",
+          "descripcion": "Verificar si Greenfield 2021 menciona datos gravitatorios de la NST",
+          "estado": "implementado",
+          "prioridad": 1,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-02. Greenfield 2021 usa free-air gravity como dato auxiliar (p8: combina source models + free-air para inferir fuerzas dinámicas NST; p10: modela flexura oceánica + anomalía gravitatoria para elastic thickness). No presentan datos propios de gravimetría. No justifica S4 — confirma clasificación S2/S6."
+        }
+      ]
+    },
+    "s5_flujo_calorico": {
+      "titulo": "5. Flujo calórico",
+      "cobertura_actual": "media",
+      "paper_principal": "pratama_2025_pfa_geothermal",
+      "nota": "Pratama et al. (2025) SSRN cubre toda la isla con PFA geotérmico — manifestaciones superficiales (Fig. 4b), volcanes A/B/C (Fig. 4c), Curie Point Depth (Fig. 4d), CCRS prospectividad (Fig. 10). También: mediciones puntuales IHFC (escasas en Sulawesi). Raster Davies & Davies 2010 a 2°×2° descartado.",
+      "nota_capas_vs_s1": "S1 tiene el arco volcánico del brazo norte como unidad tectónica (canon_nsarc — lineamiento/polígono del arco). S5 tiene los volcanes individuales como fuentes de calor puntual — son objetos distintos a diferente escala. No duplicar: canon_nsarc permanece en S1; los volcanes individuales son capas propias de S5.",
+      "capas_visuales": [
+        {
+          "id": "active_volcanoes",
+          "nombre": "Volcanes activos — clasificación PVMBG (A/B/C)",
+          "tipo": "point_layer",
+          "pipeline": [
+            "1. Descargar GVP Holocene Volcanoes CSV desde volcano.si.edu (descarga gratuita, sin API REST)",
+            "2. Filtrar: país=Indonesia, bbox [117-130°E, -5-5°N] → ~15-20 volcanes en Sulawesi + islas Sangihe",
+            "3. Cruzar con Pratama Fig. 4c para asignar campo pvmbg_type (A/B/C) — GVP no tiene esta clasificación",
+            "4. Guardar como fuentes/volcanoes_sulawesi_gvp.geojson con campos: name, lat, lon, elev_m, pvmbg_type, last_eruption, gvp_id",
+            "5. Cargar como capa estática (no endpoint dinámico — volcanes no cambian)"
+          ],
+          "clasificacion": {
+            "tipo_A": "volcanes muy activos con registros históricos de erupción + alto potencial calórico",
+            "tipo_B": "volcanes con solfataras o fumarolas activas — actividad hidrotérmica presente",
+            "tipo_C": "sin registros históricos de erupción ni actividad actual — potencial calórico bajo"
+          },
+          "volcanes_principales_sulawesi": [
+            {
+              "nombre": "Lokon-Empung",
+              "lon": 124.792,
+              "lat": 1.358,
+              "pvmbg_type": "A",
+              "elev_m": 1580,
+              "gvp_id": "266100"
+            },
+            {
+              "nombre": "Mahawu",
+              "lon": 124.858,
+              "lat": 1.358,
+              "pvmbg_type": "A",
+              "elev_m": 1324,
+              "gvp_id": "266110"
+            },
+            {
+              "nombre": "Soputan",
+              "lon": 124.725,
+              "lat": 1.112,
+              "pvmbg_type": "A",
+              "elev_m": 1784,
+              "gvp_id": "266120"
+            },
+            {
+              "nombre": "Karangetang",
+              "lon": 125.407,
+              "lat": 2.781,
+              "pvmbg_type": "A",
+              "elev_m": 1827,
+              "gvp_id": "267020"
+            },
+            {
+              "nombre": "Ruang",
+              "lon": 125.367,
+              "lat": 2.303,
+              "pvmbg_type": "A",
+              "elev_m": 725,
+              "gvp_id": "267010"
+            },
+            {
+              "nombre": "Awu",
+              "lon": 125.497,
+              "lat": 3.689,
+              "pvmbg_type": "A",
+              "elev_m": 1320,
+              "gvp_id": "267030"
+            },
+            {
+              "nombre": "Tongkoko",
+              "lon": 125.209,
+              "lat": 1.517,
+              "pvmbg_type": "B",
+              "elev_m": 1149,
+              "gvp_id": "266070"
+            },
+            {
+              "nombre": "Ambang",
+              "lon": 124.422,
+              "lat": 0.754,
+              "pvmbg_type": "B",
+              "elev_m": 1795,
+              "gvp_id": "266040"
+            },
+            {
+              "nombre": "Colo (Una-Una)",
+              "lon": 121.607,
+              "lat": -0.174,
+              "pvmbg_type": "A",
+              "elev_m": 507,
+              "gvp_id": "265020"
+            }
+          ],
+          "simbolizacion": "triángulo inverso: rojo para tipo A, naranja para tipo B, gris para tipo C; tamaño proporcional a elevación; popup con nombre, tipo PVMBG, elevación, última erupción (GVP)",
+          "estado": "parcialmente_implementado",
+          "layer_js_existente": "volcLayer (layers.js) — endpoint /api/volcanoes; símbolo triángulo naranja; sin clasificación PVMBG aún",
+          "pendiente": "Cruzar datos GVP con Pratama Fig. 4c para agregar campo pvmbg_type al backend. Layer ya renderiza — falta enriquecer el dato.",
+          "nota": "Lista volcanes_principales_sulawesi es aproximada — completar y corregir pvmbg_type al cruzar con Pratama Fig. 4c. GVP IDs son indicativos."
+        },
+        {
+          "id": "geothermal_manifestations",
+          "nombre": "Manifestaciones geotérmicas superficiales (fumarolas / termas)",
+          "tipo": "point_layer",
+          "fuente": "Pratama et al. (2025) Fig. 4b — datos originales del Ministerio de Energía Indonesia",
+          "campos": "tipo (fumarola/terma/solfatara), nombre localidad",
+          "simbolizacion": "círculo: rojo para fumarola, azul claro para terma, amarillo para solfatara",
+          "estado": "pendiente_digitalizacion",
+          "nota": "~30-60 puntos esperados al digitalizar Fig. 4b"
+        },
+        {
+          "id": "geothermal_fields",
+          "nombre": "Campos geotérmicos con explotación / prospecto formal",
+          "tipo": "point_layer",
+          "fuente": "Pratama et al. (2025) + PVMBG + PLN Geothermal",
+          "registros": [
+            {
+              "nombre": "Lahendong",
+              "lon": 124.791,
+              "lat": 1.214,
+              "mwe": 120,
+              "estado": "operacional"
+            },
+            {
+              "nombre": "Leilem-Tompaso",
+              "lon": 124.759,
+              "lat": 1.149,
+              "mwe": 20,
+              "estado": "operacional"
+            },
+            {
+              "nombre": "Tondano caldera",
+              "lon": 124.881,
+              "lat": 1.23,
+              "mwe": null,
+              "estado": "prospecto/hidrotérmico"
+            },
+            {
+              "nombre": "Kotamobagu",
+              "lon": 124.031,
+              "lat": 0.742,
+              "mwe": null,
+              "estado": "prospecto"
+            },
+            {
+              "nombre": "Tanjung Api",
+              "lon": 122.846,
+              "lat": -0.522,
+              "mwe": null,
+              "estado": "manifestación H2/gas volcánico — Faturrakhman 2025"
+            }
+          ],
+          "simbolizacion": "ícono llama (naranja) para operacionales; ícono círculo punteado para prospectos; popup con nombre, capacidad, tipo de recurso",
+          "estado": "implementado",
+          "prioridad": 3,
+          "nota_completado": "5→11 campos. Agregados: Marana, Bora, Soroako, Wotu, Suwawa (Pratama 2025). 2026-06-03"
+        },
+        {
+          "id": "heat_flow_ihfc",
+          "nombre": "Mediciones IHFC (mW/m²)",
+          "tipo": "point_layer",
+          "fuente": "Lucazeau (2019) NGHF — filtrar bbox [117-135°E, -12-5°N]",
+          "simbolizacion": "círculos coloreados por mW/m² (azul <40 → blanco 60 → rojo >100)",
+          "estado": "pendiente_descarga",
+          "nota": "~20-40 mediciones en Sulawesi. Solo incorporar si ≥5 puntos en el área de interés."
+        },
+        {
+          "id": "curie_point_depth",
+          "nombre": "Profundidad del Punto de Curie (km)",
+          "tipo": "raster_image",
+          "fuente": "Pratama et al. (2025) Fig. 4d — derivado de NOAA World Magnetic Model",
+          "simbolizacion": "imagen georreferenciada con leyenda de profundidad en km; más superficial = más caliente",
+          "estado": "pendiente_georreferenciacion",
+          "nota": "CPD superficial (<15 km) en brazo norte = gradiente geotérmico alto. CPD profundo (>25 km) en brazo sur = craton frío."
+        }
+      ],
+      "canonicals_requeridos": [
+        {
+          "tipo": "H",
+          "id": "canon_vol_soputan",
+          "nombre": "Soputan Volcano",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_vol_lokon",
+          "nombre": "Lokon-Empung Volcano",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_vol_karangetang",
+          "nombre": "Karangetang Volcano",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_vol_colo",
+          "nombre": "Colo (Una-Una) Volcano",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_geoth_lahendong",
+          "nombre": "Lahendong Geothermal",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_geoth_leilem",
+          "nombre": "Leilem-Tompaso Geothermal",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_geoth_tanjungapi",
+          "nombre": "Tanjung Api H2",
+          "merged_geom": false,
+          "nota": "Faturrakhman 2025 — pendiente digitalizar"
+        }
+      ],
+      "tareas": [
+        {
+          "id": "s5_d0",
+          "tipo": "digitalizacion",
+          "paper": "pratama_2025_pfa_geothermal",
+          "archivo": "Papers/[S5] Pratama et al. (2025) - PFA geotermica Sulawesi.pdf",
+          "figuras_a_digitalizar": [
+            "Fig. 4b — manifestaciones geotérmicas superficiales (fumarolas + termas) → puntos con campo tipo",
+            "Fig. 4c — volcanes clasificados (tipo A/B/C PVMBG) → puntos con campo volcano_type",
+            "Fig. 4d — Curie Point Depth raster → georreferenciar imagen (mín. 3 puntos de control)",
+            "Fig. 10 (P50) — mapa CCRS prospectividad → georreferenciar imagen como capa overlay"
+          ],
+          "output_geojson": "fuentes/geothermal_manifestations_pratama2025.geojson",
+          "aporte_esperado": "~30-60 puntos de manifestaciones + ~15-25 volcanes clasificados para toda la isla",
+          "estado": "implementado",
+          "prioridad": 1,
+          "responsable": "sistema",
+          "nota": "SSRN preprint — citar con nota 'preprint no revisado por pares' en la monografía",
+          "nota_completado": "pratama_2025_pfa_geothermal — 42 feats; CPD+CCRS rasters en mapa/data/sections/pratama_2025/"
+        },
+        {
+          "id": "s5_d1",
+          "tipo": "integracion_api",
+          "descripcion": "Integrar WorldHeatFlow Database REST API para mediciones de flujo calórico en Sulawesi",
+          "api": "WorldHeatFlow Database 2024 (heatflow.org)",
+          "endpoint": "GET https://heatflow.org/api/v1/measurements?lat_min=-5&lat_max=5&lon_min=117&lon_max=130&format=json",
+          "campos_relevantes": "q_val (mW/m²), q_unc (incertidumbre), quality (A-E), lat, lon, depth_m, method",
+          "output": "fuentes/heat_flow_whf_sulawesi.geojson",
+          "ventaja_vs_lucazeau2019": "versión 2024 del WHF database tiene ~20% más mediciones que NGHF/IHFC 2019 para SE Asia; incluye datos recientes de Indonesia",
+          "backend_nueva_ruta": "GET /api/heatflow → proxy a heatflow.org/api/v1/measurements con bbox Sulawesi",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota": "Verificar que heatflow.org/api esté disponible públicamente — si requiere registro, usar CSV de Lucazeau 2019 como fallback",
+          "nota_completado": "2026-06-02. fuentes/heat_flow_whf2024_sulawesi.geojson (311 mediciones). heatFlowLayer en index.html (~linea 1352). Toggle en panel S5. Escala divergente mW/m2."
+        },
+        {
+          "id": "s5_d2",
+          "tipo": "digitalizacion_manual",
+          "descripcion": "Compilar campos geotérmicos operacionales de Sulawesi (Lahendong, Leilem-Tompaso, Kotamobagu) — complementa Fig. 4b de Pratama con capacidad instalada en MW",
+          "fuente": "Pratama et al. (2025) Fig. 4b/4c + PVMBG + PLN Geothermal",
+          "output": "fuentes/geothermal_fields_sulawesi.geojson",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "geothLayer carga fuentes/geothermal_fields_sulawesi.geojson — 5 campos: Lahendong (120 MW), Leilem-Tompaso (20 MW), Kotamobagu (prospecto), Tondano (hidrotérmico), Tanjung Api (H2). Diamante naranja=operacional, violeta=prospecto, cyan=manifestación. Toggle 'geothermal' en S5. 2026-06-02."
+        },
+        {
+          "id": "s5_fe1",
+          "tipo": "frontend",
+          "descripcion": "Capa manifestaciones geotérmicas: OL VectorLayer puntos coloreados por tipo (fumarola/terma/solfatara); popup con tipo y fuente. Datos de Pratama Fig. 4b.",
+          "dependencia": "s5_d0",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "manifLayer — 29 puntos inline (6 fumarole_hotspring rojo, 23 hotspring azul). Toggle 'manif_pratama' en S5. Tooltip con tipo y brazo. 2026-05-30."
+        },
+        {
+          "id": "s5_fe2",
+          "tipo": "frontend",
+          "descripcion": "Capa volcanes: puntos con estilo A/B/C (ícono tamaño/color diferenciado); popup nombre, tipo PVMBG, elevación. Datos de Pratama Fig. 4c.",
+          "dependencia": "s5_d0",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "pratamaVolcLayer — 9 volcanes inline (7 Tipo A rojo, 2 Tipo B naranja). Triangle RegularShape. Toggle 'pratama_volc'. Click abre volcPanel. 2026-05-30."
+        },
+        {
+          "id": "s5_fe3",
+          "tipo": "frontend",
+          "descripcion": "Capa Curie Point Depth: OL ImageStatic georreferenciado (Fig. 4d de Pratama); toggleable; leyenda km. Complementa la comprensión térmica cortical junto a S4.",
+          "dependencia": "s5_d0",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "cpdLayer — ImageStatic data/sections/pratama_2025/cpd_panel_d_only.png extent=[117.5,-5.7,127.5,2.0]. Recortado panel (d) solo (sin panel b ni caption). Toggle 'cpd_pratama' con slider + ⓘ. ccrsLayer — 3 polígonos CCRS (orange dashed). Requiere calibración fina por usuario. 2026-05-31."
+        },
+        {
+          "id": "s5_fe4",
+          "tipo": "frontend",
+          "descripcion": "Capa IHFC puntos: círculos coloreados por mW/m²; escala divergente; solo si Lucazeau dataset tiene ≥5 mediciones en la región",
+          "dependencia": "s5_d1",
+          "estado": "implementado",
+          "nota_completado": "2026-06-02. heatFlowLayer en index.html (linea ~1352). fuentes/heat_flow_whf2024_sulawesi.geojson (311 mediciones). Circulos coloreados por mW/m2 escala divergente azul-blanco-naranja-rojo. Toggle en panel S5.",
+          "prioridad": 4,
+          "responsable": "sistema"
+        },
+        {
+          "id": "s5_bib1",
+          "tipo": "digitalizacion",
+          "paper": "faturrakhman_2025",
+          "archivo": "Papers/[S7] Faturrakhman et al. (2025) - Tanjung Api H2.pdf",
+          "aporte_esperado": "localización Tanjung Api (manifestación H2). Agregar a geothermal_manifestations como punto adicional.",
+          "estado": "implementado",
+          "nota_completado": "2026-06-02. faturrakhman_2025_tanjung_api en DB: 5 features (H2 seep TA, H2 seep Pulodalagan, area estudio, Ampana Fault, Toili Fault). DB_source: faturrakhman_2025_tanjung_api.",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota": "Clasificado S7 pero Tanjung Api es también dato de anomalía térmica/fluido para S5"
+        }
+      ],
+      "evaluacion_raster_global": {
+        "Davies_Davies_2010": {
+          "resolucion": "2°×2°",
+          "conclusion": "NO incorporar — resolución insuficiente para el mapa (celdas de ~220 km). Cubre Sulawesi con ~4-5 celdas en total.",
+          "alternativa": "usar puntos IHFC directamente, que son los datos crudos de los que se derivan los rasters globales"
+        }
+      }
+    },
+    "s6_estructura": {
+      "titulo": "6. Estructura — Fallas activas y deformación neotectónica",
+      "cobertura_actual": "media",
+      "nota": "Inventario cinemático de estructuras activas principales (PKF, Matano, Batui, WSFB, NSFTB) con tasas de slip, regímenes de esfuerzo neotectónico y vectores GPS. Cubre U8 (estado tensional, neotectónica) y U9 (GPS, mecánica de placas) del programa de Geotectónica UBA. Distinción con S1 (contexto regional) y S2 (sismicidad): S6 se enfoca en cinemática de fallas y campo de deformación, no en distribución de sismos ni en límites de placa.",
+      "canonicals_requeridos": [
+        {
+          "tipo": "A",
+          "id": "canon_5",
+          "nombre": "PKF",
+          "merged_geom": false,
+          "critico": true
+        },
+        {
+          "tipo": "A",
+          "id": "canon_19",
+          "nombre": "Matano",
+          "merged_geom": false,
+          "critico": true
+        },
+        {
+          "tipo": "B",
+          "id": "canon_205",
+          "nombre": "Batui Thrust",
+          "merged_geom": false
+        },
+        {
+          "tipo": "B",
+          "id": "canon_1925",
+          "nombre": "WSFB",
+          "merged_geom": false
+        },
+        {
+          "tipo": "B",
+          "id": "canon_1926",
+          "nombre": "NSFTB",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_eso",
+          "nombre": "ESO",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_csmb",
+          "nombre": "CSMB",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_mmc",
+          "nombre": "MMC",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_pmc",
+          "nombre": "PMC",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_basin_gorontalo",
+          "nombre": "Gorontalo Bay",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_basin_bone",
+          "nombre": "Bone Bay",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_basin_nmak",
+          "nombre": "N Makassar Basin",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_basin_mak",
+          "nombre": "Makassar Strait Basin",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_basin_palu",
+          "nombre": "Palu Pull-Apart Basin",
+          "merged_geom": false
+        }
+      ],
+      "tareas": [
+        {
+          "id": "s6_d1",
+          "tipo": "digitalizacion",
+          "paper": "hussein_2014",
+          "archivo": "Papers/[S1,S6] Husein et al. (2014) - estructuras Luwuk.pdf",
+          "aporte_esperado": "estructuras geológicas Luwuk, reconstrucción ESO-Banggai",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "husein_2014_luwuk — 7 feats (fids 301-307). Layer huseinFaultLayer+huseinPolyLayer en frontend v71."
+        },
+        {
+          "id": "s6_fe1",
+          "tipo": "frontend",
+          "descripcion": "S6: reestructurar sección — jerarquía 1+4 (geodésico + capas por escala)",
+          "estado": "implementado",
+          "prioridad": 1,
+          "responsable": "sistema",
+          "nota_completado": "2026-06-05. Panel S6 reestructurado con 3 niveles: (1) GPS activo automático al activar S6 via SECTION_KEYS['6'] — label indica que el toggle está en S1; (2) 'Fallas regionales activas': GEM 2023 + Serhalawan 2024 como grupo; (3) 'Estructuras locales (zoom ≥8)': Hikmy 2025 + Husein 2014 como grupo subordinado. vel_s1 agregado a SECTION_KEYS['6'] — se activa al presionar S6. Narrativa: campo GPS muestra deformación medida → fallas activas explican dónde se absorbe."
+        },
+        {
+          "id": "s6_r1",
+          "tipo": "decision_usuario",
+          "descripcion": "Confirmar enfoque de Sección 6",
+          "opciones": [
+            "Estructura cortical (perfiles sísmicos, espesor cortical)",
+            "Fallas activas (inventario cinemático de las principales estructuras)",
+            "Deformación activa (GPS + modelos de bloque)"
+          ],
+          "estado": "implementado",
+          "responsable": "usuario",
+          "nota_completado": "Enfoque definido 2026-05-31: inventario cinemático de fallas activas + deformación neotectónica. Alineado con U8 (neotectónica, esfuerzos) y U9 (GPS, mecánica de placas) del programa Geotectónica UBA. Datos ya disponibles: PKF (natawidjaja 2020/2021, cipta 2016), Matano (lukman 2016), Batui (isbram 2025, husein 2014), GPS (socquet 2006, walpersdorf 1998), regímenes (jibran 2025, serhalawan 2024). Pendiente: merged_geom para estructuras clave (fe_15) y panel de slip rates."
+        },
+        {
+          "id": "s6_fix1",
+          "descripcion": "Canonical Sorong ramal sur (canon_1929): merged_geom desde GEM sorong_s, CANON_KIN sinistral, CANON_HOST_LAYER tect_key",
+          "estado": "implementado",
+          "prioridad": "alta",
+          "nota_completado": "Insertado canon_1929 en DB con geometría GEM sorong_s (14 pts, lon[122.2,130.2] lat[-2.8,-1.0]). Remapeado FEAT_TO_CANONICAL sorong_s→canon_1929. Agregado a CANON_KIN {sym:sinistral,w:1.8}, CANON_HOST_LAYER tect_key, CANON_NAMES. Fecha: 2026-06-07"
+        },
+        {
+          "id": "s6_fix2",
+          "descripcion": "Borrar canon_1907: zona de subducción genérica en 0°N 133°E sin referencia tectónica válida",
+          "estado": "implementado",
+          "prioridad": "media",
+          "nota_completado": "Eliminado canon_1907 de DB (sulawesi.db). Removido de CANON_HOST_LAYER (tect_sub) y CANON_KIN en index.html. Fecha: 2026-06-07"
+        },
+        {
+          "id": "s6_fix3",
+          "descripcion": "Deduplicar subducción Banda/Sunda: eliminar canon_1923 (Australian:Sunda CB) y GEM sunda+banda_n de tectSubLayer",
+          "estado": "implementado",
+          "prioridad": "alta",
+          "nota_completado": "Eliminado canon_1923 de DB y referencias en index.html (CANON_HOST_LAYER, CANON_KIN, CANON_NAMES). Excluidas subzonas sunda y banda_n de tectSubLayer (GEM f54-f68, f45-f53, f146-f147) — cubiertas por canon_1934. Actualizado CANON_NAMES canon_1934. Fecha: 2026-06-07"
+        },
+        {
+          "id": "s6_fix4",
+          "descripcion": "Borrar SST (South Sulawesi Transform Belt, canon_1920): estructura insuficientemente documentada",
+          "estado": "implementado",
+          "prioridad": "media",
+          "nota_completado": "Eliminado canon_1920 de DB. Removido de CANON_HOST_LAYER, CANON_KIN, FEAT_TO_CANONICAL (south_sulawesi_faults), CANON_NAMES y entrada DB[] estática en index.html. Fecha: 2026-06-07"
+        },
+        {
+          "id": "s6_fix5",
+          "descripcion": "Corregir solapamiento MST canon_286/canon_287: ajustar punto inicial de canon_287",
+          "estado": "implementado",
+          "prioridad": "media",
+          "nota_completado": "canon_287 redefinido a [[119.05,-1.6],[119.08,-1.9]] para conectar con el endpoint de canon_286 [119.05,-1.6] sin solapamiento. Fecha: 2026-06-07"
+        },
+        {
+          "id": "s6_fix6",
+          "descripcion": "Eliminar trazas grises: COVERED_BY_CANON → invisible, huseinStyleFn fallback → null, fat25StyleFn fallback → null",
+          "estado": "implementado",
+          "prioridad": "media",
+          "nota_completado": "subductionStyle, keyFaultStyle, newFaultStyleFn: COVERED_BY_CANON devuelve [] en lugar de gris dashed. huseinStyleFn: features sin kin→null (suprimidas). fat25StyleFn fallback→null. Fecha: 2026-06-07"
+        },
+        {
+          "id": "s6_fix7",
+          "descripcion": "Deduplicar Philippine Trench: excluir subzona philippines de tectSubLayer (cubierta por canon_1919)",
+          "estado": "implementado",
+          "prioridad": "media",
+          "nota_completado": "GEM f148 (Subduction_Thrust, sz=philippines) excluido de tectSubLayer. Queda únicamente canon_1919 como representación canónica. Fecha: 2026-06-07"
+        }
+      ]
+    },
+    "s7_petrotectonicas": {
+      "titulo": "7. Asociaciones petrotectónicas",
+      "cobertura_actual": "media",
+      "nota": "Datos base ya en DB (Baillie 2022 aporta la mayoría de polígonos). Falta merged_geom en casi todos los canonicals. Pendiente: Husein 2014 (ESO detail), Surono 2012 (terrenos E Sulawesi), Satyana 2011 (microplacas).",
+      "nota_organizacion": "S7 mapea QUIN TIPO de roca/ambiente tectónico en cada lugar — distinto de S6 (estructura/fallas) y S8 (condiciones P-T metamórficas). Las cinco categorías petrotectónicas son: ofiolita, arco volcánico, complejo metamórfico, terreno continental, complejo de acreción.",
+      "layers_ya_en_frontend": {
+        "faturrakhmanFaultLayer": {
+          "fuente": "faturrakhman2024_eso_asera",
+          "visible": true,
+          "nota": "trazas de falla y geometría ESO área Asera"
+        },
+        "faturrakhmanGeoLayer": {
+          "fuente": "faturrakhman2024_eso_asera",
+          "visible": true,
+          "nota": "unidades geológicas Asera (Lawanopo, ESO)"
+        },
+        "godangLayer": {
+          "fuente": "godang2025_adang_makassar",
+          "visible": true,
+          "nota": "Adang Volcanic Complex + Makassar Basin (2 polígonos). Desbloquea merged_geom canon_adang parcialmente."
+        },
+        "clorLayer_mscc": {
+          "fuente": "clor2005_sangihe_molucca",
+          "visible": true,
+          "nota": "Polígono Molucca Sea Collision Complex (MSCC) + 5 volcanes con %S geoquímica. Implementado en S7 y S5."
+        },
+        "hikmyBeltLayer": {
+          "fuente": "hikmy_2025_east_arm_sulawesi",
+          "visible": true,
+          "nota": "cinturón brazo este Sulawesi"
+        },
+        "hikmyFaultLayer": {
+          "fuente": "hikmy_2025_east_arm_sulawesi",
+          "visible": true,
+          "nota": "fallas brazo este (Batui, Pasini, Lobu-Balolang)"
+        },
+        "hikmyPointLayer": {
+          "fuente": "hikmy_2025_east_arm_sulawesi",
+          "visible": true,
+          "nota": "puntos de interés brazo este"
+        }
+      },
+      "capas_visuales": [
+        {
+          "id": "ophiolite_belts",
+          "nombre": "Cinturones ofiolíticos",
+          "tipo": "polygon_layer",
+          "color": "#2d6a27",
+          "unidades": [
+            {
+              "nombre": "East Sulawesi Ophiolite (ESO)",
+              "edad_ma": 123,
+              "canonical": "canon_eso",
+              "descripcion": "litosfera oceánica obductada sobre Banggai-Sula en el Neógeno; brazo este"
+            },
+            {
+              "nombre": "Molucca Sea ophiolitic material",
+              "edad_ma": null,
+              "canonical": "canon_mscc",
+              "descripcion": "fragmentos ofiolíticos en el MSCC entre arcos Sangihe-Halmahera"
+            }
+          ],
+          "popup": "nombre, edad (Ma), ambiente de formación, referencia (Husein 2014 / Baillie 2022)",
+          "estado": "pendiente_merged_geom",
+          "nota": "Husein 2014 (★★★) es la fuente clave para geometría ESO — digitalizar primero"
+        },
+        {
+          "id": "volcanic_arc_units",
+          "nombre": "Unidades de arco volcánico",
+          "tipo": "polygon_layer",
+          "color": "#c0392b",
+          "unidades": [
+            {
+              "nombre": "North Arm Volcanic Arc",
+              "edad": "Neógeno-actual",
+              "canonical": "canon_nsarc",
+              "descripcion": "arco activo asociado a subducción NST; andesitas-dacitas Cuaternarias"
+            },
+            {
+              "nombre": "West Sulawesi Igneous Province (WSIP)",
+              "edad": "Paleógeno",
+              "canonical": "canon_wsip",
+              "descripcion": "arco volcánico de Eoceno-Oligoceno, brazo oeste; relación con Borneo"
+            },
+            {
+              "nombre": "Adang Volcanic Complex",
+              "edad": "Mioceno",
+              "canonical": "canon_adang",
+              "descripcion": "centro volcánico aislado NW Sulawesi; alcalino, posible pluma"
+            }
+          ],
+          "popup": "nombre, edad, quimismo (si disponible), referencia",
+          "estado": "pendiente_merged_geom"
+        },
+        {
+          "id": "metamorphic_complexes",
+          "nombre": "Complejos metamórficos",
+          "tipo": "polygon_layer",
+          "color": "#6c3483",
+          "unidades": [
+            {
+              "nombre": "Bantimala Complex (CSMB)",
+              "edad_ma": 119,
+              "canonical": "canon_csmb",
+              "descripcion": "UHP — eclogitas + blueschists; único registro UHP confirmado en Sulawesi; SW arm"
+            },
+            {
+              "nombre": "Palu Metamorphic Complex (PMC)",
+              "edad": "Cretácico-Paleógeno",
+              "canonical": "canon_pmc",
+              "descripcion": "complejo polimetamórfico en la triple junction PKF-Matano; central Sulawesi"
+            },
+            {
+              "nombre": "Malino/Mekongga Metamorphic Complex (MMC)",
+              "edad": null,
+              "canonical": "canon_mmc",
+              "descripcion": "gneises + esquistos; brazo SE; basamento pre-colisión"
+            },
+            {
+              "nombre": "Pompangeo Schist Belt",
+              "edad": null,
+              "canonical": "canon_csmb",
+              "descripcion": "esquistos verdes y micaesquistos; Sulawesi central; pueden ser parte del CSMB"
+            }
+          ],
+          "popup": "nombre, grado metamórfico, edad (Ma), P-T estimadas si disponibles, referencia",
+          "estado": "pendiente_merged_geom",
+          "nota": "Bantimala UHP es la unidad más relevante de la sección. Ver también S8 para condiciones P-T."
+        },
+        {
+          "id": "continental_terranes",
+          "nombre": "Terrenos continentales (afinidad australiana)",
+          "tipo": "polygon_layer",
+          "color": "#d4ac0d",
+          "unidades": [
+            {
+              "nombre": "Banggai-Sula Microcontinent",
+              "canonical": "canon_terrane_bsm",
+              "descripcion": "microcontinente de afinidad australiana; colisionó ~5-6 Ma; cierra el brazo este"
+            },
+            {
+              "nombre": "Buton-Tukang Besi",
+              "canonical": "canon_terrane_btb",
+              "descripcion": "terreno continental offshore SE Sulawesi; carbonatos de plataforma australiana"
+            },
+            {
+              "nombre": "West Sulawesi Province",
+              "canonical": "canon_terrane_wsp",
+              "descripcion": "basamento continental Sundaland en el brazo oeste; extensión del cratón de Borneo"
+            }
+          ],
+          "popup": "nombre, afinidad (australiana/sundaland), edad de colisión, referencia",
+          "estado": "pendiente_merged_geom"
+        },
+        {
+          "id": "accretionary_complexes",
+          "nombre": "Complejos de acreción / colisión en progreso",
+          "tipo": "polygon_layer",
+          "color": "#7d6608",
+          "unidades": [
+            {
+              "nombre": "Molucca Sea Collision Complex (MSCC)",
+              "canonical": "canon_mscc",
+              "descripcion": "material acretado entre arcos Sangihe y Halmahera; doble subducción opuesta activa"
+            }
+          ],
+          "popup": "nombre, proceso activo, tasa de convergencia estimada, referencia",
+          "estado": "pendiente_merged_geom"
+        }
+      ],
+      "canonicals_requeridos": [
+        {
+          "tipo": "H",
+          "id": "canon_eso",
+          "nombre": "ESO",
+          "merged_geom": false,
+          "critico": true,
+          "nota": "Husein 2014 es la fuente clave — digitalizar primero"
+        },
+        {
+          "tipo": "H",
+          "id": "canon_nsarc",
+          "nombre": "North Arm Volcanic Arc",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_wsip",
+          "nombre": "WSIP",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_adang",
+          "nombre": "Adang Volcanic Complex",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_terrane_bsm",
+          "nombre": "Banggai-Sula",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_terrane_btb",
+          "nombre": "Buton-Tukang Besi",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_terrane_wsp",
+          "nombre": "West Sulawesi Province",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_csmb",
+          "nombre": "Bantimala / CSMB",
+          "merged_geom": false,
+          "nota": "UHP 119 Ma — también central en S8"
+        },
+        {
+          "tipo": "H",
+          "id": "canon_pmc",
+          "nombre": "PMC",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_mmc",
+          "nombre": "MMC",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_mscc",
+          "nombre": "MSCC",
+          "merged_geom": false
+        }
+      ],
+      "tareas": [
+        {
+          "id": "s7_d1",
+          "tipo": "digitalizacion",
+          "paper": "hussein_2014",
+          "archivo": "Papers/[S1,S6] Husein et al. (2014) - estructuras Luwuk.pdf",
+          "aporte_esperado": "geometría ESO (polígono detallado brazo este), reconstrucción Banggai-Sula, estructuras Luwuk",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "husein_2014_luwuk — 7 feats (fids 301-307). canon_eso tiene 4 feats asignados (fids 15,67,306,312). merged_geom pendiente usuario en panel. huseinFaultLayer+huseinPolyLayer en frontend v71."
+        },
+        {
+          "id": "s7_d2",
+          "tipo": "digitalizacion",
+          "paper": "surono_2012",
+          "archivo": "Papers/[S1,S7] Surono (2012) - tectonoestratigrafía E Sulawesi.pdf",
+          "aporte_esperado": "mintakat/terrenos E Sulawesi, límites de unidades tectonoestratigráficas",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "surono_2012_tectonoestratigrafia — 3 feats"
+        },
+        {
+          "id": "s7_d3",
+          "tipo": "digitalizacion",
+          "paper": "satyana_ipa_2011",
+          "archivo": "Papers/[S1,S7] Satyana & Purwaningsih (2011) - colisión microplacas IPA.pdf",
+          "aporte_esperado": "límites de microplacas, colisión Banggai-Sula, terrazas de arrecife como marcador de alzamiento",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "satyana_2011_ipa_collision — 4 feats"
+        },
+        {
+          "id": "s7_d4",
+          "tipo": "digitalizacion",
+          "paper": "satyana_iagi_2011",
+          "archivo": "Papers/2011_IAGI_Makassar_Tectonic-Evolution-of-Sulawesi.pdf",
+          "aporte_esperado": "evolución tectónica completa — puede aportar polígonos de unidades en reconstrucción",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "satyana_2011_iagi_evolution — 5 feats"
+        },
+        {
+          "id": "s7_d5",
+          "tipo": "digitalizacion",
+          "paper": "faturrakhman_2024",
+          "archivo": "Papers/[S7] Faturrakhman et al. (2024) - ESO Asera.pdf",
+          "aporte_esperado": "detalle geológico área Asera (ESO), contactos ofiolita-basamento",
+          "estado": "implementado",
+          "nota": "DB: source=faturrakhman2024_eso_asera, 3 features (Lawanopo, fallas, traza ESO). Frontend: faturrakhmanFaultLayer + faturrakhmanGeoLayer ya en layers.js.",
+          "prioridad": 2,
+          "responsable": "sistema"
+        },
+        {
+          "id": "s7_d6",
+          "tipo": "digitalizacion",
+          "paper": "faturrakhman_2025",
+          "archivo": "Papers/1357-4638-3-PB.pdf",
+          "aporte_esperado": "geomorfología Tanjung Api, manifestación H2 — dato petrotectónico (fluido en falla activa)",
+          "estado": "implementado",
+          "prioridad": 1,
+          "responsable": "sistema",
+          "nota_completado": "faturrakhman_2025_tanjung_api — 5 feats (fids 385-389): H2 seep Tanjung Api (>1000 ppm, 1000-1400 m3/dia), H2 seep Pulodalagan (144-197 ppm), área estudio polygon, Ampana Fault (inferred), Toili Fault (inferred). Pendiente: agregar layer en frontend."
+        },
+        {
+          "id": "s7_mg1",
+          "tipo": "merged_geom",
+          "descripcion": "Definir merged_geom para ESO, WSIP, NSARC, Banggai-Sula, Buton-TK, CSMB, PMC, MMC, MSCC — en panel UI tras digitalizar Husein 2014",
+          "dependencia": "s7_d1",
+          "estado": "implementado",
+          "responsable": "usuario",
+          "prioridad": 2,
+          "nota_completado": "canon_wsip (15 verts), canon_terrane_bsm (9), canon_terrane_btb (9), canon_pmc (8) con Polygon en DB. S7 completo. 2026-06-03"
+        },
+        {
+          "id": "s7_fe1",
+          "tipo": "frontend",
+          "descripcion": "Capa unidades petrotectónicas: un VectorLayer por categoría (ofiolita/arco/metamórfico/continental/acreción) con fill semitransparente diferenciado por color; popup con nombre, edad, descripción petrotectónica, referencia",
+          "dependencia": "s7_mg1",
+          "estado": "implementado",
+          "nota_completado": "2026-06-02. petrotectLayer en index.html (linea ~1970). VectorSource cargado desde /api/geodata/canonical. Toggle data-t=petrotect en panel S7. Categorias: ophiolite/volcanic_arc/terrane/metamorphic_complex. PETROTECT_COLORS y PETROTECT_LABELS definidos.",
+          "prioridad": 3,
+          "responsable": "sistema"
+        }
+      ]
+    },
+    "s8_metamorfismo": {
+      "titulo": "8. Metamorfismo",
+      "cobertura_actual": "baja",
+      "nota": "GAP BIBLIOGRÁFICO — no hay paper dedicado al metamorfismo de Sulawesi en el corpus. Bantimala (UHP) es la unidad más importante y NO está en la DB. Los tres complejos existentes (CSMB, MMC, PMC) vienen solo de Baillie 2022 sin datos P-T. Mekongga-Rumbia blueschist (Nugraha & Hall 2022) sin canonical asignado.",
+      "gap_bibliografico": {
+        "papers_ausentes_clave": [
+          "Parkinson et al. (1998) Contrib. Mineral. Petrol. — Bantimala eclogites P-T: ~2.5 GPa, ~600°C",
+          "Kadarusman et al. (2004) Mineral. Petrol. — revisión metamorfismo Sulawesi (citado por Pratama 2025)",
+          "van Leeuwen & Maulana (2025) — mapa geológico Sulawesi actualizado (citado por Pratama 2025)"
+        ],
+        "implicacion_monografia": "La sección S8 será necesariamente corta (~2-3 pp.). Se puede escribir con Baillie 2022 + datos generales de Bantimala de la literatura. Para P-T detallados habría que agregar Parkinson 1998."
+      },
+      "estado_db": {
+        "features_en_db": 4,
+        "fuente": "baillie_2022_sulawesi",
+        "unidades": [
+          {
+            "nombre": "CSMB / Pompangeo Schist Complex",
+            "canonical": "canon_csmb",
+            "facies": "greenschist-amphibolite"
+          },
+          {
+            "nombre": "Malino Metamorphic Complex (MMC)",
+            "canonical": "canon_mmc",
+            "facies": "greenschist"
+          },
+          {
+            "nombre": "Palu Metamorphic Complex (PMC)",
+            "canonical": "canon_pmc",
+            "facies": "amphibolite-granulite"
+          }
+        ],
+        "ausente": "Bantimala Complex (UHP) — NO en DB. Mekongga-Rumbia (Nugraha & Hall 2022) — sin canonical."
+      },
+      "facies_sulawesi": {
+        "UHP_eclogite": {
+          "unidad": "Bantimala Complex",
+          "P_GPa": "~2.5-3.0",
+          "T_C": "~550-650",
+          "edad_ma": 119,
+          "arm": "SW"
+        },
+        "blueschist": {
+          "unidad": "Mekongga-Rumbia",
+          "P_GPa": "0.8-1.5",
+          "T_C": "300-450",
+          "edad": "Late Miocene-Pliocene",
+          "arm": "SE"
+        },
+        "amphibolite": {
+          "unidad": "PMC",
+          "P_GPa": "0.5-1.0",
+          "T_C": "500-700",
+          "edad": "Cretácico-Paleógeno",
+          "arm": "Central"
+        },
+        "greenschist": {
+          "unidad": "CSMB, MMC",
+          "P_GPa": "0.3-0.8",
+          "T_C": "300-500",
+          "edad": "Cretácico?",
+          "arm": "Central/SE"
+        }
+      },
+      "capas_visuales": [
+        {
+          "id": "metamorphic_grade",
+          "nombre": "Grado metamórfico (facies)",
+          "tipo": "polygon_layer",
+          "nota": "Mismas geometrías que S7 metamorphic_complexes, distinta atribución visual. Un VectorLayer con fill coloreado por facies.",
+          "escala_color": {
+            "UHP / Eclogita": "#1a0533",
+            "Blueschist HP": "#1f4e79",
+            "Anfibolita": "#2e86c1",
+            "Esquisto Verde": "#1e8449",
+            "Sin datos": "#aaaaaa"
+          },
+          "unidades": [
+            {
+              "nombre": "Bantimala Complex",
+              "facies": "UHP / Eclogita",
+              "canonical": "canon_bantimala",
+              "nota": "Creado 2026-05-29. merged_geom pendiente usuario."
+            },
+            {
+              "nombre": "Mekongga-Rumbia",
+              "facies": "Blueschist HP",
+              "canonical": "por_asignar",
+              "nota": "feature en DB (Nugraha & Hall 2022), sin canonical aún"
+            },
+            {
+              "nombre": "PMC",
+              "facies": "Anfibolita",
+              "canonical": "canon_pmc"
+            },
+            {
+              "nombre": "CSMB / Pompangeo",
+              "facies": "Esquisto Verde",
+              "canonical": "canon_csmb"
+            },
+            {
+              "nombre": "MMC / Malino",
+              "facies": "Esquisto Verde",
+              "canonical": "canon_mmc"
+            }
+          ],
+          "popup": "nombre, facies, P estimada (GPa), T estimada (°C), edad (Ma), referencia",
+          "estado": "pendiente_datos"
+        }
+      ],
+      "canonicals_requeridos": [
+        {
+          "tipo": "H",
+          "id": "canon_bantimala",
+          "nombre": "Bantimala Complex (UHP)",
+          "merged_geom": false,
+          "nota": "Creado 2026-05-29. Eclogitas + blueschists 119 Ma, SW arm. merged_geom pendiente usuario."
+        },
+        {
+          "tipo": "H",
+          "id": "canon_csmb",
+          "nombre": "CSMB / Pompangeo Schist",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_mmc",
+          "nombre": "Malino/Mekongga Complex",
+          "merged_geom": false
+        },
+        {
+          "tipo": "H",
+          "id": "canon_pmc",
+          "nombre": "Palu Metamorphic Complex",
+          "merged_geom": false
+        }
+      ],
+      "tareas": [
+        {
+          "id": "s8_db1",
+          "tipo": "db_insert",
+          "descripcion": "Crear canonical canon_bantimala (UHP, Tipo H) y feature asociado desde Baillie 2022",
+          "estado": "implementado",
+          "nota": "canon_bantimala creado 2026-05-29. P_kbar 27-28.5, T_C 615-640, age_ma 119. merged_geom pendiente usuario. También creado canon_mmc ya existía en DB.",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "canon_bantimala creado en DB"
+        },
+        {
+          "id": "s8_db2",
+          "tipo": "db_update",
+          "descripcion": "Asignar canonical a feature Mekongga-Rumbia (Nugraha & Hall 2022, fid=215)",
+          "estado": "implementado",
+          "nota": "2026-05-29: creado canon_mekongga_rumbia (blueschist HP, Late Miocene-Pliocene, SE arm). fid=215 asignado. Distinto de canon_mmc (Malino greenschist) ya existente.",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "canon_mekongga_rumbia creado; fid=215 asignado"
+        },
+        {
+          "id": "s8_db3",
+          "tipo": "db_update",
+          "descripcion": "Agregar campo facies_grade a los 4 features metamórficos existentes (o usar properties JSON): UHP / blueschist / amphibolite / greenschist",
+          "estado": "implementado",
+          "prioridad": 2,
+          "responsable": "sistema",
+          "nota_completado": "facies_grade implementado como campo inline en MET_UNITS (layers.js/index.html). No requirió cambio en DB — datos P-T ya conocidos de la literatura. 2026-05-30."
+        },
+        {
+          "id": "s8_fe1",
+          "tipo": "frontend",
+          "descripcion": "Capa grado metamórfico: reusa geometrías de S7 metamorphic_complexes, aplica escala de color por facies (UHP→eclogita: casi negro; esquisto verde: verde); popup P-T-edad",
+          "dependencia": "s8_db1",
+          "estado": "implementado",
+          "prioridad": 3,
+          "responsable": "sistema",
+          "nota_completado": "metamorphicLayer — 5 unidades: Bantimala (UHP #1a0533), Mekongga-Rumbia (blueschist #1f4e79 point), PMC (anfibolita #2e86c1), MMC+Tokorondo (greenschist #1e8449). Toggle 'met_grade' en S8. Tooltip P-T. Click → openPanel(id). 2026-05-30."
+        },
+        {
+          "id": "s8_r1",
+          "tipo": "decision_usuario",
+          "descripcion": "Decidir si agregar Parkinson et al. (1998) al corpus para tener datos P-T de Bantimala",
+          "opciones": [
+            "Agregar Parkinson 1998 — datos cuantitativos P-T para la monografía",
+            "No agregar — escribir S8 con datos cualitativos de Baillie 2022 solamente"
+          ],
+          "estado": "descartado",
+          "responsable": "usuario",
+          "nota_completado": "2026-06-02. Paper no disponible en Papers/. Parkinson 1998 ya está citado en DB[bantimala].papers como referencia bibliográfica — suficiente para el panel S8."
+        },
+        {
+          "id": "s8_fix1",
+          "titulo": "Eliminar canonicals metamórficos sin fuente bibliográfica",
+          "estado": "implementado",
+          "descripcion": "Borrar canon_bantimala, canon_mmc, canon_tokorondo de DB — source_count=0, sin papers asignables sin verificación adicional",
+          "nota_completado": "Eliminados 3 canonicals. DB: 55 restantes. 2026-06-08"
+        }
+      ]
+    }
+  },
+  "frontend": {
+    "titulo": "Infraestructura y visualización del frontend",
+    "nota": "Tareas globales del mapa — no dependen de una sección específica",
+    "tareas": [
+      {
+        "id": "fe_1",
+        "tipo": "frontend",
+        "descripcion": "Sistema de capas con toggle por tipo tectónico",
+        "detalle": "Tipo A (límites placa) ON por defecto; Tipo B (estructuras sec.) toggle; Tipo D (Jibran) toggle; Tipo H (unidades geol.) toggle; Tipo E (observaciones) OFF por defecto. Implementar en ui.js con checkboxes agrupados.",
+        "estado": "descartado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-02 implementado. 2026-06-05 descartado y eliminado (fe_19): la sección UI fue removida del panel por decisión del usuario. toggleTipo() y TIPO_KEYS permanecen en el código como dead code inofensivo."
+      },
+      {
+        "id": "fe_2",
+        "tipo": "frontend",
+        "descripcion": "Estilos diferenciados por tipo y cinemática en style_fns.js",
+        "detalle": "Tipo A: línea sólida gruesa, color por cinemática (sinistral=rojo, dextral=azul, thrust=naranja, extensional=verde); Tipo B: línea discontinua más fina; Tipo D: polígono translúcido con borde punteado; Tipo H: polígono fill semitransparente por categoría petrotectónica.",
+        "estado": "descartado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-02. Descartado por requerimiento del usuario: todos los elementos de línea deben permanecer en negro. El sistema actual (#111 en keyFaultStyle y newFaultStyleFn) ya cumple este criterio. La cinemática se comunica exclusivamente mediante simbología IUGS (flechas strike-slip, dientes de sierra thrust) que ya está implementada."
+      },
+      {
+        "id": "fe_3",
+        "tipo": "frontend",
+        "descripcion": "Panel lateral — info del canonical al hacer click en cualquier feature",
+        "detalle": "Nombre canónico, tipo, kinemática, lista de papers fuente, conteo de features, merged_geom status. Implementado en panel.js / ui.js.",
+        "estado": "descartado",
+        "nota": "Ya existe panel básico — expandir con datos de sección de monografía relevante",
+        "nota_completado": "2026-06-02. Superceded por fe_9. La funcionalidad de panel al clickear esta cubierta por openCanonicalPanel() con debate completo."
+      },
+      {
+        "id": "fe_4",
+        "tipo": "frontend",
+        "descripcion": "Filtro por sección de monografía — pestañas S1–S8",
+        "detalle": "Selector de sección activa que oculta/muestra las capas relevantes a esa sección. Permite usar el mapa como figura complementaria de cada capítulo. Implementar como botones de radio en la barra superior.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "Botones S1-S8 + Todo en barra superior. Click activa solo capas de esa sección (apaga el resto, mantiene base). CSS .sec-btn.active con acento. Lazy-load de GCMT/slabs al activar S2/S3. LEGEND_DEF reescrito con todos los keys nuevos. 2026-05-29."
+      },
+      {
+        "id": "fe_5",
+        "tipo": "frontend",
+        "descripcion": "Deck.gl 3D overlay — estructura mantélica S3",
+        "detalle": "ScatterplotLayer (hipocentros coloreados por profundidad), LineLayer (contornos Slab2), viewport sync con OL. Toggle 2D/3D en UI. Ver s3_fe1 para spec completa.",
+        "estado": "descartado",
+        "prioridad": 3,
+        "responsable": "sistema",
+        "nota": "OL6 no soporta proyección en perspectiva (pitch). Overlay deck.gl sobre OL6 desalinea base map vs datos cuando pitch≠0. Modal separado también descartado por falta de contexto geográfico claro. Los perfiles A-A' ya implementados (s3_fe2) cubren la necesidad de sección vertical. 2026-05-31."
+      },
+      {
+        "id": "fe_14",
+        "tipo": "frontend",
+        "descripcion": "Capa base ESRI Hybrid — satélite + divisiones políticas",
+        "detalle": "Dos TileLayers OL6: esriHybridBase (WorldImagery) + esriHybridLabels (World_Boundaries_and_Places, zIndex:15). Toggle 'esri_hybrid' en panel Fondo. Mutex: al activar apaga Sentinel; al desactivar reactiva Sentinel si no hay otro fondo. updateSentinelLock() extendido.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "esriHybridBase + esriHybridLabels en layerObjs. Toggle en panel Fondo. Mutex Sentinel↔GEBCO extendido para incluir ESRI Hybrid. 2026-05-31."
+      },
+      {
+        "id": "fe_6",
+        "tipo": "frontend",
+        "descripcion": "Herramienta perfil gravitatorio S4 — dibujar línea → comparar Bouguer vs Free-air",
+        "detalle": "OL Draw interaction → POST /api/gravity/profile → rasterio samplea TIFFs → Chart.js chart con doble curva.",
+        "estado": "implementado",
+        "prioridad": 3,
+        "responsable": "sistema",
+        "nota_completado": "backend/routers/gravity.py: POST /api/gravity/profile, rasterio samplea sulawesi_bouguer_completa.tif + sulawesi_freeair_recortada.tif, interpolación Haversine. Frontend: botón ⏥ Perfil, OL Draw LineString, modal Chart.js (Bouguer azul / Aire libre rojo), export PNG. 2026-05-29."
+      },
+      {
+        "id": "fe_7",
+        "tipo": "frontend",
+        "descripcion": "Leyenda dinámica — muestra solo las capas actualmente visibles",
+        "detalle": "Leyenda flotante que se actualiza al activar/desactivar capas.",
+        "estado": "implementado",
+        "prioridad": 3,
+        "responsable": "sistema",
+        "nota_completado": "LEGEND_DEF reescrito con 28 entradas (todos los keys actuales S1-S8). updateFloatingLegend() recorre ORDER actualizado. 2026-05-29."
+      },
+      {
+        "id": "fe_8",
+        "tipo": "frontend",
+        "descripcion": "Exportar GeoJSON por sección de monografía",
+        "detalle": "Botón que genera GeoJSON de capas visibles en la sección activa.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "Botón ⬇ GeoJSON en header. Recorre map.getLayers(), recolecta features de VectorLayers visibles, convierte coordenadas a EPSG:4326, descarga como sulawesi_sN_YYYY-MM-DD.geojson. 2026-05-29."
+      },
+      {
+        "id": "fe_9",
+        "tipo": "frontend",
+        "descripcion": "Rediseño del panel lateral — modelo canónico con debate",
+        "detalle": "Click en cualquier feature → panel del canonical con: (1) nombre+tipo+cinemática, (2) 'Este mapa adopta' con autores + imagen de figura del paper, (3) 'En debate' con autores alternativos + imagen de su figura, (4) datos cuantitativos con cita APA. Requiere extracción de imágenes de PDFs (PyMuPDF) y campo 'consensus_papers'/'dissenting_papers' en canonical_structures.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "dependencias": [
+          "fe_audit_citas",
+          "extraccion_figuras_pdfs"
+        ],
+        "nota_completado": "2026-06-02. CANONICAL_DEBATES con 14 canonicals (PKF, Matano, NST, Batui, MST N/CN/Mamuju/Somba, Sangihe, Halmahera, Sorong, SST, Gorontalo, Tolo). FEAT_TO_CANONICAL: 27 entradas incluyendo sorong_main/s, south_sulawesi_faults, gorontalo, tolo_thrust. openCanonicalPanel wired en key_fault/new_fault/subduction clicks."
+      },
+      {
+        "id": "fe_10",
+        "tipo": "frontend",
+        "descripcion": "Rediseño del panel de capas — base + S1–S8 independientes",
+        "detalle": "Panel de capas con dos secciones: 'Base' (Sentinel permanente + límites placa toggleables, default ON) y 'Temáticas' organizadas en grupos S1–S8, cada capa individual apagable, todas OFF por defecto. Capas raster (Bouguer, Aire Libre, CPD) con botón ⓘ que abre panel bibliográfico aunque no sean clickeables como features.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "Panel reorganizado en Fondo/Base/S1-S8. Todas las capas temáticas OFF por defecto. layerObjs expandido con keys individuales. Mutex Sentinel↔GEBCO implementado (Sentinel solo apagable si GEBCO activo). Botones ⓘ en Sentinel, GEBCO, Bouguer, Aire Libre, WHF2024 con DB entries y panel bibliográfico. 2026-05-29."
+      },
+      {
+        "id": "fe_11",
+        "tipo": "frontend",
+        "descripcion": "Capa de sismicidad unificada con deduplicación y filtros",
+        "detalle": "Una sola capa que combina GCMT + ISC. Filtros: slider magnitud, checkboxes profundidad (4 rangos), checkboxes fuente (GCMT/ISC). Carga lazy al activar toggle.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "cmtLayer unificada: GCMT (cmt_events.json + gcmt55_sulawesi.json) + ISC (API lazy). iscLayer eliminado. Un solo toggle 'seismicity' con panel de filtros expandible. Style cmtDotStyle/cmtBBStyle maneja ambos tipos. 2026-05-29."
+      },
+      {
+        "id": "fe_12",
+        "tipo": "frontend",
+        "descripcion": "Auditoría de citas — todos los elementos hardcodeados",
+        "detalle": "Revisar: tectSubLayer (Sangihe/Halmahera), coreLayer (PMC/MMC/Bantimala/Tokorondo), seismicGapLayer, NEW_FAULTS, GVP_VOLCANOES, PVMBG lookup, vectores Yuan/Di Leo inline. Todo elemento sin source_apa válido debe removerse o completarse.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota": "Sin cita = no va al mapa.",
+        "nota_completado": "Todos los elementos tienen cita. Creados DB entries: pmc/mmc/bantimala/tokorondo (Baillie 2022 + Parkinson 1998). PVMBG classification ahora cita Pratama 2025 en volcPanel. Rasters (Sentinel/GEBCO/Bouguer/WHF) con ⓘ y DB entry. tectSubLayer/coreLayer/seismicGapLayer/NEW_FAULTS verificados. 2026-05-29."
+      },
+      {
+        "id": "fe_15",
+        "tipo": "frontend",
+        "descripcion": "Herramienta de dibujo de merged_geom — trazar geometría canónica directamente sobre el mapa",
+        "detalle": "OL6 Draw interaction (LineString/Polygon/Point) activable desde el panel lateral de un canonical. El usuario usa las capas de referencia calibradas como guía visual y traza la geometría definitiva. Al completar: PATCH /api/geodata/canonical/{canonical_id}/merged_geom con la geometría dibujada.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "Botón '✎ Geom' en panel de capas. Modal lateral izquierdo lista 62 canonicals sin merged_geom agrupados por tipo. Selección → selector LineString/Polygon (sugerido por layer_type) → OL Draw activo → doble-click o Guardar → PATCH /api/geodata/canonical/{id}/merged_geom. Backend: GET /api/geodata/canonical/pending + PATCH /api/geodata/canonical/{id}/merged_geom. 2026-05-31."
+      },
+      {
+        "id": "fe_16",
+        "tipo": "frontend",
+        "descripcion": "Conclusiones por sección S1–S8 — síntesis científica visible en el mapa",
+        "detalle": "Panel de conclusiones para cada sección, accesible desde el botón S correspondiente (o botón 'Síntesis' adicional). Muestra 3–5 conclusiones por sección con cita APA inline por cada afirmación. Contenido redactado/curado por el usuario basado en los datos del mapa. Requerimiento de la presentación académica: el mapa debe poder comunicar conclusiones, no solo mostrar datos.",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. Panel de conclusiones implementado con CONCLUSIONS dict S1-S8. 4 conclusiones por seccion con cita APA inline. Accesible desde boton en header. Verificado con backend activo.",
+        "prioridad": 1,
+        "responsable": "sistema+usuario",
+        "nota": "El sistema (HTML/JS) implementa el panel. El contenido de las conclusiones lo redacta el usuario con citas de los papers digitalizados."
+      },
+      {
+        "id": "fe_17",
+        "tipo": "frontend",
+        "descripcion": "Bibliografía completa — modal con todas las fuentes citadas en el mapa",
+        "detalle": "Modal accesible desde botón en el header (ej. '📚 Bibliografía'). Agrega todas las entradas únicas de DB[id].papers de todos los features del mapa, más fuentes de datasets (Slab2, GEM, GVP, GPlates, Sentinel-2, GEBCO, WGM2012, IHFC, EIGEN-6C4). Ordenado alfabéticamente por autor. Formato APA. Exportable como texto. Requerimiento académico: cada elemento visual debe tener fuente trazable.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "Botón '📚 Bibliografía' en header. Modal fixed con overlay. Recolecta papers únicos de todo el objeto DB + 10 datasets estáticos (Bird, Bonvalot, Copernicus/EOX, Förste, GEBCO, GVP, Hayes, Müller, Styron). Buscador en tiempo real. Ordenado alfabéticamente. Export .txt. Cierra con Esc o click en overlay. 2026-06-01."
+      },
+      {
+        "id": "fe_13",
+        "tipo": "frontend",
+        "descripcion": "Visibilidad por nivel de zoom — OpenLayers minResolution/maxResolution",
+        "detalle": "Zoom 4-6: base + Tipo A + volcanes. Zoom 7-8: Tipo B + sismos Mw≥6. Zoom 9+: todo.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "setMaxResolution en capas Tipo B (zoom 7+): newFaultLayer, hikmy, faturrakhman, husein, srhGap/Cluster, jibranLayer, birdLayer, gpsLayer, plateVelLayer. stationLayer desde zoom 9+. 2026-05-29."
+      },
+      {
+        "id": "fe_audit_1",
+        "tipo": "auditoria_interactividad",
+        "descripcion": "Auditoria y correccion de interactividad — 9 bugs de click silencioso",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-03. 5 tipos sin handler (station/geoth_field/heat_flow/pratama_manif/isc_eq): handlers especificos. 4 openPanel sin DB (dileo/slab/hikmy/yuan): handlers por propiedades. Bug NST GEM f19-f24 routeaba a Sangihe: corregido con FEAT_TO_CANONICAL. 35/37 tooltips con titulo coloreado. DB._station papers agregados. Cobertura click handler: 36/36 tipos."
+      },
+      {
+        "id": "fe_audit_2",
+        "tipo": "auditoria_debates",
+        "descripcion": "Completar CANONICAL_DEBATES para 7 estructuras secundarias en FEAT_TO_CANONICAL",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-03. EWF (canon_1927), WWF (canon_62), Balantak (canon_1933), Buton Thrust (canon_1928), Lawanopo (canon_100), Kolaka (canon_116), TFZ (canon_357). Total: 21 canonicals con debate. Cobertura 100% FEAT_TO_CANONICAL."
+      },
+      {
+        "id": "fe_optimize_1",
+        "tipo": "optimizacion_limpieza",
+        "descripcion": "Limpieza y QA general del proyecto",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-03. Dead code eliminado: FT_COLOR/FT_HEX/RES_Z5/SLAB2_CONTOURS/gemColor/bbRadius/exportGeorefExtents/loadGravRasters/sampleBilinear/GRAV_BOX/gravRasters (-2 KB). console.log eliminado. Blanks triples colapsados. DB: 6 canonicals orphan borrados + 2 FK rotas reparadas. QA: 11/11 endpoints OK, 36/36 feat_types cubiertos, S1-S8 todos con panel+conclusiones. Pendiente manual (no afecta presentacion): archivos viejos v71.html/v6.html/js/ (1.2 MB), fetch lazy de heat_flow/bird/serhalawan (172 KB startup innecesario), NDK source files (27 MB — solo para reimport)."
+      },
+      {
+        "id": "db_split_1923",
+        "tipo": "correccion_db",
+        "descripcion": "Split canon_1923 Flores-Banda SZ en dos canonicals distintos",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-03. canon_1923 renombrado a 'Flores Back-arc Thrust' (fid=30, 1 feature Bird 2003 sector Flores-Sumbawa). canon_1934 creado como 'Banda Subduction Zone' (fid=31,36,287,288 — Timor Trough + GPlates Banda segs). fid=32 -> canonical_id=NULL (segmento de cierre poligono Bird 2003, no es feature geologico). Flores Back-arc Thrust (Hamilton 1979) y Banda SZ (rollback ~15 Ma) son estructuras distintas en mecanismo e historia."
+      },
+      {
+        "id": "fe_18",
+        "tipo": "frontend",
+        "descripcion": "Síntesis general — conclusiones transversales S1–S8 accesibles desde botón ★ General",
+        "detalle": "Botón '★ General' en el header abre conc-modal con key='general', independiente de la sección activa. 5 conclusiones transversales: marco de placas, historia de ensamblaje, partición de deformación, sistema mantélico, amenazas+recursos. Contenido scaffold redactado — el usuario lo revisa y ajusta. openConcModal() acepta argumento key opcional.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema+usuario",
+        "nota_completado": "2026-06-03. Botón '★ General' en header. CONCLUSIONS['general'] con 5 entradas scaffold. openConcModal(key) acepta key opcional; isGeneral muestra '★' en tag. Contenido pendiente revisión/ajuste por usuario."
+      },
+      {
+        "id": "fe_19",
+        "tipo": "limpieza_capas",
+        "descripcion": "Batch limpieza 2026-06-05: eliminar 10 capas, filtro tipo tectónico, hillshade, renombrar GPS",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Eliminados de panel+layerObjs+SECTION_KEYS: slab_layer (Slab2), hua_layer (Hua Banda), hall_layer (Hall slabs), yuan_flow (Yuan flujo), dileo_sks (Di Leo SKS), kesuma_tomo (Kesumastuti tomo), stations (BMKG), fat25_h2 (H2), met_grade (grado metam.), gebco_relief (hillshade). Eliminado filtro tipo tectónico (fe_1 UI). Renombrado toggle GPS·MORVEL→'Velocidades de placa'. Unificado gaps→seismicGapLayer (eliminando duplicado srhGapLayer). petrotectLayer style corregido (de null a PETROTECT_COLORS). petrotect agregado a SECTION_KEYS['7']. Mutex gebcoRelief limpiado. LEGEND_DEF y ORDER actualizados."
+      },
+      {
+        "id": "fe_19b",
+        "tipo": "frontend",
+        "descripcion": "ESRI Hybrid: botón bibliográfico ⓘ + DB entry con cita APA",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. DB['esri_hybrid_src'] agregado (Esri WorldImagery + World Boundaries and Places, 2 papers APA). Botón ⓘ en toggle ESRI Hybrid del panel Fondo. openPanel('esri_hybrid_src') abre panel bibliográfico estándar."
+      },
+      {
+        "id": "fe_24",
+        "tipo": "frontend",
+        "descripcion": "Unificar capas volcanes GVP + PVMBG: deduplicar volcanes del mismo edificio",
+        "detalle": "volcLayer (GVP) y pratamaVolcLayer (PVMBG A/B) muestran el mismo volcán dos veces cuando PVMBG clasifica un volcán GVP. Unificar: usar volcLayer como base; para volcanes que PVMBG clasifica como Tipo A/B, reemplazar el símbolo GVP por el PVMBG (indicando fuente PVMBG + GVP). Un solo triángulo por edificio volcánico con metadatos combinados de ambas fuentes en el panel.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Eliminado pratamaVolcLayer, PRATAMA_VOLC array, pratamaVolcStyleFn, toggle 'Volcanes PVMBG A/B'. volcLayer (GVP) ya aplicaba PVMBG via dict lookup. Leyenda unificada: triángulo rojo=A, naranja=B, gris=C. LEGEND_DEF.volcanoes actualizado con 3 filas. SECTION_KEYS S5 y ORDER array actualizados."
+      },
+      {
+        "id": "fe_25",
+        "tipo": "arquitectura_frontend",
+        "descripcion": "Merged_geoms Jibran en cuencas: fix arquitectural — merged_geoms no-basin deben seguir su host layer",
+        "detalle": "Bug: merged_geoms de Jibran clusters (canon_jib_01–10, host='clusters') solo aparecen cuando toggle merged_geoms (cuencas) está ON, no cuando clusters está ON. Root cause: mergedGeomLayer se controlaba vía layerObjs['merged_geoms']; al estar OFF, OL no llama a style function y los clusters Jibran nunca renderizan aunque 'clusters' esté ON. Fix: (1) mergedGeomLayer siempre visible:true; (2) layerObjs['merged_geoms'] = proxy con basinLayerVisible flag; (3) canonHostVisible() usa basinLayerVisible para basins (sin host key). Resultado: Jibran merged_geoms aparecen al activar S2 o toggle clusters, independiente del toggle cuencas.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. mergedGeomLayer siempre visible:true. basinLayerVisible flag global. layerObjs['merged_geoms'] reemplazado por proxy {getVisible/setVisible}. canonHostVisible() usa basinLayerVisible para canonicals sin entrada en CANON_HOST_LAYER. Clusters Jibran ahora visibles cuando 'clusters' toggle está ON, independiente de 'cuencas'."
+      },
+      {
+        "id": "fe_20",
+        "tipo": "frontend",
+        "descripcion": "Nombres en español para estructuras: establecer criterio de nomenclatura en UI",
+        "detalle": "Los toggles del panel que muestran nombres de estructuras geológicas (fallas, zonas de subducción, etc.) deben usar nombre en español cuando corresponda: 'Fallas activas GEM' ya OK; revisar canonicalPanel titles. El nombre canónico en DB permanece en inglés (estándar de la literatura); el panel UI muestra el nombre en español + el nombre técnico inglés como subtítulo.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. CANON_NOMBRE_ES: 30 entradas con nombres en espanol para las estructuras principales. openCanonicalPanel usa nameEs en pti y muestra nameEn como subtitulo en italica si difiere. CANONICAL_KINEMATICS ampliado con ophiolite/terrane/volcanic_arc/metamorphic_complex/slab_geometry/basin."
+      },
+      {
+        "id": "fe_21",
+        "tipo": "frontend_db",
+        "descripcion": "Trazas fallas normales: corregir simbología IUGS en DB",
+        "detalle": "Fallas con category='normal' en DB deben tener sym='normal' (tick hacia abajo en IUGS) y flip correcto según vergencia. Auditar todas las features con slip_type='normal' en geo_features y canonical_structures. Verificar newFaultStyleFn maneja case 'normal' con la simbología correcta.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Agregada funcion normalTicks() con hachuras IUGS. Casos normal agregados a hikmyStyleFn (ft===normal, flip desde fault_flip) y newFaultStyleFn (sym===normal). Leyenda hikmy_structs actualizada con SVG hachura. Solo 1 feature activo: id=84 Lobu-Balolang FZ (NW-SE, brazo este). Cargado desde DB via hikmyFaultSource; fault_type en properties se aplana en GeoJSON API."
+      },
+      {
+        "id": "fe_26",
+        "tipo": "arquitectura_db",
+        "descripcion": "Migrar todos los layers hardcodeados a carga desde DB via /api/geodata/features",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Migrados a loadLayersFromDB() (API fetch al init): jibranLayer (jibran_2025_sulawesi_tectonic_regimes), godangLayer (godang2025_adang_makassar), faturrakhmanFaultLayer+GeoLayer (faturrakhman2024_eso_asera), huseinFaultLayer+PolyLayer (husein_2014_luwuk), hikmyFaultLayer+BeltLayer+PointLayer (hikmy_2025_east_arm_sulawesi), yangObsLayer points (yang_2025_pkf_crustal_thickness), seismicGapLayer (serhalawan_2024_sulawesi hazard_zone). Todos los features cargados tienen feat_id numérico = ID en geo_features → editables sin alert de hardcodeado. Pendiente: CORES/MET_UNITS (baillie metamorphic_complex en DB no tiene propiedades de facies — requiere enriquecer la DB), newFaultLayer (NEW_FAULTS inline tiene sym/flip que ya están en properties DB — pendiente migración)."
+      },
+      {
+        "id": "fe_22",
+        "tipo": "frontend_db",
+        "descripcion": "Canonicals base: reasignar canonicals incorrectamente asignados a merged_geoms (cuencas)",
+        "detalle": "Auditar qué canonicals caen en merged_geoms por no estar en CANON_HOST_LAYER. Fallas activas → tect_key; subducción → tect_sub; ofiolitas → faturrakhman; terrenos/arcos → petrotect; complejos metamórficos → core_complexes. Solo cuencas sedimentarias deben ir a merged_geoms. Adang Volcanic Complex: integrar info a panels de elementos existentes (petrotect/volcanoes), eliminar godangLayer o mantenerla solo para el polígono del Estrecho de Makassar.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Auditoria: solo canon_slab_banda y canon_slab_sula sin host (caian a cuencas). Corregido: ambos -> srh_secs. Basins (canon_basin_*) correctamente en fallback basinLayerVisible."
+      },
+      {
+        "id": "fe_23",
+        "tipo": "frontend",
+        "descripcion": "Etiquetas (canonLabelLayer): corresponder etiqueta al tipo de elemento",
+        "detalle": "canonLabelLayer actualmente muestra todas las etiquetas canónicas con el mismo estilo. Diferenciar: fallas → texto negro pequeño; subducción → texto azul; unidades geológicas → texto color PETROTECT_COLORS[type]; volcanes → texto naranja. Verificar que el toggle de canon_labels siga funcionando.",
+        "estado": "implementado",
+        "prioridad": 3,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. CANON_LABEL_STYLE: 11 tipos con color y tamanio diferenciado. fault=amarillo, subduction=azul, ophiolite=verde, volcanic_arc=rojo, terrane=dorado, metamorphic=violeta, volcano=naranja, basin=celeste, structure=verde claro, slab=lila."
+      },
+      {
+        "id": "s2_fe2",
+        "tipo": "frontend_db",
+        "descripcion": "Perfil interactivo de hipocentros: corte vertical trazable por el usuario",
+        "detalle": "OL6 Draw LineString sobre el mapa → definir orientación y longitud del corte → POST /api/earthquakes/profile con bbox derivado de la línea + tolerancia ±30 km → Chart.js: eje X = distancia a lo largo del perfil (km), eje Y = profundidad (km). Colorear por profundidad igual que la capa de sismicidad. Permitir exportar PNG. Botón en panel S2.",
+        "estado": "implementado",
+        "nota_completado": "2026-06-05. Backend: GET /api/earthquakes/profile (lon1,lat1,lon2,lat2,halfWidth,minMag). Proyeccion punto-a-linea con haversine+distancia perpendicular. Frontend: boton en S2, modal hypo-modal con canvas Chart.js scatter, coloreado por profundidad (=seismicidad), radio escala con Mw. Exporta PNG. Draw LineString OL6 reutilizando dblClickZoom pattern de perfil gravimetrico. Requiere restart backend para activar endpoint.",
+        "prioridad": 2,
+        "responsable": "sistema"
+      },
+      {
+        "id": "s3_fe5",
+        "tipo": "frontend",
+        "descripcion": "Hall & Spakman (2015): integrar info al panel de canónicos de slabs existentes",
+        "detalle": "Agregar entrada tomo3d_hall a TOMO3D_ENTRIES con imagen de fig y datos de slabs SE Asia. La capa hallLayer queda desactivada del panel (ya eliminada del toggle); los datos de agujeros en la losa y perfiles se acceden via galería tomo3d modal. Agregar ref_hall al panel de verificación si hay imagen calibrada disponible.",
+        "estado": "implementado",
+        "prioridad": 3,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Agregado tomo3d_hall a TOMO3D_STUDIES (short=HAL). Sin imagenes disponibles (onerror oculta). Conclusion textual: slab gaps, ventanas mantélicas, acumulacion MTZ, relacion con anomalia Bouguer positiva del arco Banda. Hallayer sigue en map.getLayers pero sin toggle visible."
+      },
+      {
+        "id": "s4_fe3",
+        "tipo": "datos",
+        "descripcion": "Geoide: reemplazar EIGEN-6C4 por INAGEOID2020",
+        "detalle": "Dataset: Pahlevi et al. (2024) INAGEOID2020, Zenodo doi:10.5281/zenodo.8404628. Descarga streaming con HTTP Range (byte 250MB) para filtrar solo Sulawesi. Pipeline: stream→filter→pivot→PNG con PIL. Sin GDAL.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05 (actualización v2). Descarga completa INAGEOID2020 cobertura total [90–147.5°E, -11–20°N] via chunked HTTP Range (11 chunks × 50MB). Grid 3101×5751, N rango: -63.25 a +88.62 m. PNG 5751×3101 px, colormap divergente azul(-63m)→blanco(0m)→rojo(+88m). Extent actualizado [90,-11,147.5,20]. LEGEND_DEF y DB entry actualizados."
+      },
+      {
+        "id": "s5_fe5",
+        "tipo": "frontend",
+        "descripcion": "Campos geotérmicos: calibrar geometrías",
+        "detalle": "Revisar geothLayer (fuentes/geothermal_fields.geojson). Verificar que los polígonos/puntos de campos geotérmicos coincidan con la cartografía base. Calibrar offset si existe.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Corregidas coordenadas erroneas: Soroako 120.399,-2.935 -> 121.353,-2.531 (lago Matano); Wotu 120.217,-3.652 -> 120.816,-2.553 (costa brazo sur); Kotamobagu 124.031,0.742 -> 124.390,0.733 (volcan Ambang); Tanjung Api 122.846,-0.522 -> 122.745,-0.557 (Faturrakhman 2025)."
+      },
+      {
+        "id": "s5_fe6",
+        "tipo": "frontend",
+        "descripcion": "Geoquímica volcánica: mover %S al panel de cada volcán",
+        "detalle": "La capa geochemistry (Clor 2005) muestra puntos %S en el mapa. El dato %S de cada estación debe integrarse al panel del volcán más cercano (openVolcPanel). Buscar el volcán canónico más cercano a cada punto geoquímico e incluir el dato %S como sección 'Geoquímica' en el panel. La capa geochemistry puede quedar en el mapa o desactivarse según decisión.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. CLOR_BY_VOLC lookup (5 volcanes: Awu d15N, Ruang/Lokon-Empung/Lahendong/Ambang %S). openVolcPanel muestra seccion Geoquimica con barra %S gradiente cian-rojo + d15N si disponible + cita Clor et al. 2005."
+      },
+      {
+        "id": "s5_fe7",
+        "tipo": "frontend",
+        "descripcion": "Flujo calórico WHF2024: mejorar descripción y leyenda",
+        "detalle": "El toggle 'Flujo calórico WHF 2024' no comunica qué datos muestra. Mejorar: (1) actualizar LEGEND_DEF con escala de colores y valores en mW/m²; (2) actualizar DB entry heat_flow_src con descripción explicativa; (3) el panel ⓘ debe aclarar que son mediciones puntuales interpoladas a grid 0.1° y rango típico de la región.",
+        "estado": "implementado",
+        "prioridad": 3,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. DB entry heat_flow_src ampliado: naturaleza puntual de las mediciones, 311 puntos, distribución offshore dominante, escasez de datos terrestres en Sulawesi, anomalías arco volcánico norte. Leyenda ya tenía escala azul→blanco→naranja→rojo con valores en mW/m²."
+      },
+      {
+        "id": "s5_fe8",
+        "tipo": "frontend_debug",
+        "descripcion": "Prospectividad CCRS: debug o eliminar",
+        "detalle": "La capa ccrsLayer no muestra datos. Verificar: (1) fuentes/ccrs_pratama.geojson existe y tiene features; (2) ccrsStyleFn devuelve estilo visible; (3) la capa está en el mapa. Si no hay datos válidos: eliminar toggle y entrada en SECTION_KEYS['5'].",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-06. Bug fix: ol.geom.Polygon([lc(d.coords[0])]) wrapping corregido. CCRS layer tiene 3 poligonos inline validos (corredor PKF, arco N, S Mamuju). Geometry fix: sin wrapping la Polygon quedaba malformada."
+      },
+      {
+        "id": "s5_fe9",
+        "tipo": "raster",
+        "descripcion": "Pratama CPD: borrar fondo blanco de la imagen y trasladar escala a leyenda",
+        "detalle": "cpd_pratama imagen (panel d de Pratama 2025) tiene fondo blanco que tapa el mapa base. Usar rasterio/PIL para hacer transparente el blanco (threshold). La escala de colores de la CPD debe aparecer en LEGEND_DEF para que sea accesible sin ver la imagen.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Flood fill desde esquinas con umbral RGB>200 + canales similares (delta<30). Eliminó 1.88M píxeles de fondo. Cropeado en row 1265 para eliminar texto caption inferior. Imagen final 1654×1265 px con alpha. Cache buster ?v=nobg. Escala ya en LEGEND_DEF.cpd_pratama (somero↔profundo, 17-37 km)."
+      },
+      {
+        "id": "s5_fe10",
+        "tipo": "frontend",
+        "descripcion": "Leyenda volcanes GVP: corregir",
+        "detalle": "La leyenda de volcanes GVP muestra 'Volcán Holoceno (GVP)' pero el toggle combina GVP + PVMBG. Actualizar LEGEND_DEF['volcanoes'] para reflejar la fuente unificada.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Resuelto en fe_24: leyenda unificada con 3 entradas (A/B/C) en LEGEND_DEF.volcanoes. Título actualizado a 'S5 — Volcanes Holocenos GVP · Clasificación PVMBG'."
+      },
+      {
+        "id": "s7_fe2",
+        "tipo": "frontend_debug",
+        "descripcion": "Petrotectónica: verificar que muestra elementos tras fix de style",
+        "detalle": "petrotectLayer tenía style:()=>null — corregido en fe_19. Verificar que al activar S7 aparecen los polígonos de ofiolitas/terrenos/arcos cargados desde /api/geodata/canonical. Requiere backend activo. Si no hay canonicals con geometría definida, la capa puede estar vacía — en ese caso confirmar que loadPetrotect() funciona y que hay features con layer_type en PETROTECT_TYPES.",
+        "estado": "implementado",
+        "nota_completado": "2026-06-05. Verificado con backend activo. /api/geodata/canonical devuelve canon_eso (Polygon, ophiolite), canon_nsarc (Polygon, volcanic_arc), canon_wsip (Polygon, volcanic_arc), canon_terrane_bsm (Polygon, terrane), canon_terrane_btb (Polygon, terrane), canon_csmb (Polygon, metamorphic_complex), canon_pmc (Polygon, metamorphic_complex). loadPetrotect() filtra correctamente por PETROTECT_TYPES y excluye Points. Capa funcional.",
+        "prioridad": 1,
+        "responsable": "sistema"
+      },
+      {
+        "id": "s7_fe3",
+        "tipo": "frontend_debug",
+        "descripcion": "ESO: verificar elementos en faturrakhmanGeoLayer",
+        "detalle": "FATURRAKHMAN_2024.features filtrados por category==='ophiolite' van a faturrakhmanGeoLayer. Si ESO no muestra nada, revisar que los features tengan category='ophiolite' y que faturrakhmanStyleFn devuelva estilo visible para esos tipos.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Verificado con backend activo. API /api/geodata/features?source=faturrakhman2024_eso_asera devuelve 3 features: id=67 (ophiolite, Polygon) → faturrakhmanGeoSource; id=68,69 (fault, LineString) → faturrakhmanFaultSource. faturrakhmanStyleFn para category='ophiolite' devuelve fill+stroke verde. feat_id=null en los features del API (no interfiere con COVERED_BY_CANON)."
+      },
+      {
+        "id": "s8_fe2",
+        "tipo": "frontend",
+        "descripcion": "Complejos metamórficos: calibrar geometrías en coreLayer",
+        "detalle": "CORES hardcodeados (bantimala, pmc, mmc, tokorondo) pueden no coincidir con la cartografía del mapa. Usar las figuras fuente del panel de verificación (ref_baillie, ref_husein) para ajustar coordenadas. Actualizar el array CORES en el código.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-05. Tokorondo desplazado ~0.15 grado al este (nuevo: 120.30-120.68E, -1.05 a -1.45S) para alinear con borde NW de canon_csmb [120.41,-0.90]. Bantimala extendido a 119.88E (Parkinson 1998: 119.4-119.9E). PMC sin cambios (coincide con canon_pmc). MMC queda pendiente verificacion visual en panel ref_baillie."
+      },
+      {
+        "id": "fe_ux1",
+        "tipo": "frontend",
+        "descripcion": "Auditoria UX: fuentes, touch targets, welcome overlay",
+        "detalle": "Verificacion sistematica de legibilidad (font-size minimo 0.45rem), area de click de botones S1-S8 (min-height:28px), e implementacion de overlay de bienvenida con localStorage para primera visita.",
+        "estado": "implementado",
+        "prioridad": 2,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-06. Fix: .lcat y .fleg-title 0.44rem->0.45rem. Fix: .sec-btn padding 1px->4px + min-height:28px + display:inline-flex. Nuevo: #welcome-overlay con dismiss permanente via localStorage (sulawesi_welcome_dismissed_v1). Sin tocar estilos de capas geologicas."
+      },
+      {
+        "id": "fe_ux2_touch_tooltip",
+        "tipo": "frontend",
+        "seccion": "UX",
+        "descripcion": "Touch tooltip: buildTooltipHtml + touchstart listener",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. Extraida funcion buildTooltipHtml(hit) (linea 2793) con toda la logica de construccion del tooltip. pointermove simplificado a 1 llamada. touchstart listener (linea 3028, hitTolerance:12, timeout 1200ms) muestra tooltip en touch y lo cierra cuando singleclick abre el panel. clearTimeout en singleclick. fix: cid->id en canonical case."
+      },
+      {
+        "id": "fe_demo_qa1",
+        "tipo": "auditoria",
+        "seccion": "UX",
+        "descripcion": "QA recorrido primera visita + fixes derivados",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. dismissWelcome() llama activateSection(1). Verificados: welcome overlay, 8 secciones, paneles, fe15/fe16/fe17 OK."
+      },
+      {
+        "id": "fe_bib_fix1",
+        "tipo": "contenido",
+        "seccion": "fe_17",
+        "descripcion": "Completar BIB_STATIC con 12 papers del corpus ausentes del modal",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. Natawidjaja 2020/2021, Lukman 2016, Cipta 2016, Greenfield 2021, Lestari 2021, Liu 2026, Shih 2026, Heryandoko 2024, Surono 2012, Satyana IPA/IAGI 2011 agregados a BIB_STATIC. Modal cubre 30 papers + 10 datasets."
+      },
+      {
+        "id": "fe_concl_fix1",
+        "tipo": "contenido",
+        "seccion": "fe_16",
+        "descripcion": "Corregir error geografico S4 y referencia fuera de contexto S7",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. S4: anomalia Bouguer corregida a WSIP + arco Eoceno-Oligoceno (no Banggai-Sula). S7: Clor 2005 removido del MSCC, queda Yuan 2024."
+      },
+      {
+        "id": "s3_raster_testkey",
+        "tipo": "auditoria",
+        "seccion": "S3,S4",
+        "descripcion": "Eliminar entrada test_key huerfana de georef_extents.json",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. test_key eliminado. 34 entradas restantes verificadas OK (19 sulawesi + 8 regional)."
+      },
+      {
+        "id": "fe_ux3_touch_final",
+        "tipo": "frontend",
+        "seccion": "UX",
+        "descripcion": "Boton cerrar panel #pc 23->28px y panel responsive 700px",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. #pc: width/height 23px->28px (mejor area tactil). @media(max-width:700px){#panel{width:260px}} para tablets."
+      },
+      {
+        "id": "s3_georef_audit1",
+        "tipo": "auditoria",
+        "seccion": "S3,S4",
+        "descripcion": "Auditoria y correccion de extents en georef_extents.json",
+        "detalle": "Verificar que los extents de capas raster de referencia cubren el area de Sulawesi (117-128E, -7 a 4N). Corregir extents absurdos generados por calibracion manual erronea.",
+        "estado": "implementado",
+        "prioridad": 1,
+        "responsable": "sistema",
+        "nota_completado": "2026-06-06. Agente geo-cartografo corrigio 3 extents: ref_greenfield [80.2,0.1,126.3,34.5]->[119.0,-2.0,128.0,4.0] (proyectaba sobre India, CRITICO); ref_dileo [78.1,-54.7,149.8,25.7]->[88.0,-12.0,143.0,11.0] (llegaba a la Antartida, MAYOR); ref_shih [91.2,-17.3,143.9,12.1]->[117.0,-6.0,131.0,5.0] (desplazado 26 grados al oeste, MAYOR). CORES verificados correctos. PKF/NST/Matano merged_geom geometricamente correctas."
+      },
+      {
+        "id": "s8_canon_metamorf",
+        "tipo": "db",
+        "seccion": "S7,S8",
+        "descripcion": "Crear canonicals Bantimala, MMC y Tokorondo en canonical_structures",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. INSERTED: canon_bantimala (UHP 119Ma, 119.42-119.88E/-4.72 a -5.08S), canon_mmc (Malino/Mekongga, 119.70-120.15E/0.90-1.25N), canon_tokorondo (120.28-120.68E/-1.05 a -1.45S). geo_features asignadas: feat17->canon_mmc, feat122->canon_tokorondo."
+      },
+      {
+        "id": "s5_volc_arc_fix",
+        "tipo": "correccion",
+        "seccion": "S5,S7",
+        "descripcion": "Corregir arc=Banda a arc=Halmahera para volcanes de isla Halmahera",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. 6 volcanes (Dukono, Ibu, Gamalama, Ternate, Tidore, Makian) corregidos en GVP_VOLCANOES (index.html L606) y tabla volcanoes DB. Banda Api y los del arco Banda real (129-130E) mantienen arc=Banda."
+      },
+      {
+        "id": "fe_concl_fix2",
+        "tipo": "contenido",
+        "seccion": "fe_16",
+        "descripcion": "Correcciones menores de precision en conclusiones S2, S3, S8",
+        "estado": "implementado",
+        "nota_completado": "2026-06-06. (1) S2 10 regimenes verificado: 10 features Jibran en DB, numero correcto. (2) S3 Yang 2026: agregado calificador datos OBS offshore. (3) S8 item2: expandido CSMB -> Central Sulawesi Metamorphic Belt y MMC -> Malino Metamorphic Complex. (4) S8 item3: Advokaat et al. (2017) agregado a BIB_STATIC como fuente auxiliar (no en corpus PDF pero citado en conclusions)."
+      },
+      {
+        "id": "fe_bib_protocol",
+        "tipo": "auditoria",
+        "seccion": "fe_17",
+        "descripcion": "Auditar y corregir citacion: mover papers del corpus de BIB_STATIC a DB[id].papers[] de sus features correspondientes",
+        "estado": "implementado",
+        "nota_completado": "12 papers migrados de BIB_STATIC a DB[id].papers[]: Natawidjaja 2020/2021 en palu_koro, Lukman 2016 en matano_w/e, Cipta 2016 en matano_w/e+gorontalo+tolo_thrust+lawanopo_fault, Greenfield 2021 en NST, Surono 2012 en ophiolite_husein_2014_6, Satyana IPA 2011 en batui_thrust, Satyana IAGI 2011 en pmc. Lestari/Liu/Shih/Heryandoko: DB anchor entries creadas.",
+        "fecha_completado": "2026-06-07",
+        "nota": "Protocolo: BIB_STATIC solo para datasets externos (GEBCO, GVP, Bird, Slab2, WGM2012, GPlates). Papers del corpus siempre en DB[id].papers[]. Los 12 papers agregados a BIB_STATIC en sesion anterior deben migrarse: Natawidjaja 2020/2021, Lukman 2016, Cipta 2016, Greenfield 2021, Lestari 2021, Liu 2026, Shih 2026, Heryandoko 2024, Surono 2012, Satyana IPA 2011, Satyana IAGI 2011."
+      },
+      {
+        "id": "fe_del1",
+        "desc": "Eliminar 6 elementos del mapa: WWF, OBS cortical Yang, filtro GCMT sismicidad, Losa de Sula, Flujo Calórico WHF, Prospectividad CCRS",
+        "estado": "implementado",
+        "nota_completado": "2026-06-08. Eliminados: DB entries (wwf, heat_flow_src, ccrs_pratama), seismFilters/seismPassFilter/applySeismFilter con sus calls en cmtDotStyle/cmtBBStyle, heatFlowLayer+Source+fetch block, YANG_PKF_OFFSHORE+mohoColor+yangObsStyleFn+yangObsSource+yangObsLayer+API load, ccrsStyleFn+ccrsSource+ccrsLayer+PRATAMA_CCRS array, openHeatFlowPanel function. Handlers de tooltip y singleclick. FEAT_TO_CANONICAL wwf:canon_62, CANON_NAMES canon_slab_sula, CANONICAL_DEBATES canon_62. CANON_HOST_LAYER/CANON_KIN entries. layerObjs, LEGEND_DEF, SECTION_KEYS S3/S5, TIPO_KEYS E, THEMATIC_KEYS, legend ORDER array, map layers array. wwf removido de NEW_FAULTS. canon_62 y canon_slab_sula ya eliminados de DB en sesion previa."
+      },
+      {
+        "id": "s3_del_slab_banda",
+        "desc": "Eliminar poligono Slab geometry (canon_slab_banda) de perfiles tomograficos",
+        "estado": "implementado",
+        "nota_completado": "2026-06-08. Borrado canon_slab_banda de canonical_structures DB. Removidas entradas CANON_HOST_LAYER y CANON_NAMES en index.html."
+      },
+      {
+        "id": "fe_tomo_fix",
+        "titulo": "Corregir borradores de tomografías — agregar figuras y completar bibliografía",
+        "descripcion": "Tres cross_section DB entries carecían de section_img_url: jayadi2023_1, serhalawan_2024_1, serhalawan_2024_2. Extraídas figuras de PDFs (Jayadi Fig. 2, Serhalawan Fig. 9). Agregado perfil Jayadi C-C' a TOMO_PROFILES para visibilidad en mapa.",
+        "estado": "implementado",
+        "nota_completado": "Extraídas jayadi_2023_fig2_cross_section.png y serhalawan_2024_fig9_tomo_profiles.png. DB entries actualizados con section_img_url + section_caption. Jayadi C-C' agregado a TOMO_PROFILES array.",
+        "fecha_completado": "2026-06-08",
+        "secciones": [
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "fe_cao_profiles",
+        "titulo": "Configurar perfiles tomográficos Cao et al. (2024) — A-B y C-D",
+        "descripcion": "Agregar perfiles A-B (W-E, ~0.5°N, 120°-126°E) y C-D (N-S, ~124°E, 2°S-2°N) de Cao 2024 como líneas permanentes clickeables en el mapa con panel completo (imagen, descripción, bibliografía).",
+        "estado": "implementado",
+        "nota_completado": "DB entries cross_section_cao2024_AB y cross_section_cao2024_CD creados con section_img_url, desc, papers. Ambos perfiles agregados a TOMO_PROFILES array con coordenadas calibradas desde Fig. 1a.",
+        "fecha_completado": "2026-06-08",
+        "secciones": [
+          "s3"
+        ]
+      },
+      {
+        "id": "fe_del8_geochemistry",
+        "titulo": "Borrar capa geoquímica volcánica — trasladar datos a capa de volcanes",
+        "descripcion": "Eliminar toggle 'Geoquímica volcánica', clorLayer, CLOR_2005, clorStyleFn y DB entries volcano_clor2005_01-05 + deformation_zone. Los datos de %S y δ¹⁵N ya están integrados en openVolcPanel vía CLOR_BY_VOLC (se preserva).",
+        "estado": "implementado",
+        "nota_completado": "Borrado toggle HTML, CLOR_2005, clorStyleFn, clorLayer, DB entries. Eliminado de layerObjs/LEGEND_DEF/ORDER/THEMATIC_KEYS/SECTION_KEYS/tooltip/click. CLOR_BY_VOLC preservado — usado en openVolcPanel para mostrar %S y δ¹⁵N al hacer click en volcán.",
+        "fecha_completado": "2026-06-08",
+        "secciones": [
+          "s5"
+        ]
+      },
+      {
+        "id": "fe_del9_tfz",
+        "titulo": "Eliminar Tamponas Fault Zone (TFZ)",
+        "descripcion": "Borrar TFZ/Tamponas Fault Zone del mapa: NEW_FAULTS[tfz], DB[tfz], DB[fault_serhalawan_2024_9], FEAT_TO_CANONICAL, CANON_HOST_LAYER, CANON_KIN, CANONICAL_DEBATES[canon_357], SRH_ORDER, SRH_SKIP. Canonical canon_357 y sus 2 geo_features eliminados de sulawesi.db.",
+        "estado": "implementado",
+        "nota_completado": "Todas las referencias eliminadas. canon_357 + 2 linked geo_features borrados de DB. Sin referencias residuales.",
+        "fecha_completado": "2026-06-08",
+        "secciones": [
+          "s6"
+        ]
+      }
+    ]
+  },
+  "orden_ejecucion_recomendado": {
+    "actualizado": "2026-06-06",
+    "nota": "Solo listar items genuinamente pendientes. Actualizar cada vez que se complete o descarte un item.",
+    "P1_usuario_urgente": {
+      "descripcion": "COMPLETADO 2026-06-06",
+      "items": [
+        "OK — todos los canonicals tienen merged_geom (0 sin merged_geom en DB)"
+      ]
+    },
+    "P2_frontend_pendiente": {
+      "descripcion": "Solo pendiente con accion usuario: 2026-06-06",
+      "items": [
+        "s4_fe3 - Geoide: cargar nuevo dataset del usuario (requiere archivo del usuario)"
+      ]
+    },
+    "P3_pendiente_usuario": {
+      "descripcion": "Pendientes que requieren acción o decisión del usuario",
+      "items": [
+        "s4_fe3 — Geoide: subir nuevo archivo",
+        "fe_21 — Trazas fallas normales: revisar simbología en mapa y confirmar correcciones"
+      ]
+    },
+    "P4_completados_referencia": {
+      "descripcion": "Items completados — solo para referencia histórica",
+      "items": [
+        "✓ fe_19 — Limpieza 2026-06-05: eliminadas 10 capas, filtro tipo tectónico, hillshade; corregido petrotect; renombrado GPS",
+        "✓ P1 original — s2_d1, s7_d1, s8_db1, s8_db2 completos",
+        "✓ Todos los papers P2 digitalizados",
+        "✓ Frontend: fe_4 (S1-S8 tabs), fe_6 (gravedad), fe_7 (leyenda), fe_8 (export), fe_10 (panel), fe_11 (sismicidad), fe_12 (citas), fe_13 (zoom), fe_14 (ESRI Hybrid), fe_15 (merged_geom draw), fe_16 (conclusiones), fe_17 (bibliografía), fe_18 (síntesis ★)"
+      ]
+    }
+  },
+  "auditoria_frontend_2026_05_29": {
+    "descripcion": "Inventario de capas ya implementadas en layers.js — resultado de auditoría completa del frontend. Estas capas existen en el mapa aunque el plan las marcaba como pendientes.",
+    "capas_implementadas": {
+      "S1": [
+        {
+          "layer": "gplatesLayer",
+          "visible": false,
+          "fuente": "gplates_topology_present",
+          "nota": "circuito topológico GPlates presente, 33 features"
+        },
+        {
+          "layer": "birdLayer",
+          "visible": false,
+          "fuente": "bird2003_indonesia_sulawesi",
+          "nota": "Bird 2003 límites globales de placa, 36 features"
+        },
+        {
+          "layer": "tectSubLayer",
+          "visible": true,
+          "fuente": "hardcoded",
+          "nota": "Sangihe + Halmahera como trazas de subducción principales"
+        },
+        {
+          "layer": "tectKeyLayer",
+          "visible": true,
+          "fuente": "gem_global_active_faults",
+          "nota": "GEM key faults"
+        },
+        {
+          "layer": "tectGemLayer",
+          "visible": false,
+          "fuente": "gem_global_active_faults",
+          "nota": "GEM faults restantes"
+        },
+        {
+          "layer": "godangLayer",
+          "visible": true,
+          "fuente": "godang2025_adang_makassar",
+          "nota": "Adang Volcanic Complex + Makassar Basin"
+        }
+      ],
+      "S2": [
+        {
+          "layer": "cmtLayer",
+          "visible": true,
+          "fuente": "GCMT + CMT",
+          "nota": "mecanismos focales con beachball renderer completo (makeBeachballCanvas)"
+        },
+        {
+          "layer": "jibranLayer",
+          "visible": true,
+          "fuente": "jibran_2025_sulawesi_tectonic_regimes",
+          "nota": "10 clusters de régimen tectónico"
+        },
+        {
+          "layer": "newFaultLayer",
+          "visible": true,
+          "fuente": "new_faults (Serhalawan/Watkinson/Hall)",
+          "nota": "20+ trazas de falla activa"
+        },
+        {
+          "layer": "srhGapLayer",
+          "visible": true,
+          "fuente": "serhalawan_2024_sulawesi",
+          "nota": "polígono gap sísmico NST"
+        },
+        {
+          "layer": "srhClusterLayer",
+          "visible": true,
+          "fuente": "serhalawan_2024_sulawesi",
+          "nota": "clusters de actividad Serhalawan"
+        },
+        {
+          "layer": "srhSecLayer",
+          "visible": true,
+          "fuente": "serhalawan_2024_sulawesi",
+          "nota": "secciones de falla Serhalawan"
+        },
+        {
+          "layer": "seismicGapLayer",
+          "visible": true,
+          "fuente": "hardcoded",
+          "nota": "gap sísmico NST (polígono adicional)"
+        },
+        {
+          "layer": "hikmyBeltLayer",
+          "visible": true,
+          "fuente": "hikmy_2025_east_arm_sulawesi",
+          "nota": "cinturón brazo este"
+        },
+        {
+          "layer": "hikmyFaultLayer",
+          "visible": true,
+          "fuente": "hikmy_2025_east_arm_sulawesi",
+          "nota": "fallas brazo este (Batui, Pasini)"
+        },
+        {
+          "layer": "hikmyPointLayer",
+          "visible": true,
+          "fuente": "hikmy_2025_east_arm_sulawesi",
+          "nota": "puntos de interés brazo este"
+        },
+        {
+          "layer": "birdKeyFaultLayer",
+          "visible": true,
+          "fuente": "bird2003_indonesia_sulawesi",
+          "nota": "Bird 2003 PKF + Matano"
+        }
+      ],
+      "S3": [
+        {
+          "layer": "slabLayer",
+          "visible": false,
+          "endpoint": "/api/slabs/slab2",
+          "nota": "Slab2 Hayes 2018 — contornos slab"
+        },
+        {
+          "layer": "huaLayer",
+          "visible": false,
+          "fuente": "hua2023_banda_sulawesi",
+          "nota": "Hua 2023 — 12 features tomografía Banda"
+        },
+        {
+          "layer": "hallLayer",
+          "visible": false,
+          "fuente": "hall_spakman_2015",
+          "nota": "Hall & Spakman 2015 — 7 features slabs SE Asia"
+        },
+        {
+          "layer": "yuanFlowLayer",
+          "visible": false,
+          "fuente": "yuan_2024_molucca_mantle_flow",
+          "nota": "Yuan 2024 — vectores flujo mantélico"
+        },
+        {
+          "layer": "yuanPointLayer",
+          "visible": false,
+          "fuente": "yuan_2024_molucca_mantle_flow",
+          "nota": "Yuan 2024 — puntos"
+        }
+      ],
+      "S4": [
+        {
+          "layer": "gravBouguerLayer",
+          "visible": false,
+          "archivo": "fuentes/grav_bouguer.png",
+          "nota": "WGM2012 Bouguer — ImageStatic georreferenciado"
+        },
+        {
+          "layer": "gravFreeairLayer",
+          "visible": false,
+          "archivo": "fuentes/grav_freeair.png",
+          "nota": "WGM2012 Free-air — ImageStatic georreferenciado"
+        }
+      ],
+      "S5": [
+        {
+          "layer": "volcLayer",
+          "visible": true,
+          "endpoint": "/api/volcanoes",
+          "nota": "triángulos naranja — sin pvmbg_type aún; enriquecer con Pratama Fig. 4c"
+        },
+        {
+          "layer": "clorLayer",
+          "visible": true,
+          "fuente": "clor2005_sangihe_molucca",
+          "nota": "5 volcanes con %S geoquímica (Lahendong, Ambang, Lokon-Empung, Ruang, Karangetang) + MSCC polygon"
+        }
+      ],
+      "S7": [
+        {
+          "layer": "faturrakhmanFaultLayer",
+          "visible": true,
+          "fuente": "faturrakhman2024_eso_asera",
+          "nota": "trazas falla área Asera"
+        },
+        {
+          "layer": "faturrakhmanGeoLayer",
+          "visible": true,
+          "fuente": "faturrakhman2024_eso_asera",
+          "nota": "unidades geológicas Asera (3 features)"
+        },
+        {
+          "layer": "godangLayer",
+          "visible": true,
+          "fuente": "godang2025_adang_makassar",
+          "nota": "Adang + Makassar Basin"
+        },
+        {
+          "layer": "clorLayer_mscc",
+          "visible": true,
+          "fuente": "clor2005_sangihe_molucca",
+          "nota": "MSCC polygon"
+        }
+      ],
+      "S8": [
+        {
+          "layer": "coreLayer",
+          "visible": true,
+          "fuente": "config.js DB hardcoded",
+          "nota": "PMC, MMC, Tokorondo, Bantimala — polígonos hardcoded con P-T en metadata (Bantimala: 27-28.5 kbar / 615-640°C / 119 Ma). Falta DB canonical."
+        }
+      ]
+    },
+    "apis_nuevas_integradas": {
+      "ISC_earthquake_catalog": {
+        "seccion": "S2",
+        "tarea": "s2_api1",
+        "endpoint_backend": "/api/catalog/isc"
+      },
+      "IRIS_FDSN_stations": {
+        "seccion": "S2",
+        "tarea": "s2_api2",
+        "endpoint_backend": "/api/stations"
+      },
+      "GPlates_velocity": {
+        "seccion": "S1/S3",
+        "tarea": "s3_api1",
+        "endpoint_backend": "/api/plate_velocity"
+      },
+      "ICGEM_gravity_calculation": {
+        "seccion": "S4",
+        "tarea": "s4_fe2 opcion_a",
+        "endpoint_backend": "/api/gravity/profile_icgem"
+      },
+      "WorldHeatFlow_API": {
+        "seccion": "S5",
+        "tarea": "s5_d1",
+        "endpoint_backend": "/api/heatflow"
+      },
+      "NGL_GPS_velocities": {
+        "seccion": "S1/S2",
+        "tarea": "s1_api1",
+        "endpoint_backend": "/api/gps_velocities"
+      }
+    },
+    "pendiente_sin_layer": {
+      "S3_yang_kesumastuti": "IMPLEMENTADO 2026-05-30 — yangObsLayer: 10 OBS + PKF offshore, diamante coloreado por Moho depth (thin=rojo, thick=azul), click→panel Fig.6 con imagen. kesumaTomoLayer: 5 anomalías H1-H3 (azul) + L1-L2 (rojo) con etiqueta, click→panel con imagen Fig.4. Toggles yang_obs + kesuma_tomo en S3.",
+      "S3_di_leo_2012": "IMPLEMENTADO 2026-05-30 — diLeoLayer en index.html. 5 estaciones SKS con tick mark orientado por fast_axis_deg (KAPI 90°, KDI 45°) + punto semitransparente para las 3 sin dirección publicada (TOLI, LUWI, PCI). Toggle 'dileo_sks' en panel S3. DB entries + tooltip + panel.",
+      "S5_pratama_2025": "Pratama 2025 — no digitalizados aún. volcLayer ya sirve datos de /api/volcanoes pero sin pvmbg_type.",
+      "S5_ihfc": "Heat flow IHFC — dataset no descargado, sin capa en frontend.",
+      "S7_petrotect_poly": "Capas polígonos petrotectónicos (S7) — merged_geom no definida para ninguna unidad. No implementable hasta que usuario defina merged_geom en panel.",
+      "S8_bantimala_db": "canon_bantimala — coreLayer ya tiene el polígono hardcoded pero falta insertar canonical en DB."
+    },
+    "resumen_estado_real": {
+      "S1": "alta — GPlates, Bird, GEM, tectKeyLayer, godangLayer, ESRI Hybrid base implementados",
+      "S2": "alta — CMT beachballs, jibranLayer, newFaultLayer, srhGapLayer/ClusterLayer/SecLayer, hikmyLayers implementados",
+      "S3": "media-alta — slabLayer, huaLayer, hallLayer, yuanLayers, diLeoLayer, yangObsLayer, kesumaTomoLayer implementados. Supendi 9 slices extraídos y calibrados (pendiente implementar como layers con slider). Falta: z-slices slider.",
+      "S4": "alta — gravBouguerLayer + gravFreeairLayer + heightAnomLayer implementados. Perfil gravitatorio implementado.",
+      "S5": "media-alta — manifLayer, pratamaVolcLayer, cpdLayer (panel-d recortado), ccrsLayer implementados. Falta: IHFC, campos geotérmicos operacionales.",
+      "S6": "media — enfoque definido 2026-05-31: fallas activas + deformación neotectónica. Datos base en DB (husein, isbram, lukman, jibran, serhalawan, GPS). Pendiente: merged_geom estructuras clave (fe_15) y panel slip rates.",
+      "S7": "media — faturrakhmanLayers + godangLayer + clorLayer_mscc implementados. Falta: merged_geom para unidades H, polígonos petrotectónicos.",
+      "S8": "media — metamorphicLayer con 5 unidades (UHP→greenschist). Falta: merged_geom canonicals."
+    }
+  },
+  "decisiones_descartadas": {
+    "descripcion": "Features intentados y descartados con razón técnica — para no repetir el mismo camino",
+    "items": [
+      {
+        "id": "desc_01",
+        "feature": "Deck.gl 3D overlay sobre OL6",
+        "fecha": "2026-05-31",
+        "razon_tecnica": "OpenLayers 6 no soporta proyección en perspectiva (pitch). Al activar pitch en deck.gl, el overlay se inclina pero el base map OL6 permanece plano — desalineamiento total. El modal separado con deck.gl tampoco aportó valor sin contexto geográfico claro (base map requerido externamente).",
+        "alternativa_implementada": "fe_14 ESRI Hybrid como base layer. Perfiles A-A' (s3_fe2) para sección vertical."
+      },
+      {
+        "id": "desc_02",
+        "feature": "Colores por cinemática en todas las capas de fallas (fe_2)",
+        "fecha": "2026-05-31",
+        "razon_tecnica": "Al aplicar colores por cinemática (sinistral=rojo, dextral=azul, thrust=naranja) en newFaultLayer, huseinFaultLayer y tectGemLayer, el mapa quedó visualmente ruidoso y el usuario rechazó el cambio. Las fallas secundarias con colores fuertes compiten con las capas temáticas.",
+        "alternativa_implementada": "Todo negro como antes. La diferenciación visual se logra con tipo de línea (sólida vs discontinua) y símbolos (flechas, dientes), no color.",
+        "nota": "fe_2 marcado como pendiente — requiere diseño visual validado antes de implementar"
+      }
+    ]
+  },
+  "protocolo_incorporacion_papers": {
+    "descripcion": "Pasos obligatorios para agregar un paper nuevo al corpus y mapa",
+    "actualizado": "2026-06-04",
+    "pasos": [
+      {
+        "n": 1,
+        "accion": "Renombrar PDF",
+        "detalle": "[Sn] Autor et al. (año) - descripcion.pdf — nunca dejar nombre de descarga"
+      },
+      {
+        "n": 2,
+        "accion": "project_state.json",
+        "detalle": "Agregar entrada: status=pendiente, sections_relevant, nota"
+      },
+      {
+        "n": 3,
+        "accion": "Tabla CLAUDE.md",
+        "detalle": "Agregar fila en tabla de papers con secciones y estado DB"
+      },
+      {
+        "n": 4,
+        "accion": "Extraer figura",
+        "detalle": "Recortar mapa/figura del paper → mapa/data/sections/[autor_año]_figN.png"
+      },
+      {
+        "n": 5,
+        "accion": "Calibrar figura",
+        "detalle": "Panel Verificación → ajustar extents → guardar en mapa/data/georef_extents.json"
+      },
+      {
+        "n": 6,
+        "accion": "Digitalizar",
+        "detalle": "Trazar features sobre figura calibrada → GeoJSON → importar a sulawesi.db"
+      },
+      {
+        "n": 7,
+        "accion": "Asignar canonical",
+        "detalle": "Existente: agregar feat_id a FEAT_TO_CANONICAL. Nuevo: crear canonical en DB + merged_geom con fe_15 + entrada en CANON_HOST_LAYER"
+      },
+      {
+        "n": 8,
+        "accion": "project_state.json",
+        "detalle": "status=digitalizado, features_en_db=N"
+      },
+      {
+        "n": 9,
+        "accion": "mapa_plan.json",
+        "detalle": "Agregar tarea bajo sección correspondiente (sN_dN)"
+      },
+      {
+        "n": 10,
+        "accion": "Marcar implementado",
+        "detalle": "estado=implementado + nota_completado + fecha YYYY-MM-DD"
+      }
+    ],
+    "canon_host_layer_tabla": {
+      "tect_key": "Falla activa / límite de placa",
+      "tect_sub": "Zona de subducción",
+      "clusters": "Régimen de esfuerzo (Jibran)",
+      "slab_layer": "Slab mantélico",
+      "faturrakhman": "Ofiolita",
+      "petrotect": "Terreno / arco volcánico",
+      "core_complexes": "Complejo metamórfico",
+      "volcanoes": "Volcán canónico",
+      "merged_geoms": "Cuenca sedimentaria (toggle global)"
+    }
+  },
+  "tareas": {
+    "fe_del2": {
+      "id": "fe_del2",
+      "desc": "Borrar GEM Global Active Faults (tectGemLayer) + todos los referencias",
+      "estado": "implementado",
+      "nota_completado": "Eliminado: HTML toggle, tectGemLayer definition, tooltip, singleclick, openGEMPanel, layerObjs, LEGEND_DEF, ORDER, THEMATIC_KEYS, TIPO_KEYS B, SECTION_KEYS S6, map layers array, layer refresh. GEM_FAULTS array conservado (shared con tectSubLayer y birdKeyFaultLayer). 2026-06-08"
+    },
+    "fe_del3": {
+      "id": "fe_del3",
+      "desc": "Borrar Husein 2014 (husein_structs + ref_husein) - todos los referencias",
+      "estado": "implementado",
+      "nota_completado": "Eliminado: DB entries (7), HTML toggles (husein_structs y ref_husein), refHuseinLayer, ref_husein extents, huseinStyleFn, huseinFaultSource/PolySource, huseinFaultLayer/PolyLayer, API load, zoom visibility, tooltip, singleclick, FEAT_TO_CANONICAL, layerObjs, LEGEND_DEF, ORDER, THEMATIC_KEYS, TIPO_KEYS B, SECTION_KEYS S6, map layers, layer refresh, REF_LAYERS_DATA, REF_LABELS, source-to-ref mapping, resetGeorefExtents default. 2026-06-08"
+    },
+    "fe_del4": {
+      "id": "fe_del4",
+      "desc": "Borrar petrotect toggle (petrotectLayer, PETROTECT_LABELS/TYPES, loadPetrotect, openPetrotectPanel)",
+      "estado": "implementado",
+      "nota_completado": "Eliminado: HTML toggle, PETROTECT_LABELS, petrotectSource, petrotectLayer, PETROTECT_TYPES, loadPetrotect(), openPetrotectPanel, layerObjs, LEGEND_DEF, ORDER, THEMATIC_KEYS, TIPO_KEYS H, SECTION_KEYS S7, map layers, singleclick, tooltip, CANON_HOST_LAYER (canon_terrane_bsm/btb, canon_nsarc, canon_wsip). PETROTECT_COLORS conservado (usado por mergedGeomStyleFn). 2026-06-08"
+    },
+    "fe_del5": {
+      "id": "fe_del5",
+      "desc": "Borrar ESO Asera (faturrakhman 2024) - toggle, layers, DB, API load",
+      "estado": "implementado",
+      "nota_completado": "Eliminado: HTML toggle, faturrakhmanStyleFn, faturrakhmanFaultSource/GeoSource, faturrakhmanFaultLayer/GeoLayer, DB entries (3: ophiolite_faturrakhman2024_01, fault_faturrakhman2024_01/02), API load, zoom visibility, tooltip, singleclick, FEAT_TO_CANONICAL, CANON_HOST_LAYER (canon_eso), layerObjs, LEGEND_DEF, ORDER, THEMATIC_KEYS, TIPO_KEYS H, SECTION_KEYS S7, map layers, layer refresh. fat25 (Tanjung Api 2025) conservado. 2026-06-08"
+    },
+    "fe_del6": {
+      "id": "fe_del6",
+      "desc": "Borrar Adang Makassar (godang toggle) - todos los referencias",
+      "estado": "implementado",
+      "nota_completado": "Eliminado: HTML toggle, godangStyleFn, godangSource, godangLayer, DB entries (3: volcanic_complex_godang2025_01, basin_godang2025_01, geophysical_point_godang2025_01), API load, tooltip, singleclick, CANON_HOST_LAYER (canon_sassak), layerObjs, LEGEND_DEF, ORDER, THEMATIC_KEYS, TIPO_KEYS H, SECTION_KEYS S7, map layers. 2026-06-08"
+    },
+    "fe_del7": {
+      "id": "fe_del7",
+      "desc": "Borrar toggle complejos metamorficos (core_complexes - coreLayer + metamorphicLayer)",
+      "estado": "implementado",
+      "nota_completado": "Eliminado: HTML toggle, CORES array, coreLayer, FACIES_COLOR/LABEL/FILL, MET_UNITS, metSource, metStyleFn, metamorphicLayer, tooltip (met_grade), singleclick (core + met_grade), CANON_HOST_LAYER (canon_pmc, canon_csmb), FEAT_TO_CANONICAL (pmc), layerObjs, LEGEND_DEF, ORDER, THEMATIC_KEYS, TIPO_KEYS H, SECTION_KEYS S7, map layers, layer refresh. DB entries pmc/mmc/bantimala conservados (usados por canonicals). 2026-06-08"
+    },
+    "fe_yuan_anis": {
+      "id": "fe_yuan_anis",
+      "desc": "Toggle anisotropia sismica Yuan — 6 depth slices (100-600 km) Fig.9, patron Supendi",
+      "estado": "implementado",
+      "nota_completado": "2026-06-08: Extraidos 6 slices de Yuan et al. (2024) Fig.9 (p10). Layers refYuanAnisXXX con makeRefLayer, YUAN_ANIS_DEPTHS array, toggleYuanAnis()/selectYuanAnisDepth(), toggle HTML identico a Supendi. Extents iniciales [115,-10,130,10] calibrables desde panel de verificacion.",
+      "fecha": "2026-06-08",
+      "seccion": "s3"
+    },
+    "fe_tomo3d_update": {
+      "id": "fe_tomo3d_update",
+      "desc": "Galeria 3D — reemplazar estudios, nuevas figuras correctas por paper",
+      "estado": "implementado",
+      "nota_completado": "2026-06-08: Galeria reemplazada con 7 estudios en orden alfabetico (Cao Fig7, DiLeo Fig10, Hall Figs11/13/15, Hua Fig4, Kesumastuti Fig4a+4b, Liu Fig13, Yuan Fig12). Figuras extraidas de PDF a 3x. Epigrafes y conclusiones actualizados.",
+      "fecha": "2026-06-08",
+      "seccion": "s3"
+    },
+    "fe_s6_reorg": {
+      "id": "fe_s6_reorg",
+      "desc": "Reorganizacion panel S6: mover Velocidades, Etiquetas, Subducciones, Fallas a S6; eliminar toggles Serhalawan y Hikmy de S6; remover tect_sub y tect_key de BASE_ALWAYS; S7 activa solo Baillie",
+      "estado": "implementado",
+      "nota_completado": "Eliminados new_faults e hikmy_structs del panel S6 y SECTION_KEYS. Renombrado vel_s1 a Velocidades de placas y movido a S6. Movido canon_labels (Etiquetas) a S6. Renombrado tect_sub a Subducciones y tect_key a Fallas, ambos movidos a S6. Removidos de BASE_ALWAYS (ahora BASE_ALWAYS=[satellite,gebco_color]). SECTION_KEYS[1] eliminado. SECTION_KEYS[6]=[vel_s1,tect_key,tect_sub,canon_labels,palu_basin]. S7 activa solo ref_baillie.",
+      "fecha_completado": "2026-06-08"
+    }
+  }
+}

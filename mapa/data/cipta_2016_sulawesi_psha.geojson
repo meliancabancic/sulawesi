@@ -1,0 +1,255 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "cipta_2016_sulawesi_psha",
+    "source": "Cipta et al. (2016)",
+    "title": "A probabilistic seismic hazard assessment for Sulawesi, Indonesia",
+    "journal": "Geological Society London Special Publications",
+    "volume": "441",
+    "doi": "10.1144/SP441.6",
+    "year_published": 2016,
+    "authors": ["Cipta, A.", "Robiana, R.", "Griffin, J.D.", "Horspool, N.", "Hidayati, S.", "Cummins, P."],
+    "study_area": "Sulawesi island — all arms and offshore regions",
+    "method": "Probabilistic seismic hazard assessment (PSHA) using EQRM; fault sources + background seismicity zones + intraslab sources; ISC catalog declustered; GMPEs with site amplification (Vs30 from Matsuoka 2006 proxy); spectral acceleration at 0.2s, 1.0s, and PGA at 500 and 2500 yr return periods",
+    "conclusions": [
+      "High seismic hazard over all but SW Sulawesi — controlled by fast-slipping PKF, Matano and Lawanopo faults (>30 mm/yr) and North Sulawesi Subduction Zone",
+      "Palu: extremely high PGA >0.8g at 500-yr return period — pull-apart basin on PKF strands with soft sediment amplification",
+      "Gorontalo: significant hazard from Gorontalo Fault at longer return periods (1000-2500 yr); soft sediments along Lake Limboto corridor amplify motions",
+      "Kendari: high hazard from Lawanopo Fault, city sited on delta/coastal lowland (site class E)",
+      "Key fault slip rates compiled from multiple sources and updated relative to Irsyam et al. (2010): Matano 41 mm/yr, PKF 35 mm/yr, Lawanopo 20.3 mm/yr, Tolo 14 mm/yr, East Molucca Sea Thrust 29 mm/yr",
+      "North Sulawesi megathrust: dip 21° (range 11-43°), width 100 km, max depth 35 km; majority of thrust events 50-100 km south of trench axis; steeper dips in east (avg 24°) than west (avg 18°)"
+    ],
+    "fault_table_note": "Table 1 provides compiled fault parameters: slip rates, Mmax, fault type; PKF = 35 mm/yr; Matano = 41 mm/yr; Lawanopo = 20.3 mm/yr; E.Molucca Sea = 29 mm/yr; W.Molucca Sea = 13 mm/yr; Tolo = 14 mm/yr; Makassar (offshore) = 9 mm/yr; Sula = 14 mm/yr; Gorontalo = 5 mm/yr"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.5, -2.0],
+          [121.5, -2.1],
+          [122.5, -2.2],
+          [123.5, -2.2],
+          [124.5, -2.1]
+        ]
+      },
+      "properties": {
+        "id": "cipta_2016_matano_fault",
+        "category": "fault",
+        "name": "Matano Fault",
+        "canonical_name": "matano",
+        "fault_type": "strike_slip",
+        "kinematics": "left_lateral",
+        "slip_rate_mmyr": 41,
+        "slip_rate_source": "Cipta et al. 2016 Table 1 (updated from Irsyam et al. 2010 weighted 37/44 mm/yr)",
+        "mmax": 7.9,
+        "interpretation": "Major sinistral strike-slip fault forming the northern boundary of the SE Arm (Sula-derived terranes). Runs roughly E-W through Central Sulawesi near Lake Matano. One of the fastest-slipping faults in the study area at 41 mm/yr. Together with the PKF it accommodates the clockwise rotation of the Sula Block. Forms a structural pair with the Palu-Koro Fault at the western end of the same microblock boundary system.",
+        "tectonic_context": "Eastern continuation of the Palu-Koro fault system; together they define the northern boundary of the Sula/SE Sulawesi block. The Matano Fault also marks the contact between Gondwana-derived Australian terranes to the SE and the collision/ophiolite zone of Central Sulawesi.",
+        "source_figure": "Figures 1, 2; Table 1",
+        "source_short": "Cipta et al. 2016",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["matano"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.8, -3.3],
+          [121.5, -3.4],
+          [122.5, -3.5],
+          [123.2, -3.5]
+        ]
+      },
+      "properties": {
+        "id": "cipta_2016_lawanopo_fault",
+        "category": "fault",
+        "name": "Lawanopo Fault",
+        "canonical_name": "lawanopo",
+        "fault_type": "strike_slip",
+        "kinematics": "sinistral",
+        "slip_rate_mmyr": 20.3,
+        "slip_rate_source": "Cipta et al. 2016 Table 1 (reduced from Irsyam 2010: 25 mm/yr)",
+        "mmax": 7.0,
+        "interpretation": "Sinistral strike-slip fault running E-W across SE Sulawesi, parallel to and south of the Matano Fault. Passes just north of Kendari city (population ~200,000), which sits on delta/coastal lowlands (NEHRP site class E). Major contributor to seismic hazard in SE Sulawesi. Slip rate reduced from Irsyam (2010) 25 mm/yr to 20.3 mm/yr based on updated activity rate balance with background source zone.",
+        "hazard_cities": ["Kendari"],
+        "source_figure": "Figures 1, 2, 7; Table 1",
+        "source_short": "Cipta et al. 2016",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["lawanopo"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [121.5, 0.4],
+          [122.0, 0.4],
+          [122.8, 0.45],
+          [123.5, 0.5]
+        ]
+      },
+      "properties": {
+        "id": "cipta_2016_gorontalo_fault",
+        "category": "fault",
+        "name": "Gorontalo Fault",
+        "canonical_name": "gorontalo",
+        "fault_type": "strike_slip",
+        "kinematics": "sinistral",
+        "slip_rate_mmyr": 5,
+        "slip_rate_source": "Cipta et al. 2016 Table 1 (reduced from Irsyam 2010: 11 mm/yr)",
+        "mmax": 7.6,
+        "interpretation": "E-W sinistral strike-slip fault across the North Arm near Gorontalo city. Despite relatively low slip rate (5 mm/yr), contributes significantly to hazard at long return periods (1000-2500 yr) because it is shallow and on-land. Soft sediments along the fault depression around Lake Limboto (between Limboto and Gorontalo cities) amplify ground motions. Possibly connects the Poso Fault to the West Molucca Sea Thrust through the Gorontalo Bay (Hall 2011). May be related to back-arc extension in Gorontalo Bay.",
+        "hazard_cities": ["Gorontalo", "Limboto"],
+        "source_figure": "Figures 1, 2, 7; Table 1",
+        "source_short": "Cipta et al. 2016",
+        "approx": true,
+        "match_needed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [124.2, -1.8],
+          [124.8, -2.5],
+          [125.3, -3.2],
+          [125.5, -4.0]
+        ]
+      },
+      "properties": {
+        "id": "cipta_2016_tolo_thrust",
+        "category": "fault",
+        "name": "Tolo Thrust",
+        "canonical_name": "tolo",
+        "fault_type": "reverse",
+        "kinematics": "reverse",
+        "slip_rate_mmyr": 14,
+        "slip_rate_source": "Cipta et al. 2016 Table 1 (updated from weighted 9/19 mm/yr in Irsyam 2010)",
+        "mmax": 7.5,
+        "interpretation": "Reverse fault forming the eastern boundary of the SE Arm of Sulawesi, offshore facing the Tolo/Tomori Bay. Accommodates the convergence between SE Sulawesi (Sula/Australian terranes) and the North Arm/Molucca region. 14 mm/yr slip rate. Previously modeled as weighted 9/19 mm/yr uncertainty in Irsyam 2010; simplified to 14 mm/yr in this study.",
+        "source_figure": "Figures 1, 2; Table 1",
+        "source_short": "Cipta et al. 2016",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["tolo"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.0, -0.5],
+          [119.1, -1.0],
+          [119.0, -2.0],
+          [118.8, -3.0],
+          [118.6, -4.0]
+        ]
+      },
+      "properties": {
+        "id": "cipta_2016_makassar_thrust",
+        "category": "fault",
+        "name": "Makassar Thrust (Offshore West Sulawesi)",
+        "canonical_name": "makassar_thrust",
+        "fault_type": "reverse",
+        "kinematics": "reverse_west_vergent",
+        "slip_rate_mmyr": 9,
+        "slip_rate_source": "Cipta et al. 2016 Table 1 (updated from weighted 4/13 mm/yr in Irsyam 2010)",
+        "mmax": 7.5,
+        "interpretation": "Offshore thrust fault system along the West Sulawesi coast extending from near Palu southward. Extended northward by Cipta et al. (2016) compared to Irsyam (2010) to connect with the Palu-Koro Fault NW of Palu, based on seismic reflection profiles (Puspita et al. 2005) showing clear thrusting offshore of much of West Sulawesi. Part of the westward-vergent fold and thrust belt documented by Puspita et al. (2005) and Sandwell & Smith (2009). Cipta et al. treat as a single continuous structure at 9 mm/yr. Possibly the 'Makassar Strait Thrust' that ruptured in the 2021 Mw6.2 Mamuju earthquake (Meilano et al. 2023).",
+        "source_figure": "Figures 1, 2; Table 1",
+        "source_short": "Cipta et al. 2016",
+        "approx": true,
+        "match_needed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [126.5, 1.8],
+          [127.0, 1.5],
+          [127.5, 1.2],
+          [127.8, 0.8],
+          [127.8, 0.3]
+        ]
+      },
+      "properties": {
+        "id": "cipta_2016_west_molucca_thrust",
+        "category": "fault",
+        "name": "West Molucca Sea Thrust (Sangihe Arc Frontal Thrust)",
+        "canonical_name": "west_molucca_thrust",
+        "fault_type": "reverse",
+        "kinematics": "west_vergent",
+        "slip_rate_mmyr": 13,
+        "slip_rate_source": "Cipta et al. 2016 Table 1",
+        "mmax": 7.9,
+        "interpretation": "Western frontal thrust of the Molucca Sea arc-arc collision zone, associated with eastward-subducting Sangihe Arc. Active thrust faulting above the Molucca Sea Plate verges away from the collision zone, overthrusting frontal arc sediments onto the volcanic arc. Region of intense seismic activity both within the slab and on thrust faults. Slip rate 13 mm/yr, Mmax 7.9.",
+        "source_figure": "Figures 1, 2; Table 1",
+        "source_short": "Cipta et al. 2016",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["west_molucca_thrust", "sangihe_frontal_thrust"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [127.8, 1.5],
+          [128.2, 1.2],
+          [128.5, 0.8],
+          [128.8, 0.3],
+          [128.8, -0.3]
+        ]
+      },
+      "properties": {
+        "id": "cipta_2016_east_molucca_thrust",
+        "category": "fault",
+        "name": "East Molucca Sea Thrust (Halmahera Arc Frontal Thrust)",
+        "canonical_name": "east_molucca_thrust",
+        "fault_type": "reverse",
+        "kinematics": "east_vergent",
+        "slip_rate_mmyr": 29,
+        "slip_rate_source": "Cipta et al. 2016 Table 1",
+        "mmax": 8.1,
+        "interpretation": "Eastern frontal thrust of the Molucca Sea arc-arc collision zone, associated with westward-subducting Halmahera Arc. Highest slip rate and Mmax in the Molucca Sea region at 29 mm/yr and Mmax 8.1, reflecting the more active eastern subduction (consistent with Liu et al. 2026 finding of larger HVA on eastern side). Active thrust faulting verging eastward away from collision zone center.",
+        "source_figure": "Figures 1, 2; Table 1",
+        "source_short": "Cipta et al. 2016",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["east_molucca_thrust", "halmahera_frontal_thrust"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.9, -0.9]
+      },
+      "properties": {
+        "id": "cipta_2016_palu_high_hazard",
+        "category": "geophysical_point",
+        "name": "Palu City — Extreme Seismic Hazard Zone (PKF Pull-Apart Basin)",
+        "anomaly_type": "high_hazard",
+        "pga_500yr_g": 0.8,
+        "pga_note": "PGA > 0.8g at 500-year return period — one of highest in study",
+        "hazard_drivers": ["Palu-Koro Fault strands (sinistral pull-apart basin geometry)", "Soft sediments (NEHRP site class D-E) in pull-apart basin", "High background seismicity"],
+        "population_2010": 335000,
+        "interpretation": "Palu is located on a pull-apart basin created by multiple strands of the Palu-Koro Fault (Socquet et al. 2006 identified four strands within 50 km of Palu). The combination of extremely fast fault slip rate (35 mm/yr, updated to 35 from 30-45 mm/yr weighted), pull-apart basin geometry, and soft basin sediments (site class D-E) produces among the highest seismic hazard in all of Indonesia. Cipta et al. highlight this as the most hazardous city in Sulawesi. This assessment was validated by the 2018 Mw 7.5 Palu earthquake and associated liquefaction/tsunami.",
+        "source_figure": "Figures 1, 7; text",
+        "source_short": "Cipta et al. 2016",
+        "approx": true
+      }
+    }
+  ]
+}

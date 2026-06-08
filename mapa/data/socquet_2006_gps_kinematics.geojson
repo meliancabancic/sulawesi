@@ -1,0 +1,258 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "socquet_2006_gps_kinematics",
+    "source": "Socquet et al. (2006)",
+    "title": "Microblock rotations and fault coupling in SE Asia triple junction (Sulawesi, Indonesia) from GPS and earthquake slip vector data",
+    "journal": "Journal of Geophysical Research",
+    "volume": "111",
+    "article": "B08409",
+    "doi": "10.1029/2005JB003963",
+    "year": 2006,
+    "authors": ["Socquet, A.", "Simons, W.", "Vigny, C.", "McCaffrey, R.", "Subarya, C.", "Sarsito, D.", "Ambrosius, B.", "Spakman, W."],
+    "study_area": "Sulawesi and surroundings, SE Asia triple junction (Australian, Philippine, Sunda plates)",
+    "method": "GPS block modelling + earthquake slip vectors; DEFNODE rigid-block elastic coupling inversion; ~30+ campaign GPS sites + 6 continuous stations + 25 Palu/Gorontalo transect sites (1992-2004)",
+    "conclusions": [
+      "Sulawesi deformation described by 5 rapidly rotating microblocks: Makassar (ACW -1.4°/Myr vs Sunda), North Sula (CW +2.6°/Myr), Manado (CW +3.2°/Myr), East Sulawesi (ACW -2.2°/Myr), Banda Sea (ACW -1.8°/Myr)",
+      "Palu-Koro Fault (PKF): 41-44 mm/yr total; 39 mm/yr left-lateral + 11-14 mm/yr extension; transtensive pull-apart at Palu; possibly 3-4 parallel strands each locked to 1-15 km depth",
+      "Gorontalo Fault: 11 mm/yr right-lateral (dextral transtension), locked to 10 km depth; separates North Sula Block from Manado Block",
+      "Lawanopo Fault: ~23-25 mm/yr left-lateral; poorly known whether PKF continues as Matano or Lawanopo fault to the south",
+      "Minahassa Trench: currently uncoupled (j≈0) due to postseismic relaxation from January 1996 Mw 7.9 earthquake; full locking expected to resume",
+      "Block rotation in N. Sulawesi driven by Borneo collision resistance (W) + oceanic trench suction (N); clockwise rotation of North Sula Block instead of mountain building",
+      "East Sulawesi Trench accommodates ~15 mm/yr; Makassar Trench accommodates 4-13 mm/yr (locked)"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.35, -3.5],
+          [120.31, -2.5],
+          [120.28, -1.5],
+          [120.23, -0.5],
+          [120.2, 0.5]
+        ]
+      },
+      "properties": {
+        "id": "socquet_2006_PKF",
+        "category": "fault",
+        "name": "Palu-Koro Fault",
+        "canonical_name": "PKF",
+        "fault_type": "strike_slip_transtensive",
+        "kinematics": "left_lateral",
+        "slip_rate_mmyr": 41,
+        "slip_rate_range": [41, 44],
+        "slip_rate_description": "GPS interseismic deficit; total block motion North Sula vs Makassar",
+        "strike_slip_mmyr": 39,
+        "extension_mmyr": 12,
+        "extension_range": [11, 14],
+        "azimuth_range_deg": [-21, 7],
+        "azimuth_note": "Azimuth varies from -21° (south) to +7° (north) along fault strike",
+        "locking_depth_km": 12,
+        "coupling_ratio": 1.0,
+        "coupling_model": "Model 2 (GPS + slip vectors); variable coupling allowed along strike",
+        "pull_apart": "Palu basin; possible 3-4 parallel strands locked to 1-15 km depth; transtensive motifs seen in morphology (triangular facets)",
+        "paleoslip_rate_mmyr": 35,
+        "paleoslip_note": "35±8 mm/yr from stream and fan offsets (Bellier et al. 2001); GPS agrees at high end",
+        "context": "Boundary between Makassar Block (SW) and North Sula Block (NE); western continuation of Sula-Sorong/Matano fault system; connects to Minahassa Trench (N) and Matano/Lawanopo fault (S)",
+        "source_figure": "Figures 4, 6-8; Table 2",
+        "source_short": "Socquet et al. 2006",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["palu_koro"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [121.0, 0.55],
+          [121.5, 0.52],
+          [122.0, 0.50],
+          [122.5, 0.48]
+        ]
+      },
+      "properties": {
+        "id": "socquet_2006_gorontalo",
+        "category": "fault",
+        "name": "Gorontalo Fault",
+        "canonical_name": "ESO",
+        "fault_type": "strike_slip_transtensive",
+        "kinematics": "right_lateral",
+        "slip_rate_mmyr": 11,
+        "slip_rate_range": [11, 12],
+        "azimuth_range_deg": [-14, -6],
+        "locking_depth_km": 10,
+        "coupling_ratio": 0.85,
+        "coupling_model": "Model 2 (GPS + slip vectors)",
+        "dip_deg": 80,
+        "context": "Boundary between North Sula Block (W) and Manado Block (E); bisects northern arm of Sulawesi; connects to Minahassa Trench at eastern end. Dextral transtension with 11 mm/yr; accumulates interseismic elastic strain.",
+        "source_figure": "Figures 4, 6-7; Table 2",
+        "source_short": "Socquet et al. 2006",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["gorontalo"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.8, -3.6],
+          [121.3, -3.55],
+          [121.8, -3.55],
+          [122.3, -3.6]
+        ]
+      },
+      "properties": {
+        "id": "socquet_2006_lawanopo",
+        "category": "fault",
+        "name": "Lawanopo Fault",
+        "canonical_name": "Lawanopo",
+        "fault_type": "strike_slip",
+        "kinematics": "left_lateral",
+        "slip_rate_mmyr": 24,
+        "slip_rate_range": [23, 25],
+        "azimuth_range_deg": [-51, -36],
+        "locking_depth_km": 15,
+        "coupling_ratio": 0.36,
+        "coupling_model": "Model 2 (GPS + slip vectors)",
+        "dip_deg": 50,
+        "context": "Southern boundary of East Sulawesi Block; western continuation of Sula-Sorong Fault into Sulawesi; parallel to and south of Matano Fault. It is unclear whether PKF connects southward to Matano or Lawanopo fault. ~25 mm/yr left-lateral interseismic deficit.",
+        "source_figure": "Figures 4, 6; Table 2",
+        "source_short": "Socquet et al. 2006",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["matano_w", "matano_e", "sorong_main"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [121.0, 0.0],
+          [121.5, 0.1],
+          [122.0, 0.05],
+          [122.5, -0.1]
+        ]
+      },
+      "properties": {
+        "id": "socquet_2006_tomini_fault",
+        "category": "fault",
+        "name": "Tomini Gulf Fault Zone",
+        "fault_type": "strike_slip",
+        "kinematics": "right_lateral",
+        "slip_rate_mmyr": 24,
+        "slip_rate_range": [23, 28],
+        "azimuth_range_deg": [-44, -151],
+        "locking_depth_km": 15,
+        "coupling_ratio": 0.79,
+        "coupling_model": "Model 2 (GPS + slip vectors)",
+        "dip_deg": 50,
+        "context": "Northern boundary of East Sulawesi Block inferred from GPS velocities; zone of frequent seismicity beneath Gulf of Tomini (roughly E-W). Right-lateral ~24 mm/yr. Inferred structure, not confirmed from geology alone.",
+        "source_figure": "Figures 4, 6; Table 2",
+        "source_short": "Socquet et al. 2006",
+        "approx": true,
+        "match_needed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.4, -4.8]
+      },
+      "properties": {
+        "id": "socquet_2006_euler_makassar",
+        "category": "geophysical_point",
+        "name": "Euler Pole — Makassar Block / Sunda",
+        "block": "Makassar",
+        "euler_lon_deg": 117.4,
+        "euler_lat_deg": -4.8,
+        "rotation_rate_degMyr": -1.4,
+        "rotation_sense": "anticlockwise",
+        "uncertainty_degMyr": 0.15,
+        "model": "Model 2 (GPS + slip vectors)",
+        "interpretation": "The southwestern part of Sulawesi (Makassar Block) rotates anticlockwise at -1.4°/Myr relative to the Sunda Plate about a pole near its southwestern tip. Makassar Trench to the west accommodates convergence; East Sulawesi Trench bounds it to the SE.",
+        "source_figure": "Table 3; Figure 5",
+        "source_short": "Socquet et al. 2006",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.5, 2.4]
+      },
+      "properties": {
+        "id": "socquet_2006_euler_northsula",
+        "category": "geophysical_point",
+        "name": "Euler Pole — North Sula Block / Sunda",
+        "block": "North_Sula",
+        "euler_lon_deg": 129.5,
+        "euler_lat_deg": 2.4,
+        "rotation_rate_degMyr": 2.6,
+        "rotation_sense": "clockwise",
+        "uncertainty_degMyr": 0.38,
+        "model": "Model 2 (GPS + slip vectors)",
+        "motion_direction": "NNW",
+        "interpretation": "North Sula Block rotates clockwise at +2.6°/Myr relative to Sunda; pole near NE tip. Block moves toward NNW and is pinched between PKF/Lawanopo (S), Minahassa Trench (N), Gorontalo Fault (E). Clockwise rotation preferred over mountain building due to low-stress boundary (oceanic crust) to the north.",
+        "source_figure": "Table 3; Figure 5",
+        "source_short": "Socquet et al. 2006",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.5, 1.8]
+      },
+      "properties": {
+        "id": "socquet_2006_euler_manado",
+        "category": "geophysical_point",
+        "name": "Euler Pole — Manado Block / Sunda",
+        "block": "Manado",
+        "euler_lon_deg": 126.5,
+        "euler_lat_deg": 1.8,
+        "rotation_rate_degMyr": 3.2,
+        "rotation_sense": "clockwise",
+        "uncertainty_degMyr": 1.99,
+        "model": "Model 2 (GPS + slip vectors)",
+        "interpretation": "Eastern part of northern arm (Manado Block) rotates clockwise at +3.2°/Myr relative to Sunda, faster than North Sula Block. Separated from North Sula Block by Gorontalo Fault (11 mm/yr right-lateral).",
+        "source_figure": "Table 3; Figure 5",
+        "source_short": "Socquet et al. 2006",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.0, -7.9]
+      },
+      "properties": {
+        "id": "socquet_2006_euler_eastsula",
+        "category": "geophysical_point",
+        "name": "Euler Pole — East Sulawesi Block / Sunda",
+        "block": "East_Sulawesi",
+        "euler_lon_deg": 115.0,
+        "euler_lat_deg": -7.9,
+        "rotation_rate_degMyr": -2.2,
+        "rotation_sense": "anticlockwise",
+        "uncertainty_degMyr": 0.55,
+        "model": "Model 2 (GPS + slip vectors)",
+        "interpretation": "East Sulawesi Block (SE arm area) rotates anticlockwise at -2.2°/Myr. GPS sites AMPA and LUWU show significant westward motion relative to North Sula Block. Boundaries are poorly defined: Lawanopo Fault (S), Matano Fault (N?), Tomini Gulf fault zone (N). Independent from Makassar Block at 99% confidence.",
+        "source_figure": "Table 3; Figure 5",
+        "source_short": "Socquet et al. 2006",
+        "approx": false
+      }
+    }
+  ]
+}

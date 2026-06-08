@@ -1,0 +1,225 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "natawidjaja_2020_palu_rupture",
+    "source": "Natawidjaja et al. (2021)",
+    "title": "The 2018 Mw 7.5 Palu 'supershear' earthquake ruptures geological fault's multisegment separated by large bends: results from integrating field measurements, LiDAR, swath bathymetry and seismic-reflection data",
+    "journal": "Geophysical Journal International",
+    "volume": "224",
+    "pages": "985-1002",
+    "doi": "10.1093/gji/ggaa498",
+    "year_published": 2021,
+    "year_data": 2018,
+    "authors": ["Natawidjaja, D.H.", "Daryono, M.R.", "Prasetya, G.", "Udrekh", "Liu, P.L-F.", "Hananto, N.D.", "Kongko, W.", "Triyoso, W.", "Puji, A.R.", "Meilano, I.", "Gunawan, E.", "Supendi, P.", "Pamumpuni, A.", "Irsyam, M.", "Faizal, L.", "Hidayati, S.", "Sapiie, B.", "Kusuma, M.A.", "Tawil, S."],
+    "study_area": "Palu region, Central Sulawesi — onshore and offshore Palu Bay and northern PKF",
+    "method": "Field surveys (Oct 2018, Jan 2020), LiDAR (1-m grid, BIG), swath bathymetry (Baruna Jaya/NUS-INHO, 5-m grid), single-channel seismic reflection (JICA sparker)",
+    "conclusions": [
+      "2018 Palu earthquake ruptured 177 km total along the mature, pre-existing geological Palu-Koro Fault — NOT a hidden immature fault (contradicting previous InSAR/remote-sensing interpretations)",
+      "PKF divided into 4 segments separated by large bends: Tanimbaya (N, compressional), Donggala (submarine, transition), Palu (pull-apart, extensional), Saluki (S)",
+      "Offshore rupture: ~110 km submarine, from Palu Bay northward past Tanimbaya Peninsula toward Sulawesi Trench",
+      "Inland rupture: ~67 km NNW-SSE to N-S; left-lateral slip up to 6 m near Palu beach, with 5-10% dip-slip component on average",
+      "Maximum vertical displacement ~5 m at the 12 km NW-SE releasing fault bend (Skm33-45)",
+      "Two large releasing bends form pull-apart structure: 3.5 km wide submarine (Donggala-Palu junction) + 7 km wide inland (southern Palu basin edge)",
+      "Long submarine rupture likely triggered massive underwater landslides, contributing significantly to Palu tsunami (inconsistently modelled in studies using only the neck-area fault)",
+      "Straight fault geometry allows possibility of early and persistent supershear rupture propagation"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.85, -0.26]
+      },
+      "properties": {
+        "id": "natawidjaja_2020_palu2018_mainshock",
+        "category": "earthquake",
+        "name": "2018 Palu Mw 7.5 Mainshock",
+        "date": "2018-09-28",
+        "time_local": "18:02:44",
+        "magnitude": 7.5,
+        "magnitude_type": "Mw",
+        "depth_km": 12,
+        "mechanism": "left_lateral_strike_slip",
+        "fault_responsible": "Palu-Koro Fault (Donggala segment)",
+        "epicenter_note": "Relocated from Supendi et al. (2020); ~15 km NE of a bend in Donggala segment; approximate in this GeoJSON",
+        "rupture_length_km": 177,
+        "rupture_onshore_km": 67,
+        "rupture_offshore_km": 110,
+        "max_slip_m": 6,
+        "slip_type": "predominantly left-lateral with 5-10% dip-slip (east-down)",
+        "effects": ["tsunami", "massive liquefaction", "submarine landslides", ">2000 fatalities"],
+        "source_figure": "Figure 1; Figures 3, 6",
+        "source_short": "Natawidjaja et al. 2021",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.78, 0.5],
+          [119.78, 0.3],
+          [119.80, 0.1],
+          [119.82, -0.05]
+        ]
+      },
+      "properties": {
+        "id": "natawidjaja_2020_pkf_tanimbaya",
+        "category": "fault",
+        "name": "Palu-Koro Fault — Tanimbaya Segment",
+        "canonical_name": "PKF",
+        "segment": "Tanimbaya",
+        "fault_type": "strike_slip_compressional",
+        "kinematics": "left_lateral",
+        "tectonic_regime": "compressional (restraining bend region)",
+        "orientation": "N-S curving to NNW-SSE northward toward Sulawesi Trench",
+        "geometry_note": "Northern segment; fault regionally curves clockwise from Tanimbaya Peninsula toward North Sulawesi Trench. Connects strike-slip to subduction. Separated from Donggala by 4.2 km wide restraining stepover at Nkm105.",
+        "stepover_to_south_km": 4.2,
+        "stepover_type": "restraining",
+        "ruptured_2018": false,
+        "source_figure": "Figures 3, 4",
+        "source_short": "Natawidjaja et al. 2021",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["palu_koro"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.82, -0.05],
+          [119.83, -0.2],
+          [119.84, -0.4],
+          [119.85, -0.55]
+        ]
+      },
+      "properties": {
+        "id": "natawidjaja_2020_pkf_donggala",
+        "category": "fault",
+        "name": "Palu-Koro Fault — Donggala Segment",
+        "canonical_name": "PKF",
+        "segment": "Donggala",
+        "fault_type": "strike_slip",
+        "kinematics": "left_lateral",
+        "tectonic_regime": "transitional compressional-extensional; slight restraining bend in middle",
+        "orientation": "NNW-SSE to N-S (submarine)",
+        "geometry_note": "Primarily submarine segment (~110 km total offshore rupture). Separated from Tanimbaya by 4.2 km restraining stepover (N) and from Palu segment by 3.5 km releasing bend underwater (Nkm15-20 inside Palu Bay). Main shock nucleated here (~Nkm85 area, ~15 km NE of central restraining bend). Narrow submarine graben valley up to 2700 m wide at ~1000 m depth (Nkm70-90).",
+        "stepover_to_south_km": 3.5,
+        "stepover_type": "releasing",
+        "ruptured_2018": true,
+        "rupture_length_km": 110,
+        "source_figure": "Figures 3, 4",
+        "source_short": "Natawidjaja et al. 2021",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["palu_koro"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.85, -0.55],
+          [119.855, -0.65],
+          [119.860, -0.75],
+          [119.865, -0.87]
+        ]
+      },
+      "properties": {
+        "id": "natawidjaja_2020_pkf_palu",
+        "category": "fault",
+        "name": "Palu-Koro Fault — Palu Segment",
+        "canonical_name": "PKF",
+        "segment": "Palu",
+        "fault_type": "strike_slip_transtensive",
+        "kinematics": "left_lateral",
+        "tectonic_regime": "extensional (releasing bend, pull-apart basin)",
+        "orientation": "N-S then NNW-SSE",
+        "geometry_note": "From Palu Bay mouth (Nkm0/Skm0) southward ~34 km inland to southern basin edge. Left-lateral slip 4-6 m near beach, decreasing southward. Accompanied by dip-slip (east-down) up to 1 m along eastern margin normal faults. Fault narrows from wide offshore graben to sharp inland fault line at beachfront.",
+        "max_slip_m": 6,
+        "avg_slip_m": 4.5,
+        "dip_slip_avg_percent": 7.5,
+        "stepover_to_south_km": 7,
+        "stepover_type": "releasing",
+        "ruptured_2018": true,
+        "rupture_length_km": 34,
+        "pull_apart_basin": "Palu basin",
+        "source_figure": "Figures 3, 6",
+        "source_short": "Natawidjaja et al. 2021",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["palu_koro"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.878, -0.95],
+          [119.89, -1.1],
+          [119.91, -1.25],
+          [119.93, -1.45]
+        ]
+      },
+      "properties": {
+        "id": "natawidjaja_2020_pkf_saluki",
+        "category": "fault",
+        "name": "Palu-Koro Fault — Saluki Segment",
+        "canonical_name": "PKF",
+        "segment": "Saluki",
+        "fault_type": "strike_slip",
+        "kinematics": "left_lateral",
+        "tectonic_regime": "extensional to neutral",
+        "orientation": "NNW-SSE",
+        "geometry_note": "Southern segment from the large 7 km releasing bend (Skm33-45) to termination at Skm67 where a 1.5 km wide restraining stepover ends the rupture. Left-lateral slip increases from ~2 m at Skm37 to peak ~3.2 m at Skm49, then decreases to ~1 m at Skm66, terminating at Skm67. The restraining stepover at Skm67 is a segment boundary with the more southerly PKF trace.",
+        "max_slip_m": 3.2,
+        "slip_at_end_m": 1.0,
+        "stepover_at_end_km": 1.5,
+        "stepover_type": "restraining",
+        "ruptured_2018": true,
+        "rupture_length_km": 33,
+        "source_figure": "Figures 3, 6",
+        "source_short": "Natawidjaja et al. 2021",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["palu_koro"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.82, -0.55],
+          [119.88, -0.55],
+          [119.90, -0.87],
+          [119.88, -0.95],
+          [119.82, -0.95],
+          [119.80, -0.87],
+          [119.80, -0.65],
+          [119.82, -0.55]
+        ]]
+      },
+      "properties": {
+        "id": "natawidjaja_2020_palu_basin",
+        "category": "basin",
+        "name": "Palu Pull-Apart Basin",
+        "basin_type": "pull_apart",
+        "width_km": 7,
+        "length_km": 40,
+        "geometry_note": "Formed by 7 km wide releasing bend between Palu and Saluki segments. Basin includes Palu city, Palu Bay (Bay = northern submarine part), and elongated valley south of bay. Extensive normal faults along eastern margin accommodating extension. Liquefaction (Balaroa, Sibalaya) and massive landslides contributed to catastrophic effects of 2018 earthquake.",
+        "orientation": "N-S elongated",
+        "eastern_margin_faults": "numerous N-S and NW-SE normal faults (potentially active)",
+        "source_figure": "Figures 3, 4, 5, 6",
+        "source_short": "Natawidjaja et al. 2021",
+        "approx": true
+      }
+    }
+  ]
+}

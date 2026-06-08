@@ -1,0 +1,242 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "cao_2024_sula_mantle",
+    "source": "Cao et al. (2024)",
+    "title": "Mantle Flow Induced by the Interplay of Downgoing Slabs Revealed by Seismic Anisotropy Beneath the Sula Block in Eastern Indonesia",
+    "journal": "Journal of Geophysical Research: Solid Earth",
+    "volume": "129",
+    "article": "e2023JB028110",
+    "doi": "10.1029/2023JB028110",
+    "year": 2024,
+    "authors": ["Cao, L.", "Lü, C.", "He, X.", "Rawlinson, N.", "Hao, T.", "Widiyantoro, S.", "Supendi, P.", "Zhao, L.", "Yuan, H.", "Zhao, M.", "Qiu, X.", "Rafie, M.T.", "Alfian, A.", "Sahara, D.P."],
+    "study_area": "North Sulawesi and Sula Block, eastern Indonesia (118-124°E, -3 to 2°N)",
+    "method": "Shear-wave splitting (local S and teleseismic SKS/SKKS) from 8 temporary + 1 permanent broadband stations (Nov 2019 – Mar 2021 for temporaries; 2009–2019 for TOLI)",
+    "conclusions": [
+      "Sangihe subduction zone (SHS) produces dominant corner flow above its westward-dipping slab (trench-normal fast axes, Arrow 1 in Fig. 7)",
+      "North Sulawesi subduction zone (CSS): corner flow fast axes follow CSS depth contours (slab-strike-normal, not purely trench-normal), consistent with slab-controlled flow (Arrow 2)",
+      "Slab-slab interaction between CSS and SHS deflects CSS corner flow, producing trench-oblique fast axes in the northern NSSZ mantle wedge (Arrow 3; stations SW08/SW18 area)",
+      "Sula slab (SLS, extinct/submerged): blocks southward CSS corner flow at SW17, producing ENE-WSW fast axes parallel to SLS strike (Arrow 5)",
+      "Palu-Koro fault (PKF): N-S fault-parallel fast axis at SW01 (φ≈-20°, δt=1.3 s) records lithospheric-scale deformation; PKF is a microplate boundary between North Sula Block and Makassar Block that confines strain within the microplate (Arrow 4)",
+      "Regional strain is microplate-restricted; PKF marks western limit of slab-driven lithospheric deformation"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.315, -1.426]
+      },
+      "properties": {
+        "id": "cao_2024_SW01",
+        "category": "anisotropy",
+        "station": "SW01",
+        "station_type": "temporary",
+        "fast_axis_deg": -20,
+        "fast_axis_type": "SKS_integrated",
+        "fast_axis_range": [-37, -7],
+        "delay_time_s": 1.3,
+        "delay_time_range": [1.0, 1.6],
+        "depth_class": "upper_mantle",
+        "flow_style": "lateral_extrusion",
+        "interpretation": "N-S fault-parallel fast axis subparallel to Palu-Koro fault (PKF); records lithospheric-scale sinistral shearing between North Sula Block and Makassar Block. δt=1.3 s exceeds global average of ~1.0 s, suggesting coupled lithosphere-asthenosphere deformation or N-S asthenospheric flow channeled beneath thin eastern PKF lithosphere.",
+        "tectonic_context": "Western boundary of North Sula Block adjacent to PKF",
+        "source_figure": "Table 3; Figure 6; Figure 7 Arrow 4",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.049, -1.330]
+      },
+      "properties": {
+        "id": "cao_2024_SW05",
+        "category": "anisotropy",
+        "station": "SW05",
+        "station_type": "temporary",
+        "fast_axis_deg": null,
+        "fast_axis_type": "null_measurement",
+        "delay_time_s": null,
+        "depth_class": "upper_mantle",
+        "flow_style": "unknown",
+        "interpretation": "Only null SKS measurement obtained. Located near PKF. Nulls may reflect back-azimuth coinciding with fast or slow directions, or cancellation due to complex deformation geometry at the fault zone (competing N-S PKF shearing, CSS edge effects, lithospheric thickness asymmetry).",
+        "tectonic_context": "Near Palu-Koro fault in western Sula Block",
+        "source_figure": "Table 4; Figure 6",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.319, -0.977]
+      },
+      "properties": {
+        "id": "cao_2024_SW06",
+        "category": "anisotropy",
+        "station": "SW06",
+        "station_type": "temporary",
+        "fast_axis_deg": 43,
+        "fast_axis_type": "SKS_integrated",
+        "fast_axis_range": [27, 62],
+        "delay_time_s": 1.8,
+        "delay_time_range": [1.6, 2.1],
+        "depth_class": "upper_mantle",
+        "flow_style": "mixed",
+        "interpretation": "Fault-oblique (NE-SW, ~45°) fast axis near PKF and western edge of North Sulawesi subduction zone. Possibly reflects CSS slab edge effects at western extent of subduction plus N-S asthenospheric flow deflected by thicker lithosphere west of PKF. Fast direction parallels CSS depth contours in this area.",
+        "tectonic_context": "Western edge of CSS, near PKF",
+        "source_figure": "Table 3; Figure 6",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.811, -0.210]
+      },
+      "properties": {
+        "id": "cao_2024_SW07",
+        "category": "anisotropy",
+        "station": "SW07",
+        "station_type": "temporary",
+        "fast_axis_deg": null,
+        "fast_axis_type": "null_measurement",
+        "delay_time_s": null,
+        "depth_class": "upper_mantle",
+        "flow_style": "unknown",
+        "interpretation": "Only null SKS measurement. Located very close to PKF. Similar to SW05, nulls likely reflect complex, competing anisotropy sources near the fault zone leading to signal cancellation, or back-azimuth alignment with fast/slow polarization directions.",
+        "tectonic_context": "On or near Palu-Koro fault",
+        "source_figure": "Table 4; Figure 6",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.001, 0.452]
+      },
+      "properties": {
+        "id": "cao_2024_SW08",
+        "category": "anisotropy",
+        "station": "SW08",
+        "station_type": "temporary",
+        "fast_axis_deg": -77.6,
+        "fast_axis_type": "SKS_integrated",
+        "fast_axis_range": [-80, -64],
+        "delay_time_s": 2.3,
+        "depth_class": "upper_mantle",
+        "flow_style": "corner_flow",
+        "interpretation": "WNW-ESE fast axis (φ≈-78°) normal to Sangihe trench on north arm of Sulawesi. Large δt=2.3 s attributed to joint contributions from corner flow above both the SHS mantle wedge and the overlying CSS mantle wedge (two stacked subduction zones). Fast direction is oblique to the North Sulawesi trench but perpendicular to the Sangihe trench, indicating SHS dominance.",
+        "tectonic_context": "North arm of Sulawesi, backarc of NSSZ, above CSS/SHS overlap zone",
+        "source_figure": "Tables 2-3; Figure 4; Figure 6; Figure 7 Arrow 1+2",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.653, -0.1362]
+      },
+      "properties": {
+        "id": "cao_2024_SW17",
+        "category": "anisotropy",
+        "station": "SW17",
+        "station_type": "temporary",
+        "fast_axis_deg": 69.3,
+        "fast_axis_type": "SKS_integrated",
+        "fast_axis_range": [46, -76],
+        "delay_time_s": 2.2,
+        "delay_time_range": [1.3, 3.4],
+        "depth_class": "upper_mantle",
+        "flow_style": "corner_flow",
+        "interpretation": "ENE-WSW fast axis (φ≈69°) near Una-Una volcano, parallel to the Sula slab (SLS) strike. Located in the mantle wedge of the NSSZ above the CSS-SLS overlap zone. The ENE-WSW direction (rather than trench-normal CSS direction) is attributed to the extinct northward-dipping Sula slab blocking southward CSS corner flow, forcing flow into the SLS strike-parallel direction (Arrow 5 in Fig. 7). Large δt=2.2 s reflects significant thickness of anisotropic upper mantle.",
+        "tectonic_context": "South of NSSZ, above CSS/SLS interaction zone; near Una-Una volcano",
+        "source_figure": "Tables 2-3; Figures 4-6; Figure 7 Arrow 5",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.414, 1.117]
+      },
+      "properties": {
+        "id": "cao_2024_SW18",
+        "category": "anisotropy",
+        "station": "SW18",
+        "station_type": "temporary",
+        "fast_axis_deg": -63.8,
+        "fast_axis_type": "SKS_integrated",
+        "delay_time_s": 1.0,
+        "depth_class": "upper_mantle",
+        "flow_style": "corner_flow",
+        "interpretation": "NW-SE fast axis (φ≈-64°) on north arm of Sulawesi, oblique to North Sulawesi trench but perpendicular to Sangihe trench. Together with SW08, reconciles with Sangihe mantle wedge corner flow dominance over the SHS. The fast direction follows the subducting SHS slab-normal direction. Smaller δt=1.0 s compared to SW08 may reflect thinner anisotropic mantle column at this location.",
+        "tectonic_context": "North arm of Sulawesi, above combined CSS/SHS system",
+        "source_figure": "Table 3; Figure 6; Figure 7 Arrow 1",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.062, -0.469]
+      },
+      "properties": {
+        "id": "cao_2024_SW20",
+        "category": "anisotropy",
+        "station": "SW20",
+        "station_type": "temporary",
+        "fast_axis_deg": 18.5,
+        "fast_axis_type": "teleseismic_S",
+        "delay_time_s": 1.1,
+        "delay_time_range": [0.6, 1.6],
+        "depth_class": "upper_mantle",
+        "flow_style": "mixed",
+        "interpretation": "NNE-SSW average fast axis (two teleseismic S measurements: φ=9° δt=0.6 s and φ=28° δt=1.6 s). Located near PKF, fault-oblique (~45° to PKF strike). Interpreted as CSS slab edge effects plus possible N-S asthenospheric flow channeled beneath the PKF. Similar oblique direction to SW06 on the western CSS edge.",
+        "tectonic_context": "Near PKF, western edge of CSS subduction system",
+        "source_figure": "Table 3; Figure 6",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.794, 1.121]
+      },
+      "properties": {
+        "id": "cao_2024_TOLI_localS",
+        "category": "anisotropy",
+        "station": "TOLI",
+        "station_type": "permanent_BMKG",
+        "fast_axis_deg": -59,
+        "fast_axis_type": "local_S",
+        "delay_time_s": 0.58,
+        "delay_time_range": [0.34, 0.93],
+        "depth_class": "upper_mantle",
+        "flow_style": "corner_flow",
+        "interpretation": "Average of 5 local S measurements (2009-2016) at permanent station TOLI: φ range from -86° to -41°, mean ≈ -59° (WNW-ESE to NW-SE). Deep-event measurements (604-673 km) give larger δt (0.88-0.93 s) and more E-W φ (-84 to -86°); shallower events show NW-SE directions (-41° to -43°). Pattern consistent with Sangihe corner flow dominance (WNW-ESE = trench-normal to Sangihe). Complements SKS data from Di Leo (2012) and Cao (2021) at same station.",
+        "tectonic_context": "Gorontalo Bay area, above SHS mantle wedge, north arm of Sulawesi (connects to central)",
+        "source_figure": "Table 2; Figure 6",
+        "source_short": "Cao et al. 2024",
+        "approx": true
+      }
+    }
+  ]
+}

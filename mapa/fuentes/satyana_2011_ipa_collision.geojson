@@ -1,0 +1,196 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Satyana, A. H., & Purwaningsih, M. E. M. (2011). Collision of micro-continents with Eastern Sulawesi: records from uplifted reef terraces and proven-potential petroleum plays. Proceedings of the Indonesian Petroleum Association, 35th Annual Convention & Exhibition (IPA11-G-219).",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "REGIONAL",
+    "region": "East and SE Arms Sulawesi — Buton-Tukang Besi + Banggai-Sula collision",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["terrane", "suture_zone", "structure"],
+    "comprehension_summary": "Documents evidence for two ongoing micro-continent collisions with Eastern Sulawesi: (1) Buton-Tukang Besi with SE Arm (Early Miocene to present, suture along Buton Strait), (2) Banggai-Sula with East Arm (Late Miocene to present, uplifted reef terraces as collision proxy). Both terranes are Australoid (Australian-derived). Kapantoreh ophiolites on Buton = rootless thrust slices. Tukang Besi is extension east of Buton post-collision. Banggai Basin petroleum system documented (Miocene carbonate source/reservoir). Uplift evidence: multi-level coastal terraces up to 400 m asl; ongoing collision documented by present seismicity.",
+    "main_conclusions": [
+      "Buton-Tukang Besi microcontinent collided with SE Arm/Muna Block from Early Miocene; collision ongoing — Buton Strait is terrane suture",
+      "Banggai-Sula microcontinent collision with East Arm from Late Miocene; ongoing — uplifted reef terraces document progressive uplift",
+      "Tukang Besi separated from Buton as post-collision extension (not pre-collision separation)",
+      "Kapantoreh ophiolites on Buton are rootless detached thrust slices (gravity data, Milsom et al. 1999)",
+      "Both Buton-Tukang Besi and Banggai-Sula are Australoid terranes — continental Australia origin",
+      "Banggai Basin: proven sources = Miocene marls + carbonates (Matindok + Tomori Fms); reservoirs = Miocene carbonates",
+      "Buton area: proven source = Triassic Winto marine shales (type II kerogen); reservoir = Miocene carbonates"
+    ],
+    "total_features": 4,
+    "figures_used": ["Regional maps implied in text", "Fig. 12 (petroleum systems)", "Fig. 13 (play types Banggai)"]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.500, -1.500],
+          [125.500, -1.500],
+          [126.000, -2.500],
+          [125.000, -3.500],
+          [123.500, -3.500],
+          [122.000, -2.500],
+          [122.500, -1.500]
+        ]]
+      },
+      "properties": {
+        "id": "terrane_satyana_ipa_2011_1",
+        "name": "Banggai-Sula Microcontinent — colisión brazo este",
+        "full_name": "Banggai-Sula Microcontinent — Australoid terrane, collision with East Arm from Late Miocene, ongoing",
+        "category": "terrane",
+        "layer_type": "structure",
+        "source": "satyana_2011_ipa_collision",
+        "canonical_id": "canon_terrane_bsm",
+        "affinity": "continental_australian",
+        "collision_onset": "Late Miocene (~6-5 Ma)",
+        "collision_status": "ongoing",
+        "collision_evidence": "Multi-level uplifted reef terraces (up to 400 m asl in Luwuk area); active seismicity; Batui Thrust active (Hikmy et al. 2025)",
+        "depth_class": "superficial",
+        "source_apa": "Satyana & Purwaningsih (2011). IPA11-G-219, Proc. IPA 35th Conv.",
+        "source_short": "Satyana & Purwaningsih (2011)",
+        "paper_finding": "Banggai-Sula collision with East Arm documented by uplifted reef terraces; Tomori PSC gas field produced in Miocene carbonates; collision ongoing",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono regional Banggai-Sula (incluyendo islas Banggai y Sula). Complementa y confirma surono_2012 y husein_2014 para este terreno.",
+        "conclusions": [
+          {
+            "text": "Banggai-Sula collision with East Arm Sulawesi is ongoing; multi-level uplifted reef terraces document progressive Neogene-Quaternary uplift",
+            "type": "kinematics",
+            "geodyn_implication": "Colisión activa en curso — el frente colisional Banggai-Sula define la neotectónica del brazo este y el control sobre la prospectividad hidrocarburífera (trampas de inversión Plioceno-Cuaternario)",
+            "confidence": "high",
+            "figure_ref": "Text, Fig. 12B"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.500, -4.500],
+          [124.000, -4.500],
+          [124.500, -5.200],
+          [123.500, -6.000],
+          [122.000, -5.500],
+          [122.000, -4.800],
+          [122.500, -4.500]
+        ]]
+      },
+      "properties": {
+        "id": "terrane_satyana_ipa_2011_2",
+        "name": "Buton-Tukang Besi Microcontinent — colisión brazo SE",
+        "full_name": "Buton-Tukang Besi Microcontinent — Australoid terrane, collision with SE Arm/Muna Block from Early Miocene",
+        "category": "terrane",
+        "layer_type": "structure",
+        "source": "satyana_2011_ipa_collision",
+        "canonical_id": "canon_terrane_btb",
+        "affinity": "continental_australian",
+        "collision_onset": "Early Miocene",
+        "collision_status": "ongoing",
+        "tukang_besi_origin": "Post-collision extensional separation from Buton (not pre-collision)",
+        "kapantoreh_ophiolites": "Rootless detached thrust slices on Buton (gravity data, Milsom et al. 1999)",
+        "suture_zone": "Buton Strait (successor basin from slight relaxation post-collision)",
+        "pre_rift_stratigraphy": "Permian meta-sedimentary basement; Triassic continental clastics; Jurassic-Cretaceous passive margin",
+        "depth_class": "superficial",
+        "source_apa": "Satyana & Purwaningsih (2011). IPA11-G-219, Proc. IPA 35th Conv.",
+        "source_short": "Satyana & Purwaningsih (2011)",
+        "paper_finding": "Buton-Tukang Besi collision with SE Arm from Early Miocene; Buton Strait is terrane suture; Kapantoreh ophiolites = rootless thrust slices; Tukang Besi = post-collision extensional block",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono incluyendo Buton island y plataforma de Tukang Besi al este.",
+        "conclusions": [
+          {
+            "text": "Buton-Tukang Besi microcontinent collided with SE Arm from Early Miocene; Buton Strait = terrane suture (successor basin); Kapantoreh ophiolites are detached rootless thrust slices",
+            "type": "genesis",
+            "geodyn_implication": "El estrecho de Buton es una cuenca de sutura post-colisional — la arquitectura extensional post-colisión separa a Tukang Besi de Buton como bloques independientes pero coetáneos",
+            "confidence": "high",
+            "figure_ref": "Text pp.2-3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.700, -4.700],
+          [122.850, -5.000],
+          [123.000, -5.300]
+        ]
+      },
+      "properties": {
+        "id": "suture_satyana_ipa_2011_3",
+        "name": "Buton Strait — zona de sutura Buton-SE Arm",
+        "full_name": "Buton Strait — terrane suture zone, Buton-Tukang Besi microcontinent / SE Arm Sulawesi",
+        "category": "suture_zone",
+        "layer_type": "fault",
+        "source": "satyana_2011_ipa_collision",
+        "canonical_id": "canon_1928",
+        "terranes_joined": ["Buton-Tukang Besi", "SE Arm Sulawesi/Muna Block"],
+        "collision_age_ma": "Early Miocene (~20 Ma)",
+        "basin_type": "successor basin (slight relaxation post-collision)",
+        "depth_class": "mayor",
+        "source_apa": "Satyana & Purwaningsih (2011). IPA11-G-219, Proc. IPA 35th Conv.",
+        "source_short": "Satyana & Purwaningsih (2011)",
+        "paper_finding": "Buton Strait is the terrane suture between Buton-Tukang Besi and SE Arm; interpreted as successor basin from slight relaxation of compression following collision",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza corta de la zona de sutura en el estrecho de Buton. Posición geográfica bien conocida.",
+        "conclusions": [
+          {
+            "text": "Buton Strait = terrane suture between Buton-Tukang Besi and SE Arm; formed as successor basin from relaxation post-collision",
+            "type": "genesis",
+            "geodyn_implication": "La sutura de Buton marca el límite tectónico entre el terreno australiano y el arco SE de Sulawesi — relevante para el análisis de provenance y los sistemas petroleros de Buton",
+            "confidence": "high",
+            "figure_ref": "Text pp.2-3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.000, -1.500],
+          [124.000, -1.500],
+          [124.500, -2.500],
+          [123.500, -3.500],
+          [122.000, -3.000],
+          [121.500, -2.000],
+          [122.000, -1.500]
+        ]]
+      },
+      "properties": {
+        "id": "basin_satyana_ipa_2011_4",
+        "name": "Banggai Basin — sistema petrolero Mioceno",
+        "full_name": "Banggai Basin — proven petroleum system, Miocene carbonate source/reservoir, East Arm Sulawesi",
+        "category": "basin",
+        "layer_type": "structure",
+        "source": "satyana_2011_ipa_collision",
+        "canonical_id": null,
+        "basin_type": "foreland",
+        "proven_sources": "Miocene marls + carbonates (Matindok Fm + Tomori Fm)",
+        "proven_reservoirs": "Miocene carbonates (reefal limestones)",
+        "production_fields": ["Tiaka (oil+gas)", "Minahaki", "Mantawa (gas)", "Matindok"],
+        "depth_class": "cortical",
+        "source_apa": "Satyana & Purwaningsih (2011). IPA11-G-219, Proc. IPA 35th Conv.",
+        "source_short": "Satyana & Purwaningsih (2011)",
+        "paper_finding": "Banggai Basin proven petroleum system with Miocene source+reservoir; structural traps from Banggai-Sula collision; active exploration continuing",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono aproximado de la cuenca Banggai en el área del brazo este de Sulawesi.",
+        "conclusions": [
+          {
+            "text": "Banggai Basin petroleum system: proven sources = Miocene marls/carbonates; trap styles range from thin-skinned thrust anticlines to wrench-related structures; active collision drives trap formation",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La colisión activa de Banggai-Sula genera trampas de HC Plio-Pleistocenas en la cuenca Banggai — sistema activo donde la tectónica y la prospectividad son coetáneas",
+            "confidence": "high",
+            "figure_ref": "Fig. 12B, Fig. 13"
+          }
+        ]
+      }
+    }
+  ]
+}

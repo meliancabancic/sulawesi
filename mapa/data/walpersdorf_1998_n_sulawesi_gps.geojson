@@ -1,0 +1,129 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "walpersdorf_1998_n_sulawesi_gps",
+    "source": "Walpersdorf et al. (1998)",
+    "title": "GPS compared to long-term geologic motion of the north arm of Sulawesi",
+    "journal": "Earth and Planetary Science Letters",
+    "volume": "159",
+    "pages": "47-55",
+    "doi": "10.1016/S0012-821X(98)00056-9",
+    "year_published": 1998,
+    "authors": ["Walpersdorf, A.", "Rangin, C.", "Vigny, C."],
+    "study_area": "North arm of Sulawesi; Celebes Sea; Palu-Koro Fault transect",
+    "method": "GPS (GEODYSSEA network campaigns Nov/Dec 1994 + Apr 1996; local PKF transect 1992-1997); palaeomagnetic comparison; magnetic anomaly analysis of Celebes Sea",
+    "conclusions": [
+      "North Arm of Sulawesi has rotated 20-25° clockwise since 5 Ma about a pole NE of Sulawesi (2.1°N, 126.2°E); GPS rotation rate 3.4 ± 0.4°/Ma matches geological estimate of minimum 4°/Ma",
+      "PKF GPS slip rate (far-field): 4 cm/yr (3.8-4.0 cm/yr from AMPA vs Kalimantan stations); consistent with geological minimum of 4 cm/yr from 200 km / 5 Ma displacement",
+      "PKF local transect (Palu, 5-year avg): 34 mm/yr average; variable 26 mm/yr (1992-1995) to 63 mm/yr (1995-1997) due to seismic transients in northern Sulawesi",
+      "Celebes Sea: ~250 km subducted south beneath North Sulawesi Trench since last 5 Ma; south-dipping slab to ~200 km depth blocked at depth in east by north-dipping Molucca Sea slab",
+      "Una-Una Island (Gulf of Tomini) = youngest (still active) expression of CAK volcanic chain that migrated NW with rotating North Arm; volcanic chain extends ~200 km wide NW-SE belt from North Sulawesi to Una-Una"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.6, -1.4],
+          [119.85, -0.5],
+          [119.9, 0.0],
+          [119.95, 0.5],
+          [120.0, 1.0]
+        ]
+      },
+      "properties": {
+        "id": "walpersdorf_1998_pkf",
+        "category": "fault",
+        "name": "Palu-Koro Fault",
+        "canonical_name": "PKF",
+        "fault_type": "strike_slip_transtensive",
+        "kinematics": "left_lateral",
+        "slip_rate_mmyr": 40,
+        "slip_rate_range_mmyr": [34, 50],
+        "slip_rate_gps_mmyr": 40,
+        "slip_rate_gps_method": "GEODYSSEA far-field (AMPA vs Kalimantan stations); 17-month observation, 2 campaigns",
+        "slip_rate_gps_transect_mmyr": 34,
+        "slip_rate_gps_transect_note": "5-year average on 50 km transect across fault; variable 26-63 mm/yr (seismic transients affect near-fault stations)",
+        "slip_rate_geological_mmyr": 40,
+        "slip_rate_geological_note": "Minimum 4 cm/yr from ~200 km displacement in ~5 Ma (Silver et al. 1983 reconstruction)",
+        "total_displacement_km": 200,
+        "displacement_duration_Ma": 5,
+        "azimuth_deg": 345,
+        "context": "Western limit of the clockwise-rotating Sula/North Arm microblock. PKF accommodates the sinistral component of the oblique collision between Sula platform and North Arm. Consistent with Silver et al. (1983) reconstruction.",
+        "source_figure": "Figures 1, 4",
+        "source_short": "Walpersdorf et al. 1998",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["palu_koro"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.2, 2.1]
+      },
+      "properties": {
+        "id": "walpersdorf_1998_euler_north_arm",
+        "category": "geophysical_point",
+        "name": "Euler Pole — North Arm (Sula Block) Clockwise Rotation (GPS)",
+        "euler_lon_deg": 126.2,
+        "euler_lat_deg": 2.1,
+        "rotation_rate_degMyr": 3.4,
+        "rotation_rate_uncertainty_degMyr": 0.4,
+        "rotation_sense": "clockwise",
+        "model": "GPS rigid-block fitting (GEODYSSEA + Palu transect; 4 stations inside block)",
+        "paleomagnetic_rotation_deg": 22,
+        "paleomagnetic_duration_Ma": 5,
+        "paleomagnetic_rate_degMyr": 4.4,
+        "paleomagnetic_ref": "Surmont et al. (1994)",
+        "interpretation": "North Arm of Sulawesi (welded to the Sula domain since ~15 Ma) has been rotating clockwise about this pole since ~5 Ma. The rotation drives subduction of Celebes Sea crust at the North Sulawesi Trench and sinistral slip on the PKF. Station MANA (near Manado) is close to the pole — motion similar to Eurasian plate. AMPA (central Sulawesi, east of PKF) moves westward relative to MANA, consistent with this rotation.",
+        "source_figure": "Figures 4, 5; p.53",
+        "source_short": "Walpersdorf et al. 1998",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.6, -0.6]
+      },
+      "properties": {
+        "id": "walpersdorf_1998_ampa_gps",
+        "category": "geophysical_point",
+        "name": "GPS Station AMPA — Key Velocity Reference (Sula Block)",
+        "description": "GEODYSSEA GPS campaign station AMPA in central Sulawesi (east side of PKF, Sula domain). Used as the primary observation point for far-field velocity of Sula block relative to Kalimantan (Eurasian plate).",
+        "velocity_mmyr": 43,
+        "velocity_range_mmyr": [37, 51],
+        "velocity_azimuth_deg": 312,
+        "velocity_note": "4.3-4.5 cm/yr oriented 307-318° relative to Kalimantan stations BATU and TAWA. Strike-slip projection on PKF (azimuth 345°) gives 3.8-4.0 cm/yr left-lateral.",
+        "reference_frame": "Sundaland/Kalimantan (BATU, TAWA stations)",
+        "source_figure": "Figures 4, 5",
+        "source_short": "Walpersdorf et al. 1998",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.6, -0.1]
+      },
+      "properties": {
+        "id": "walpersdorf_1998_una_una",
+        "category": "geophysical_point",
+        "name": "Una-Una Volcano (Gulf of Tomini) — Youngest CAK Volcanic Chain",
+        "description": "Una-Una Island volcano in Gulf of Tomini. Youngest (still active as of 1998, last eruption 1983) expression of the calc-alkalic potassic (CAK) volcanic chain that migrated northwestward with the rotating North Arm. The chain extends ~200 km NW-SE from North Sulawesi to Una-Una. The CAK volcanism is interpreted to result from subduction of Sula-Buton continental crust below central-western Sulawesi (Polve et al. 1997). Una-Una is currently closest to the volcanic source, sitting above the active 'melting continental crust' — consistent with the Hall & Spakman (2015) interpretation of Sula slab delamination.",
+        "last_eruption_year": 1983,
+        "volcanic_chain_width_km": 200,
+        "cak_volcanism_age_n_sulawesi_Ma": 4.5,
+        "source_figure": "Figure 3",
+        "source_short": "Walpersdorf et al. 1998",
+        "approx": false
+      }
+    }
+  ]
+}

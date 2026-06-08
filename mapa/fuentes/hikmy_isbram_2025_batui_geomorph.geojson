@@ -1,0 +1,198 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1–15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4 (Fig. 3 lectura visual de ejes)",
+    "paper_scale": "LOCAL",
+    "region": "East Arm Sulawesi — Lobu Watershed, Luwuk area (122°30'E–122°50'E, 0°20'S–0°55'S)",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["fault", "fold_thrust_belt", "geophysical_point"],
+    "comprehension_summary": "Estudio de geomorfologia tectonica del Lobu Watershed (NW de Luwuk). Eje Fig. 3: 122°30'E-122°50'E, 0°20'S-0°55'S. Batui Thrust confirmada activa por 8 indices morfometricos. Uplift rate 0.213+-0.046 mm/yr. Fault plane N256°E/58°NW.",
+    "main_conclusions": [
+      "Batui Thrust confirmed active: Smf near 1.0; Vf<=0.2 all watersheds; knickpoints Hako River",
+      "Uplift rate East Arm: 0.213+-0.046 mm/yr from Salodik Group limestone elevation",
+      "Fault plane N256°E/58°NW; Left Thrust Slip (Rickard 1972)",
+      "Lobu Watershed: 5 of 6 sub-watersheds classified Most Active Tectonics",
+      "Batui Thrust segmented: knickpoint only in Hako profile, not Senseiyan and Luwaan"
+    ],
+    "total_features": 4,
+    "figures_used": ["Fig. 3 (slope map Lobu Watershed, axes read)", "Fig. 4 (knickpoints)", "Fig. 5 (morphometric indices)", "Fig. 9 (seismic cross-section offshore)"]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.220, -1.250],
+          [122.380, -1.080],
+          [122.520, -0.920],
+          [122.650, -0.780],
+          [122.780, -0.650],
+          [122.920, -0.520],
+          [123.050, -0.400]
+        ]
+      },
+      "properties": {
+        "id": "fault_isbram_2025_1",
+        "name": "Batui Thrust — activa confirmada geomorfologia (Fig. 3 coordenadas revisadas)",
+        "full_name": "Batui Thrust — NE-SW active thrust, ESO/Banggai-Sula boundary, Luwuk area (Hikmy et al. 2025)",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "hikmy_isbram_2025_batui_geomorph",
+        "canonical_id": "canon_205",
+        "kinematics": "thrust",
+        "iugs_symbol": "thrust",
+        "depth_class": "superficial",
+        "fault_plane": "N256°E/58°NW",
+        "slip_sense": "Left Thrust Slip (Rickard 1972)",
+        "uplift_rate_mmyr": 0.213,
+        "uplift_rate_unc": 0.046,
+        "activity_indices": "Smf~1.0; Vf<=0.2 all sub-watersheds; knickpoints Hako River",
+        "segmented": true,
+        "segmentation_note": "Knickpoint only in Hako profile — thrust segmented along strike",
+        "source_apa": "Hikmy et al. (2025). JGSM 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Batui Thrust active NE-SW; uplift 0.213 mm/yr; fault plane N256/58NW; segmented",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza actualizada con ejes de Fig. 3 (122°30'E-122°50'E, 0°20'S-0°55'S). El Batui Thrust corre NE-SW desde SW hacia NE a traves del watershed y continua al E de Luwuk. Traza extendida al SW (hacia cuenca Banggai) y al NE (hacia Poh Head) respecto a la version anterior.",
+        "conclusions": [
+          {
+            "text": "Batui Thrust confirmed active; uplift 0.213±0.046 mm/yr; segmented — active segment confirmed in Hako sub-watershed, questionable in Senseiyan-Luwaan",
+            "type": "slip_rate",
+            "geodyn_implication": "Tasa de alzamiento baja pero activa — collision Banggai-Sula aun en progreso; la segmentacion del Batui Thrust implica que no todo el frente es igualmente activo en el mismo ciclo sismico",
+            "confidence": "high",
+            "figure_ref": "Fig. 3, Fig. 4, Table 2, p.13"
+          },
+          {
+            "text": "Fault plane N256°E/58°NW; slickensides + fault breccias + shear fractures confirm thrust kinematics in field",
+            "type": "kinematics",
+            "geodyn_implication": "Cinematica de cabalgamiento confirmada en campo — consistente con el modelo de piel delgada NW-vergente de Husein 2014",
+            "confidence": "high",
+            "figure_ref": "Fig. 3, p.9"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.100, -1.350],
+          [122.300, -1.150],
+          [122.500, -0.980],
+          [122.680, -0.820]
+        ]
+      },
+      "properties": {
+        "id": "fault_isbram_2025_2",
+        "name": "Pasini Thrust — activa paralela a Batui",
+        "full_name": "Pasini Thrust — NE-SW active thrust parallel to Batui Thrust, Luwuk area",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "hikmy_isbram_2025_batui_geomorph",
+        "canonical_id": "canon_1935",
+        "kinematics": "thrust",
+        "depth_class": "superficial",
+        "source_apa": "Hikmy et al. (2025). JGSM 26(1), 1-15.",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Pasini Thrust active alongside Batui; morphometric anomalies confirm",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza SW del Batui Thrust, paralela, derivada de descripcion textual. Actualizada con escala del area de estudio de Fig. 3.",
+        "conclusions": [
+          {
+            "text": "Pasini Thrust active simultaneously with Batui Thrust — distributed deformation across the Luwuk thrust belt",
+            "type": "kinematics",
+            "geodyn_implication": "Sistema de cabalgamientos distribuidos en el brazo este — deformacion no concentrada en una sola falla sino en un frente de 10-20 km de ancho",
+            "confidence": "medium",
+            "figure_ref": "Fig. 5, p.8"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.300, -0.200],
+          [122.850, -0.200],
+          [122.950, -0.600],
+          [122.850, -1.050],
+          [122.350, -1.050],
+          [122.200, -0.700],
+          [122.300, -0.200]
+        ]]
+      },
+      "properties": {
+        "id": "structure_isbram_2025_3",
+        "name": "Lobu Watershed — area de estudio geomorfologico",
+        "full_name": "Lobu Watershed study area — tectonic geomorphology, NW of Luwuk, drains N to Gulf of Tomini",
+        "category": "deformation_zone",
+        "layer_type": "deformation_zone",
+        "source": "hikmy_isbram_2025_batui_geomorph",
+        "canonical_id": null,
+        "depth_class": "superficial",
+        "axes_read_from_fig3": "122°30'E-122°50'E / 0°20'S-0°55'S",
+        "sub_watersheds": ["Balolang","Hako","Lambangan","Lobu","Luwaan","Pangi","Senseiyan"],
+        "dominant_activity": "Most Active Tectonics (5 of 6 sub-watersheds)",
+        "drains_to": "Gulf of Tomini (north)",
+        "source_apa": "Hikmy et al. (2025). JGSM 26(1), 1-15.",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Lobu Watershed axis from Fig. 3: 122°30'-122°50'E, 0°20'-0°55'S; all Vf<=0.2",
+        "coord_quality": "approximate",
+        "extraction_notes": "Poligono actualizado desde ejes de Fig. 3 leidos visualmente. Ubicado al NW de Luwuk [122.79,-1.03], drenando norte hacia el Golfo de Tomini. Version anterior tenia el watershed demasiado al sur.",
+        "conclusions": [
+          {
+            "text": "Lobu Watershed (NW of Luwuk, 122°30'-50'E, 0°20'-55'S): 5/6 sub-watersheds Most Active Tectonics; all Vf<=0.2",
+            "type": "tectonic_setting",
+            "geodyn_implication": "El brazo este en el area Luwuk es una zona de deformacion activa intensa — coherente con la colision en progreso de Banggai-Sula",
+            "confidence": "high",
+            "figure_ref": "Fig. 3, Fig. 5, Table 2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.200, -1.200],
+          [122.800, -1.200],
+          [123.400, -1.200]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_isbram_2025_4",
+        "name": "Perfil sismico offshore brazo E — Batui Thrust (Hartanto 2019 mod.)",
+        "full_name": "Modified seismic cross-section offshore South Coast East Arm — Batui Thrust geometry (after Hartanto 2019)",
+        "category": "cross_section",
+        "layer_type": "structure",
+        "source": "hikmy_isbram_2025_batui_geomorph",
+        "depth_class": "cortical",
+        "section_label": "Offshore seismic (mod. Hartanto 2019)",
+        "section_type": "seismic_reflection",
+        "depth_range_km": [0, 15],
+        "orientation": "W-E",
+        "key_features_in_section": ["Batui Thrust", "ESO contact", "Banggai-Sula Microcontinent"],
+        "source_apa": "Hikmy et al. (2025). JGSM 26(1), 1-15.",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Offshore seismic confirms thin-skinned Batui Thrust; ESO/Banggai-Sula boundary at depth",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza E-W aprox. al sur de la costa del brazo este, lat ~-1.2S.",
+        "conclusions": [
+          {
+            "text": "Offshore seismic confirms Batui Thrust as thin-skinned ESO/Banggai-Sula boundary at depth",
+            "type": "kinematics",
+            "geodyn_implication": "Geometria subsuperficial del Batui Thrust confirma modelo piel delgada — consistente con Husein 2014 y Baillie 2022",
+            "confidence": "medium",
+            "figure_ref": "Fig. 9"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "model": "claude-sonnet-4-5",
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-Content \"c:\\\\Users\\\\PC\\\\Desktop\\\\Geo\\\\Tectonica\\\\Monografia\\\\mapa\\\\mapa_sulawesi_v71.html\"\\).Count)",
+      "PowerShell(python --version)",
+      "PowerShell(python -c \"import numpy, rasterio, matplotlib; print\\('OK numpy:', numpy.__version__, 'rasterio:', rasterio.__version__, 'matplotlib:', matplotlib.__version__\\)\")",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\PC\\\\Desktop\\\\Geo\\\\Tectonica\\\\Monografia\\\\mapa\\\\css\",\"c:\\\\Users\\\\PC\\\\Desktop\\\\Geo\\\\Tectonica\\\\Monografia\\\\mapa\\\\js\" | Select-Object Name,@{N='KB';E={[math]::Round\\($_.Length/1024,1\\)}})",
+      "Bash(curl -s \"http://localhost:8080/api/earthquakes?minMag=6.5&startYear=2000&endYear=2010\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('OK', d['count'], 'events'\\)\")"
+    ]
+  }
+}

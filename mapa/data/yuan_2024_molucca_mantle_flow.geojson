@@ -1,0 +1,176 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "yuan_2024_molucca_mantle_flow",
+    "source": "Yuan et al. (2024)",
+    "title": "Multiple Slabs and Complex Mantle Flows in the Molucca Sea Subduction Zone",
+    "journal": "Geochemistry, Geophysics, Geosystems",
+    "volume": "25",
+    "article": "e2024GC011500",
+    "doi": "10.1029/2024GC011500",
+    "year_published": 2024,
+    "authors": ["Yuan, C.", "et al."],
+    "study_area": "Molucca Sea subduction zone — Sangihe Arc, Halmahera Arc, and surrounding mantle domains",
+    "method": "P-wave tilting-axis anisotropic tomography; symmetry axis free to rotate in 3D; 267,833 P-wave arrivals from 11,297 local earthquakes + 194,318 arrivals from 10,430 teleseismic events; 254 seismic stations; ISC-EHB catalog 1969-2020; Fast Velocity Planes (FVPs) as proxy for olivine LPO and mantle flow direction",
+    "conclusions": [
+      "Feature A (BMW above Sangihe slab, ~200 km): LVZ with trench-normal vertical FVPs — 2D corner flow entrained by Sangihe subduction; transitions to trench-parallel FVPs at 400-500 km depth",
+      "Feature B (200-300 km): Low-V zone with NW-SE vertical FVPs connecting Banda arc opening to southern Sangihe slab — mantle material extruded NW from Banda Sea bay area, blocked by Celebes Sea slab from reaching Sangihe's western BMW",
+      "Feature C (300-400 km): Continuous low-V zone from Seram → Buru → Sulawesi → west of Sangihe; FVPs parallel to flow direction — extruded mantle bypassing north of Banda Sea slab",
+      "Feature D (500 km): FVPs normal to Java trench aligned with Indo-Australian slab motion direction, extending from Java region to southern Sangihe slab — rollback-induced convection from Java reaching Molucca Sea",
+      "Feature E: Toroidal-like FVP pattern around Halmahera slab edges",
+      "Halmahera slab break-off: near-vertical high-velocity anomaly beneath Halmahera slab = aseismic fragment detaching; max subduction length revised upward to 500-550 km (previously 400-450 km)",
+      "Western vs Eastern MS asymmetry: western MS (Sangihe side) remotely influenced by Banda + Java subduction zones; eastern MS (Halmahera side) virtually unaffected by other subduction zones — self-controlled flow",
+      "Celebes Sea slab acts as obstruction to westward mantle flows from Banda and Java toward Sangihe BMW",
+      "Sangihe subduction initiated ~20 Ma, ceased ~10 Ma; Halmahera subduction initiated after Sangihe",
+      "Banda Sea spoon-shaped slab fully developed by ~4 Ma, generating N-S compression and mantle extrusion"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.0, 2.5]
+      },
+      "properties": {
+        "id": "yuan_2024_feature_a_sangihe_bmw",
+        "category": "anisotropy",
+        "name": "Feature A — Sangihe Big Mantle Wedge (BMW) Entrained Flow (~200 km)",
+        "anomaly_type": "low_velocity",
+        "depth_km": 200,
+        "fvp_orientation": "trench-normal vertical at ~200 km; transitions to trench-parallel at 400-500 km",
+        "interpretation": "Low-velocity zone with trench-normal vertically oriented Fast Velocity Planes (FVPs) in the Big Mantle Wedge (BMW) above the Sangihe slab at ~200 km depth. Interpreted as 2D corner flow entrained by the downgoing Sangihe slab pulling surrounding mantle downward. At 400-500 km depth the FVPs rotate to trench-parallel orientation, suggesting the mantle flow transitions from slab-entrained to lateral displacement. This is the most direct, local flow signal associated with Sangihe subduction.",
+        "flow_type": "2D_entrained_corner_flow",
+        "tectonic_context": "Sangihe Arc westward subduction of the Molucca Sea Plate; subduction initiated ~20 Ma, ceased ~10 Ma (slab now detaching?)",
+        "source_figure": "Figures 5, 6, 7",
+        "source_short": "Yuan et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.5, 0.0]
+      },
+      "properties": {
+        "id": "yuan_2024_feature_b_banda_extruded_flow",
+        "category": "anisotropy",
+        "name": "Feature B — Banda-Sangihe Extruded Mantle Flow (200-300 km)",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [200, 300],
+        "fvp_orientation": "NW-SE vertical FVPs",
+        "interpretation": "Low-velocity zone with NW-SE oriented vertical FVPs at 200-300 km depth, connecting the Banda arc opening region to the southern Sangihe slab. Interpreted as mantle material extruded northwestward from the Banda Sea bay area as the Banda slab rolled back and the spoon-shaped geometry developed (~4 Ma). The Celebes Sea slab acts as a partial obstruction, preventing this extruded flow from reaching the full western BMW of the Sangihe slab. This flow component represents remote forcing of Molucca Sea mantle dynamics by the Banda subduction zone.",
+        "flow_type": "extruded_lateral_flow_from_Banda",
+        "flow_source": "Banda Sea rollback opening",
+        "obstruction": "Celebes Sea slab",
+        "source_figure": "Figures 5, 6, 8",
+        "source_short": "Yuan et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [124.0, -1.0]
+      },
+      "properties": {
+        "id": "yuan_2024_feature_c_seram_sulawesi_flow",
+        "category": "anisotropy",
+        "name": "Feature C — Continuous Extruded Mantle Flow Seram → Buru → Sulawesi (300-400 km)",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [300, 400],
+        "fvp_orientation": "parallel to flow direction (Seram → Buru → Sulawesi → west of Sangihe)",
+        "interpretation": "Continuous low-velocity zone at 300-400 km depth tracing a path from the Seram subduction region → Buru → beneath Sulawesi → west of Sangihe Arc. FVP orientations are parallel to the inferred flow direction, consistent with a toroidal-to-lateral extrusion pathway. Interpreted as extruded mantle material bypassing the northern edge of the Banda Sea slab and flowing westward/northwestward beneath the Sulawesi region at depth. This deep flow path represents indirect Banda influence on Molucca Sea dynamics at a deeper level than Feature B.",
+        "flow_type": "deep_extruded_flow_bypassing_Banda_slab_north",
+        "flow_path": "Seram → Buru → Sulawesi → west of Sangihe",
+        "source_figure": "Figures 5, 6, 9",
+        "source_short": "Yuan et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.0, -2.0]
+      },
+      "properties": {
+        "id": "yuan_2024_feature_d_java_rollback_flow",
+        "category": "anisotropy",
+        "name": "Feature D — Java Rollback-Induced Flow Reaching Sangihe (500 km)",
+        "anomaly_type": "anisotropy",
+        "depth_km": 500,
+        "fvp_orientation": "normal to Java trench; aligned with Indo-Australian slab motion",
+        "interpretation": "At ~500 km depth, FVPs oriented normal to the Java trench and aligned with the motion direction of the Indo-Australian plate/slab are detected extending from the Java subduction system northward to the southern part of the Sangihe slab. Interpreted as rollback-induced sub-slab mantle convection driven by the Java (Sunda) subduction zone propagating over great distances. This is the most distant remote influence on Molucca Sea mantle dynamics, operative at the deepest levels imaged. Demonstrates that mantle flow connectivity in the region spans multiple subduction systems.",
+        "flow_type": "rollback_induced_sub_slab_convection",
+        "flow_source": "Java/Sunda subduction rollback",
+        "source_figure": "Figures 5, 6, 10",
+        "source_short": "Yuan et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [128.5, 1.0]
+      },
+      "properties": {
+        "id": "yuan_2024_feature_e_halmahera_toroidal",
+        "category": "anisotropy",
+        "name": "Feature E — Toroidal Flow Around Halmahera Slab",
+        "anomaly_type": "anisotropy",
+        "fvp_orientation": "toroidal pattern around Halmahera slab edges",
+        "interpretation": "Toroidal-like FVP pattern detected around the edges of the Halmahera slab. This flow geometry records mantle being displaced around the lateral edges of the downgoing Halmahera slab as it subducts westward beneath the Molucca Sea arc-arc collision zone. The eastern Molucca Sea mantle domain (Halmahera side) is characterized by locally self-controlled flow patterns with minimal influence from the remote Banda or Java subduction zones, in contrast to the western MS (Sangihe side) which shows strong remote forcing. Toroidal flow around the Halmahera slab is consistent with the asymmetric double-subduction geometry.",
+        "flow_type": "toroidal_around_slab_edges",
+        "tectonic_context": "Halmahera eastward subduction of Molucca Sea Plate; no detected remote forcing from Banda or Java",
+        "source_figure": "Figures 5, 6, 11",
+        "source_short": "Yuan et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [128.0, 0.5]
+      },
+      "properties": {
+        "id": "yuan_2024_halmahera_slab_breakoff",
+        "category": "geophysical_point",
+        "name": "Halmahera Slab Break-Off — Near-Vertical Detaching Fragment",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [300, 550],
+        "max_subduction_length_km": [500, 550],
+        "previous_estimate_km": [400, 450],
+        "interpretation": "Near-vertical high-velocity anomaly detected beneath the main Halmahera slab body, interpreted as an aseismic slab fragment in the process of breaking off (necking/detachment). This detaching fragment extends the maximum inferred subduction length of the Halmahera slab upward to 500-550 km, revising previous estimates of 400-450 km. The break-off is consistent with the arc-arc collision geometry and the advanced stage of Molucca Sea Plate consumption. The seismicity associated with active subduction terminates above the detaching fragment, which is why it is identified as aseismic.",
+        "slab_status": "active_subduction_above_aseismic_detaching_fragment",
+        "source_figure": "Figures 4, 5",
+        "source_short": "Yuan et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [125.0, 1.5]
+      },
+      "properties": {
+        "id": "yuan_2024_ms_west_east_asymmetry",
+        "category": "geophysical_point",
+        "name": "Molucca Sea W vs E Asymmetry — Remote vs Self-Controlled Mantle Flow",
+        "anomaly_type": "tectonic_terrane",
+        "interpretation": "The two sides of the Molucca Sea double subduction zone show fundamentally different mantle flow regimes. Western MS (Sangihe side): mantle flow is remotely controlled by at least three external drivers — (1) Banda Sea rollback-extrusion (Features B and C), (2) Java subduction rollback (Feature D), and (3) local 2D entrained corner flow (Feature A). The Celebes Sea slab partially obstructs but does not fully block this multi-source influence. Eastern MS (Halmahera side): mantle flow is virtually unaffected by Banda or Java; driven entirely by local Halmahera subduction kinematics (Feature E toroidal flow + Feature A analog on eastern BMW). This asymmetry reflects the fundamentally different tectonic settings — Sangihe is embedded within a convergent system influenced by multiple large-scale subduction zones, while Halmahera is more isolated from those remote drivers.",
+        "western_ms_drivers": ["Banda Sea rollback extrusion", "Java rollback convection", "Local Sangihe 2D entrained flow"],
+        "eastern_ms_drivers": ["Local Halmahera subduction kinematics only"],
+        "obstruction": "Celebes Sea slab (partial obstruction of westward flows)",
+        "source_figure": "Figures 5, 12",
+        "source_short": "Yuan et al. 2024",
+        "approx": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+    "extraction_date": "2025-05-17",
+    "extractor": "Claude geo-comprehension + paper-extractor",
+    "region": "East Arm of Sulawesi, Luwuk area, Indonesia",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["fault", "structure", "geophysical_point"],
+    "notes": "Tectonic geomorphology study using 7 morphometric indices on 8 sub-watersheds. Confirms Batui Thrust as active fault. Uplift rates derived from Celebes Molasse and Salodik Formation elevations."
+  },
+  "bibliography": {
+    "hikmy_2025": {
+      "apa": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+      "short": "Hikmy et al. (2025)",
+      "journal": "Jurnal Geologi dan Sumberdaya Mineral",
+      "year": 2025,
+      "doi": "10.33332/jgsm.geologi.v26i1.663",
+      "topic": "Tectonic geomorphology, uplift rate, active faults",
+      "region": "East Arm of Sulawesi, Luwuk"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.35, -0.60],
+          [122.45, -0.75],
+          [122.55, -0.90],
+          [122.60, -1.05],
+          [122.55, -1.20],
+          [122.50, -1.35]
+        ]
+      },
+      "properties": {
+        "id": "fault_hikmy_2025_01",
+        "name": "Batui Thrust — activa NE-SW Luwuk",
+        "full_name": "Batui Thrust — falla inversa activa NE-SW, frontera ESO/Banggai-Sula en el area de Luwuk",
+        "category": "fault",
+        "fault_type": "thrust",
+        "iugs_symbol": "thrust_open",
+        "slip_rate_mmyr": 2.0,
+        "slip_rate_source": "Tim Pusat Studi Gempa Nasional (2017)",
+        "max_magnitude_mw": 7.3,
+        "max_length_km": 84,
+        "strike": "NE-SW",
+        "dip_direction": "NW",
+        "fault_plane_attitude": "N256E/58NW",
+        "net_slip_deg": 53,
+        "pitch_deg": 71,
+        "kinematics": "Left Thrust Slip Fault",
+        "segmented_by": "wrench_faults",
+        "tectonic_context": "Boundary between East Sulawesi Ophiolite and Banggai-Sula Microcontinent",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza digitalizada de Fig. 6 y 7. Coordenadas aproximadas de la zona de Luwuk/Pagimana segun Fig. 1 y mapa geologico regional.",
+        "source_apa": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Batui Thrust confirmada como falla activa por morfometria (7 indices en 8 sub-cuencas) y datos de campo. Plano: N256E/58NW, cinematica Left Thrust Slip. Segmentada por fallas wrench. Desplazamiento observado en Rio Boimbin: throw 12m, heave 3m separando arenisca Poh Fm y serpentinita ofiolita."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.58, -0.75],
+          [122.63, -0.88],
+          [122.65, -1.00],
+          [122.62, -1.12]
+        ]
+      },
+      "properties": {
+        "id": "fault_hikmy_2025_02",
+        "name": "Pasini Thrust — activa NE-SW",
+        "full_name": "Pasini Thrust — falla inversa activa NE-SW, 2.7 km al SE del Batui Thrust",
+        "category": "fault",
+        "fault_type": "thrust",
+        "iugs_symbol": "thrust_open",
+        "strike": "NE-SW / NNE-SSW",
+        "vertical_throw_m": "10-25",
+        "length_visible_m": 300,
+        "spacing_from_batui_km": 2.7,
+        "coord_quality": "approximate",
+        "extraction_notes": "Posicion aproximada a 2.7 km al SE del Batui Thrust segun descripcion en texto. Coordenadas estimadas de Fig. 7.",
+        "source_apa": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Pasini Thrust a 2.7 km SE del Batui Thrust. Throw vertical 10-25 m, visible hasta 300 m. Crestas disectadas con orientacion NNE-SSW. Morfometria (Vf, Smf, SL) confirma actividad reciente. Influencia el sub-watershed Pakowa."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.38, -0.78],
+          [122.42, -0.88],
+          [122.45, -1.00],
+          [122.43, -1.12]
+        ]
+      },
+      "properties": {
+        "id": "fault_hikmy_2025_03",
+        "name": "Lobu-Balolang Fault Zone — NW-SE",
+        "full_name": "Zona de Falla Lobu-Balolang — falla normal NW-SE, activa en rocas ultramaticas",
+        "category": "fault",
+        "fault_type": "normal",
+        "iugs_symbol": "normal",
+        "strike": "NW-SE",
+        "lithology": "serpentinite, gabbro (ultramafic complex)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Zona de falla dentro del watershed Balolang. Coordenadas estimadas de Fig. 2 y 7.",
+        "source_apa": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Zona de Falla Lobu-Balolang con orientacion NW-SE dentro de rocas ultramaticas. Morfometria clasifica watershed Balolang como Moderate Active Tectonics. Sinuosidad del rio Balolang creada por fallas a lo largo del cauce."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[122.35, -0.55], [122.70, -0.55], [122.70, -1.35], [122.35, -1.35], [122.35, -0.55]]]
+      },
+      "properties": {
+        "id": "structure_hikmy_2025_batui_belt",
+        "name": "Batui Thrust Belt — cinturon de cabalgamientos",
+        "full_name": "Batui Thrust Belt — cinturon de fallas inversas paralelas entre ESO y Banggai-Sula, Late Pliocene",
+        "category": "structure",
+        "structure_type": "thrust_belt",
+        "age": "Late Pliocene",
+        "propagation": "From ultramafic rocks (ESO) toward sedimentary rocks (Banggai-Sula) within suture zone",
+        "coord_quality": "approximate",
+        "extraction_notes": "Poligono aproximado del area de estudio cubriendo el cinturon de fallas segun Fig. 7 y seccion sismica Fig. 9.",
+        "source_apa": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Batui Thrust Belt: serie de fallas inversas paralelas al Batui Thrust propagandose desde rocas ultramaticas del ESO hacia rocas sedimentarias del Banggai-Sula en la zona de sutura. Seccion sismica 2D confirma el cinturon offshore costa sur del Brazo Este."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.52, -0.85]
+      },
+      "properties": {
+        "id": "geo_hikmy_2025_uplift_salodik",
+        "name": "Tasa de uplift — Formacion Salodik (0.408 mm/año)",
+        "full_name": "Tasa de levantamiento tectonico del Brazo Este — Formacion Salodik a 1469 m.s.n.m. → 0.408 mm/año",
+        "category": "geophysical_point",
+        "uplift_rate_mmyr": 0.408,
+        "uplift_rate_uncertainty_mmyr": 0.008,
+        "method": "Elevation of youngest Salodik Formation / assumed age",
+        "marker_formation": "Salodik Formation (reef limestone)",
+        "marker_elevation_m": 1469,
+        "marker_age_ma": 3.6,
+        "marker_depositional_env": "Shallow marine, 0-30 m below sea level",
+        "direction_increasing": "West (toward Pompangeo Schist Complex)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Punto representativo del area de estudio. La tasa se calcula como 1469m / 3.6 Ma = 0.408 mm/año.",
+        "source_apa": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Formacion Salodik (caliza arrecifal, ambiente marino somero 0-30 m bajo NM) encontrada a 1469 m.s.n.m. en Pagimana. Asumiendo edad Late Pliocene (~3.6 Ma), tasa de uplift = 0.408 ± 0.008 mm/año. Tasa aumenta hacia el oeste antes del Complejo de Schist de Pompangeo."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.10, -0.72]
+      },
+      "properties": {
+        "id": "geo_hikmy_2025_uplift_molasse",
+        "name": "Tasa de uplift — Molasa Celebes (0.213 mm/año)",
+        "full_name": "Tasa de levantamiento tectonico — Molasa de Celebes (Fm. Kintom) a 512 m.s.n.m. → 0.213 mm/año",
+        "category": "geophysical_point",
+        "uplift_rate_mmyr": 0.213,
+        "uplift_rate_uncertainty_mmyr": 0.046,
+        "method": "Elevation of Celebes Molasse (Kintom Formation) / assumed age",
+        "marker_formation": "Kintom Formation (Celebes Molasse)",
+        "marker_elevation_m": 512,
+        "marker_age_ma": 2.4,
+        "marker_lithology": "Polymict cobble conglomerate with pegmatite fragments",
+        "marker_depositional_env": "Marine, outer sublittoral to upper bathyal (20-250 m below sea level)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Ubicacion aproximada cerca del Poh Head, extremo E del Brazo Este, segun descripcion en texto.",
+        "source_apa": "Hikmy, I. G., Rudyawan, A., Putri, B. S., Sapiie, B., & Gunawan, I. (2025). The uplift rate of Sulawesi East Arm and the activity of Batui Fault using a tectonic geomorphology approach in the Luwuk Area, Sulawesi. Jurnal Geologi dan Sumberdaya Mineral, 26(1), 1-15. https://doi.org/10.33332/jgsm.geologi.v26i1.663",
+        "source_short": "Hikmy et al. (2025)",
+        "paper_finding": "Molasa de Celebes (conglomerado polimictico con fragmentos de pegmatita, Fm. Kintom) encontrada a 512 m.s.n.m. cerca del Poh Head. Depositada en ambiente marino batial superior (~2.4 Ma). Tasa de uplift = 0.213 ± 0.046 mm/año. Tasa regional llega a 2000 m.s.n.m. en el oeste (Fm. Bongka)."
+      }
+    }
+  ]
+}

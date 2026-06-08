@@ -1,0 +1,224 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Faturrakhman, M. L., Sanjaya, I., Jamal, J., Saputro, D. H., & Setiawan, R. (2025). Tectonic geomorphology analysis in natural hydrogen exploration: A case study from Tanjung Api, Sulawesi. Riset Geologi dan Pertambangan, 35(1), 37–48. https://doi.org/10.55981/risetgeotam.2025.1357",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "LOCAL",
+    "region": "Tanjung Api — Ampana — Central Sulawesi (Tomini Bay coast, East Arm)",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["geophysical_point", "fault", "structure"],
+    "comprehension_summary": "Tectonic geomorphology (IRTA = Mountain Front Sinuosity + Basin Shape Index + Drainage Density) applied to Tanjung Api/Ampana area to support natural hydrogen exploration. IRTA class 1–2 (high–very high tectonic activity) concentrated around Ampana and Toili faults. Two H2 seep localities identified: Tanjung Api coast (>1000 ppm, 1000–1400 m³/day) and Pulodalagan hot spring (144–197 ppm). H2 generation via serpentinization of ESO ultramafics, with active faults as water infiltration conduits.",
+    "main_conclusions": [
+      "Tanjung Api coast H2 seep: flow rate 1000–1400 m³/day, H2 > 1000 ppm — among highest natural H2 flow rates reported globally",
+      "Pulodalagan hot spring H2: 144–197 ppm from travertine crack, co-located with Class 1–2 tectonic activity",
+      "Both H2 seeps spatially coincide with high–very high tectonic activity zones (IRTA Class 1–2) and are located along the Ampana and Toili active faults",
+      "Active faults act as dual conduit: water infiltration pathway into ultramafics (triggers serpentinization) + fluid migration pathway to surface",
+      "Research area composed mainly of Bongka Formation (early–late Pliocene, ophiolite-rich conglomerate) and ultramafics — both susceptible to serpentinization",
+      "Tectonic geomorphology validated as exploration tool for subsurface natural hydrogen targets"
+    ],
+    "total_features": 5,
+    "figures_used": ["Fig. 1 (research location)", "Fig. 2 (geological map + seep locations)", "Fig. 6 (IRTA classification map)"],
+    "bibliography": {
+      "faturrakhman_2025_tanjung_api": {
+        "apa": "Faturrakhman, M. L., Sanjaya, I., Jamal, J., Saputro, D. H., & Setiawan, R. (2025). Tectonic geomorphology analysis in natural hydrogen exploration: A case study from Tanjung Api, Sulawesi. Riset Geologi dan Pertambangan, 35(1), 37–48. https://doi.org/10.55981/risetgeotam.2025.1357",
+        "short": "Faturrakhman et al. (2025)",
+        "journal": "Riset Geologi dan Pertambangan",
+        "year": 2025,
+        "doi": "10.55981/risetgeotam.2025.1357",
+        "paper_scale": "LOCAL",
+        "topic": "Tectonic geomorphology, natural hydrogen exploration, Tanjung Api",
+        "region": "Tanjung Api, Ampana, Central Sulawesi",
+        "categories_extracted": ["geophysical_point", "fault", "structure"],
+        "geojson_file": "faturrakhman_2025_tanjung_api.geojson"
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.745, -0.557]
+      },
+      "properties": {
+        "id": "geophysical_point_faturrakhman2025_1",
+        "name": "H2 seep Tanjung Api — >1000 ppm",
+        "full_name": "Natural hydrogen seep — Tanjung Api coast, Central Sulawesi (Faturrakhman et al. 2025)",
+        "category": "geophysical_point",
+        "layer_type": "structure",
+        "source": "faturrakhman_2025_tanjung_api",
+        "depth_class": "superficial",
+        "point_type": "H2_seep",
+        "h2_ppm": ">1000",
+        "flow_rate_m3day": "1000-1400",
+        "host_rock": "ESO ultramafics + terrace deposits (jointed Quaternary limestone)",
+        "genesis": "serpentinization",
+        "associated_fault": "Ampana Fault",
+        "irta_class": "1-2",
+        "source_apa": "Faturrakhman et al. (2025). Riset Geologi dan Pertambangan, 35(1), 37–48. doi:10.55981/risetgeotam.2025.1357",
+        "source_short": "Faturrakhman et al. (2025)",
+        "paper_finding": "H2 >1000 ppm, flow rate 1000–1400 m³/day. Gas bubbles emerging from underwater seeps and from soil along jointed terrace deposits. Located in IRTA Class 1–2 zone along Ampana and Toili faults.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Tanjung Api cape, Central Sulawesi. Coordinates estimated from geographic position of Tanjung Api promontory (Tomini Bay coast, ~8 km N of Ampana town) and Fig. 1/Fig. 2 in paper. ±3 km precision.",
+        "conclusions": [
+          {
+            "text": "Tanjung Api H2 seep: >1000 ppm H2, flow rate 1000–1400 m³/day — one of the highest natural H2 flow rates documented. Located at Class 1–2 tectonic activity zone along active Ampana/Toili faults.",
+            "type": "other",
+            "geodyn_implication": "La serpentinización activa del ESO en Tanjung Api está controlada por fallas activas que facilitan la infiltración de agua — el H2 natural es marcador de actividad sísmica y de circulación de fluidos en la zona de colisión ESO/Banggai-Sula",
+            "confidence": "high",
+            "figure_ref": "Fig. 6, Fig. 7c, Discussion p.9-10"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.775, -0.585]
+      },
+      "properties": {
+        "id": "geophysical_point_faturrakhman2025_2",
+        "name": "H2 seep Pulodalagan — termal spring 144-197 ppm",
+        "full_name": "Natural hydrogen seep — Pulodalagan hot spring, near Tanjung Api (Faturrakhman et al. 2025)",
+        "category": "geophysical_point",
+        "layer_type": "structure",
+        "source": "faturrakhman_2025_tanjung_api",
+        "depth_class": "superficial",
+        "point_type": "H2_seep_thermal",
+        "h2_ppm": "144-197",
+        "host_rock": "travertine deposits",
+        "genesis": "serpentinization",
+        "associated_fault": "Ampana Fault",
+        "irta_class": "1-2",
+        "source_apa": "Faturrakhman et al. (2025). Riset Geologi dan Pertambangan, 35(1), 37–48. doi:10.55981/risetgeotam.2025.1357",
+        "source_short": "Faturrakhman et al. (2025)",
+        "paper_finding": "H2 = 144–197 ppm from crack in travertine deposits. Hot spring with periodic gas bubbling. Located in IRTA Class 1–2 zone along Ampana fault.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Pulodalagan is described as near Tanjung Api coast. Coordinates estimated ~2–3 km SE of Tanjung Api seep based on Fig. 2 relative position. ±5 km precision — exact location not given in text.",
+        "conclusions": [
+          {
+            "text": "Pulodalagan hot spring H2: 144–197 ppm from travertine crack; periodic gas bubbling. Co-located with Class 1–2 tectonic activity, confirming spatial correlation between active faulting and H2 seepage.",
+            "type": "other",
+            "geodyn_implication": "Las termas con H2 en Pulodalagan indican circulación profunda de fluidos hidrotermales a través de fracturas en la zona de falla — consistente con el modelo de serpentinización controlada por fallas activas del ESO",
+            "confidence": "high",
+            "figure_ref": "Fig. 7d, p.9"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.600, -0.420],
+          [123.000, -0.420],
+          [123.000, -0.950],
+          [122.600, -0.950],
+          [122.600, -0.420]
+        ]]
+      },
+      "properties": {
+        "id": "structure_faturrakhman2025_3",
+        "name": "Área estudio Tanjung Api — geomorfología tectónica",
+        "full_name": "Research area — Tanjung Api / Ampana tectonic geomorphology study (Faturrakhman et al. 2025)",
+        "category": "structure",
+        "layer_type": "structure",
+        "source": "faturrakhman_2025_tanjung_api",
+        "depth_class": "superficial",
+        "irta_dominant": "Class 2-3 (moderate-high)",
+        "irta_high_zones": "Class 1-2 along Ampana and Toili faults",
+        "n_mountain_fronts": 30,
+        "n_sub_basins": 52,
+        "source_apa": "Faturrakhman et al. (2025). Riset Geologi dan Pertambangan, 35(1), 37–48. doi:10.55981/risetgeotam.2025.1357",
+        "source_short": "Faturrakhman et al. (2025)",
+        "paper_finding": "30 mountain fronts + 52 sub-basins analyzed. IRTA Class 1–2 (very high–high tectonic activity) dominates the western and eastern parts; Class 2–3 scattered throughout. Area composed of ESO ultramafics and Pliocene Bongka Formation (ophiolite-rich conglomerate).",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono estimado del área de estudio a partir de Fig. 1 (mapa de localización) y descripción textual. ±5 km de precisión en los bordes.",
+        "conclusions": [
+          {
+            "text": "IRTA dominantly Class 2–3 with Class 1–2 concentrated along Ampana and Toili faults — high tectonic activity corroborates active faulting control on H2 seepage",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La zona de Tanjung Api/Ampana es una región de actividad tectónica alta sostenida, resultado de la colisión ESO/Banggai-Sula activa y de las fallas sinistral-NW-SE que la acomodan",
+            "confidence": "high",
+            "figure_ref": "Fig. 6"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.600, -0.700],
+          [122.750, -0.620],
+          [122.900, -0.540],
+          [123.050, -0.480]
+        ]
+      },
+      "properties": {
+        "id": "fault_faturrakhman2025_4",
+        "name": "Ampana Fault — NW-SE strike-slip",
+        "full_name": "Ampana Fault — NW-SE active fault, Tanjung Api area (sensu Rusmana et al. 1993, documented by Faturrakhman et al. 2025)",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "faturrakhman_2025_tanjung_api",
+        "depth_class": "superficial",
+        "kinematics": "unknown",
+        "source_apa": "Faturrakhman et al. (2025). Riset Geologi dan Pertambangan, 35(1), 37–48. doi:10.55981/risetgeotam.2025.1357",
+        "source_short": "Faturrakhman et al. (2025)",
+        "paper_finding": "Ampana Fault identified as key structural control on H2 seepage in Tanjung Api. Located in IRTA Class 1–2 zone. Triangular facets and linear valleys observed along fault trace (field observation).",
+        "coord_quality": "inferred",
+        "extraction_notes": "Traza inferred a partir de Fig. 2 y posición geográfica de Ampana. La traza exacta proviene del mapa geológico Rusmana et al. (1993), no digitalizada directamente en este paper. Tendencia NW-SE aproximada inferida de contexto textual y geología regional. ±10 km precisión.",
+        "conclusions": [
+          {
+            "text": "Ampana Fault acts as conduit for water infiltration into ESO ultramafics, triggering serpentinization and H2 generation — confirmed by co-location of H2 seeps with Class 1–2 tectonic activity",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La Falla Ampana es un conducto activo para fluidos en la zona ESO — su actividad sísmica y la infiltración de agua controlada por la falla son el mecanismo directo de generación de H2 natural en Tanjung Api",
+            "confidence": "medium",
+            "figure_ref": "Fig. 2, Fig. 6, Discussion p.10"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.300, -0.950],
+          [122.500, -0.800],
+          [122.700, -0.700],
+          [122.850, -0.640]
+        ]
+      },
+      "properties": {
+        "id": "fault_faturrakhman2025_5",
+        "name": "Toili Fault — NW-SE active fault",
+        "full_name": "Toili Fault — NW-SE active fault, southern Tanjung Api area (sensu Rusmana et al. 1993, documented by Faturrakhman et al. 2025)",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "faturrakhman_2025_tanjung_api",
+        "depth_class": "superficial",
+        "kinematics": "unknown",
+        "source_apa": "Faturrakhman et al. (2025). Riset Geologi dan Pertambangan, 35(1), 37–48. doi:10.55981/risetgeotam.2025.1357",
+        "source_short": "Faturrakhman et al. (2025)",
+        "paper_finding": "Toili Fault co-located with H2 seepage zones and IRTA Class 1–2 activity in the study area. Active fault morphology confirmed by field observation (triangular facets, linear valleys).",
+        "coord_quality": "inferred",
+        "extraction_notes": "Traza inferred a partir de Fig. 2 y posición de Toili town (~122.45°E, -1.18°S). Tendencia NW-SE aproximada inferida del contexto. La traza exacta proviene del mapa de Rusmana et al. (1993). ±15 km precisión — baja confianza geométrica.",
+        "conclusions": [
+          {
+            "text": "Toili Fault is co-located with high tectonic activity (IRTA Class 1–2) and H2 seepage, confirming active fault role in hydrogen generation via serpentinization conduit",
+            "type": "tectonic_setting",
+            "geodyn_implication": "El sistema Ampana-Toili de fallas NW-SE controla la generación y migración de H2 en la zona de Tanjung Api — estructuralmente vinculadas a la colisión activa ESO/Banggai-Sula",
+            "confidence": "low",
+            "figure_ref": "Fig. 2, Fig. 6"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "lukman_2016_matano",
+    "source": "Lukman et al. (2016)",
+    "title": "Understanding Matano Fault, Southeast Arm of Sulawesi, Indonesia",
+    "journal": "Proceedings GEOSEA XIV Congress & 45th IAGI Annual Convention",
+    "location": "Bandung, October 10-13, 2016",
+    "year": 2016,
+    "authors": ["Lukman, M.N.", "Lamaliwa, K.A.", "Husein, S.", "Setianto, A.", "Samodra, S.B.", "Surjono, S.S."],
+    "study_area": "Northern Southeast Arm of Sulawesi; Matano Fault zone and Lake Matano pull-apart basin",
+    "method": "DEM analysis (IFSAR-derived), geological map interpretation (Simandjuntak et al. 1993; Effendi & Bawono 1997), tectonic stress inversion from 9 earthquake focal mechanisms (Win-Tensor 5.0.7)",
+    "conclusions": [
+      "Matano Fault is a left-stepping, left-lateral strike-slip fault with ESE-WNW orientation, connecting Palu-Koro Fault (west) to Sorong Fault (east)",
+      "The left-stepping geometry creates a transtension zone forming Matano Lake as a pull-apart basin",
+      "Minimum displacement: ~60 km left-lateral, inferred from offset of Tokala Formation on the eastern coast of the Southeast Arm",
+      "Tectonic stress inversion of 9 focal mechanisms (M>4.5 since 1970) gives maximum compressive stress at N38°E/30° (NE-SW sigma1)",
+      "Fault activated/reactivated after Early Miocene collision event; located within the Sulawesi Ophiolite Belt"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.5, -2.5],
+          [120.9, -2.47],
+          [121.25, -2.47],
+          [121.6, -2.48],
+          [122.0, -2.5]
+        ]
+      },
+      "properties": {
+        "id": "lukman_2016_matano_fault",
+        "category": "fault",
+        "name": "Matano Fault",
+        "canonical_name": "Matano",
+        "fault_type": "strike_slip",
+        "kinematics": "left_lateral",
+        "geometry_style": "left_stepping_segmented",
+        "orientation": "ESE-WNW",
+        "displacement_km": 60,
+        "displacement_marker": "Tokala Formation offset on eastern SE Arm coast",
+        "age_activity": "Early Miocene reactivation, seismically active to present",
+        "pull_apart_basin": "Matano Lake",
+        "sigma1_azimuth_deg": 38,
+        "sigma1_plunge_deg": 30,
+        "sigma1_description": "N38°E/30° from focal mechanism stress inversion (9 events M>4.5, 1970-2016)",
+        "context": "Located within Sulawesi Ophiolite Belt; connects PKF (west) to Sorong Fault (east); parallel to Lawanopo and Kolaka faults",
+        "source_figure": "Figures 1-3",
+        "source_short": "Lukman et al. 2016",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["matano_w", "matano_e"]
+      }
+    }
+  ]
+}

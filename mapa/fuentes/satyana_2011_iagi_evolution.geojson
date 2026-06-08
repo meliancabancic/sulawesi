@@ -1,0 +1,232 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Satyana, A. H., Faulin, T., & Mulyati, S. N. (2011). Tectonic evolution of Sulawesi area: implications for proven and prospective petroleum plays. Proceedings of JCM Makassar 2011 — 36th HAGI & 40th IAGI Annual Convention, Makassar, 26–29 September 2011.",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "SYNTHESIS",
+    "region": "Sulawesi + surrounding region — full tectonic evolution",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["terrane", "basin", "volcanic_complex", "structure"],
+    "comprehension_summary": "Full tectonic synthesis of Sulawesi from Oligocene to present. Sulawesi = collision between drifted Sundaland fragment (W) and Indian-Australian microcontinent fragments (E). Four arms = four megatectonic provinces. N arm = Paleogene-Neogene volcanic arc (subduction NST). E+SE arms = Mesozoic metamorphic+ophiolitic rocks from Oligocene obduction. S arm = Miocene volcanic/plutonic belt. Middle Miocene extension → Gorontalo Bay + Bone Gulf formation + core complex metamorphism in N Sulawesi. Late Miocene-Pliocene: Banggai-Sula + Buton-Tukang Besi collisions finalize 'K-shape'. Petroleum implications documented for all basins.",
+    "main_conclusions": [
+      "Sulawesi formed by collision of drifted Sundaland fragments (W) with Indian-Australian microcontinents (E) during Oligocene-early Pliocene",
+      "Four megatectonic provinces corresponding to four arms: N arm (volcanic arc) + E+SE arms (metamorphic/ophiolitic) + S arm (magmatic belt)",
+      "Middle Miocene extension post-collision: formation of Gorontalo Bay (between N-E arms) and Bone Gulf (between S-SE arms) as deep pull-apart basins",
+      "Miocene core complex metamorphism in N Sulawesi during extensional phase",
+      "Banggai-Sula and Buton-Tukang Besi collisions: Late Miocene-early Pliocene, finalizing present K-shape",
+      "Extensional magmatism in S Sulawesi during Middle Miocene extension phase"
+    ],
+    "total_features": 5,
+    "figures_used": ["Regional tectonic maps (Figs 1-16)", "Fig. 15 (Buton-TK collision sections)", "Fig. 16 (Banggai-Sula collision sections)"]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [120.500, 0.500],
+          [125.500, 0.500],
+          [126.000, -0.500],
+          [124.000, -0.500],
+          [122.000, -1.000],
+          [120.500, -0.500],
+          [120.500, 0.500]
+        ]]
+      },
+      "properties": {
+        "id": "volcanic_arc_satyana_iagi_1",
+        "name": "North Arm Volcanic Arc — Paleógeno-Neógeno",
+        "full_name": "North Arm Volcanic Arc — Late Paleogene to Neogene subduction-related arc, associated with North Sulawesi Trench subduction",
+        "category": "volcanic_complex",
+        "layer_type": "structure",
+        "source": "satyana_2011_iagi_evolution",
+        "canonical_id": "canon_nsarc",
+        "arc_type": "continental",
+        "age_range": "Late Paleogene to Neogene (active)",
+        "driving_subduction": "North Sulawesi Trench (Celebes Sea subduction ~8-9 Ma)",
+        "depth_class": "superficial",
+        "source_apa": "Satyana et al. (2011). JCM Makassar 2011, HAGI-IAGI.",
+        "source_short": "Satyana et al. (2011)",
+        "paper_finding": "North arm composed of late Paleogene to Neogene subduction-related volcanic arc, forming one of four megatectonic provinces of Sulawesi",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono del arco volcánico del brazo norte. Coincide con canon_nsarc existente; este feature aporta contexto temporal y de origen.",
+        "conclusions": [
+          {
+            "text": "North arm = subduction-related volcanic arc active since Late Paleogene; one of four megatectonic provinces defining Sulawesi K-shape",
+            "type": "genesis",
+            "geodyn_implication": "El arco del brazo norte documenta el inicio de la subducción de la NST — vincula la formación del brazo norte con la geodinámica regional (inicio NST ~8-9 Ma según Greenfield 2021)",
+            "confidence": "high",
+            "figure_ref": "Text pp.1-2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [120.000, -0.500],
+          [122.000, -0.500],
+          [122.000, -3.000],
+          [120.500, -4.000],
+          [119.500, -3.000],
+          [119.500, -1.500],
+          [120.000, -0.500]
+        ]]
+      },
+      "properties": {
+        "id": "volcanic_arc_satyana_iagi_2",
+        "name": "South Arm Magmatic Belt — Mioceno",
+        "full_name": "South Arm Magmatic Belt — Miocene volcanic and plutonic rocks superimposed on older basement",
+        "category": "volcanic_complex",
+        "layer_type": "structure",
+        "source": "satyana_2011_iagi_evolution",
+        "canonical_id": "canon_wsip",
+        "arc_type": "continental",
+        "age_range": "Miocene (extensional magmatism)",
+        "depth_class": "superficial",
+        "source_apa": "Satyana et al. (2011). JCM Makassar 2011, HAGI-IAGI.",
+        "source_short": "Satyana et al. (2011)",
+        "paper_finding": "South arm dominated by Miocene and younger volcanic and plutonic rocks forming a magmatic belt superimposed on older basement; related to Middle Miocene extensional phase",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono aproximado del brazo sur. Coincide aproximadamente con WSIP existente como province volcánica.",
+        "conclusions": [
+          {
+            "text": "South arm magmatic belt is Middle Miocene extensional magmatism — formed during post-collision extension that also opened Gorontalo Bay and Bone Gulf",
+            "type": "genesis",
+            "geodyn_implication": "La extensión del Mioceno Medio en Sulawesi es un evento post-colisional que afecta simultáneamente el brazo sur (magmatismo) y las cuencas inter-brazo (Gorontalo, Bone) — sugiere colapso gravitacional post-orogénico",
+            "confidence": "medium",
+            "figure_ref": "Text p.2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.500, -0.200],
+          [123.000, -0.200],
+          [123.500, -1.000],
+          [122.500, -1.500],
+          [121.000, -1.000],
+          [121.500, -0.200]
+        ]]
+      },
+      "properties": {
+        "id": "basin_satyana_iagi_3",
+        "name": "Gorontalo Bay — pull-apart extensional Mioceno Medio",
+        "full_name": "Gorontalo Bay (Gulf of Tomini) — deep pull-apart basin, Middle Miocene extensional phase between N and E arms",
+        "category": "basin",
+        "layer_type": "structure",
+        "source": "satyana_2011_iagi_evolution",
+        "canonical_id": "canon_basin_gorontalo",
+        "basin_type": "pull_apart",
+        "age_onset_ma": "~15 (Middle Miocene)",
+        "depth_class": "cortical",
+        "context": "Formed during post-collision Middle Miocene extension between N arm (volcanic arc) and E arm (ophiolitic/metamorphic). Sister basin to Bone Gulf.",
+        "source_apa": "Satyana et al. (2011). JCM Makassar 2011, HAGI-IAGI.",
+        "source_short": "Satyana et al. (2011)",
+        "paper_finding": "Gorontalo Bay formed during Middle Miocene extension as deep basin between N and E arms; extension accompanied by core complex metamorphism in N Sulawesi",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono del Golfo de Tomini (Gorontalo Bay). Coincide con canon_basin_gorontalo existente.",
+        "conclusions": [
+          {
+            "text": "Gorontalo Bay formed during Middle Miocene post-collision extension as deep pull-apart basin between N and E arms; contemporaneous with core complex metamorphism in N Sulawesi",
+            "type": "genesis",
+            "geodyn_implication": "La extensión del Mioceno Medio en Sulawesi es un evento de escala litosférica que explica tanto las cuencas inter-brazo como el metamorfismo de core complex en el brazo norte",
+            "confidence": "high",
+            "figure_ref": "Text p.2-3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [120.000, -3.500],
+          [122.000, -3.500],
+          [122.500, -5.000],
+          [121.000, -5.500],
+          [119.500, -4.500],
+          [120.000, -3.500]
+        ]]
+      },
+      "properties": {
+        "id": "basin_satyana_iagi_4",
+        "name": "Bone Gulf — pull-apart extensional Mioceno Medio",
+        "full_name": "Bone Gulf (Gulf of Bone) — deep pull-apart basin, Middle Miocene extensional phase between S and SE arms",
+        "category": "basin",
+        "layer_type": "structure",
+        "source": "satyana_2011_iagi_evolution",
+        "canonical_id": "canon_basin_bone",
+        "basin_type": "pull_apart",
+        "age_onset_ma": "~15 (Middle Miocene)",
+        "depth_class": "cortical",
+        "context": "Sister basin to Gorontalo Bay; formed between S arm (magmatic belt) and SE arm (metamorphic/ophiolitic). Part of same Middle Miocene extensional event.",
+        "source_apa": "Satyana et al. (2011). JCM Makassar 2011, HAGI-IAGI.",
+        "source_short": "Satyana et al. (2011)",
+        "paper_finding": "Bone Gulf formed during Middle Miocene extension as deep basin between S and SE arms; part of same extensional event as Gorontalo Bay",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono del Golfo de Bone. Coincide con canon_basin_bone existente.",
+        "conclusions": [
+          {
+            "text": "Bone Gulf and Gorontalo Bay are coeval Middle Miocene pull-apart basins formed by post-collision extension on opposite sides of Sulawesi",
+            "type": "genesis",
+            "geodyn_implication": "La geometría simétrica de las cuencas (Gorontalo al N-NE, Bone al S) sugiere un mecanismo de extensión radial o colapso gravitacional centrado en el núcleo de Sulawesi durante el Mioceno Medio",
+            "confidence": "medium",
+            "figure_ref": "Text pp.2-3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.500, 0.500],
+          [121.000, 0.500],
+          [121.500, -0.500],
+          [120.500, -1.500],
+          [119.000, -1.000],
+          [119.000, 0.000],
+          [119.500, 0.500]
+        ]]
+      },
+      "properties": {
+        "id": "metamorphic_satyana_iagi_5",
+        "name": "PMC — core complex metamorfismo Mioceno N Sulawesi",
+        "full_name": "Palu Metamorphic Complex (PMC) — Miocene core complex, N Sulawesi extensional phase",
+        "category": "metamorphic_complex",
+        "layer_type": "structure",
+        "source": "satyana_2011_iagi_evolution",
+        "canonical_id": "canon_pmc",
+        "complex_type": "core_complex",
+        "age": "Miocene (Middle Miocene extensional phase)",
+        "depth_class": "superficial",
+        "context": "Core complex metamorphism in N Sulawesi contemporaneous with Gorontalo Bay + Bone Gulf extension",
+        "source_apa": "Satyana et al. (2011). JCM Makassar 2011, HAGI-IAGI.",
+        "source_short": "Satyana et al. (2011)",
+        "paper_finding": "Miocene core complex metamorphism in N Sulawesi during post-collision extensional phase; contemporaneous with Gorontalo Bay and Bone Gulf formation",
+        "coord_quality": "approximate",
+        "extraction_notes": "El 'core complex metamorphism in north Sulawesi' del paper corresponde al PMC (Palu Metamorphic Complex) por posición geográfica. Polígono aproximado en área central-norte de Sulawesi.",
+        "conclusions": [
+          {
+            "text": "Miocene core complex metamorphism in N Sulawesi is coeval with Gorontalo Bay + Bone Gulf extensional basins — all part of Middle Miocene post-collision extension",
+            "type": "genesis",
+            "geodyn_implication": "El PMC como core complex extensional del Mioceno Medio vincula la historia metamórfica con la apertura de las cuencas inter-brazo — extensión en profundidad (PMC) y en superficie (cuencas pull-apart) son simultáneas",
+            "confidence": "medium",
+            "figure_ref": "Text p.2"
+          }
+        ]
+      }
+    }
+  ]
+}

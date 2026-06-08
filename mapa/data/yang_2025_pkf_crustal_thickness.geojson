@@ -1,0 +1,268 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "yang_2025_pkf_crustal_thickness",
+    "source": "Yang et al. (2025)",
+    "title": "Offshore Crustal Thickness Variation along the Palu-Koro Strike-Slip Fault in the Sulawesi region from OBS Receiver Function Analysis",
+    "journal": "EGUSphere (preprint)",
+    "doi": "10.5194/egusphere-2025-3105",
+    "year_published": 2025,
+    "status": "preprint_under_review",
+    "discussion_started": "2025-07-08",
+    "authors": ["Yang, T.", "Lu, C.", "Hao, T.", "Rawlinson, N.", "Xu, T.", "Widiyantoro, S.", "Alfian, A.", "Rafie, M.T.", "Sahara, D.P."],
+    "study_area": "Celebes Sea and Makassar Strait, straddling the Palu-Koro Fault zone",
+    "method": "OBS H-κ stacking (receiver functions from teleseismic P waves) + neighbourhood algorithm waveform inversion; 9 OBSs + 1 land station (TOLI2); deployed Aug 2019 – Aug 2020",
+    "conclusions": [
+      "Celebes Sea: thin oceanic crust ~8-12 km beneath OBSs; Moho depth ~12-17 km (including water column)",
+      "Makassar Strait: transitional/continental crust ~24-26 km (M01G–M03F stations), suggesting modified continental crust rather than purely oceanic",
+      "North Sulawesi (TOLI2): thickest crust ~30 km, consistent with ancient island arc terrane",
+      "PKF zone (C28F, 0.871°N, 119.766°E): 25.1 km Moho depth — pronounced step between this station and northern Celebes Sea stations confirms Moho offset across the fault",
+      "PKF is a deep, throughgoing lithospheric-scale strike-slip fault in the Celebes Sea, evidenced by: (1) low-velocity zone at C28F; (2) sharp Moho step; (3) relocated 2018 aftershocks aligning with fault trace",
+      "Back-projection of 2018 Mw 7.5 Palu earthquake: rapid NNW rupture propagation, then southward with ~20 s delay — asymmetric rupture behavior confirmed",
+      "Palu-Koro fault accommodates oblique convergence and trench retreat, and is a major lithospheric boundary separating Makassar Block (W) from North Sula Block (E)"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [119.766, 0.871]},
+      "properties": {
+        "id": "yang_2025_obs_C28F",
+        "category": "geophysical_point",
+        "name": "OBS C28F — PKF zone (Palu-Koro Fault offshore)",
+        "station_id": "C28F",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 2400.7,
+        "crustal_thickness_km": 22.70,
+        "crustal_thickness_uncertainty_km": 2.95,
+        "vp_vs": 2.13,
+        "vp_vs_uncertainty": 0.18,
+        "moho_depth_km": 25.10,
+        "tectonic_setting": "Palu-Koro Fault zone offshore extension; transitional crust at the fault boundary",
+        "interpretation": "Relatively thick crust (22.7 km) compared to northern Celebes Sea OBSs. Sharp Moho step between this station (25.1 km) and C08F (17.3 km) to the north marks the PKF crustal boundary. Low-velocity zone at this site interpreted as fractured or partially serpentinized fault zone material extending to mid-lower crust.",
+        "source_table": "Table 2; Figures 5, 6",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [119.560, 1.597]},
+      "properties": {
+        "id": "yang_2025_obs_C08F",
+        "category": "geophysical_point",
+        "name": "OBS C08F — Southern Celebes Sea",
+        "station_id": "C08F",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 2700.1,
+        "crustal_thickness_km": 14.62,
+        "crustal_thickness_uncertainty_km": 0.91,
+        "vp_vs": 2.23,
+        "vp_vs_uncertainty": 0.13,
+        "moho_depth_km": 17.33,
+        "tectonic_setting": "Southern Celebes Sea, transitional (north of PKF zone)",
+        "source_table": "Table 2",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [119.343, 2.314]},
+      "properties": {
+        "id": "yang_2025_obs_C09G",
+        "category": "geophysical_point",
+        "name": "OBS C09G — Central Celebes Sea (SW)",
+        "station_id": "C09G",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 4711,
+        "crustal_thickness_km": 12.16,
+        "crustal_thickness_uncertainty_km": 0.74,
+        "vp_vs": 2.24,
+        "vp_vs_uncertainty": 0.07,
+        "moho_depth_km": 16.87,
+        "tectonic_setting": "Deep Celebes Sea oceanic crust",
+        "source_table": "Table 2",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [119.631, 2.689]},
+      "properties": {
+        "id": "yang_2025_obs_C12F",
+        "category": "geophysical_point",
+        "name": "OBS C12F — Western Celebes Sea",
+        "station_id": "C12F",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 4800.4,
+        "crustal_thickness_km": 11.60,
+        "crustal_thickness_uncertainty_km": 1.08,
+        "vp_vs": 2.17,
+        "vp_vs_uncertainty": 0.19,
+        "moho_depth_km": 16.40,
+        "tectonic_setting": "Deep Celebes Sea oceanic crust",
+        "source_table": "Table 2",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [120.001, 3.112]},
+      "properties": {
+        "id": "yang_2025_obs_C18F",
+        "category": "geophysical_point",
+        "name": "OBS C18F — Northern Celebes Sea",
+        "station_id": "C18F",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 4425.2,
+        "crustal_thickness_km": 10.75,
+        "crustal_thickness_uncertainty_km": 0.84,
+        "vp_vs": 2.20,
+        "vp_vs_uncertainty": 0.16,
+        "moho_depth_km": 15.18,
+        "tectonic_setting": "Northern Celebes Sea oceanic crust",
+        "source_table": "Table 2",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [121.461, 2.862]},
+      "properties": {
+        "id": "yang_2025_obs_C21F",
+        "category": "geophysical_point",
+        "name": "OBS C21F — Eastern Celebes Sea (thinnest crust)",
+        "station_id": "C21F",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 4500.4,
+        "crustal_thickness_km": 7.83,
+        "crustal_thickness_uncertainty_km": 0.53,
+        "vp_vs": 1.82,
+        "vp_vs_uncertainty": 0.11,
+        "moho_depth_km": 12.33,
+        "tectonic_setting": "Eastern Celebes Sea oceanic crust; thinnest measured — purely oceanic character",
+        "source_table": "Table 2",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [118.443, -1.016]},
+      "properties": {
+        "id": "yang_2025_obs_M01G",
+        "category": "geophysical_point",
+        "name": "OBS M01G — Makassar Strait (continental crust)",
+        "station_id": "M01G",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 2150,
+        "crustal_thickness_km": 23.80,
+        "crustal_thickness_uncertainty_km": 0.80,
+        "vp_vs": 2.10,
+        "vp_vs_uncertainty": 0.07,
+        "moho_depth_km": 25.95,
+        "tectonic_setting": "Makassar Strait; transitional/continental crust on western side of PKF",
+        "source_table": "Table 2",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [118.925, -1.189]},
+      "properties": {
+        "id": "yang_2025_obs_M02F",
+        "category": "geophysical_point",
+        "name": "OBS M02F — Makassar Strait",
+        "station_id": "M02F",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 2050.8,
+        "crustal_thickness_km": 23.97,
+        "crustal_thickness_uncertainty_km": 0.60,
+        "vp_vs": 2.29,
+        "vp_vs_uncertainty": 0.06,
+        "moho_depth_km": 26.02,
+        "tectonic_setting": "Makassar Strait; transitional/continental crust",
+        "source_table": "Table 2",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [119.110, -0.674]},
+      "properties": {
+        "id": "yang_2025_obs_M03F",
+        "category": "geophysical_point",
+        "name": "OBS M03F — Makassar Strait (south PKF)",
+        "station_id": "M03F",
+        "anomaly_type": "crustal_thickness",
+        "water_depth_m": 2150.1,
+        "crustal_thickness_km": 22.65,
+        "crustal_thickness_uncertainty_km": 0.44,
+        "vp_vs": 2.14,
+        "vp_vs_uncertainty": 0.03,
+        "moho_depth_km": 24.80,
+        "tectonic_setting": "Makassar Strait; just south of PKF transition zone. Sharp Moho step to C28F (just to north across PKF) confirms crustal boundary.",
+        "source_table": "Table 2; Figure 4",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [120.794, 1.121]},
+      "properties": {
+        "id": "yang_2025_land_TOLI2",
+        "category": "geophysical_point",
+        "name": "Land Station TOLI2 — North Sulawesi (island arc crust)",
+        "station_id": "TOLI2",
+        "anomaly_type": "crustal_thickness",
+        "elevation_m": 86,
+        "crustal_thickness_km": 30.39,
+        "crustal_thickness_uncertainty_km": 1.37,
+        "vp_vs": 1.86,
+        "vp_vs_uncertainty": 0.055,
+        "moho_depth_km": 30.30,
+        "tectonic_setting": "Northern Sulawesi (island arc); thickest measured crust in study. Low Vp/Vs (1.86) consistent with felsic/arc crust composition.",
+        "interpretation": "~30 km crust reflects ancient island arc terrane of North Arm. Consistent with Greenfield et al. (2021) finding of continental-like lithosphere. Gradual crustal thickening from North Sulawesi Trench landward.",
+        "source_table": "Table 2; Figure 3",
+        "source_short": "Yang et al. 2025",
+        "approx": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.1, -0.65],
+          [119.5, -0.1],
+          [119.77, 0.87],
+          [119.85, 1.4],
+          [119.9, 2.0]
+        ]
+      },
+      "properties": {
+        "id": "yang_2025_pkf_offshore",
+        "category": "fault",
+        "name": "Palu-Koro Fault — Offshore Extension into Celebes Sea",
+        "canonical_name": "PKF",
+        "fault_type": "strike_slip",
+        "kinematics": "left_lateral",
+        "depth_scale": "lithospheric_scale",
+        "evidence": "Low-velocity zone at C28F depth profile; sharp Moho step between Makassar Strait (M02F/M03F, ~25 km) and Celebes Sea stations (C08F, 17.3 km); relocated 2018 Palu aftershocks; back-projection shows NNW rupture propagation offshore",
+        "fault_geometry": "Deep, throughgoing structure; dips gently with depth — supracrustal submarine fault system",
+        "source_figure": "Figures 5, 6",
+        "source_short": "Yang et al. 2025",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["palu_koro"]
+      }
+    }
+  ]
+}

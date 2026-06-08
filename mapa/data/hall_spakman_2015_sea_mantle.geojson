@@ -1,0 +1,222 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "hall_spakman_2015_sea_mantle",
+    "source": "Hall & Spakman (2015)",
+    "title": "Mantle structure and tectonic history of SE Asia",
+    "journal": "Tectonophysics",
+    "volume": "658",
+    "pages": "14-45",
+    "doi": "10.1016/j.tecto.2015.07.003",
+    "year_published": 2015,
+    "authors": ["Hall, R.", "Spakman, W."],
+    "study_area": "SE Asia region — Sunda-Java-Banda, Molucca Sea, North Sulawesi, Philippines, NW Pacific",
+    "method": "UU-P07 global P-wave tomography model; tectonic reconstruction comparisons; earthquake hypocentre analysis",
+    "tomography_model": "UU-P07 (Utrecht University P-wave model 2007)",
+    "conclusions": [
+      "Three-slab interpretation for North Sulawesi: (1) Celebes slab — S-dipping from N Sulawesi Trench since ~5 Ma, reaches ~200-250 km; (2) Sangihe slab — W-dipping from Molucca Sea, ~900-950 km subducted, reaches base of upper mantle; (3) Sula slab — north-dipping third slab, ~400 km total from tomography, currently nearly vertical and mostly aseismic",
+      "Sula slab formed by north-dipping subduction beneath North Arm prior to Early Miocene collision (~24 Ma) with Sula Spur; deeper part broke off and sank to lower mantle (now at 700-950 km between Timor and Sulawesi); ~200 km still attached",
+      "Previous interpretations (Gudmundsson & Sambridge 1998; Walpersdorf et al. 1998) required 90° bend in Sangihe/Celebes slab inconsistent with geological record of extension (not compression) in Late Miocene-Pliocene North Arm-Sula region",
+      "North Sulawesi Trench terminates at PKF offshore extension (W) and near Manado (E); Celebes slab subduction driven by clockwise rotation of North Arm",
+      "Molucca Sea slabs: Sangihe (W-dipping, ~900-950 km) + Halmahera (E-dipping, ~400-450 km) = ~1500-1600 km total, consistent with ~25 Ma start date (not 2200 km as in Hall et al. 1995)",
+      "Sangihe subduction began ~20 Ma; ceased ~10 Ma on Sangihe side; Halmahera side began ~10 Ma; arc-arc collision since ~2 Ma",
+      "Una-Una volcano: product of localized melting from crustal thinning and delamination of Sula Spur as Sula slab becomes vertical",
+      "Tomography rules out major east-directed subduction on east side of Makassar Straits (as previously proposed by some)"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.5, 1.8]
+      },
+      "properties": {
+        "id": "hall_spakman_2015_celebes_slab",
+        "category": "geophysical_point",
+        "name": "Celebes Slab (CSS) — South-dipping from North Sulawesi Trench",
+        "anomaly_type": "high_velocity",
+        "slab_name": "Celebes slab",
+        "slab_abbrev": "CSS",
+        "dip_direction": "south",
+        "dip_approx_deg": 45,
+        "depth_range_km": [0, 250],
+        "max_depth_km": 250,
+        "subduction_onset_Ma": 5,
+        "subduction_onset_note": "Since ~5 Ma based on GPS rates (Socquet et al. 2006) and palaeomagnetic evidence (Surmont et al. 1994)",
+        "subducting_plate": "Celebes Sea lithosphere",
+        "overriding_plate": "North Arm of Sulawesi (North Sula Block)",
+        "trench": "North Sulawesi Trench",
+        "seismicity_note": "Central slab depth just over 200 km; abrupt seismicity termination at E-W line through centre of Gorontalo Bay; almost all events south of this line are shallower than 50 km. Una-Una hypocentres south of the dipping slab (unrelated).",
+        "una_una_note": "Una-Una volcano (erupted 1983) interpreted as product of localised melting from crustal thinning and delamination of Sula Spur as Sula slab becomes vertical",
+        "context": "Subducts Celebes Sea oceanic lithosphere southwards beneath the North Arm (North Sula Block). Trench terminates at Manado (E) and at offshore PKF continuation (W). Driven by clockwise rotation of North Arm. At west end overlaps with PKF-PKF structural boundary.",
+        "source_figure": "Figures 11, 12, 13",
+        "source_short": "Hall & Spakman 2015",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [124.5, 2.5]
+      },
+      "properties": {
+        "id": "hall_spakman_2015_sangihe_slab",
+        "category": "geophysical_point",
+        "name": "Sangihe Slab — West-dipping from Molucca Sea",
+        "anomaly_type": "high_velocity",
+        "slab_name": "Sangihe slab",
+        "slab_abbrev": "SHS",
+        "dip_direction": "west-northwest",
+        "dip_approx_deg": 45,
+        "depth_range_km": [0, 670],
+        "penetrates_lower_mantle": false,
+        "subducted_length_km": 925,
+        "subducted_length_range_km": [900, 950],
+        "subduction_onset_Ma": 20,
+        "subducting_plate": "Molucca Sea plate (west-dipping portion)",
+        "overriding_arc": "Sangihe arc",
+        "arc_collision_start_Ma": 2,
+        "seismicity_note": "Traceable from seismicity to base of upper mantle (~670 km); straight NNE-striking below 400 km depth; clearly imaged beneath Celebes Sea by tomography",
+        "context": "West-dipping slab from Molucca Sea beneath Celebes Sea. Part of the Molucca Sea arc-arc collision system. Subduction on Sangihe side began ~20 Ma, ceased ~10 Ma; Halmahera side began ~10 Ma. Arc-arc collision producing young volcanism from eastern North Sulawesi tip through Sangihe to Mindanao.",
+        "source_figure": "Figures 11, 12, 13",
+        "source_short": "Hall & Spakman 2015",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [128.5, 0.5]
+      },
+      "properties": {
+        "id": "hall_spakman_2015_halmahera_slab",
+        "category": "geophysical_point",
+        "name": "Halmahera Slab — East-dipping from Molucca Sea",
+        "anomaly_type": "high_velocity",
+        "slab_name": "Halmahera slab",
+        "slab_abbrev": "HMS",
+        "dip_direction": "east",
+        "dip_approx_deg": 45,
+        "depth_range_km": [0, 300],
+        "max_depth_km": 300,
+        "subducted_length_km": 425,
+        "subducted_length_range_km": [400, 450],
+        "subduction_onset_Ma": 10,
+        "subducting_plate": "Molucca Sea plate (east-dipping portion)",
+        "overriding_arc": "Halmahera arc",
+        "context": "East-dipping slab from Molucca Sea beneath Halmahera arc. Subduction started ~10 Ma driven by continued Philippine Sea plate motion. Halmahera hinge rolled back rapidly until ~2 Ma when arc-arc collision with Sangihe began. Total Molucca Sea subduction ~1500-1600 km (Sangihe + Halmahera), implying Halmahera arc was at Bird's shoulder of western New Guinea at 25 Ma (not Manus region as in Hall et al. 1995).",
+        "source_figure": "Figures 11, 13",
+        "source_short": "Hall & Spakman 2015",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.2, 0.2]
+      },
+      "properties": {
+        "id": "hall_spakman_2015_sula_slab_upper",
+        "category": "geophysical_point",
+        "name": "Sula Slab (upper mantle portion) — North-dipping beneath Gorontalo Bay",
+        "anomaly_type": "high_velocity",
+        "slab_name": "Sula slab",
+        "slab_abbrev": "SLS",
+        "dip_direction": "north (overturned/subvertical at depth)",
+        "depth_range_km": [0, 400],
+        "total_length_km": 400,
+        "continental_fraction_note": "Up to half may be continental lithosphere; Sula Spur continental crust may extend as far north as the North Arm based on zircon age data from young granites (Rudyawan et al. 2014)",
+        "seismicity": "mostly aseismic at depth; shallow events may record delamination of lower continental lithosphere",
+        "morphology": "south-dipping and overturned in west, steeply north-dipping further east; almost subvertical at depth",
+        "collision_age_Ma": 24,
+        "detachment_depth_km": 300,
+        "detachment_note": "Most of original slab detached below ~300 km after collision and sank to lower mantle (lithosphere older than ~80 Ma; Duretz et al. 2011 modelling). Remaining ~200 km still attached.",
+        "context": "Hall & Spakman (2015) new interpretation: a THIRD slab (separate from Celebes and Sangihe slabs) beneath Gorontalo Bay, formed by pre-Miocene north-dipping subduction beneath North Arm before collision with Sula Spur at ~24 Ma. Consistent with: north-dipping Benioff zone proposed by Silver et al. (1983a); industry seismic lines north of Sula Islands (Ferdian et al. 2010; Watkinson et al. 2011). Interaction with Sangihe slab (since 24 Ma) and Celebes slab (since 5 Ma) steepened its dip. Una-Una magmatism linked to delamination.",
+        "previous_interpretation_note": "Gudmundsson & Sambridge (1998) and Walpersdorf et al. (1998) interpreted a 90° bend in Sangihe/Celebes slab, which requires major Miocene compression between North Arm and Sula Spur — contradicted by evidence of extension in this region during Late Miocene-Pliocene",
+        "source_figure": "Figures 11, 13, 14, 15",
+        "source_short": "Hall & Spakman 2015",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.5, -2.5]
+      },
+      "properties": {
+        "id": "hall_spakman_2015_sula_slab_lower_mantle",
+        "category": "geophysical_point",
+        "name": "Sula Slab Remnant — Lower Mantle High-Velocity Anomaly",
+        "anomaly_type": "high_velocity",
+        "slab_name": "Sula slab remnant",
+        "depth_range_km": [700, 950],
+        "location_description": "High velocity anomalies in lower mantle between Timor and Sulawesi",
+        "interpretation": "Remnant of slab that subducted under the North Arm of Sulawesi prior to Early Miocene collision (~24 Ma) with Australian Sula Spur. Slab broke off after collision and sank; slab detachment and vertical sinking consistent with reconstructions of Spakman & Hall (2010) and Hall (2012). Lithosphere older than ~80 Ma detaches below ~300 km (Duretz et al. 2011).",
+        "position_in_reconstruction": "UU-P07 depth slice at 820 km shows 'Su' anomaly; interpreted slab subducted northward beneath North Arm, broke off at ~20 Ma, now in lower mantle",
+        "source_figure": "Figures 14, 18; Section 6.1",
+        "source_short": "Hall & Spakman 2015",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.6, 0.65],
+          [120.5, 0.95],
+          [121.5, 1.2],
+          [122.5, 1.35],
+          [123.5, 1.45],
+          [124.8, 1.5]
+        ]
+      },
+      "properties": {
+        "id": "hall_spakman_2015_n_sulawesi_trench",
+        "category": "fault",
+        "name": "North Sulawesi Trench",
+        "canonical_name": "NST",
+        "fault_type": "subduction_zone",
+        "kinematics": "convergent_south_dipping",
+        "subducting_plate": "Celebes Sea",
+        "overriding_block": "North Arm (North Sula Block)",
+        "subduction_onset_Ma": 5,
+        "western_terminus": "Offshore extension of Palu-Koro Fault (~119.5-120°E); trench terminates where PKF strikes NNW toward North Sulawesi",
+        "eastern_terminus": "Near Manado (~124.8°E, 1.5°N)",
+        "slab_depth_km": 250,
+        "context": "Subduction zone for Celebes slab. Western end terminates at PKF offshore continuation; eastern end near Manado. Rotation of North Arm about a pole near its eastern end (Hamilton 1979; Silver et al. 1983a,b,c) drives subduction. The Una-Una volcano (erupted 1983) sits south of the slab, not associated with subduction but with delamination/decompression melting.",
+        "source_figure": "Figures 9, 12, 13",
+        "source_short": "Hall & Spakman 2015",
+        "approx": true,
+        "match_needed": true,
+        "match_candidates": ["north_sulawesi_trench"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.0, 0.5]
+      },
+      "properties": {
+        "id": "hall_spakman_2015_molucca_sea_plate",
+        "category": "geophysical_point",
+        "name": "Molucca Sea Plate — Arc-Arc Collision System",
+        "anomaly_type": "high_velocity",
+        "description": "The Molucca Sea plate: only present-day example of active arc-arc collision. Subducts west under Sangihe arc (W-dipping, ~900-950 km) and east under Halmahera arc (E-dipping, ~400-450 km). Total subducted lithosphere ~1500-1600 km, implying ~25 Ma start date. Was part of Philippine Sea plate (Hall 1987); moved north as independent plate while subducting on both sides.",
+        "total_subduction_km": 1550,
+        "total_subduction_range_km": [1500, 1600],
+        "arc_arc_collision_onset_Ma": 2,
+        "context": "No clear subduction trenches remain in Molucca Sea because elevated collision complex formed between converging arcs. Arc-arc collision has produced young volcanic activity from eastern tip of North Sulawesi through Sangihe to Mindanao.",
+        "source_figure": "Figures 11, 13",
+        "source_short": "Hall & Spakman 2015",
+        "approx": true
+      }
+    }
+  ]
+}

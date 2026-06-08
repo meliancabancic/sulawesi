@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "hua_2023_banda_anisotropy",
+    "source": "Hua et al. (2023)",
+    "title": "P and S Wave Anisotropic Tomography of the Banda Subduction Zone",
+    "journal": "Geophysical Research Letters",
+    "volume": "50",
+    "article": "e2023GL105611",
+    "doi": "10.1029/2023GL105611",
+    "year_published": 2023,
+    "authors": ["Hua, Y.", "Zhao, D.", "Xu, Y.-G."],
+    "study_area": "Banda arc — Philippines-Banda junction region",
+    "method": "Joint P + S wave anisotropic tomography (Liu & Zhao 2016b method); ~200,000 P arrivals + ~30,000 S arrivals from 8,844 local earthquakes (ISC-EHB 1999-2018); 175 seismic stations; orthorhombic anisotropy with horizontal symmetry plane; lateral resolution ~100 km; depth to ~500 km (limited by deep earthquake distribution); fast-velocity directions (FVDs) as proxy for olivine LPO and mantle flow",
+    "conclusions": [
+      "First 3-D P + S wave azimuthal anisotropy model of the Banda subduction zone, resolved to ~500 km depth",
+      "Banda slab imaged as arc-shaped HVA at 50-400 km; spoon-shaped geometry: northward-subducting Timor segment + southward-subducting Seram segment merge at ~450 km in the mantle transition zone",
+      "FVDs within slab change along arc strike: NW-SE (perpendicular to isochrons) under Java/Sumba = fossil ridge anisotropy; trench-parallel under Timor-Babar = continental lithosphere fossil; trench-normal under Banda Sea at 250 km = slab bending/external forces modified fabric",
+      "Trench-parallel FVDs in low-V anomalies >100 km depth beneath Banda Sea = lateral mantle flow caused by subduction of the highly curved Banda slab; material squeezed out of limited mantle wedge space — fundamentally different from trench-normal FVDs found in normal subduction zones (Japan, Alaska, Cascadia)",
+      "Semi-toroidal FVD pattern around northern edge of Banda slab + NE-SW FVDs in low-V zone N of Banda slab and E of Molucca Sea slab = mantle material extruded from Banda arc escaping NE through a gap between the Banda slab and the Molucca Sea slab",
+      "Molucca Sea double subduction asymmetry: Sangihe-side HVA reaches the MTZ (subduction since ~20-30 Ma, ~1000 km convergence); Halmahera-side HVA only to ~250-300 km (subduction started ~10 Ma, ~300 km convergence at ~3 cm/yr); asymmetry driven by different plate tensions"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [128.0, -7.0]
+      },
+      "properties": {
+        "id": "hua_2023_banda_slab_hva",
+        "category": "geophysical_point",
+        "name": "Banda Arc Slab — Spoon-Shaped HVA with Subduction Polarity Reversal",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [50, 450],
+        "interpretation": "Arc-shaped high-velocity anomaly (HVA) beneath the Banda arc at 50-400 km depth represents the subducting Indo-Australian slab with its characteristic 180° curvature. The slab geometry shows two components: (1) the Timor segment subducting northward beneath the Timor Trough, and (2) the Seram segment subducting southward beneath the Seram Trench. At depth (~450 km), both segments merge and become stagnant in the mantle transition zone, forming a unique spoon-shaped structure. The western boundary of subducted continental lithosphere is near central Flores (Fichtner et al. 2010). Intermediate-depth and deep earthquakes occur actively within the high-V slab. Beneath Sumba, oceanic Indo-Australian lithosphere continues to subduct. The 180° arc curvature results from either opposite subduction of two slabs or bending of a single slab under external forces — both scenarios produce unique non-standard mantle flow patterns.",
+        "slab_merge_depth_km": 450,
+        "polarity_reversal": "Timor (northward) → Seram (southward)",
+        "spoon_shape": true,
+        "slab_model_reference": "Spakman & Hall 2010; Widiyantoro & Hilst 1997; Liu et al. 2026",
+        "source_figure": "Figures 2, 3",
+        "source_short": "Hua et al. 2023",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.0, -6.5]
+      },
+      "properties": {
+        "id": "hua_2023_banda_wedge_trenchparallel_flow",
+        "category": "anisotropy",
+        "name": "Banda Arc Mantle Wedge — Trench-Parallel Lateral Flow (>100 km depth)",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [100, 400],
+        "fvd_orientation": "trench-parallel (arc-strike-parallel)",
+        "interpretation": "Significant low-velocity (low-V) anomalies in the bay area of the Banda arc (mantle wedge) display trench-parallel fast-velocity directions (FVDs) at depths >100 km. FVDs are parallel to mantle flow direction under A-type olivine LPO, indicating lateral flow parallel to the arc strike. This is interpreted as asthenospheric material being squeezed laterally out of the limited mantle wedge space caused by the subduction of the highly curved (180°) Banda slab. This is fundamentally different from normal subduction zones (Japan, Alaska, Cascadia, Chile) which show trench-NORMAL FVDs in the mantle wedge, reflecting classic 2D corner flow. The Banda arc's unique trench-parallel flow pattern is a direct consequence of its extreme slab curvature — the spoon-shaped slab geometry forces mantle material to flow around its curved margins rather than being entrained in 2D corner flow. This confirms the mantle flow model of Di Leo et al. (2012) who found trench-parallel FVDs in the Banda arc from shear-wave splitting.",
+        "flow_type": "lateral_trench_parallel_extrusion",
+        "cause": "Extreme 180° slab curvature forces lateral squeeze of mantle material",
+        "comparison": "Normal subduction zones have trench-normal corner flow; Banda unique due to curvature",
+        "source_figure": "Figures 2, 4b",
+        "source_short": "Hua et al. 2023",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.0, -3.5]
+      },
+      "properties": {
+        "id": "hua_2023_semitoroidal_n_banda_extrusion",
+        "category": "anisotropy",
+        "name": "Semi-Toroidal Mantle Flow — Extrusion NE Through Banda-Molucca Slab Gap",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [100, 400],
+        "fvd_orientation": "NE-SW FVDs in low-V zone N of Banda + E of Molucca slab; semi-toroidal around N Banda slab edge",
+        "interpretation": "Around the northern edge of the Banda slab, a semi-toroidal pattern of fast-velocity directions (FVDs) is revealed. In the low-velocity zone north of the Banda slab and east of the Molucca Sea slab, the FVDs are nearly NE-SW. The Vp and Vs images show a distinct gap between the Banda slab and the Molucca Sea slab. This pattern is interpreted as mantle material extruded from within the Banda arc (driven by the lateral squeeze mechanism described above) escaping toward the northeast through this slab gap, producing semi-toroidal flow around the northern slab edge. This toroidal edge-flow is analogous to patterns seen at Cascadia, Kamchatka, and other subduction zones with slab edges, but here it is driven by the active lateral extrusion from the curved Banda arc rather than passive trench migration alone. The gap between the Banda and Molucca Sea slabs is therefore a critical conduit for inter-arc mantle material transfer.",
+        "flow_type": "semi_toroidal_extrusion_through_slab_gap",
+        "slab_gap": "gap between Banda slab northern edge and Molucca Sea slab southern extent",
+        "flow_direction": "toward NE",
+        "source_figure": "Figures 2, 4",
+        "source_short": "Hua et al. 2023",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.5, 1.5]
+      },
+      "properties": {
+        "id": "hua_2023_molucca_asymmetric_subduction",
+        "category": "geophysical_point",
+        "name": "Molucca Sea Double Subduction — Asymmetric Slab Depths (Sangihe to MTZ; Halmahera to 250-300 km)",
+        "anomaly_type": "high_velocity",
+        "sangihe_slab_depth_km": "to MTZ (>410 km)",
+        "halmahera_slab_depth_km": [250, 300],
+        "interpretation": "The Molucca Sea double-sided subduction shows strong asymmetry in the Hua et al. (2023) model. The Sangihe-side HVA (westward-dipping slab) continues deep into the mantle transition zone (>410 km), consistent with subduction active since ~20-30 Ma producing >1000 km of plate convergence (Lallemand et al. 1998) and making it the deepest slab in the Philippine mobile belt. In contrast, the Halmahera-side HVA (eastward-dipping slab) appears to extend only to ~250-300 km depth, consistent with subduction initiated ~10 Ma ago producing only ~300 km of convergence at ~3 cm/yr (Lallemand et al. 1998). This asymmetry is attributed to different plate tensions on the two sides — the side with faster convergence dominates plate motion (Király et al. 2018 numerical simulations). The Molucca Sea Plate is caught in an advanced stage of collapse, consumed from both sides simultaneously. Also see Liu et al. (2026) for complementary S-wave constraints on the same asymmetry.",
+        "sangihe_age_Ma": [20, 30],
+        "halmahera_age_Ma": 10,
+        "source_figure": "Figures 2, 3",
+        "source_short": "Hua et al. 2023",
+        "approx": true
+      }
+    }
+  ]
+}

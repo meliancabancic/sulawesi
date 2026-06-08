@@ -1,0 +1,140 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "heryandoko_2024_ant_crustal",
+    "source": "Heryandoko et al. (2024)",
+    "title": "Crustal structure of Borneo, Makassar Strait and Sulawesi from ambient noise tomography",
+    "journal": "Geophysical Journal International",
+    "volume": "237",
+    "pages": "949-964",
+    "doi": "10.1093/gji/ggae085",
+    "year_published": 2024,
+    "year_data": "2019-2020",
+    "authors": ["Heryandoko, N.", "Nugraha, A.D.", "Zulfakriza, Z.", "Rosalia, S.", "Yudistira, T.", "Rohadi, S.", "Daryono, D.", "Supendi, P.", "Greenfield, T.", "Rawlinson, N.", "Widiyantoro, S."],
+    "study_area": "Borneo (Kalimantan), Makassar Strait, and Sulawesi",
+    "method": "Rayleigh wave ambient noise tomography (ANT); 108 seismic stations (BMKG permanent + Malaysian + temporary networks); 8-month cross-correlation; group velocity dispersion 8-50 s; 3D Vs model via pseudo-dispersion curve inversion with CRUST1.0 Moho constraints",
+    "model_doi": "10.5281/zenodo.10662743",
+    "conclusions": [
+      "Lateral Vs heterogeneities of up to ±1.2 km/s in crust and uppermost mantle",
+      "Strong LSVZ at shallow depth (~14 km) beneath North Makassar Strait (NMS): sediment basement ~14±2 km, Moho ~22±2 km — thinnest crust in study; extends ~300 km E-W and ~400 km N-S; Vs as low as 2.2 km/s at 8 km depth; result of Middle Eocene rifting (~48 Ma)",
+      "Strong high Vs anomaly at 22-30 km beneath NMS co-located with LSVZ above — confirms thin crust, no crustal root",
+      "Central Sulawesi (CS): thick crust with Moho at ~45±2 km — thickest in study area; deep LDVZ extends into lithospheric mantle; crustal thickening from late Oligocene transpressional regime (Banggai-Sula accretion); uplift 200-700 m/Ma; slab likely detached (no slab evidence in tomographic models)",
+      "NMS sediment fill sourced from high erosion of uplifted Central Sulawesi; thick sedimentary package connects NMS to Kutai Basin (KB) in East Borneo",
+      "Schwaner Mountain (SW Borneo): high near-surface Vs with slight velocity change with depth confirms crustal root; Palaeozoic continental core (Gondwana margin of NW Australia)",
+      "LSVZs also in Tomini Bay (TB) — oceanic-like crust with thermal extension/thinning from subduction rollback at North Sulawesi Trench; Bone Gulf + South Arm of Sulawesi (BG/SS) — Neogene extensional basins with petroleum potential; eastern Southeast Arm of Sulawesi (SES); Sarawak (NW Borneo)"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.5, 0.5]
+      },
+      "properties": {
+        "id": "heryandoko_2024_nms_lsvz",
+        "category": "geophysical_point",
+        "name": "North Makassar Strait — LSVZ (Sedimentary Basin, Thin Crust)",
+        "anomaly_type": "low_velocity",
+        "vs_min_kmps": 2.2,
+        "vs_min_depth_km": 8,
+        "vs_threshold_basin_kmps": 3.0,
+        "sediment_basement_depth_km": 14,
+        "sediment_basement_uncertainty_km": 2,
+        "moho_depth_km": 22,
+        "moho_uncertainty_km": 2,
+        "basin_extent_ew_km": 300,
+        "basin_extent_ns_km": 400,
+        "crustal_thickness_km": 22,
+        "depth_range_km": [0, 22],
+        "interpretation": "Largest and deepest LSVZ in the study area beneath the North Makassar Strait (NMS), including the Kutai Basin (KB) in East Borneo. Sediment basement at ~14±2 km depth; Moho at ~22±2 km (thinnest crust in study). Strong co-located HDVZ at 22-30 km confirms rapid velocity change with depth and thin crust with no crustal root. Result of asymmetric rifting in Middle Eocene (~48 Ma) that opened the Makassar Strait. Thick sedimentary fill sourced from high erosion of uplifted Central Sulawesi transported westward into the subsiding NMS.",
+        "tectonic_context": "Makassar Strait opened by rifting ~48 Ma, separating Borneo from Sulawesi. North Basin (water depth ~2.5 km) connects to Celebes Sea. Cloke et al. (1999) estimated 48 Ma oceanic crust with elastic thickness ~20 km. The thin Moho at ~22 km (versus continental ~30-35 km to west of Makassar Strait) confirms extended/oceanic character of the NMS crust.",
+        "source_figure": "Figures 10, 11 (cross-sections B-B', C-C'), 12",
+        "source_short": "Heryandoko et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.5, -1.5]
+      },
+      "properties": {
+        "id": "heryandoko_2024_central_sulawesi_thick_crust",
+        "category": "geophysical_point",
+        "name": "Central Sulawesi — Thickened Crust and LDVZ (Crustal Root)",
+        "anomaly_type": "low_velocity",
+        "vs_threshold_moho_kmps": 3.9,
+        "moho_depth_km": 45,
+        "moho_uncertainty_km": 2,
+        "depth_range_km": [0, 60],
+        "interpretation": "Central Sulawesi (CS) has the thickest crust in the study area at ~45±2 km Moho depth. A low deep Vs anomaly (LDVZ) extends below ~30 km into the lithospheric mantle. Crustal thickening initiated since late Oligocene through: (1) accretion of East Sulawesi Ophiolite onto West Sulawesi in Late Oligocene; (2) Banggai-Sula continental fragment accretion in Miocene/earliest Pliocene; (3) transpressional regime between 5-2 Ma generating uplift of 200-700 m/Ma (Wilson & Moss 1999). The absence of evidence for a subducting slab in regional and global tomographic models (Zenonos et al. 2019, Wehner et al. 2022) suggests slab detachment, which further increases uplift rates (van Hunen & Allen 2011).",
+        "tectonic_context": "Central Sulawesi is a collision-assembled terrane. High erosion of the uplifted CS crust has supplied thick sediments to the adjacent NMS (KB) basin. The ~23 km jump in Moho depth from NMS (~22 km) to CS (~45 km) is a key structural boundary reflecting the Makassar Strait rift margin.",
+        "uplift_rate_m_Ma": [200, 700],
+        "uplift_onset_Ma": 5,
+        "slab_detachment_note": "No subducting slab visible in LLNL-G3Dv3, Zenonos et al. 2019, or Wehner et al. 2022a,b — slab likely detached, driving ongoing uplift",
+        "source_figure": "Figures 10, 11 (cross-sections D-D', E-E'), 12",
+        "source_short": "Heryandoko et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.5, -0.3]
+      },
+      "properties": {
+        "id": "heryandoko_2024_tomini_bay_lsvz",
+        "category": "geophysical_point",
+        "name": "Tomini Bay (Gulf of Tomini) — LSVZ (Oceanic-Like Crust, Extension)",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [0, 20],
+        "interpretation": "Low shear wave velocity zone beneath Tomini Bay (TB). Based on marine magnetic studies (Kusnida et al. 2009), the bay is underlain by oceanic-like crust with suspected thermal extension, thinning and differential subsidence in the basement. According to Hall (2011), the additional extension contributing to subsidence was caused by subduction rollback at the North Sulawesi Trench. The LSVZ lacks a crustal root (shallow Moho), consistent with extensional thinning. Also co-located with HDVZ at deeper levels indicating thin crust.",
+        "tectonic_context": "Tomini Bay sits between the North Arm and East Arm of Sulawesi. The extension is linked to trench rollback dynamics at the North Sulawesi Trench (northward). Hall & Spakman (2015) interpret Gorontalo Bay extension as related to subduction rollback and Sula slab vertical motion; Tomini Bay (east) may share a similar extensional origin.",
+        "source_figure": "Figures 10, 11, 12",
+        "source_short": "Heryandoko et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.0, -1.0]
+      },
+      "properties": {
+        "id": "heryandoko_2024_schwaner_mountain_crustal_root",
+        "category": "geophysical_point",
+        "name": "Schwaner Mountain (SW Borneo/Kalimantan) — High-Vs Crustal Root",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [0, 40],
+        "interpretation": "High near-surface Vs anomaly with only slight velocity change with increasing depth, confirming the existence of a crustal root beneath Schwaner Mountain (SM), SW Kalimantan. This is the seismic signature of a stable continental block with mechanically strong crust. Borneo has a Palaeozoic continental core in its SW region (Hamilton 1979), derived from the Gondwana margin of NW Australia (Hall et al. 2009). The SM itself is characterized by Cretaceous granitoid plutons intruding older metamorphic rocks (Hall et al. 2008). Hall et al. (2008) suggested the CBM crust is mechanically weak and experienced shortening in Early Miocene. Both CBM and SM show LDVZ-type patterns indicating crustal roots.",
+        "tectonic_context": "SW Borneo forms the stable western flank of the study area, in contrast to the thin, extended NMS crust to the east. The crustal root reflects the Palaeozoic continental lithosphere that was not significantly modified by Cenozoic extension. The eastern edge of this root approximates the Makassar Strait rift margin.",
+        "source_figure": "Figures 10, 11, 13",
+        "source_short": "Heryandoko et al. 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.5, -4.5]
+      },
+      "properties": {
+        "id": "heryandoko_2024_bone_gulf_lsvz",
+        "category": "geophysical_point",
+        "name": "Bone Gulf + South Arm of Sulawesi — LSVZ (Neogene Sedimentary Basin)",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [0, 20],
+        "interpretation": "Low shear wave velocity zone beneath the Bone Gulf (BG) and South Arm of Sulawesi (SS). Consistent with previous geological studies reporting BG as a Neogene interarm basin (~23-4 Ma) dominated by extension and underlain by pre-Neogene rocks. Proven petroleum plays include gas fields in the East Sengkang Basin in the SS (Camplin & Hall 2014). No crustal root detected — shallow Moho consistent with extensional origin of the basin.",
+        "tectonic_context": "Bone Gulf is one of the interarm basins formed during the complex Neogene tectonic assembly of Sulawesi. Extension in the Miocene-Pliocene created the subsiding basin. The South Arm is a distinct arc-related terrane.",
+        "source_figure": "Figures 10, 11, 12",
+        "source_short": "Heryandoko et al. 2024",
+        "approx": true
+      }
+    }
+  ]
+}

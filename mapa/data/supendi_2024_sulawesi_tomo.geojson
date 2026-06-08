@@ -1,0 +1,118 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "supendi_2024_sulawesi_tomo",
+    "source": "Supendi et al. (2025)",
+    "title": "Evidence of Magma Reservoirs Beneath Volcanoes in Northern Sulawesi and the Molucca Sea From Regional Earthquake Tomography",
+    "journal": "Geophysical Research Letters",
+    "volume": "52",
+    "article": "e2024GL110794",
+    "doi": "10.1029/2024GL110794",
+    "year_published": 2025,
+    "year_data": "2018-2023",
+    "authors": ["Supendi, P.", "Rawlinson, N.", "Han, J.", "Widiyantoro, S.", "Pilia, S.", "Nugraha, A.D.", "Karnawati, D."],
+    "study_area": "Sulawesi island and surroundings — North Sulawesi subduction zone, Molucca Sea Collision Zone, Gorontalo Bay",
+    "method": "Regional earthquake P-wave body wave tomography (FMTOMO); BMKG catalog 2018-2023; 126 permanent broadband stations; 6,207 earthquakes with 106,722 P-picks",
+    "conclusions": [
+      "High velocity anomaly beneath Molucca Sea diverging E and W to ~200 km depth — divergent double subduction of Molucca Sea Plate (MSP): westward under Sangihe arc and eastward under Halmahera arc, dip ~45° each side",
+      "Low velocity anomalies at 80-130 km depth directly above Sangihe and Halmahera slabs at eastern end of North Arm — likely magma reservoirs (partial melt) supplying active arc volcanism",
+      "Colo volcano (Una-Una, Gorontalo Bay): diffuse low velocity zone at 60-110 km depth, distinct from sharper LVZs above slabs; character more consistent with decompression melting from extension (Hall & Spakman 2015 hypothesis) than subduction-driven melting",
+      "Celebes slab imaged to ~60 km depth in Vp model; resolution limited below this depth due to absence of deep earthquakes — consistent with slab only reaching ~200 km (Slab2 model)",
+      "Slow slip on subduction interface + deep afterslip on PKF (Nijholt et al. 2024) confirms subduction-transform edge propagator interaction at western trench terminus"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.5, 1.5]
+      },
+      "properties": {
+        "id": "supendi_2024_msp_double_subduction",
+        "category": "geophysical_point",
+        "name": "Molucca Sea Plate — Divergent Double Subduction High-Velocity Anomaly",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [0, 200],
+        "slab_system": "Molucca Sea Plate (MSP) divergent double subduction",
+        "sangihe_dip_deg": 45,
+        "sangihe_dip_direction": "west",
+        "halmahera_dip_deg": 45,
+        "halmahera_dip_direction": "east",
+        "interpretation": "Continuous high-velocity anomaly in sections A-B and C-D diverging E and W to ~200 km depth, consistent with divergent double subduction of MSP (Zhang et al. 2017). West-dipping portion = Sangihe slab; east-dipping portion = Halmahera slab. Deep earthquake hypocenters confirm. Consistent with Hall & Spakman (2015) slab geometry.",
+        "source_figure": "Figures 2, 3 (sections A-B, C-D)",
+        "source_short": "Supendi et al. 2025",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [125.5, 2.0]
+      },
+      "properties": {
+        "id": "supendi_2024_arc_magma_reservoir",
+        "category": "geophysical_point",
+        "name": "Sangihe/Halmahera Arc Magma Reservoirs — Low-Velocity Zones",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [80, 130],
+        "interpretation": "Low-velocity anomalies directly above west- and east-dipping Molucca Sea slabs at eastern end of North Sulawesi Arm, at depths of ~80-130 km. Location corresponds to active Quaternary volcanoes in North Sulawesi and Molucca region. Interpreted as partial melt and/or fluid-saturated material forming magma reservoirs feeding arc volcanism. Amplitude suppressed by regularization — undamped models suggest up to 5% anomaly (consistent with partial melt).",
+        "vp_anomaly_percent": -1.5,
+        "vp_anomaly_undamped_percent": -5.0,
+        "tectonic_context": "Fluid release from Sangihe and Halmahera slabs at 80-130 km depth triggers melting in overlying mantle wedge; melt ascends to feed volcanic arc at eastern end of North Arm. No volcanism present west of ~124°E along North Arm despite south-dipping Celebes slab — absence unexplained by subduction-induced melting alone.",
+        "source_figure": "Figures 2, 3 (sections A-B, C-D)",
+        "source_short": "Supendi et al. 2025",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.6, -0.1]
+      },
+      "properties": {
+        "id": "supendi_2024_colo_lvz",
+        "category": "geophysical_point",
+        "name": "Colo Volcano (Una-Una, Gorontalo Bay) — Diffuse Low-Velocity Zone",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [60, 110],
+        "volcano_name": "Colo",
+        "island": "Una-Una",
+        "location_description": "Solitary island in Gorontalo Bay, ~100 km south of the North Arm coast",
+        "interpretation": "Diffuse low-velocity anomaly at 60-110 km depth beneath Colo, distinct from the more pronounced LVZs above Sangihe/Halmahera slabs. Character is more consistent with decompression melting from extension (crustal thinning, low-angle normal faulting, subduction rollback-driven subsidence in Gorontalo Bay) than subduction-induced melting. Hall & Spakman (2015) interpret Una-Una as product of delamination of Sula Spur as Sula slab becomes vertical. Also present in S-wave tomography model.",
+        "competing_hypotheses": [
+          "Decompression melting from extension/crustal thinning (Hall & Spakman 2015, Pholbud et al. 2012) — FAVORED by this study",
+          "Subduction of Celebes slab beneath North Arm at shallow angle (Sendjaja 2013)",
+          "East Sangihe Subduction Zone volcanism extending SW (Effendi & Bawono 1997)",
+          "Adakites from slab melting of south-dipping Celebes slab (Vroon & van Bergen 2000)"
+        ],
+        "last_eruption_year": 1983,
+        "source_figure": "Figures 2, 3 (sections C-D, E-F)",
+        "source_short": "Supendi et al. 2025",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.0, 2.0]
+      },
+      "properties": {
+        "id": "supendi_2024_celebes_slab_shallow",
+        "category": "geophysical_point",
+        "name": "Celebes Slab — Shallow High-Velocity Imaged to ~60 km",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [0, 60],
+        "slab_name": "Celebes slab",
+        "interpretation": "High-velocity anomaly imaged to ~60 km depth in section E-F. Resolution drops off below this depth due to absence of deep earthquakes beneath Gorontalo Bay area. Consistent with Slab2 model showing south-dipping slab to ~200 km. The complete absence of Neogene or active arc volcanism above this slab (except Colo) is a key unexplained feature — no melting induced above the Celebes slab over most of its extent.",
+        "no_arc_volcanism_note": "No arc volcanism along most of the North Arm above the Celebes slab (unusual); only arc volcanism at far eastern end above Sangihe/Halmahera slabs; Colo (back-arc) explained by extension rather than slab melting",
+        "source_figure": "Figures 2, 3 (section E-F)",
+        "source_short": "Supendi et al. 2025",
+        "approx": true
+      }
+    }
+  ]
+}

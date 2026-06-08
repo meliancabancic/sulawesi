@@ -1,0 +1,1188 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366. https://doi.org/10.1016/j.tecto.2024.230366",
+    "extraction_date": "2025-05-20",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "REGIONAL",
+    "region": "Sulawesi, Indonesia",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": [
+      "fault",
+      "subduction_zone",
+      "earthquake",
+      "hazard_zone",
+      "seismicity_cluster",
+      "cross_section"
+    ],
+    "custom_categories": {},
+    "figures_used": [
+      "Fig. 1c",
+      "Fig. 2",
+      "Fig. 4",
+      "Fig. 5",
+      "Fig. 7",
+      "Fig. 8",
+      "Fig. 9"
+    ],
+    "sections_present": [
+      "A-A'",
+      "B-B'"
+    ],
+    "comprehension_summary": "Sismotectónica completa de Sulawesi basada en distribución de sismos superficiales (<60 km, ISC-EHB/BMKG 1964-2022) y mecanismos focales GCMT. La colisión Banggai-Sula (~5 Ma) es el motor geodinámico de todas las estructuras activas; el sismo Palu 2018 Mw 7.6 demostró ser un disparador de actividad sísmica regional por cambios de estrés de Coulomb.",
+    "main_conclusions": [
+      "El sismo Palu 2018 Mw 7.6 no solo llenó la brecha sísmica del PKF sino que incrementó la actividad sísmica en al menos 6 zonas de Sulawesi mediante cambios de estrés de Coulomb positivos.",
+      "El segmento central de la NST (121–121.7°E) exhibe un gap sísmico interplaca cuya naturaleza (acoplamiento, slow-slip o aseísmica) requiere validación geodésica futura.",
+      "El segmento N del PKF (offshore NW Sulawesi) muestra baja sismicidad por estar fuera del radio de alta velocidad relativa MKB-NSB.",
+      "La Batui Thrust exhibe sismicidad mínima y ninguna solución GCMT disponible — riesgo subestimado.",
+      "El cluster de Tolo Bay (Abr 2019) puede representar la continuación offshore SW de la falla Peleng.",
+      "El evento TFZ 2001 Mw 7.5 requeriría reactivación del segmento W TFZ de sinestral a dextral — interpretación de baja confianza."
+    ],
+    "total_features": 19,
+    "alert_scientific": "Circularidad potencial: el modelo tomográfico UU-P07 (Hall & Spakman 2015) fue construido por los mismos autores que proveen la interpretación tectónica regional de referencia. Las perturbaciones de velocidad en las zonas Mamasa y Una-Una deben interpretarse con cautela.",
+    "bibliography": {
+      "serhalawan_2024": {
+        "apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366. https://doi.org/10.1016/j.tecto.2024.230366",
+        "short": "Serhalawan & Chen (2024)",
+        "journal": "Tectonophysics",
+        "year": 2024,
+        "doi": "10.1016/j.tecto.2024.230366",
+        "paper_scale": "REGIONAL",
+        "topic": "Sismotectónica Sulawesi — distribución sismicidad, mecanismos focales, gaps sísmicos",
+        "region": "Sulawesi, Indonesia",
+        "categories_extracted": [
+          "fault",
+          "subduction_zone",
+          "earthquake",
+          "hazard_zone",
+          "seismicity_cluster",
+          "cross_section"
+        ],
+        "sections_extracted": [
+          "A-A'",
+          "B-B'"
+        ],
+        "geojson_file": "serhalawan_2024_sulawesi.geojson",
+        "section_images": [
+          "serhalawan_2024_fig9_secciones.png",
+          "serhalawan_2024_fig10_coulomb.png"
+        ]
+      },
+      "socquet_2006": {
+        "apa": "Socquet, A., Simons, W., Vigny, C., McCaffrey, R., Subarya, C., Sarsito, D., Ambrosius, B., & Spakman, W. (2006). Microblock rotations and fault coupling in SE Asia triple junction (Sulawesi, Indonesia) from GPS and earthquake slip vector data. Journal of Geophysical Research, 111(B8), B08409. https://doi.org/10.1029/2005jb003963",
+        "short": "Socquet et al. (2006)",
+        "journal": "Journal of Geophysical Research",
+        "year": 2006,
+        "doi": "10.1029/2005jb003963",
+        "topic": "Cinemática de bloques GPS y acoplamiento de fallas, Sulawesi",
+        "region": "Sulawesi"
+      },
+      "hall_wilson_2000": {
+        "apa": "Hall, R., & Wilson, M. (2000). Neogene sutures in eastern Indonesia. Journal of Asian Earth Sciences, 18(6), 781–808. https://doi.org/10.1016/s1367-9120(00)00040-7",
+        "short": "Hall & Wilson (2000)",
+        "journal": "Journal of Asian Earth Sciences",
+        "year": 2000,
+        "doi": "10.1016/s1367-9120(00)00040-7",
+        "topic": "Suturas neógenas Indonesia oriental",
+        "region": "Indonesia Oriental"
+      },
+      "irsyam_2020": {
+        "apa": "Irsyam, M., et al. (2020). Development of the 2017 national seismic hazard maps of Indonesia. Earthquake Spectra, 36(1_suppl), 112–136. https://doi.org/10.1177/8755293020951206",
+        "short": "Irsyam et al. (2020)",
+        "journal": "Earthquake Spectra",
+        "year": 2020,
+        "doi": "10.1177/8755293020951206",
+        "topic": "Mapa de peligro sísmico nacional Indonesia 2017",
+        "region": "Indonesia"
+      },
+      "hayes_2018": {
+        "apa": "Hayes, G.P., Moore, G.L., Portner, D.E., Hearne, M., Flamme, H., Furtney, M., & Smoczyk, G.M. (2018). Slab2, a comprehensive subduction zone geometry model. Science, 362(6410), 58–61. https://doi.org/10.1126/science.aat4723",
+        "short": "Hayes et al. (2018)",
+        "journal": "Science",
+        "year": 2018,
+        "doi": "10.1126/science.aat4723",
+        "topic": "Geometría de zonas de subducción Slab2.0",
+        "region": "Global"
+      },
+      "bellier_2001": {
+        "apa": "Bellier, O., Sebrier, M., Beaudouin, T., Villeneuve, M., Braucher, R., Bourles, D., Siame, L., Putranto, E., & Pratomo, I. (2001). High slip rate for a low seismicity along the Palu-Koro active fault in Central Sulawesi (Indonesia). Terra Nova, 13(6), 463–470. https://doi.org/10.1046/j.1365-3121.2001.00382.x",
+        "short": "Bellier et al. (2001)",
+        "journal": "Terra Nova",
+        "year": 2001,
+        "doi": "10.1046/j.1365-3121.2001.00382.x",
+        "topic": "Tasa deslizamiento PKF, trinchera paleosísmica",
+        "region": "Sulawesi Central"
+      },
+      "hutchings_2021": {
+        "apa": "Hutchings, S.J., & Mooney, W.D. (2021). The Seismicity of Indonesia and Tectonic Implications. Geochemistry, Geophysics, Geosystems, 22(9), e2021GC009812. https://doi.org/10.1029/2021gc009812",
+        "short": "Hutchings & Mooney (2021)",
+        "journal": "Geochemistry Geophysics Geosystems",
+        "year": 2021,
+        "doi": "10.1029/2021gc009812",
+        "topic": "Sismicidad Indonesia, segmentación MST",
+        "region": "Indonesia"
+      },
+      "hall_spakman_2015": {
+        "apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14–45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "short": "Hall & Spakman (2015)",
+        "journal": "Tectonophysics",
+        "year": 2015,
+        "doi": "10.1016/j.tecto.2015.07.003",
+        "topic": "Estructura del manto y tomografía SE Asia, modelo UU-P07",
+        "region": "SE Asia"
+      },
+      "natawidjaja_2020": {
+        "apa": "Natawidjaja, D.H., et al. (2020). The 2018 Mw7.5 Palu 'supershear' earthquake ruptures geological fault's multi-segment separated by large bends. Geophysical Journal International. https://doi.org/10.1093/gji/ggaa498",
+        "short": "Natawidjaja et al. (2020)",
+        "journal": "Geophysical Journal International",
+        "year": 2020,
+        "doi": "10.1093/gji/ggaa498",
+        "topic": "Ruptura superficial sismo Palu 2018 Mw 7.5",
+        "region": "Sulawesi Central"
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.87,
+            1.45
+          ],
+          [
+            119.92,
+            1.0
+          ],
+          [
+            119.95,
+            0.5
+          ],
+          [
+            119.93,
+            0.0
+          ],
+          [
+            119.9,
+            -0.5
+          ],
+          [
+            119.87,
+            -0.8
+          ],
+          [
+            119.85,
+            -1.1
+          ],
+          [
+            119.83,
+            -1.5
+          ],
+          [
+            119.82,
+            -1.8
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_1",
+        "name": "Palu-Koro Fault — sinistral activa",
+        "category": "fault",
+        "fault_type": "sinistral",
+        "slip_rate_mmyr": 42,
+        "slip_rate_uncertainty": 3,
+        "length_km": 380,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "sinistral",
+        "neotectonic": true,
+        "data_source_original": "Hall & Wilson (2000); Watkinson et al. (2011)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region II",
+        "conclusions": [
+          {
+            "text": "Tasa de deslizamiento 32–45 mm/yr (promedio ~42 mm/yr relativo MKB-NSB). Sismicidad históricamente baja antes de 2018: solo ~5 eventos Mw>6 GCMT 1976–2018. El sismo Palu 2018 Mw 7.6 llenó la brecha sísmica y disparó sismicidad regional.",
+            "type": "slip_rate + hazard_assessment",
+            "confidence": "high"
+          },
+          {
+            "text": "El segmento más septentrional del PKF (offshore NW Sulawesi) exhibe baja sismicidad, posiblemente porque se encuentra fuera del radio de alta velocidad relativa entre el Makassar Block y el North Sula Block.",
+            "type": "kinematics",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Traza estimada de Fig. 1c/Fig. 5; coordenadas approximate. El segmento Donggala (línea amarilla Fig. 5) es la parte continental de la falla principal PKF. NS-PF es un segmento norte oculto propuesto por He et al. 2019."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_2",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.6,
+            -2.1
+          ],
+          [
+            122.0,
+            -2.4
+          ],
+          [
+            122.4,
+            -2.7
+          ],
+          [
+            122.8,
+            -2.9
+          ],
+          [
+            123.2,
+            -2.95
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_2",
+        "name": "Matano Fault — sinistral activa",
+        "category": "fault",
+        "fault_type": "sinistral",
+        "slip_rate_mmyr": 7,
+        "slip_rate_uncertainty": 1,
+        "length_km": 180,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "sinistral",
+        "neotectonic": true,
+        "data_source_original": "Hamilton (1979); Socquet et al. (2006)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region V",
+        "conclusions": [
+          {
+            "text": "Patrón WNW-ESE de sismicidad y mecanismos focales confirma movimiento sinestral consistente con offsets de drenaje. Los dos mayores sismos son Mw 6.1 (1980 y 2011), acomodando ~7 mm/yr. El borde E se conecta con el Tolo Thrust.",
+            "type": "kinematics + slip_rate",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Traza estimada de Fig. 1c/Fig. 8. Rahmadani et al. (2022) refina la tasa a ~7 mm/yr con geodesia moderna."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_3",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.5,
+            -0.5
+          ],
+          [
+            118.6,
+            -1.0
+          ],
+          [
+            118.7,
+            -1.5
+          ],
+          [
+            118.8,
+            -2.0
+          ],
+          [
+            118.85,
+            -2.5
+          ],
+          [
+            118.9,
+            -3.0
+          ],
+          [
+            119.0,
+            -3.4
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_3",
+        "name": "Makassar Strait Thrust (MST) — thrust compresivo este-buzante",
+        "category": "fault",
+        "fault_type": "thrust",
+        "slip_rate_mmyr": 8,
+        "slip_rate_uncertainty": 3,
+        "length_km": 350,
+        "dip_direction": "E",
+        "dip_angle": null,
+        "iugs_symbol": "thrust_filled",
+        "neotectonic": true,
+        "data_source_original": "Irsyam et al. (2020); Hutchings & Mooney (2021)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region III",
+        "conclusions": [
+          {
+            "text": "MST acomoda convergencia Sulawesi-Sunda a 5–11 mm/yr. Cinco segmentos: North, Central, Central-North, Mamuju (Mw 6.7, 1984), Somba (Mw 7.1, 1969). MST-Somba muestra silencio sísmico desde 1970 (potencial riesgo no liberado). MST Central aumentó actividad desde Sep 2020 posiblemente como respuesta al Palu 2018.",
+            "type": "slip_rate + hazard_assessment",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Traza compuesta de cinco segmentos según Irsyam et al. (2020) e Hutchings & Mooney (2021). Coordenadas approximate desde Fig. 1c."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_4",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.3,
+            -1.7
+          ],
+          [
+            121.5,
+            -1.5
+          ],
+          [
+            121.7,
+            -1.3
+          ],
+          [
+            121.9,
+            -1.1
+          ],
+          [
+            122.1,
+            -0.9
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_4",
+        "name": "Peleng Fault — sinistral activa",
+        "category": "fault",
+        "fault_type": "sinistral",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 120,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "sinistral",
+        "neotectonic": true,
+        "data_source_original": "Simandjuntak (1986); Watkinson et al. (2011)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region IV",
+        "conclusions": [
+          {
+            "text": "El sismo del 4 May 2000 Mw 7.5 es atribuido a deslizamiento sinestral en el plano NE-SW de la falla Peleng (distribución NE-SW de réplicas y tipo consistente). La continuación offshore SW de la falla Peleng podría explicar el cluster de Tolo Bay (Abr 2019, Mw 6.8), previamente no identificada.",
+            "type": "kinematics",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Coordenadas approximate desde Fig. 7."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_5",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.7,
+            -1.9
+          ],
+          [
+            121.9,
+            -2.1
+          ],
+          [
+            122.1,
+            -2.3
+          ],
+          [
+            122.3,
+            -2.5
+          ],
+          [
+            122.5,
+            -2.6
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_5",
+        "name": "Batui Thrust — thrust de baja sismicidad",
+        "category": "fault",
+        "fault_type": "thrust",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 110,
+        "dip_direction": "W",
+        "dip_angle": null,
+        "iugs_symbol": "thrust_open",
+        "neotectonic": true,
+        "data_source_original": "Simandjuntak (1986)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region IV",
+        "conclusions": [
+          {
+            "text": "La Batui Thrust exhibe niveles de sismicidad muy bajos — ninguna solución GCMT disponible. Los últimos eventos Mw>5 ocurrieron en 1964, 1966 y 1981. Esto constituye una brecha sísmica potencial vinculada a la colisión Banggai-Sula.",
+            "type": "hazard_assessment",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Estructura referenciada y estudiada con sismicidad. Traza approximate desde Fig. 7."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_6",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            123.3,
+            -2.7
+          ],
+          [
+            123.5,
+            -3.1
+          ],
+          [
+            123.7,
+            -3.5
+          ],
+          [
+            123.9,
+            -4.0
+          ],
+          [
+            124.1,
+            -4.4
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_6",
+        "name": "Tolo Thrust — thrust de vergencia oeste",
+        "category": "fault",
+        "fault_type": "thrust",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 200,
+        "dip_direction": "W",
+        "dip_angle": null,
+        "iugs_symbol": "thrust_open",
+        "neotectonic": true,
+        "data_source_original": "Silver et al. (1983b); Hall & Wilson (2000)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region V",
+        "conclusions": [
+          {
+            "text": "El Tolo Thrust exhibe baja sismicidad con pocos mecanismos de thrust correlacionados. Clusters de fallas normales perpendiculares al trench podrían deberse al rollback de la slab de Banda. Es considerado una posible futura zona de subducción.",
+            "type": "hazard_assessment + tectonic_setting",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Coordenadas approximate desde Fig. 8. Hall (2018) lo propone como posible zona de iniciación de subducción futura."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_7",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7,
+            0.4
+          ],
+          [
+            120.9,
+            0.5
+          ],
+          [
+            121.1,
+            0.55
+          ],
+          [
+            121.3,
+            0.5
+          ],
+          [
+            121.5,
+            0.4
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_7",
+        "name": "Gorontalo Fault — dextral activa",
+        "category": "fault",
+        "fault_type": "dextral",
+        "slip_rate_mmyr": 11,
+        "slip_rate_uncertainty": 2,
+        "length_km": 120,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "dextral",
+        "neotectonic": true,
+        "data_source_original": "Socquet et al. (2006)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region I",
+        "conclusions": [
+          {
+            "text": "A pesar de la tasa estimada ~11 mm/yr de movimiento dextral, la sismicidad cortical en la placa cabalgante es baja. El evento histórico M 7.2 de 1941 ocurrió a 35–50 km de profundidad. El potencial para un gran sismo futuro en la Gorontalo Fault no puede descartarse.",
+            "type": "hazard_assessment",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Traza approximate desde Fig. 1c. La tasa de 11 mm/yr proviene de Socquet et al. (2006) interpolada en Fig. 1c."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_8",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            124.0,
+            -3.5
+          ],
+          [
+            124.3,
+            -3.8
+          ],
+          [
+            124.6,
+            -4.1
+          ],
+          [
+            124.9,
+            -4.4
+          ],
+          [
+            125.1,
+            -4.7
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_8",
+        "name": "Kolaka Fault — strike-slip con componente normal",
+        "category": "fault",
+        "fault_type": "oblique",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 180,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "unknown",
+        "neotectonic": true,
+        "data_source_original": "Watkinson & Hall (2017)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region V",
+        "conclusions": [
+          {
+            "text": "Sismicidad de la Kolaka Fault concentrada en el centro con mecanismo de falla normal, coherente con el lado hundido al sur identificado por Watkinson & Hall (2017). Watkinson & Hall (2017) interpretan una extensión en el step-over o pull-apart.",
+            "type": "kinematics",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Traza approximate desde Fig. 8."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fault_serhalawan_2024_9",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            123.2,
+            -3.8
+          ],
+          [
+            123.5,
+            -3.9
+          ],
+          [
+            123.8,
+            -3.95
+          ],
+          [
+            124.1,
+            -3.9
+          ],
+          [
+            124.4,
+            -3.8
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fault_serhalawan_2024_9",
+        "name": "Tamponas Fault Zone (TFZ W) — reactivación propuesta dextral",
+        "category": "fault",
+        "fault_type": "dextral",
+        "slip_rate_mmyr": null,
+        "slip_rate_uncertainty": null,
+        "length_km": 150,
+        "dip_direction": null,
+        "dip_angle": null,
+        "iugs_symbol": "dextral",
+        "neotectonic": true,
+        "data_source_original": "Titu-Eki & Hall (2020)",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region V",
+        "conclusions": [
+          {
+            "text": "El evento del 19 Oct 2001 Mw 7.5 con mecanismo strike-slip y distribución N-S de réplicas sugiere que el plano de falla es el segmento W del TFZ (no la continuación offshore de Lawanopo). Esto requeriría reactivación del segmento W desde sinestral a dextral — interpretación de baja confianza.",
+            "type": "kinematics",
+            "confidence": "low"
+          }
+        ],
+        "extraction_notes": "⚠️ Confianza baja — la reactivación sinestral→dextral es especulativa. Alternativa: continuación offshore de Lawanopo Fault (Yeats 2012). Coordenadas approximate desde Fig. 8."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "subduction_zone_serhalawan_2024_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.5,
+            2.5
+          ],
+          [
+            120.0,
+            2.6
+          ],
+          [
+            120.5,
+            2.8
+          ],
+          [
+            121.0,
+            3.0
+          ],
+          [
+            121.5,
+            3.2
+          ],
+          [
+            122.0,
+            3.4
+          ],
+          [
+            122.5,
+            3.6
+          ],
+          [
+            123.0,
+            3.8
+          ],
+          [
+            123.5,
+            3.9
+          ],
+          [
+            124.0,
+            4.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "subduction_zone_serhalawan_2024_1",
+        "name": "North Sulawesi Trench (NST) — subducción Mar de Célebes",
+        "category": "subduction_zone",
+        "depth_range_km": "20-60",
+        "depth_max_km": 60,
+        "depth_extent_km": null,
+        "dip_direction": "S",
+        "slab_name": "Celebes Sea slab",
+        "onset_ma": 5,
+        "convergence_rate_cmyr": null,
+        "convergence_total_km": null,
+        "mtz_stagnation": false,
+        "rollback_onset_ma": null,
+        "curvature_deg": null,
+        "includes_delaminated_continental": false,
+        "tectonic_affinity": "oceanic",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region I",
+        "conclusions": [
+          {
+            "text": "La subducción del Mar de Célebes exhibe predominantemente sismos interplaca thrust de buzamiento suave hacia el S. La tasa de convergencia aumenta hacia el O (de ~13 a ~65 mm/yr). El mayor evento es Mw 7.9 (1996) en el extremo W donde la convergencia es máxima.",
+            "type": "kinematics + slip_rate",
+            "confidence": "high"
+          },
+          {
+            "text": "Inicio de subducción NST ~5 Ma disparado por colisión Banggai-Sula (Dong et al. 2022): fuerza externa inicial → rollback espontáneo posterior por flotabilidad negativa. El slab de Sangihe al E limita el espacio del manto disponible para el Célebes slab.",
+            "type": "genesis + tectonic_setting",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Traza de la trinchera tomada de Fig. 1c; contornos de slab de Hayes et al. (2018) Slab2.0."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earthquake_serhalawan_2024_1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.9,
+          -0.18
+        ]
+      },
+      "properties": {
+        "id": "earthquake_serhalawan_2024_1",
+        "name": "Palu 2018 — Mw 7.6 strike-slip",
+        "category": "earthquake",
+        "magnitude": 7.6,
+        "magnitude_type": "Mw",
+        "date": "2018-09-28",
+        "depth_km": 10,
+        "strike1": null,
+        "dip1": null,
+        "rake1": null,
+        "strike2": null,
+        "dip2": null,
+        "rake2": null,
+        "fault_type": "strike_slip",
+        "catalog": "GCMT",
+        "coord_quality": "accurate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region II",
+        "conclusions": [
+          {
+            "text": "El sismo Palu 2018 Mw 7.6 llenó la brecha sísmica del PKF y disparó un aumento de actividad sísmica en al menos 6 zonas de Sulawesi (Mamasa, Tolo Bay, MST Central, MST Mamuju, East Arm-Togian, Matano) a través de cambios positivos de estrés de Coulomb (Wibowo et al. 2020). Representa un sismo supershear de propagación hacia el S.",
+            "type": "hazard_assessment + kinematics",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Coordenadas del hipocentro del sismo Donggala/Palu. Natawidjaja et al. (2020): aspereza principal al S de Palu Beach; Liu & Shi (2021) documenta el estrés de Coulomb del sismo Minahassa 1996 Mw 7.9 como preacondicionante del Palu 2018."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earthquake_serhalawan_2024_2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.0,
+          -1.8
+        ]
+      },
+      "properties": {
+        "id": "earthquake_serhalawan_2024_2",
+        "name": "Banggai-Sula 1998 — Mw 7.7 strike-slip",
+        "category": "earthquake",
+        "magnitude": 7.7,
+        "magnitude_type": "Mw",
+        "date": "1998-11-29",
+        "depth_km": null,
+        "strike1": null,
+        "dip1": null,
+        "rake1": null,
+        "strike2": null,
+        "dip2": null,
+        "rake2": null,
+        "fault_type": "strike_slip",
+        "catalog": "ISC-EHB",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region IV",
+        "conclusions": [
+          {
+            "text": "Mayor evento de la región de estudio (Mw 7.7, 29 Nov 1998). Atribuido posiblemente a la traslación hacia el O del microcontinente Banggai-Sula a través de la falla South Sula. Podría haber disparado otros sismos strike-slip en la zona.",
+            "type": "kinematics",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Coordenadas approximate desde Fig. 7. El plano de falla no está determinado con certeza."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earthquake_serhalawan_2024_3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.9,
+          2.0
+        ]
+      },
+      "properties": {
+        "id": "earthquake_serhalawan_2024_3",
+        "name": "Minahassa 1996 — Mw 7.9 thrust",
+        "category": "earthquake",
+        "magnitude": 7.9,
+        "magnitude_type": "Mw",
+        "date": "1996-01-01",
+        "depth_km": null,
+        "strike1": null,
+        "dip1": null,
+        "rake1": null,
+        "strike2": null,
+        "dip2": null,
+        "rake2": null,
+        "fault_type": "thrust",
+        "catalog": "ISC-EHB",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region I",
+        "conclusions": [
+          {
+            "text": "Mayor evento interplaca de la NST (Mw 7.9); ocurrió en el extremo O donde la tasa de convergencia es máxima. Estudios de estrés de Coulomb (Liu & Shi 2021) muestran que este evento incrementó significativamente el estrés en el hipocentro del sismo Palu 2018.",
+            "type": "kinematics + hazard_assessment",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Coordenadas approximate desde Fig. 4. Fecha exacta no dada en el paper — tomada del catálogo ISC."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hazard_zone_serhalawan_2024_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.8,
+              1.6
+            ],
+            [
+              121.8,
+              1.6
+            ],
+            [
+              121.8,
+              2.2
+            ],
+            [
+              120.8,
+              2.2
+            ],
+            [
+              120.8,
+              1.6
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "hazard_zone_serhalawan_2024_1",
+        "name": "Seismic gap NST central — potencial hazard interplaca",
+        "category": "hazard_zone",
+        "hazard_type": "seismic_gap",
+        "magnitude_potential": null,
+        "recurrence_yr": null,
+        "depth_range_km": "20-60",
+        "gap_length_km": 80,
+        "age_formation_ma": null,
+        "evidence": "Ausencia de sismos interplaca Mw≥6.5 en 121–121.7°E. No hay área de ruptura de eventos Mw≥7.3 en esta zona (Fig. 4). Catálogos históricos ISC-Bulletin, USGS y BMKG confirman la ausencia.",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region I",
+        "conclusions": [
+          {
+            "text": "El gap sísmico central de la NST (121–121.7°E) podría corresponder a una zona de bajo acoplamiento (como el Shumagin Gap, Alaska), deslizamiento asísmico (como el Guerrero Gap, México) o ser el sitio de un gran sismo futuro. Solo estudios geodésicos futuros podrán discriminar entre estas hipótesis.",
+            "type": "hazard_assessment",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Polígono estimado a partir del cuadrado punteado púrpura de la Fig. 4. Longitud del gap de ~80 km estimada de la figura."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hazard_zone_serhalawan_2024_2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.7,
+              0.8
+            ],
+            [
+              120.1,
+              0.8
+            ],
+            [
+              120.1,
+              1.3
+            ],
+            [
+              119.7,
+              1.3
+            ],
+            [
+              119.7,
+              0.8
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "hazard_zone_serhalawan_2024_2",
+        "name": "Brecha sísmica PKF norte — offshore NW Sulawesi",
+        "category": "hazard_zone",
+        "hazard_type": "seismic_gap",
+        "magnitude_potential": null,
+        "recurrence_yr": null,
+        "depth_range_km": "0-30",
+        "gap_length_km": 60,
+        "age_formation_ma": null,
+        "evidence": "Segmento N del PKF con sismicidad significativamente menor que el resto de la falla. No está vinculado por Tiranda & Hall (2024) a NE Borneo sino a la NST.",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region II",
+        "conclusions": [
+          {
+            "text": "La baja sismicidad del segmento N del PKF (offshore NW Sulawesi) posiblemente refleja que este segmento está más allá del radio de alta velocidad relativa entre los bloques Makassar y North Sula, reduciendo la influencia de la interacción de bloques en la dirección N de la falla.",
+            "type": "kinematics + tectonic_setting",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Polígono estimado desde Fig. 5. Tiranda & Hall (2024) refuta la conexión con NE Borneo propuesta por Hidayati et al. (2018)."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "seismicity_cluster_serhalawan_2024_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.8,
+              -2.0
+            ],
+            [
+              122.2,
+              -2.0
+            ],
+            [
+              122.2,
+              -2.5
+            ],
+            [
+              121.8,
+              -2.5
+            ],
+            [
+              121.8,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "seismicity_cluster_serhalawan_2024_1",
+        "name": "Tolo Bay cluster 2019 — extensión SW falla Peleng",
+        "category": "seismicity_cluster",
+        "n_events": 21,
+        "depth_range_km": "0-60",
+        "magnitude_range": "4.3-6.8",
+        "catalog": "ISC-EHB+BMKG",
+        "tectonic_interpretation": "Posible continuación offshore SW de la falla Peleng (strike-slip NE-SW); activado en Abr-Jun 2019 después del gap sísmico previo de 20 años (último evento Ago 1999). Posiblemente disparado por el sismo Palu 2018 mediante Coulomb stress positivo.",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region IV",
+        "conclusions": [
+          {
+            "text": "El cluster de Tolo Bay (Apr-Jun 2019; 21 eventos, momento acumulado 1.96e+26 dyne-cm) puede representar la continuación offshore SW no identificada previamente de la falla Peleng. Antes del Palu 2018 la zona era quiescente desde 1999.",
+            "type": "kinematics + tectonic_setting",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "Polígono estimado de la distribución de sismos en Fig. 7."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "seismicity_cluster_serhalawan_2024_2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.9,
+              -1.0
+            ],
+            [
+              120.3,
+              -1.0
+            ],
+            [
+              120.3,
+              -1.6
+            ],
+            [
+              119.9,
+              -1.6
+            ],
+            [
+              119.9,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "seismicity_cluster_serhalawan_2024_2",
+        "name": "Tokorondo cluster — extensional gravity collapse",
+        "category": "seismicity_cluster",
+        "n_events": null,
+        "depth_range_km": "0-40",
+        "magnitude_range": "4.3-6.6",
+        "catalog": "GCMT+BMKG",
+        "tectonic_interpretation": "Clusters de fallas normales al E del segmento S del PKF. Mayor evento: Mw 6.6 (29 May 2017), buzamiento SW. Interpretado como colapso gravitacional lateral facilitado por el PKF durante el Cuaternario.",
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region II",
+        "conclusions": [
+          {
+            "text": "Sismicidad normal al E del PKF sur refleja settings extensionales por colapso gravitacional lateral, correlacionado con extrusión de masa facilitada por el PKF (Wang et al. 2018). El Mw 6.6 de 2017 tiene buzamiento SW y mecanismo normal.",
+            "type": "tectonic_setting + kinematics",
+            "confidence": "high"
+          }
+        ],
+        "extraction_notes": "Polígono estimado desde Fig. 5. TC = Tokorondo Complex."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cross_section_serhalawan_2024_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8,
+            1.2
+          ],
+          [
+            119.2,
+            0.8
+          ],
+          [
+            119.6,
+            0.4
+          ],
+          [
+            120.0,
+            -0.2
+          ],
+          [
+            120.4,
+            -0.8
+          ]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_serhalawan_2024_1",
+        "name": "Perfil A-A' — tomografía velocidad P Brazo Norte / Mamasa",
+        "category": "cross_section",
+        "section_type": "tomographic",
+        "section_label": "A-A'",
+        "depth_range_km": "0-800",
+        "length_km": 280,
+        "orientation_deg": 135,
+        "image_file": "serhalawan_2024_fig9_secciones.png",
+        "image_caption": "Fig. 9. The seismic tomography model of Sulawesi. The tomography data is the UU-P07 model (Amaru, 2007; Hall and Spakman, 2015).",
+        "key_features_in_section": [
+          "Zona de baja velocidad en Mamasa zone (superficie hasta ~100 km) — consistente con magmatismo extensional tardío Mioceno y mecanismos normales del enjambre Mamasa",
+          "Anomalía positiva de velocidad a profundidad interpretada como la slab de Celebes en subducción",
+          "Transición corteza oceánica (Brazo Norte) a estructuras más complejas al S"
+        ],
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region III",
+        "conclusions": [
+          {
+            "text": "La zona de Mamasa muestra perturbación de baja velocidad P en el modelo UU-P07, consistente con la presencia de material fundido/fluidos relacionados a la explosión magmática intermedia-félsica del Mioceno tardío (~7-6 Ma) por rollback de Banda. Justifica los mecanismos de falla normal del enjambre Mamasa.",
+            "type": "tectonic_setting + genesis",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "⚠️ ALERTA CIENTÍFICA: el modelo UU-P07 fue construido por Hall & Spakman (2015), quienes también proveen la interpretación tectónica regional de referencia — posible circularidad. La resolución del UU-P07 es ~100 km, insuficiente para resolver estructuras corticales <50 km. La imagen exportada es la página completa del paper (incluye también B-B'). Coordenadas de la traza A-A' estimadas del mapa inset de Fig. 9."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cross_section_serhalawan_2024_2",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8,
+            0.6
+          ],
+          [
+            121.0,
+            0.2
+          ],
+          [
+            121.2,
+            -0.2
+          ],
+          [
+            121.4,
+            -0.6
+          ],
+          [
+            121.6,
+            -1.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_serhalawan_2024_2",
+        "name": "Perfil B-B' — tomografía velocidad P East Arm / Una-Una",
+        "category": "cross_section",
+        "section_type": "tomographic",
+        "section_label": "B-B'",
+        "depth_range_km": "0-800",
+        "length_km": 200,
+        "orientation_deg": 160,
+        "image_file": "serhalawan_2024_fig9_secciones.png",
+        "image_caption": "Fig. 9. The seismic tomography model of Sulawesi. The tomography data is the UU-P07 model (Amaru, 2007; Hall and Spakman, 2015).",
+        "key_features_in_section": [
+          "Zona de baja velocidad bajo el volcán Una-Una — consistente con extensión cortical por rollback del slab de Célebes (no subducción Sangihe)",
+          "Sismicidad profunda relacionada con slab Sangihe al E",
+          "East Arm: estructura cortical compleja — Ofiolita del E de Sulawesi"
+        ],
+        "coord_quality": "approximate",
+        "source_apa": "Serhalawan, Y., & Chen, P.-F. (2024). Seismotectonics of Sulawesi, Indonesia. Tectonophysics, 883, 230366.",
+        "region_paper": "Region IV",
+        "conclusions": [
+          {
+            "text": "La baja velocidad bajo la zona del volcán Una-Una es consistente con extensión cortical y adelgazamiento relacionado al rollback del slab de Célebes desde el Plioceno (Cottam et al. 2011). El volcán Una-Una no es producto de subducción Célebes sino de la extensión inducida por rollback.",
+            "type": "genesis + tectonic_setting",
+            "confidence": "medium"
+          }
+        ],
+        "extraction_notes": "⚠️ Misma alerta de circularidad que A-A' (UU-P07 = Hall & Spakman 2015). Imagen es la misma página completa que A-A' — recortar manualmente el panel B-B' si se necesita mostrar por separado. Coordenadas de traza estimadas del inset de Fig. 9."
+      }
+    }
+  ]
+}

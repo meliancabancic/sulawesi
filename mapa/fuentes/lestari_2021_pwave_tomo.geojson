@@ -1,0 +1,107 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Lestari, H., Supendi, P., Nugraha, A. D., & Heryandoko, N. (2021). Preliminary results: tomographic imaging of P-wave velocity structure beneath Kalimantan, Makassar Strait, and Sulawesi using Fast Marching Tomography Method. ITB Graduate School Conference (IGSC), December 21, 2021.",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "REGIONAL",
+    "region": "Kalimantan — Makassar Strait — Sulawesi",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["structure", "geophysical_point"],
+    "comprehension_summary": "Preliminary P-wave tomography using 85 BMKG seismic stations (Jan 2017-Jan 2021) covering Kalimantan, Makassar Strait, and Sulawesi with FMTOMO software (fast-marching method). Confirms Sulawesi has significantly higher seismicity than Kalimantan due to active faults (PKF, Matano) and NST subduction. High-velocity anomalies expected to image subducted slabs (NST, Sangihe, Halmahera). Preliminary study — full tomographic images not described in text (conference proceedings, 8 pages).",
+    "main_conclusions": [
+      "Sulawesi has significantly higher seismicity than Kalimantan due to PKF, Matano Fault, and NST subduction zone",
+      "85 BMKG stations used; 4-year dataset (Jan 2017-Jan 2021)",
+      "FMTOMO (fast-marching tomography) applied to P-wave travel times",
+      "High-velocity anomalies expected to correspond to subducted slabs (NST Celebes Sea slab, Sangihe, Halmahera)",
+      "Preliminary results — full interpretation pending further analysis"
+    ],
+    "total_features": 2,
+    "figures_used": ["Fig. 1 (study area + earthquake epicenters + BMKG stations)"]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [107.000, 7.000],
+          [130.000, 7.000],
+          [130.000, -6.000],
+          [107.000, -6.000],
+          [107.000, 7.000]
+        ]]
+      },
+      "properties": {
+        "id": "structure_lestari_2021_1",
+        "name": "Área de estudio — Tomografía P-wave Kalimantan-Makassar-Sulawesi",
+        "full_name": "Study area — P-wave tomography Kalimantan + Makassar Strait + Sulawesi, 85 BMKG stations, Jan 2017-Jan 2021",
+        "category": "structure",
+        "layer_type": "structure",
+        "source": "lestari_2021_pwave_tomo",
+        "canonical_id": null,
+        "structure_type": "tomographic_study_area",
+        "depth_class": "mayor",
+        "method": "Fast Marching Tomography (FMTOMO, Rawlinson)",
+        "data": "P-wave arrival times, 85 BMKG stations",
+        "period": "January 2017 - January 2021",
+        "depth_range_km": [0, 700],
+        "resolution_note": "Preliminary results — resolution not formally assessed in this proceedings paper",
+        "source_apa": "Lestari et al. (2021). ITB Graduate School Conference (IGSC).",
+        "source_short": "Lestari et al. (2021)",
+        "paper_finding": "P-wave tomography applied to Kalimantan-Makassar-Sulawesi region; high seismicity of Sulawesi vs Kalimantan documented; slabs (NST, Sangihe, Halmahera) expected as high-V anomalies",
+        "coord_quality": "approximate",
+        "extraction_notes": "Extent estimado del área de estudio basado en descripción del paper (cubre Kalimantan, Estrecho de Makassar, Sulawesi). Polígono amplio incluyendo toda la región.",
+        "conclusions": [
+          {
+            "text": "P-wave tomography confirms high seismicity of Sulawesi vs Kalimantan; subducted slabs (NST Celebes Sea, Sangihe, Halmahera) expected to appear as high-velocity anomalies",
+            "type": "slab_geometry",
+            "geodyn_implication": "La tomografía P regional Kalimantan-Sulawesi puede revelar la geometría de las losas en el estrecho de Makassar — potencial identificación de losa relicta del rift Makassar bajo la cuenca",
+            "confidence": "low",
+            "figure_ref": "Fig. 1, text p.2-3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [119.868, -0.896], [124.845, 1.487], [122.794, -1.024],
+          [120.193, 0.548], [119.500, 0.500], [123.600, 0.500],
+          [120.000, -3.000], [121.000, -2.000], [119.000, -2.000],
+          [116.000, 0.500]
+        ]
+      },
+      "properties": {
+        "id": "geophysical_point_lestari_2021_2",
+        "name": "Estaciones BMKG — 85 estaciones sismológicas (representativas)",
+        "full_name": "BMKG Seismic Stations (85 stations) used in P-wave tomography Kalimantan-Makassar-Sulawesi",
+        "category": "geophysical_point",
+        "layer_type": "structure",
+        "source": "lestari_2021_pwave_tomo",
+        "canonical_id": null,
+        "depth_class": "superficial",
+        "point_type": "seismic_station",
+        "network": "BMKG",
+        "total_stations": 85,
+        "period": "January 2017 - January 2021",
+        "source_apa": "Lestari et al. (2021). ITB Graduate School Conference (IGSC).",
+        "source_short": "Lestari et al. (2021)",
+        "paper_finding": "85 BMKG stations used for P-wave travel time inversion covering Kalimantan, Makassar Strait, and Sulawesi",
+        "coord_quality": "approximate",
+        "extraction_notes": "NOTA: Coordenadas exactas de las 85 estaciones no listadas en el texto. Estos 10 puntos son representativos de ubicaciones conocidas de redes BMKG. Para las 85 estaciones reales: descargar de IRIS FDSN Station (red IA, ver api-integration.md tarea s2_api2).",
+        "conclusions": [
+          {
+            "text": "85 BMKG stations provide P-wave coverage for Kalimantan-Makassar-Sulawesi; Sulawesi's denser seismicity provides better ray coverage than Kalimantan",
+            "type": "other",
+            "geodyn_implication": "La asimetría de cobertura sísmica (alta en Sulawesi, baja en Kalimantan) limita la resolución tomográfica bajo Kalimantan — las anomalías bajo el estrecho de Makassar serán las menos resueltas",
+            "confidence": "medium",
+            "figure_ref": "Fig. 1"
+          }
+        ]
+      }
+    }
+  ]
+}

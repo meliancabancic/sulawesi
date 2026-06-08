@@ -1,0 +1,135 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "kesumastuti_2025_sulawesi_tomo",
+    "source": "Kesumastuti et al. (2025)",
+    "title": "Evidence of Multiple Subducting Slabs Beneath Sulawesi From Teleseismic P-Wave Tomography",
+    "journal": "Geophysical Research Letters",
+    "volume": "52",
+    "article": "e2025GL115393",
+    "doi": "10.1029/2025GL115393",
+    "year": 2025,
+    "authors": ["Kesumastuti, L.", "Pilia, S.", "Rawlinson, N.", "Whattam, S.A.", "Supendi, P."],
+    "study_area": "Sulawesi and surroundings (117.5-127.5°E, 4.5°N-7.5°S), 0-500 km depth",
+    "method": "Teleseismic P-wave tomography (FMTOMO), 89 BMKG stations, 985 events, 46,171 relative P-wave arrival-time residuals (Jan 2020 – Oct 2023). Resolution ~140 km for larger anomalies, ~70 km minimum in well-sampled regions.",
+    "conclusions": [
+      "Three high-velocity anomalies (H1, H2, H3) are identified beneath North Sulawesi, corresponding to the Celebes Sea slab (CSS, south-dipping), a north-dipping structure interpreted as the Sula slab, and the Sangihe slab (SHS, west-dipping)",
+      "Celebes Sea slab reaches 350-400 km depth at ~122.5°E (exceeds prior seismicity-based estimate of ~250 km)",
+      "Sula slab (H2) is absent west of 122.5°E, revising Hall & Spakman (2015) who placed it from 120-124°E; either it is a separate third slab east of 122.5°E or a deflected continuation of the Sangihe slab",
+      "Low-velocity anomaly L1 beneath East Arm of Sulawesi (200-500 km depth): interpreted as deep mantle inflow responding to lithospheric extension in Gulf of Tomini; not a direct melt source for Colo/Una-Una volcanism",
+      "Low-velocity anomaly L2 east of Palu-Koro Fault (0-100 km depth) near Tambarana Fault: suggests Tambarana Fault is a major lithospheric-scale boundary extending into the upper mantle, possibly the dominant tectonic structure before PKF became active (~2 Ma)"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.5, 1.0]
+      },
+      "properties": {
+        "id": "kesumastuti_2025_H1_CSS",
+        "category": "geophysical_point",
+        "name": "H1 — Celebes Sea Slab",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [0, 400],
+        "depth_method": "tomographic_slice",
+        "velocity_perturbation": "+0.4 km/s maximum",
+        "slab_id": "Celebes_Sea_slab",
+        "slab_dip": "south-dipping",
+        "extent_km": "~500 km E-W beneath northern arm",
+        "interpretation": "South-dipping high-velocity anomaly beneath North Sulawesi Trench representing the Celebes Sea slab. Seismicity extends to ~250 km depth, but tomographic model shows the slab reaching 350-400 km at ~122.5°E with no seismicity in the lower section. Subduction initiated ~5 Ma. The slab's depth increases west-to-east before shallowing again, consistent with lateral propagation of subduction from a point initiation.",
+        "tectonic_context": "North Sulawesi subduction zone; Celebes Sea plate subducting southward beneath North Sulawesi trench",
+        "source_figure": "Figure 3 (H1); Figure 4",
+        "source_short": "Kesumastuti et al. 2025",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.0, 0.5]
+      },
+      "properties": {
+        "id": "kesumastuti_2025_H2_Sula",
+        "category": "geophysical_point",
+        "name": "H2 — Sula Slab (north-dipping)",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [50, 400],
+        "depth_method": "tomographic_slice",
+        "slab_id": "Sula_slab",
+        "slab_dip": "north-dipping",
+        "east_limit_deg_E": 122.5,
+        "interpretation": "North-dipping high-velocity anomaly east of 122.5°E interpreted as the Sula slab (fossil subduction, disconnected from surface lithosphere). Crucially, NO north-dipping slab is found west of 122°E, revising Hall & Spakman (2015) who placed the Sula slab from 120-124°E. Two interpretations: (a) a third distinct Sula slab limited to east of 122.5°E; (b) H2 is a deflected continuation of the Sangihe slab. Authors favor option (a). This slab co-exists with and partially underlies the Celebes Sea slab.",
+        "tectonic_context": "Sula Block / Gulf of Tomini area; paleosubduction of Sula microcontinent's leading edge",
+        "source_figure": "Figure 3 (H2); Figure 4; profiles d-d', e-e'",
+        "source_short": "Kesumastuti et al. 2025",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [124.5, 1.5]
+      },
+      "properties": {
+        "id": "kesumastuti_2025_H3_Sangihe",
+        "category": "geophysical_point",
+        "name": "H3 — Sangihe Slab",
+        "anomaly_type": "high_velocity",
+        "depth_range_km": [0, 660],
+        "depth_method": "tomographic_slice",
+        "slab_id": "Sangihe_slab",
+        "slab_dip": "west-dipping",
+        "interpretation": "West-dipping high-velocity anomaly in NE part of study area consistent with the Sangihe slab subducting westward from the Molucca Sea. The Sangihe slab penetrates the mantle transition zone. This model provides limited resolution in the NE due to sparse station coverage in that direction. Interacts with H1 and H2 at depth creating complex slab-slab dynamics consistent with Cao et al. (2024) anisotropy observations.",
+        "tectonic_context": "Sangihe subduction zone; Molucca Sea oceanic lithosphere subducting westward",
+        "source_figure": "Figure 3 (H3); Figure 4",
+        "source_short": "Kesumastuti et al. 2025",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.0, -1.5]
+      },
+      "properties": {
+        "id": "kesumastuti_2025_L1_EastArm_LVZ",
+        "category": "geophysical_point",
+        "name": "L1 — East Arm Low-Velocity Anomaly",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [200, 500],
+        "depth_method": "tomographic_slice",
+        "interpretation": "Prominent blob-like low-velocity anomaly beneath the East Arm of Sulawesi (strongest below 350 km, extending up to 200 km depth). Located south of main volcanic centers (Colo/Una-Una), so not a direct melt source. Interpreted as deep mantle inflow responding to lithospheric extension in the Gulf of Tomini since Pliocene (slab rollback of Celebes Sea since ~5 Ma; Advokaat et al. 2017). Supendi et al. (2025) found a related shallower anomaly beneath Togian Islands (down to 200 km) closer to surface volcanism that may be the direct melting source.",
+        "tectonic_context": "East Arm / Gulf of Tomini; Gorontalo Bay extensional setting; back-arc of CSS subduction",
+        "source_figure": "Figure 3 (L1); Figures S8-S10",
+        "source_short": "Kesumastuti et al. 2025",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.2, 0.3]
+      },
+      "properties": {
+        "id": "kesumastuti_2025_L2_TambaranaFault",
+        "category": "geophysical_point",
+        "name": "L2 — Tambarana Fault Low-Velocity Anomaly",
+        "anomaly_type": "low_velocity",
+        "depth_range_km": [0, 100],
+        "depth_method": "tomographic_slice",
+        "related_fault": "Tambarana Fault",
+        "interpretation": "Low-velocity anomaly beneath the eastern Palu-Koro Fault/Tambarana Fault zone, extending to 100 km depth. Interpreted as evidence that the Tambarana Fault is a major lithospheric-scale boundary, not merely crustal. The Tambarana Fault (Miocene-Pliocene, >7 km vertical displacement) separates exhumed granitic/metamorphic basement (west) from thick sedimentary sequences beneath Gorontalo Bay (east). May have been the dominant tectonic structure before PKF became active (~2 Ma). Confirms lithosphere-asthenosphere coupling along major strike-slip systems in N. Sulawesi (consistent with Cao et al. 2024 SW01 observations).",
+        "tectonic_context": "North arm isthmus; east of Palu-Koro Fault; Tambarana Fault zone",
+        "source_figure": "Figure 3 (L2); Figures S9-S10",
+        "source_short": "Kesumastuti et al. 2025",
+        "approx": true
+      }
+    }
+  ]
+}

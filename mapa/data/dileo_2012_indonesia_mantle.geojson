@@ -1,0 +1,233 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Di Leo, J. F., Wookey, J., Hammond, J. O. S., Kendall, J.-M., Kaneshima, S., Inoue, H., Yamashina, T., & Harjadi, P. (2012). Mantle flow in regions of complex tectonics: Insights from Indonesia. Geochemistry, Geophysics, Geosystems, 13, Q12008. https://doi.org/10.1029/2012GC004417",
+    "extraction_date": "2026-05-27",
+    "extractor": "Claude paper-extractor v5",
+    "paper_scale": "SYNTHESIS",
+    "region": "Indonesia — Sulawesi, Mar de Banda, Mar de Molucas, Borneo",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["anisotropy"],
+    "custom_categories": {},
+    "figures_used": ["Fig. 5", "Fig. 7", "Fig. 8"],
+    "sections_present": ["5.1 Region 1: S. Sulawesi & Banda Sea", "5.3 Region 3: N. Sulawesi & Molucca Sea"],
+    "comprehension_summary": "Primera documentación sísmica del flujo toroidal alrededor del borde SE de la losa del Mar de Célebes y del flujo sub-losa trench-parallel en el sistema de doble subducción del Mar de Molucas. Usa tres fases de cizalla simultáneas (local S, SKS, downgoing S) en estaciones de toda Indonesia para mejorar resolución espacial de la anisotropía.",
+    "main_conclusions": [
+      "El flujo mantélico en el Mar de Molucas es trench-parallel (Molucas siendo exprimido hacia afuera por la subducción doble) con dt ~1.25-1.53 s medidos en estaciones del Norte de Sulawesi.",
+      "La losa del Mar de Célebes (solo 200-250 km de profundidad, frenada por colisión con losa de Molucas) genera flujo toroidal en su borde SE (dt ~0.98 s en PCI).",
+      "En el Sur de Sulawesi, el manto fluye oblicuamente (corner flow) en la cuña de Banda, paralelo a la curvatura del arco, con dt ~1.13-1.35 s.",
+      "La anisotropía profunda (>530 km) en el Mar de Banda puede corresponder a anisotropía fósil en la losa continental o a anisotropía en la zona de transición mantélica."
+    ],
+    "total_features": 5,
+    "bibliography": {
+      "dileo_2012": {
+        "apa": "Di Leo, J. F., Wookey, J., Hammond, J. O. S., Kendall, J.-M., Kaneshima, S., Inoue, H., Yamashina, T., & Harjadi, P. (2012). Mantle flow in regions of complex tectonics: Insights from Indonesia. Geochemistry, Geophysics, Geosystems, 13, Q12008. https://doi.org/10.1029/2012GC004417",
+        "short": "Di Leo et al. (2012)",
+        "journal": "Geochemistry, Geophysics, Geosystems",
+        "year": 2012,
+        "doi": "10.1029/2012GC004417",
+        "paper_scale": "SYNTHESIS",
+        "topic": "Anisotropía sísmica (SKS splitting) y flujo mantélico en Indonesia",
+        "region": "Indonesia — Sulawesi, Banda, Molucas, Borneo",
+        "categories_extracted": ["anisotropy"],
+        "sections_extracted": [],
+        "geojson_file": "dileo_2012_indonesia_mantle.geojson",
+        "section_images": []
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.27, -4.44] },
+      "properties": {
+        "id": "anisotropy_dileo_2012_1",
+        "name": "Flujo corner flow oblicuo — KAPI (SW Sulawesi)",
+        "full_name": "Estación KAPI — splitting SKS, Sur-Oeste de Sulawesi. Anisotropía atribuida a flujo oblicuo de esquina en la cuña de subducción de Banda, paralelo a la curvatura del arco.",
+        "category": "anisotropy",
+        "depth_class": "mantélica",
+        "source_apa": "Di Leo et al. (2012). Mantle flow in regions of complex tectonics. G-cubed, 13, Q12008.",
+        "source_short": "Di Leo et al. (2012)",
+        "source_figure": "Fig. 5",
+        "approx": true,
+        "paper_finding": "SKS stacked average dt = 1.13 s; fast directions consistently E-W trending (trench-parallel to Banda arc). Local S (7 events, 460-690 km deep): dt = 0.38-0.95 s, fast NW-SE (oblique to slab, trending toward perpendicular).",
+        "coord_quality": "inferred",
+        "extraction_notes": "Coordenadas inferidas de la red GEOFON (estación GE.KAPI, SW de Sulawesi). Valores exactos no publicados en el texto; tomar como aproximación ±0.5°. Fast axis degree derivado de descripción textual ('E-W trending' = 90°). Cobertura azimutal limitada en KAPI (todos los rayos similares backazimuth), imposible descartar capas múltiples.",
+        "fast_axis_deg": 90,
+        "fast_axis_type": "trench_parallel",
+        "delay_time_s": 1.13,
+        "delay_uncertainty_s": null,
+        "station_name": "KAPI",
+        "depth_km": null,
+        "depth_range_km": "0-300",
+        "velocity_context": "mixed",
+        "interpretation": "asthenospheric_flow",
+        "flow_style": "corner_flow",
+        "conclusions": [
+          {
+            "text": "La anisotropía E-O en KAPI es consistente con flujo oblicuo de esquina (corner flow) en la cuña de Banda, con el manto fluyendo paralelo a la curvatura arcuada del arco de Banda alrededor del borde continental de Sulawesi.",
+            "type": "flow_direction",
+            "geodyn_implication": "El rollback del slab de Banda genera flujo mantélico que rodea la quilla continental de Sulawesi; el flujo no es ni puramente trench-parallel ni perpendicular — es oblicuo.",
+            "confidence": "medium",
+            "figure_ref": "Fig. 5"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [122.52, -3.97] },
+      "properties": {
+        "id": "anisotropy_dileo_2012_2",
+        "name": "Flujo corner flow Banda — KDI (SE Sulawesi)",
+        "full_name": "Estación KDI (Kendari) — splitting SKS, Sur-Este de Sulawesi. Anisotropía NE-SO interpretada como flujo oblicuo de esquina paralelo a la curvatura del arco de Banda.",
+        "category": "anisotropy",
+        "depth_class": "mantélica",
+        "source_apa": "Di Leo et al. (2012). Mantle flow in regions of complex tectonics. G-cubed, 13, Q12008.",
+        "source_short": "Di Leo et al. (2012)",
+        "source_figure": "Fig. 5",
+        "approx": true,
+        "paper_finding": "SKS: dt = 1.32 s y 1.38 s (dos mediciones); fast direction NE-SW, aproximadamente paralelo a curvatura del arco de Banda. Local S (11 eventos, 460-690 km): dt = 0.34-1.08 s.",
+        "coord_quality": "inferred",
+        "extraction_notes": "Kendari es la capital de Sulawesi SE; coordenadas bien conocidas. Estación probablemente JISNET o GEOFON. Solo 2 rayos SKS, ambos con similar backazimuth, no permite descartar backazimuthal variation.",
+        "fast_axis_deg": 45,
+        "fast_axis_type": "trench_parallel",
+        "delay_time_s": 1.35,
+        "delay_uncertainty_s": 0.03,
+        "station_name": "KDI",
+        "depth_km": null,
+        "depth_range_km": "0-300",
+        "velocity_context": "mixed",
+        "interpretation": "asthenospheric_flow",
+        "flow_style": "corner_flow",
+        "conclusions": [
+          {
+            "text": "Fast directions NE-SO en KDI (SE Sulawesi) son paralelas a la curvatura del arco de Banda, consistente con flujo oblicuo de esquina en la cuña o sub-slab trench-parallel.",
+            "type": "flow_direction",
+            "geodyn_implication": "Junto con KAPI, confirma que el flujo mantélico en el Sur de Sulawesi sigue la curvatura arcuada del sistema Banda — evidencia de coupling entre geometría del slab y flujo del manto.",
+            "confidence": "low",
+            "figure_ref": "Fig. 5"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.79, 1.12] },
+      "properties": {
+        "id": "anisotropy_dileo_2012_3",
+        "name": "Sub-slab trench-parallel Molucas — TOLI (N. Sulawesi)",
+        "full_name": "Estación TOLI (Toli-Toli) — splitting SKS, Norte de Sulawesi. Fast direction perpendicular a la losa del Mar de Molucas y oblicua a la Fosa Norte de Sulawesi. Interpretado como flujo sub-losa extruyendo lateralmente del sistema de doble subducción del Mar de Molucas.",
+        "category": "anisotropy",
+        "depth_class": "mantélica",
+        "source_apa": "Di Leo et al. (2012). Mantle flow in regions of complex tectonics. G-cubed, 13, Q12008.",
+        "source_short": "Di Leo et al. (2012)",
+        "source_figure": "Fig. 7",
+        "approx": true,
+        "paper_finding": "SKS stacked average dt = 1.25 s. Fast directions perpendicular al strike de la losa del Mar de Molucas y oblicuas a la North Sulawesi Trench. Posiblemente influenciado por ambas subduciones (Molucas y Célebes).",
+        "coord_quality": "inferred",
+        "extraction_notes": "Coordenadas de Tolitoli bien conocidas. Fast_axis_deg no determinable con precisión del texto (solo descripción cualitativa); marcado null. Los rayos SKS están dentro de la esfera de influencia de ambas zonas de subducción (Molucas y Célebes), dificultando la atribución única.",
+        "fast_axis_deg": null,
+        "fast_axis_type": "trench_parallel",
+        "delay_time_s": 1.25,
+        "delay_uncertainty_s": null,
+        "station_name": "TOLI",
+        "depth_km": null,
+        "depth_range_km": "0-400",
+        "velocity_context": "mixed",
+        "interpretation": "asthenospheric_flow",
+        "flow_style": "lateral_extrusion",
+        "conclusions": [
+          {
+            "text": "dt = 1.25 s en TOLI con fast direction perpendicular a la losa de Molucas es consistente con flujo sub-losa trench-parallel debido a la doble subducción del Mar de Molucas, con la microplaca hundiéndose completa expulsando el manto lateralmente en ambas direcciones.",
+            "type": "flow_direction",
+            "geodyn_implication": "La magnitud de anisotropía similar a LUWI y MNI (~1.3-1.5 s) sugiere que el flujo de extrusión lateral del Mar de Molucas es regional y coherente a lo largo de todo el Norte de Sulawesi.",
+            "confidence": "medium",
+            "figure_ref": "Fig. 7"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [122.79, -0.93] },
+      "properties": {
+        "id": "anisotropy_dileo_2012_4",
+        "name": "Extrusión lateral sub-slab Molucas — LUWI (brazo E Sulawesi)",
+        "full_name": "Estación LUWI (Luwuk) — splitting SKS, brazo Este de Sulawesi. Anisotropía trench-parallel atribuida al mismo flujo de extrusión lateral del Mar de Molucas documentado en MNI (estudio previo Di Leo et al. 2012b).",
+        "category": "anisotropy",
+        "depth_class": "mantélica",
+        "source_apa": "Di Leo et al. (2012). Mantle flow in regions of complex tectonics. G-cubed, 13, Q12008.",
+        "source_short": "Di Leo et al. (2012)",
+        "source_figure": "Fig. 7",
+        "approx": true,
+        "paper_finding": "SKS stacked average dt = 1.30 s. Similar en magnitud a MNI (dt = 1.53 s del estudio previo). Fast direction no especificada cuantitativamente en el texto; interpretada como trench-parallel a las fosas Sangihe/Halmahera.",
+        "coord_quality": "inferred",
+        "extraction_notes": "Luwuk es ciudad del brazo Este de Sulawesi; coordenadas bien conocidas. Fast_axis_deg no determinable del texto (se requiere Fig. 7). La interpretación de 'same mantle flow as MNI' confirma la coherencia espacial del flujo sub-slab en el Mar de Molucas.",
+        "fast_axis_deg": null,
+        "fast_axis_type": "trench_parallel",
+        "delay_time_s": 1.30,
+        "delay_uncertainty_s": null,
+        "station_name": "LUWI",
+        "depth_km": null,
+        "depth_range_km": "0-400",
+        "velocity_context": "mixed",
+        "interpretation": "asthenospheric_flow",
+        "flow_style": "lateral_extrusion",
+        "conclusions": [
+          {
+            "text": "dt = 1.30 s en LUWI (brazo E de Sulawesi) es consistente con el flujo sub-losa trench-parallel del Mar de Molucas documentado en estaciones más al norte (MNI, TOLI). El manto es 'exprimido' lateralmente por la subducción doble de la microplaca del Mar de Molucas.",
+            "type": "flow_direction",
+            "geodyn_implication": "La coherencia del flujo trench-parallel entre LUWI, TOLI y MNI (todo el arco de Sangihe) confirma que la extrusión lateral es un proceso regional dominante en todo el Norte de Sulawesi, no solo local.",
+            "confidence": "medium",
+            "figure_ref": "Fig. 7"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [119.85, -0.52] },
+      "properties": {
+        "id": "anisotropy_dileo_2012_5",
+        "name": "Flujo toroidal borde SE losa Célebes — PCI (N. Sulawesi)",
+        "full_name": "Estación PCI — splitting SKS, Norte de Sulawesi central. Anisotropía con dt menor (~0.98 s) interpretada como flujo toroidal alrededor del borde SE de la losa del Mar de Célebes (subducción incipiente, solo 200-250 km de profundidad).",
+        "category": "anisotropy",
+        "depth_class": "mantélica",
+        "source_apa": "Di Leo et al. (2012). Mantle flow in regions of complex tectonics. G-cubed, 13, Q12008.",
+        "source_short": "Di Leo et al. (2012)",
+        "source_figure": "Fig. 7",
+        "approx": true,
+        "paper_finding": "SKS stacked average dt = 0.98 s (menor que TOLI/LUWI/MNI). Fast direction no especificada cuantitativamente. Local S también obtenido en PCI complementando mediciones en MNI para el arco de Sangihe.",
+        "coord_quality": "inferred",
+        "extraction_notes": "Ubicación de PCI inferida: probablemente en la zona de Palu o en el 'notch' entre el brazo N y brazo O de Sulawesi, dada la interpretación de flujo toroidal del slab de Célebes con dip SE. Coordenadas muy inciertas (±1°). Fast_axis_deg no determinable del texto. El menor dt respecto a otras estaciones del norte refleja el desarrollo incipiente del flujo toroidal (slab solo 200-250 km de profundidad vs. 400-550+ km para Molucas).",
+        "fast_axis_deg": null,
+        "fast_axis_type": "toroidal",
+        "delay_time_s": 0.98,
+        "delay_uncertainty_s": null,
+        "station_name": "PCI",
+        "depth_km": null,
+        "depth_range_km": "0-250",
+        "velocity_context": "mixed",
+        "interpretation": "asthenospheric_flow",
+        "flow_style": "toroidal_slab_edge",
+        "conclusions": [
+          {
+            "text": "dt = 0.98 s en PCI con patrón interpretado como toroidal es la primera evidencia sísmica directa de flujo toroidal alrededor del borde SE de la losa del Mar de Célebes. El menor dt respecto a otras estaciones refleja que la losa solo alcanzó 200-250 km (frenada por colisión con la losa del Mar de Molucas).",
+            "type": "flow_direction",
+            "geodyn_implication": "La colisión de la losa del Mar de Célebes con la losa del Mar de Molucas frena el rollback y limita el desarrollo del flujo toroidal. Esto vincula directamente la dinámica del manto con el estado de colisión del sistema Sulawesi.",
+            "confidence": "medium",
+            "figure_ref": "Fig. 7"
+          },
+          {
+            "text": "El sistema de doble subducción del Mar de Molucas más el incipiente rollback del Mar de Célebes crean al menos tres dominios de flujo mantélico distintos en el Norte de Sulawesi en un área de ~500 km.",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La complejidad del flujo mantélico en este segmento es consecuencia directa de la arquitectura de múltiples losas convergentes — un sistema análogo al Mediterráneo occidental pero con mayor número de losas activas.",
+            "confidence": "high",
+            "figure_ref": "Fig. 7"
+          }
+        ]
+      }
+    }
+  ]
+}

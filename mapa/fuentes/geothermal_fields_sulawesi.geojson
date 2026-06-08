@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "description": "Campos geotérmicos operacionales y prospectos — Sulawesi",
+    "sources": ["Pratama et al. (2025)", "PLN Geothermal", "PVMBG"],
+    "note": "capacity_mwe: capacidad instalada en MW eléctrico"
+  },
+  "features": [
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[124.791,1.214]},"properties":{"id":"geoth_lahendong","name":"Lahendong","status":"operacional","capacity_mwe":120,"operator":"PLN/PGE","note":"Campo geotérmico más grande de Sulawesi. 4 unit de 20 MW c/u. En producción desde 2001.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[124.759,1.149]},"properties":{"id":"geoth_leilem","name":"Leilem-Tompaso","status":"operacional","capacity_mwe":20,"operator":"PLN/PGE","note":"Campo adyacente a Lahendong. 1 unit de 20 MW.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[124.881,1.230]},"properties":{"id":"geoth_tondano","name":"Tondano Caldera","status":"prospecto","capacity_mwe":null,"operator":"PGE","note":"Caldera con actividad hidrotérmica activa. En evaluación.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[124.390,0.733]},"properties":{"id":"geoth_kotamobagu","name":"Kotamobagu","status":"prospecto","capacity_mwe":null,"operator":"PGE","note":"Prospecto volcánico en el volcán Ambang. En exploración.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[122.745,-0.557]},"properties":{"id":"geoth_tanjungapi","name":"Tanjung Api","status":"manifestacion","capacity_mwe":null,"operator":null,"note":"Emanaciones H2 natural (>1000 ppm) + termas Pulodalagan (144-197 ppm). Serpentinización ESO. Ver Faturrakhman et al. (2025).","source":"Faturrakhman et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[119.870,0.780]},"properties":{"id":"geoth_marana","name":"Marana","status":"prospecto","capacity_mwe":null,"operator":"PGE","note":"Prospecto geotérmico en la zona de Palu-Donggala. Manifestaciones termales asociadas a la traza de la PKF. En exploración.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[121.028,-1.237]},"properties":{"id":"geoth_bora","name":"Bora","status":"prospecto","capacity_mwe":null,"operator":"PGE","note":"Prospecto en Sulawesi central. Manifestaciones hidrotermales en zona de cizalla PKF-Matano.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[121.353,-2.531]},"properties":{"id":"geoth_soroako","name":"Soroako","status":"prospecto","capacity_mwe":null,"operator":"PGE","note":"Prospecto geotérmico en la cuenca del lago Matano. Asociado a la Falla Matano y flujo calórico elevado.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[120.816,-2.553]},"properties":{"id":"geoth_wotu","name":"Wotu","status":"manifestacion","capacity_mwe":null,"operator":null,"note":"Manifestaciones termales en el extremo sur del sistema PKF-Matano. Zona de alta actividad sísmica.","source":"Pratama et al. (2025)"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[124.536,0.832]},"properties":{"id":"geoth_suwawa","name":"Suwawa","status":"prospecto","capacity_mwe":null,"operator":"PGE","note":"Prospecto en la cuenca de Gorontalo, asociado a actividad volcánica del Gunung Boliyohuto.","source":"Pratama et al. (2025)"}}
+  ]
+}

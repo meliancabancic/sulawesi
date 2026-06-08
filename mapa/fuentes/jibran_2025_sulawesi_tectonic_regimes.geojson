@@ -1,0 +1,275 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+    "extraction_date": "2025-05-17",
+    "extractor": "Claude geo-comprehension + paper-extractor",
+    "region": "Sulawesi Island, Indonesia",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["structure", "hazard_zone"],
+    "notes": "DBSCAN clustering (minPts=15, epsilon=0.40) aplicado a 1390 mecanismos focales (1967-2022, 4.0<Mw<7.0, prof<=50km). 10 clusters identificados. Coordenadas aproximadas digitalizadas de Fig. 2a. No se reportan coordenadas exactas de sismos individuales — el valor del paper es la clasificacion de regimenes tectonicos por zona."
+  },
+  "bibliography": {
+    "jibran_2025": {
+      "apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+      "short": "Jibran & Rafie (2025)",
+      "journal": "IOP Conference Series: Earth and Environmental Science",
+      "year": 2025,
+      "doi": "10.1088/1755-1315/1525/1/012002",
+      "topic": "Tectonic regimes, focal mechanisms, DBSCAN clustering",
+      "region": "Sulawesi, Indonesia"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[119.5, 1.0], [121.5, 1.0], [121.5, 2.5], [119.5, 2.5], [119.5, 1.0]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster01",
+        "name": "Cluster 01 — Régimen compresional NST oeste",
+        "full_name": "Cluster 01 (DBSCAN) — Régimen compresional por subducción del Mar de Célebes, North Sulawesi Trench sector oeste",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "compressional",
+        "dominant_mechanism": "reverse",
+        "n_events": 49,
+        "cluster_id": "01",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "North Sulawesi Trench subduction (Celebes Sea slab)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Coordenadas aproximadas del cluster en la parte norte-occidental del Brazo Norte, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 01 (49 eventos): regimen compresional con predominio de mecanismos inversos. Resultado de la subduccion del Mar de Célebes en el North Sulawesi Trench, sector occidental."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[121.5, 1.0], [124.0, 1.0], [124.0, 2.5], [121.5, 2.5], [121.5, 1.0]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster02",
+        "name": "Cluster 02 — Régimen compresional NST este",
+        "full_name": "Cluster 02 (DBSCAN) — Régimen compresional por subducción del Mar de Célebes, North Sulawesi Trench sector este",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "compressional",
+        "dominant_mechanism": "reverse",
+        "n_events": 81,
+        "cluster_id": "02",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "North Sulawesi Trench subduction (Celebes Sea slab)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Sector oriental del NST, norte del Brazo Norte, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 02 (81 eventos): regimen compresional, mecanismos inversos dominantes. Sector oriental del North Sulawesi Trench."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[119.0, -1.5], [120.5, -1.5], [120.5, 0.5], [119.0, 0.5], [119.0, -1.5]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster03",
+        "name": "Cluster 03 — Régimen transformante PKF",
+        "full_name": "Cluster 03 (DBSCAN) — Régimen transformante de la Falla Palu-Koro con mecanismos strike-slip sinestrales y normales",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "transform",
+        "dominant_mechanism": "strike-slip + normal",
+        "n_events": 62,
+        "cluster_id": "03",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "Palu-Koro Fault (left-lateral), Palolo Fault, Bada Fault",
+        "coord_quality": "approximate",
+        "extraction_notes": "Zona PKF en el Brazo Central-Norte, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 03 (62 eventos): diagrama ternario muestra dos tipos dominantes — strike-slip (PKF sinestral) y normal (Palolo Fault, Bada Fault). Regimen transformante con componente extensional local."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[121.0, -1.5], [123.0, -1.5], [123.0, 0.0], [121.0, 0.0], [121.0, -1.5]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster04",
+        "name": "Cluster 04 — Extensional Lalanga-Tongian",
+        "full_name": "Cluster 04 (DBSCAN) — Régimen extensional entre los Ridges Lalanga y Tongian, East Arm norte",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "extensional",
+        "dominant_mechanism": "normal",
+        "n_events": 16,
+        "cluster_id": "04",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "Lalanga Ridge, Tongian Ridge",
+        "coord_quality": "approximate",
+        "extraction_notes": "Zona entre Lalanga y Tongian ridges, borde norte del East Arm, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 04 (16 eventos): dominado por mecanismos normales — ambiente extensional influenciado por el comportamiento de los ridges Lalanga y Tongian."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[122.0, -0.8], [123.5, -0.8], [123.5, 0.3], [122.0, 0.3], [122.0, -0.8]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster05",
+        "name": "Cluster 05 — Compresional North-Vergent Thrust",
+        "full_name": "Cluster 05 (DBSCAN) — Régimen compresional asociado al North-Vergent Thrust, norte del East Arm",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "compressional",
+        "dominant_mechanism": "reverse",
+        "n_events": 24,
+        "cluster_id": "05",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "North-Vergent Thrust",
+        "coord_quality": "approximate",
+        "extraction_notes": "Zona del North-Vergent Thrust, offshore norte del East Arm, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 05 (24 eventos): dominado por mecanismos inversos. Posicion en la zona del North-Vergent Thrust — regimen compresional resultante de la colision Latest Miocene."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[121.0, -3.5], [122.5, -3.5], [122.5, -2.0], [121.0, -2.0], [121.0, -3.5]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster06",
+        "name": "Cluster 06 — Régimen transformante Matano",
+        "full_name": "Cluster 06 (DBSCAN) — Régimen transformante de la Falla Matano, mecanismos strike-slip dominantes",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "transform",
+        "dominant_mechanism": "strike-slip",
+        "n_events": 19,
+        "cluster_id": "06",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "Matano Fault (left-lateral)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Zona de la Falla Matano, SE Arm, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 06 (19 eventos): predominio de strike-slip — actividad de cizalla a lo largo de la Falla Matano. Regimen transformante sinestral."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[124.0, 2.5], [126.5, 2.5], [126.5, 4.5], [124.0, 4.5], [124.0, 2.5]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster07",
+        "name": "Cluster 07 — Compresional West Sangihe Trench",
+        "full_name": "Cluster 07 (DBSCAN) — Régimen compresional en el West Sangihe Trench, subduccion doble Molucca Sea",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "compressional",
+        "dominant_mechanism": "reverse",
+        "n_events": 18,
+        "cluster_id": "07",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "West Sangihe Trench",
+        "coord_quality": "approximate",
+        "extraction_notes": "Zona del Sangihe Trench occidental, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 07 (18 eventos): compresional, West Sangihe Trench. Parte del sistema de doble subduccion del Mar de Molucas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[126.0, -1.5], [129.0, -1.5], [129.0, 2.0], [126.0, 2.0], [126.0, -1.5]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster08",
+        "name": "Cluster 08 — Compresional Molucca Sea (mayor)",
+        "full_name": "Cluster 08 (DBSCAN) — Régimen compresional principal del Mar de Molucas, doble subduccion divergente (742 eventos)",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "compressional",
+        "dominant_mechanism": "reverse",
+        "n_events": 742,
+        "cluster_id": "08",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "Molucca Sea Double Subduction (Sangihe slab W + Halmahera slab E)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Cluster mas grande del estudio (742 eventos = 53% del total). Zona del Mar de Molucas, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 08 (742 eventos — el mayor): regimen compresional dominante en el Mar de Molucas. Sistema de doble subduccion divergente activo. Representa mas del 50% de todos los eventos clasificados."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[127.0, 0.5], [130.0, 0.5], [130.0, 2.5], [127.0, 2.5], [127.0, 0.5]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster09",
+        "name": "Cluster 09 — Compresional Molucca Sea norte",
+        "full_name": "Cluster 09 (DBSCAN) — Régimen compresional sector norte del Mar de Molucas, subduccion Halmahera",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "compressional",
+        "dominant_mechanism": "reverse",
+        "n_events": 30,
+        "cluster_id": "09",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "Molucca Sea Double Subduction - Halmahera sector",
+        "coord_quality": "approximate",
+        "extraction_notes": "Sector norte del Mar de Molucas, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 09 (30 eventos): compresional, sector norte del sistema de doble subduccion del Mar de Molucas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[119.0, -7.5], [122.0, -7.5], [122.0, -5.5], [119.0, -5.5], [119.0, -7.5]]]
+      },
+      "properties": {
+        "id": "structure_jibran_2025_cluster10",
+        "name": "Cluster 10 — Compresional Nusa Tenggara Back Arc",
+        "full_name": "Cluster 10 (DBSCAN) — Régimen compresional en el Nusa Tenggara Back Arc Thrust, sur de Sulawesi",
+        "category": "structure",
+        "structure_type": "seismotectonic_cluster",
+        "tectonic_regime": "compressional",
+        "dominant_mechanism": "reverse",
+        "n_events": 33,
+        "cluster_id": "10",
+        "dbscan_params": "minPts=15, epsilon=0.40",
+        "driving_structure": "Nusa Tenggara Back Arc Thrust",
+        "coord_quality": "approximate",
+        "extraction_notes": "Zona del Nusa Tenggara Back Arc Thrust, sur de la region de estudio, segun Fig. 2a.",
+        "source_apa": "Jibran, H., & Rafie, M. T. (2025). Heterogeneity of tectonic regimes in Sulawesi Island: Applying unsupervised machine learning to focal mechanism data. IOP Conference Series: Earth and Environmental Science, 1525, 012002. https://doi.org/10.1088/1755-1315/1525/1/012002",
+        "source_short": "Jibran & Rafie (2025)",
+        "paper_finding": "Cluster 10 (33 eventos): compresional, Nusa Tenggara Back Arc Thrust al sur. Zona de subduccion fuera del area principal de Sulawesi."
+      }
+    }
+  ]
+}

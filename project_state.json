@@ -1,0 +1,473 @@
+{
+  "project": "Mapa Tectónico + Monografía Geotectónica — Sulawesi",
+  "last_updated": "2026-05-31 (S6 enfoque definido: fallas activas + deformación neotectónica)",
+  "papers": {
+    "baillie_2022": {
+      "file": "Papers/[S1,S6,S7] Baillie & Decker (2022) - tectónica estructural Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "baillie_2022_sulawesi",
+      "features_en_db": 26,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1,
+        6,
+        7
+      ]
+    },
+    "socquet_2006": {
+      "file": "Papers/[S1] Socquet et al. (2006) - GPS cinemática SE Asia.pdf",
+      "status": "digitalizado",
+      "db_source": "socquet_2006_gps_kinematics",
+      "features_en_db": 8,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1,
+        2
+      ]
+    },
+    "walpersdorf_1998": {
+      "file": "Papers/[S1] Walpersdorf et al. (1998) - GPS norte Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "walpersdorf_1998_n_sulawesi_gps",
+      "features_en_db": 4,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1
+      ]
+    },
+    "natawidjaja_2020": {
+      "file": "Papers/[S2] Natawidjaja et al. (2020) - ruptura PKF 2018.pdf",
+      "status": "digitalizado",
+      "db_source": "natawidjaja_2020_palu_rupture",
+      "features_en_db": 6,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1,
+        2
+      ]
+    },
+    "natawidjaja_2021": {
+      "file": "Papers/[S2] Natawidjaja et al. (2021) - PKF supershear LiDAR.pdf",
+      "status": "digitalizado",
+      "db_source": "natawidjaja_2021_pkf_lidar",
+      "features_en_db": 6,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2
+      ],
+      "nota": "4 segmentos PKF (Tanimbaya/Donggala/Palu/Saluki) + traza ruptura 2018 LiDAR + perfil X-Y. Coord approx — desbloquea merged_geom canon_5 (usuario define en panel)."
+    },
+    "lukman_2016": {
+      "file": "Papers/[S6] Lukman et al. (2016) - Matano Fault.pdf",
+      "status": "digitalizado",
+      "db_source": "lukman_2016_matano",
+      "features_en_db": 1,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2,
+        6
+      ]
+    },
+    "cipta_2016": {
+      "file": "Papers/[S2] Cipta et al. (2016) - PSHA Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "cipta_2016_sulawesi_psha",
+      "features_en_db": 10,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2
+      ]
+    },
+    "greenfield_2021": {
+      "file": "Papers/[S2] Greenfield et al. (2021) - deformación NST.pdf",
+      "status": "digitalizado",
+      "db_source": "greenfield_2021_n_sulawesi_megathrust",
+      "features_en_db": 2,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2,
+        4,
+        6
+      ]
+    },
+    "serhalawan_chen_2024": {
+      "file": "Papers/[S2] Chen & Serhalawan (2024) - sismotectónica Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "serhalawan_chen_2024_sulawesi_seismotectonics",
+      "features_en_db": 5,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2
+      ]
+    },
+    "jibran_2025": {
+      "file": "Papers/[S2] Jibran et al. (2025) - regímenes tectónicos Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "jibran_2025_sulawesi_tectonic_regimes",
+      "features_en_db": 10,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2
+      ]
+    },
+    "jayadi_2023": {
+      "file": "Papers/[S2] Jayadi et al. (2023) - tomografía PKF.pdf",
+      "status": "digitalizado",
+      "db_source": "jayadi_2023_pkf_tomo",
+      "features_en_db": 3,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2
+      ],
+      "prioridad": "★★ — tomografía PKF",
+      "nota": "Estudio PRELIMINAR — conference proceedings. 3 features: perfil C-C inferred + area estudio + zona anomalia negativa Vp (5-25 km PKF). Coordenadas inferidas, coord_quality=inferred."
+    },
+    "di_leo_2012": {
+      "file": "Papers/[S3] Di Leo et al. (2012) - flujo mantélico Indonesia.pdf",
+      "status": "digitalizado",
+      "db_source": "dileo_2012_indonesia_mantle",
+      "features_en_db": 5,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "cao_2024": {
+      "file": "Papers/[S3] Cao et al. (2024) - anisotropía mantélica.pdf",
+      "status": "digitalizado",
+      "db_source": "cao_2024_sula_mantle",
+      "features_en_db": 9,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "yuan_2024": {
+      "file": "Papers/[S3] Yuan et al. (2024) - slabs Molucca.pdf",
+      "status": "digitalizado",
+      "db_source": "yuan_2024_molucca_mantle_flow",
+      "features_en_db": 13,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "hua_2023": {
+      "file": "Papers/[S3] Hua et al. (2023) - tomografía Banda.pdf",
+      "status": "digitalizado",
+      "db_source": "hua2023_banda_sulawesi",
+      "features_en_db": 12,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "kesumastuti_2025": {
+      "file": "Papers/[S3] Kesumastuti et al. (2025) - slabs múltiples Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "kesumastuti_2025_sulawesi_tomo",
+      "features_en_db": 5,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "heryandoko_2024": {
+      "file": "Papers/[S3] Heryandoko et al. (2024) - ANT corteza Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "heryandoko_2024_ant_crustal",
+      "features_en_db": 5,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "supendi_2024": {
+      "file": "Papers/[S3] Supendi et al. (2024) - slabs Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "supendi_2024_sulawesi_tomo",
+      "features_en_db": 4,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "liu_2026": {
+      "file": "Papers/[S3] Liu et al. (2026) - tomografía S-wave Indonesia.pdf",
+      "status": "digitalizado",
+      "db_source": "liu_2026_indonesia_swave_tomo",
+      "features_en_db": 6,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ]
+    },
+    "yang_2025": {
+      "file": "Papers/[S3] Yang et al. (2025) - espesor cortical PKF.pdf",
+      "status": "digitalizado",
+      "db_source": "yang_2025_pkf_crustal_thickness",
+      "features_en_db": 11,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3,
+        6
+      ]
+    },
+    "faturrakhman_2024": {
+      "file": "Papers/[S7] Faturrakhman et al. (2024) - ESO Asera.pdf",
+      "status": "digitalizado",
+      "db_source": "faturrakhman2024_eso_asera",
+      "features_en_db": 3,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        7
+      ]
+    },
+    "faturrakhman_2025": {
+      "file": "Papers/[S5,S7] Faturrakhman et al. (2025) - Tanjung Api H2.pdf",
+      "status": "digitalizado",
+      "db_source": "faturrakhman_2025_tanjung_api",
+      "features_en_db": 5,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        7
+      ],
+      "prioridad": "★ — geomorfología Tanjung Api H2"
+    },
+    "hussein_2014": {
+      "file": "Papers/[S1,S6] Husein et al. (2014) - estructuras Luwuk.pdf",
+      "status": "digitalizado",
+      "db_source": "husein_2014_luwuk",
+      "features_en_db": 7,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1,
+        6,
+        7
+      ],
+      "nota": "Batui/Salodik Thrust (NW-vergente thin-skinned) + Balantak Fault (dextral) + Luwuk Sinistral + Wekuli Fault + Salodik Anticlinorium + ESO polygon + perfil N-S. Desbloquea merged_geom canon_eso (usuario define en panel)."
+    },
+    "isbram_2025": {
+      "file": "Papers/[S2,S6] Hikmy & Isbram (2025) - geomorfología tectónica brazo este.pdf",
+      "status": "digitalizado",
+      "db_source": "hikmy_isbram_2025_batui_geomorph",
+      "features_en_db": 4,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2,
+        6
+      ],
+      "prioridad": "★★★ — Batui Thrust, Luwuk uplift",
+      "nota": "Batui Thrust (activa) + Pasini Thrust + Lobu Watershed (area study) + perfil sismico offshore. Uplift rate 0.213+-0.046 mm/yr."
+    },
+    "surono_2012": {
+      "file": "Papers/[S1,S7] Surono (2012) - tectonoestratigrafía E Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "surono_2012_tectonoestratigrafia",
+      "features_en_db": 3,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1,
+        7
+      ],
+      "prioridad": "★★ — tectonoestratigrafía E Sulawesi",
+      "nota": "ESO polygon + Banggai-Sula terrane + SE Arm terrane (Meluhu). Contexto tectonoestratigrafico."
+    },
+    "satyana_ipa_2011": {
+      "file": "Papers/[S1,S7] Satyana & Purwaningsih (2011) - colisión microplacas IPA.pdf",
+      "status": "digitalizado",
+      "db_source": "satyana_2011_ipa_collision",
+      "features_en_db": 4,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1,
+        7
+      ],
+      "prioridad": "★★ — colisión microplacas",
+      "nota": "Banggai-Sula + Buton-TK microcontinent polygons + Buton Strait suture + Banggai Basin."
+    },
+    "satyana_iagi_2011": {
+      "file": "Papers/[S1,S7] Satyana et al. (2011) - evolución tectónica IAGI.pdf",
+      "status": "digitalizado",
+      "db_source": "satyana_2011_iagi_evolution",
+      "features_en_db": 5,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1,
+        7
+      ],
+      "prioridad": "★★ — evolución tectónica Sulawesi",
+      "nota": "N Arm arc + S Arm magmatic belt + Gorontalo Bay + Bone Gulf + PMC core complex."
+    },
+    "hikmy_2025": {
+      "file": "Papers/Jibran_2025_IOP.pdf",
+      "status": "digitalizado",
+      "db_source": "hikmy_2025_east_arm_sulawesi",
+      "features_en_db": 6,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        2,
+        6
+      ]
+    },
+    "lestari_2021": {
+      "file": "Papers/[S3] Lestari et al. (2021) - tomografía P-wave Makassar.pdf",
+      "status": "digitalizado",
+      "db_source": "lestari_2021_pwave_tomo",
+      "features_en_db": 2,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ],
+      "prioridad": "★ — tomografía P-wave Makassar",
+      "nota": "Area de estudio tomografia P + 85 estaciones BMKG (representativas). Resultados preliminares."
+    },
+    "sulawesi_central_2002": {
+      "file": "Papers/[S-] Desconocido (2002) - Sulawesi central IJES scan.pdf",
+      "status": "pendiente_ocr",
+      "db_source": null,
+      "features_en_db": 0,
+      "cited_in_monografia": false,
+      "sections_relevant": [],
+      "nota": "PDF escaneado sin OCR — requiere lectura manual"
+    },
+    "shih_2026_sulawesi_geoid": {
+      "file": "Papers/[S4] Shih et al. (2026) - gravimetría aérea Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "shih_2026_geoid_sulawesi",
+      "features_en_db": 2,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        4
+      ],
+      "prioridad": "★★★ — gravimetría aérea Sulawesi 2008-2019, modelo geoidal, anomalía free-air",
+      "nota": "Area de estudio + 57 estaciones gravedad absoluta (representativas). Geoid accuracy mejorada a decimetro."
+    },
+    "pratama_2025_pfa_geothermal": {
+      "file": "Papers/[S5] Pratama et al. (2025) - PFA geotermica Sulawesi.pdf",
+      "status": "digitalizado",
+      "db_source": "pratama_2025_pfa_geothermal",
+      "features_en_db": 42,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        5,
+        4
+      ],
+      "prioridad": "★★★ — PFA geotérmica toda la isla; manifestaciones superficiales, volcanes A/B/C, Curie Point Depth, mapas CCRS P10/P50/P90",
+      "nota": "29 manifestaciones geotermicas (Fig. 4b, coord. visuales) + 9 volcanes A/B/C (Fig. 4c, coord. GVP confirmadas) + 3 zonas CCRS (Fig. 10) + 1 area PFA. CPD raster + CCRS rasters en mapa/data/sections/pratama_2025/ listos para ImageStatic extent=[117.5,-6.0,127.5,4.0]."
+    },
+    "hall_spakman_2015": {
+      "file": "Papers/[S3] Hall & Spakman (2015) - estructura manto SE Asia.pdf",
+      "status": "digitalizado",
+      "db_source": "hall_spakman_2015_sea_mantle",
+      "features_en_db": 9,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        3
+      ],
+      "nota": "Tomografia UU-P07. Losa Celebes S-dipping ~200 km, losa Sula tentativa N-dipping ~400 km, slab holes Java E y Sumbawa. Archivo renombrado 2026-06-03 desde nombre de descarga Elsevier."
+    },
+    "argus_2011": {
+      "file": "Papers/[S1] Argus et al. (2011) - NNR-MORVEL56 velocidades de placa.pdf",
+      "status": "referencia",
+      "db_source": null,
+      "features_en_db": 0,
+      "cited_in_monografia": false,
+      "sections_relevant": [
+        1
+      ],
+      "nota": "Fuente del modelo NNR-MORVEL56. Citado en panel de velocidades de placa. No digitalizado como features geológicos."
+    }
+  },
+  "monografia": {
+    "seccion_6_enfoque": "Inventario cinemático de fallas activas y deformación neotectónica — slip rates (PKF 35-45mm/yr, Matano ~35mm/yr, Batui 0.2mm/yr), regímenes de esfuerzo neotectónicos, vectores GPS. Alineado con U8+U9 del programa Geotectónica UBA.",
+    "paginas_acumuladas": 0,
+    "secciones": {
+      "1_descripcion_general": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null
+      },
+      "2_sismicidad": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null
+      },
+      "3_estructura_manto": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null
+      },
+      "4_campo_gravitatorio": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null
+      },
+      "5_flujo_calorico": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null
+      },
+      "6_estructura": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null,
+        "nota": "Enfoque definido 2026-05-31: fallas activas + deformación neotectónica."
+      },
+      "7_petrotectonicas": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null
+      },
+      "8_metamorfismo": {
+        "status": "pendiente",
+        "paginas": 0,
+        "draft_file": null
+      }
+    },
+    "figura_counter": 0,
+    "docx_file": "monografia/monografia_sulawesi.docx",
+    "pdf_final": "monografia/monografia_sulawesi_FINAL.pdf"
+  },
+  "mapa": {
+    "html_file": "mapa/index.html",
+    "db_file": "mapa/backend/sulawesi.db",
+    "total_features": 371,
+    "features_asignados": 210,
+    "features_null_intencional": 161,
+    "total_canonicals": 84,
+    "canonicals_con_merged_geom": 22,
+    "capas_base": [
+      "Sentinel-2 EOX",
+      "ESRI Hybrid (opcional)",
+      "GEBCO (opcional)"
+    ],
+    "secciones_implementadas": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S7",
+      "S8"
+    ],
+    "secciones_bloqueadas": [],
+    "supendi_slices_calibrados": 9,
+    "nota": "Ver mapa_plan.json orden_ejecucion_recomendado para tareas pendientes actuales"
+  },
+  "skills_creados": [
+    "skills/api-integration.md",
+    "skills/db-operations.md",
+    "skills/raster-georef.md",
+    "skills/data-pipeline.md",
+    "skills/map-layer-manager.md",
+    "skills/frontend-design.md"
+  ],
+  "skills_pendientes_migrar": [],
+  "notas": [
+    "PKF (canon_5): merged_geom pendiente — ninguna traza disponible es precisa. Digitalizar Natawidjaja 2021 primero.",
+    "Matano (canon_19): merged_geom pendiente usuario.",
+    "canon_1920-1924, 1925-1936: merged_geom pendiente usuario.",
+    "SPLIT parents (fid=42, 108, 169): canonical_id=NULL intencional."
+  ]
+}

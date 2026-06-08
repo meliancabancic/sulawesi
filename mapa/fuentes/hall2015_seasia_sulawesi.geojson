@@ -1,0 +1,549 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+    "extraction_date": "2026-05-18",
+    "extractor": "Claude paper-extractor v3",
+    "region": "SE Asia / Indonesia — Sulawesi y sistema regional",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": [
+      "subduction_zone",
+      "hazard_zone",
+      "structure",
+      "cross_section"
+    ],
+    "figures_used": [
+      "Fig. 4",
+      "Fig. 5",
+      "Fig. 8B",
+      "Fig. 9",
+      "Fig. 10",
+      "Fig. 11",
+      "Fig. 12",
+      "Fig. 13"
+    ],
+    "sections_present": [
+      "West Java (Fig. 5B)",
+      "East Java (Fig. 5C)",
+      "Gorontalo Bay NNW-SSE (Fig. 13D/E)"
+    ],
+    "comprehension_summary": "Síntesis de 32 páginas que integra el modelo tomográfico UU-P07 con las reconstrucciones tectónicas de Hall (2012) para toda la región del SE Asiático. Aportes principales: tercera losa Sula bajo la Bahía de Gorontalo (nueva), agujeros en la losa bajo Java Este (~8 Ma) y Sumbawa (~4 Ma), tear NNE bajo Toba, rollback de la losa Banda desde ~15 Ma en el Banda embayment, y la conexión explícita NST-PKF.",
+    "main_conclusions": [
+      "Tercera losa (Sula slab) N-dipping bajo Bahía de Gorontalo — remanente de subducción pre-Mioceno, ~400 km, semi-vertical [subduction_zone_hall2015_02]",
+      "Agujero en losa Java Este (~400 km along-strike, 250–500 km, formado ~8 Ma) — asociado a plateau bouyante y K-volcanismo [hazard_zone_hall2015_01]",
+      "Agujero en losa Sumbawa (~150 km along-strike, 200–400 km, formado ~4 Ma) [hazard_zone_hall2015_02]",
+      "Tear NNE en losa Sumatra bajo Toba (~1°N) — preferido sobre hipótesis de pliegue [structure_hall2015_01]",
+      "Banda slab confinado al manto superior, rollback desde ~15 Ma en Banda embayment, tear norte bajo Buru-Seram Oeste [subduction_zone_hall2015_03]",
+      "NST termina en el oeste en la continuación offshore de la PKF — conexión cinemática explícita [subduction_zone_hall2015_01]",
+      "Celebes slab: ~200 km profundidad, subducción iniciada últimos ~5 Ma, genera extensión de Bahía de Gorontalo y delaminación Sula Spur [subduction_zone_hall2015_01]"
+    ],
+    "critical_alert": "⚠️ CIRCULARIDAD PARCIAL: Los autores usan el modelo tectónico de Hall (2012) tanto para interpretar la tomografía COMO para validarla. Las identificaciones de losas (especialmente Sula slab y losas en el manto inferior) dependen de esta reconstrucción. La losa Sula es explícitamente tentativa. Los tests de sensibilidad son independientes pero las interpretaciones estratigráficas no lo son.",
+    "data_model": "UU-P07 (Amaru 2007), seismicity EHB (Engdahl et al. 1998)"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8,
+            0.3
+          ],
+          [
+            121.5,
+            1.0
+          ],
+          [
+            122.5,
+            1.5
+          ],
+          [
+            123.3,
+            1.8
+          ],
+          [
+            124.2,
+            2.0
+          ],
+          [
+            124.5,
+            1.8
+          ]
+        ]
+      },
+      "properties": {
+        "id": "subduction_zone_hall2015_01",
+        "name": "North Sulawesi Trench — Celebes slab S-dipping",
+        "full_name": "Fosa de Sulawesi Norte — losa Celebes, subducción de litosfera del Mar de Célebes hacia el sur bajo el Brazo Norte de Sulawesi. Profundidad máxima ~200 km, iniciada últimos ~5 Ma (Hall & Spakman 2015, Fig. 9, 11, 12)",
+        "category": "subduction_zone",
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Losa Celebes dipping sur desde la NST hasta ~200 km de profundidad; sismicidad más profunda en la parte central de la trinchera con disminución hacia los extremos este y oeste; trinchera termina en el oeste en la continuación offshore de la PKF",
+        "conclusions": [
+          {
+            "text": "La trinchera Norte de Sulawesi termina en su extremo oeste en la continuación offshore de la Palu-Koro Fault, estableciendo una conexión cinemática directa entre la subducción del Mar de Célebes y el sistema de fallas de cizalla PKF",
+            "type": "kinematics",
+            "geodyn_implication": "La PKF actúa como límite occidental de la losa Celebes; el inicio de la subducción del Mar de Célebes (~5 Ma) es consistente con las tasas GPS de la PKF (Socquet et al. 2006) y con la colisión Banggai-Sula como evento trigger",
+            "confidence": "high",
+            "figure_ref": "Fig. 11, 12A"
+          },
+          {
+            "text": "La losa Celebes ha subductado la litosfera del Mar de Célebes hacia el sur en los últimos ~5 Ma, alcanzando ~200 km de profundidad en su parte central; la subducción causa extensión y rápida subsidencia de la Bahía de Gorontalo y delaminación de la Sula Spur",
+            "type": "slab_geometry",
+            "geodyn_implication": "La delaminación de la Sula Spur inducida por la losa Celebes genera extensión, magmatismo en el Brazo Norte y el volcán Una-Una como producto de fusión localizada asociada al adelgazamiento cortical",
+            "confidence": "high",
+            "figure_ref": "Fig. 12B, Fig. 15"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza georeferenciada de Fig. 9 (mapa de trincheras) y Fig. 12A (distribución de sismicidad). La terminación oeste en la PKF es inferida de Fig. 11 y texto.",
+        "depth_max_km": 200,
+        "onset_ma": 5,
+        "dip_direction": "S",
+        "slab_name": "Celebes slab"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5,
+            -0.5
+          ],
+          [
+            122.0,
+            0.0
+          ],
+          [
+            122.5,
+            0.5
+          ],
+          [
+            123.0,
+            1.0
+          ],
+          [
+            123.5,
+            0.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "subduction_zone_hall2015_02",
+        "name": "Sula slab — tercera losa N-dipping Bahía de Gorontalo",
+        "full_name": "Losa Sula — tercera losa propuesta bajo la Bahía de Gorontalo, N-dipping, ~400 km de largo total, remanente de subducción pre-Mioceno Temprano que colisionó con el Brazo Norte (~24 Ma) y se desprendió parcialmente; la parte profunda está en el manto inferior a ~820 km (Hall & Spakman 2015, Fig. 13, 14, 15)",
+        "category": "subduction_zone",
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Tercera losa identificada por tomografía y sismicidad bajo la Bahía de Gorontalo, sub-vertical a dipping N, ~400 km de largo total (mitad posiblemente litosfera continental); remanente adjunto post-colisión de la Sula Spur con el Brazo Norte (~24 Ma); la parte profunda se desprendió y está actualmente en el manto inferior a ~820 km",
+        "conclusions": [
+          {
+            "text": "Una tercera losa (Sula slab), distinta de la losa Sangihe, subduce con dip norte bajo la Bahía de Gorontalo; es el remanente de una zona de subducción pre-Mioceno activa antes de la colisión entre la Sula Spur y el Brazo Norte de Sulawesi (~24 Ma). El largo total de ~400 km implica que hasta la mitad podría ser litosfera continental",
+            "type": "slab_geometry",
+            "geodyn_implication": "La losa Sula explica la sismicidad vertical de la Bahía de Gorontalo que no puede ser atribuida ni a la losa Sangihe ni a la losa Celebes; la interacción con la losa Sangihe (subducción desde ~24 Ma) y la losa Celebes (desde ~5 Ma) puede haber causado el steepening de la losa Sula hasta su posición sub-vertical actual",
+            "confidence": "medium",
+            "figure_ref": "Fig. 13, 14, 15",
+            "note": "Interpretación tentativa — los autores lo explicitan. Consistente con sismicidad, datos geológicos recientes y la reconstrucción tectónica, pero requiere modelado termomecánico 3D para validar"
+          },
+          {
+            "text": "La parte profunda de la losa Sula se desprendió tras la colisión (~20 Ma) y descendió al manto inferior, ahora localizada a ~820 km de profundidad entre Timor y Sulawesi según el modelo UU-P07",
+            "type": "slab_geometry",
+            "geodyn_implication": "El desprendimiento de losa es consistente con modelado numérico que muestra que litosfera >80 Ma puede desprenderse por debajo de ~300 km (Duretz et al. 2011). La anomalía en el manto inferior ('Su' en Fig. 14) es la firma de esta subducción pre-Mioceno",
+            "confidence": "medium",
+            "figure_ref": "Fig. 14, 15"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "⚠️ Interpretación tentativa de los propios autores. Posición georeferenciada de Fig. 12C (distribución de hipocentros) y Fig. 13A (cartoon 3D). La traza en superficie es incierta — se usa la zona de transición Sula Spur / Bahía de Gorontalo como aproximación.",
+        "depth_total_km": 400,
+        "depth_lower_mantle_km": 820,
+        "onset_ma": "pre-24",
+        "collision_age_ma": 24,
+        "dip_direction": "N",
+        "slab_name": "Sula slab",
+        "tectonic_affinity": "partially_continental"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -6.5
+            ],
+            [
+              115.0,
+              -6.5
+            ],
+            [
+              115.0,
+              -9.5
+            ],
+            [
+              111.0,
+              -9.5
+            ],
+            [
+              111.0,
+              -6.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "hazard_zone_hall2015_01",
+        "name": "Slab hole Java Este — gap sísmico 250–500 km",
+        "full_name": "Agujero en la losa subductada bajo Java Este — gap sísmico entre ~250 y 500 km de profundidad, ~400 km de extensión along-strike; interpretado como hueco real en la losa formado ~8 Ma por entrada de un objeto bouyante (plateau oceánico) en la trinchera (Hall & Spakman 2015, Fig. 5)",
+        "category": "hazard_zone",
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Gap sísmico entre 250–500 km bajo Java Este con extensión along-strike de ~400 km; tomografía confirma que no es sección asísmica sino hueco real en la losa; formado ~8 Ma, consistente con el timing del cese del volcanismo calc-alcalino en Java Este y el inicio de K-volcanismo",
+        "conclusions": [
+          {
+            "text": "El gap sísmico bajo Java Este es un agujero real en la losa (no sección asísmica), con ~400 km de extensión along-strike y formado aproximadamente a los 8 Ma cuando un objeto bouyante (posiblemente un plateau oceánico similar al Roo Rise actual) bloqueó la subducción, causó deformación compresiva en Java y generó K-volcanismo al cesar el flujo de fluidos de la losa",
+            "type": "slab_geometry",
+            "geodyn_implication": "El paso del agujero bajo el arco explica la secuencia: contracción y thrust en Java → cese del volcanismo calc-alcalino → K-volcanismo → reanudación del volcanismo calc-alcalino. El hueco tiene implicancias para el riesgo sísmico en Java Este ya que representa una discontinuidad en el sistema de subducción",
+            "confidence": "high",
+            "figure_ref": "Fig. 5"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono aproximado basado en la distribución del gap sísmico en Fig. 5A (mapa de sismicidad >50 km de profundidad en Java). Los límites exactos son inciertos.",
+        "hazard_type": "slab_gap",
+        "depth_range_km": "250-500",
+        "gap_length_km": 400,
+        "age_formation_ma": 8,
+        "evidence": "Gap sísmico confirmado por tomografía UU-P07; correlación con timing de K-volcanismo y thrust en Java"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.5,
+              -7.5
+            ],
+            [
+              119.0,
+              -7.5
+            ],
+            [
+              119.0,
+              -9.5
+            ],
+            [
+              116.5,
+              -9.5
+            ],
+            [
+              116.5,
+              -7.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "hazard_zone_hall2015_02",
+        "name": "Slab hole Sumbawa — gap sísmico 200–400 km",
+        "full_name": "Agujero en la losa subductada bajo Sumbawa — gap sísmico entre ~200 y 400 km, ~150 km de extensión along-strike; formado ~4 Ma; K-volcanismo joven en Sumbawa norte asociado (Hall & Spakman 2015, Fig. 4, texto Sec. 5.1)",
+        "category": "hazard_zone",
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Gap similar pero más pequeño bajo Sumbawa, ~150 km de extensión along-strike, 200–400 km de profundidad; formado ~4 Ma; volcanes K-ricos jóvenes en Sumbawa norte con profundidades anómalas al Benioff zone",
+        "conclusions": [
+          {
+            "text": "Un agujero en la losa bajo Sumbawa, de menor tamaño que el de Java Este (~150 km along-strike, formado ~4 Ma), está asociado a K-volcanismo joven en el norte de Sumbawa con profundidades anómalas al Benioff zone; podría relacionarse con la llegada del margen continental australiano a la trinchera",
+            "type": "slab_geometry",
+            "geodyn_implication": "La secuencia de formación de agujeros de este a oeste (Sumbawa ~4 Ma, Java Este ~8 Ma) es consistente con la progresión de la colisión del margen australiano con el arco Sunda",
+            "confidence": "medium",
+            "figure_ref": "Fig. 4, Sec. 5.1"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono aproximado basado en descripción textual y Fig. 4. Resolución tomográfica en esta área es suficiente para detectar estructuras de escala 200 km según los tests de sensibilidad.",
+        "hazard_type": "slab_gap",
+        "depth_range_km": "200-400",
+        "gap_length_km": 150,
+        "age_formation_ma": 4,
+        "evidence": "Gap sísmico en Fig. 4; K-volcanismo joven en Sumbawa norte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            98.5,
+            0.5
+          ],
+          [
+            98.8,
+            2.0
+          ],
+          [
+            99.0,
+            4.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "structure_hall2015_01",
+        "name": "Sumatra slab tear — NNE bajo Toba",
+        "full_name": "Tear NNE en la losa subductada bajo Sumatra — localizado bajo el centro volcánico de Toba (~1°N–4°N, ~98.8°E); interpretado como desgarre preferido sobre hipótesis de pliegue (Pesicek et al. 2008). Al oeste del tear: ~800 km de losa; al este: ~1200 km hasta NE (Hall & Spakman 2015, Fig. 8B)",
+        "category": "structure",
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Tear NNE en la losa Sumatra bajo el volcán Toba (~1°N); al oeste del tear la losa es más corta (~800 km, dip más vertical) y al este puede trazarse hasta ~1200 km hacia el NE; la posición del tear coincide con la Fracture Zone Investigator subductada",
+        "conclusions": [
+          {
+            "text": "Se prefiere un tear NNE en la losa Sumatra bajo el volcán Toba sobre la hipótesis de pliegue (Pesicek et al. 2008); el tear genera un offset en la posición de la trinchera del Mioceno Temprano entre Sumatra central y norte; su posición coincide con la Fracture Zone Investigator subductada que puede representar una debilidad mecánica preexistente",
+            "type": "slab_geometry",
+            "geodyn_implication": "El tear separa dos regímenes cinemáticos distintos: al sur la losa penetra en el manto inferior con dip pronunciado (subducción desde >20 Ma de litosfera Cretácica), al norte la losa permanece en la zona de transición y se extiende hacia el NE (litosfera Cenozoica). La posición bajo Toba puede ser causal — el tear genera anomalía de upwelling que alimenta el supereruption",
+            "confidence": "medium",
+            "figure_ref": "Fig. 8B"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Posición georeferenciada de Fig. 8B (tear interpretation) y ubicación conocida del volcán Toba (~2.6°N, 98.8°E). La extensión N-S del tear es estimada del texto.",
+        "structure_type": "slab_tear",
+        "orientation": "NNE",
+        "length_km": 400
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.0,
+            -9.5
+          ],
+          [
+            120.5,
+            -10.2
+          ],
+          [
+            122.0,
+            -10.5
+          ],
+          [
+            124.5,
+            -10.5
+          ],
+          [
+            126.5,
+            -10.8
+          ],
+          [
+            128.5,
+            -9.5
+          ],
+          [
+            130.0,
+            -6.5
+          ],
+          [
+            131.5,
+            -4.0
+          ],
+          [
+            129.5,
+            -2.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "subduction_zone_hall2015_03",
+        "name": "Banda slab — rollback desde ~15 Ma, confinado al manto superior",
+        "full_name": "Losa Banda — confinada al manto superior con sección plana ~300 km en la base; rollback en el Banda embayment (cuenca oceánica jurásica dentro del margen continental australiano) desde ~15 Ma; tear prominente en el lado norte bajo Buru y Seram Oeste (Hall & Spakman 2015, Fig. 4, 10, 11)",
+        "category": "subduction_zone",
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Losa Banda totalmente confinada al manto superior con sección plana ~300 km en la base del manto superior ('spoon shape'); rollback iniciado ~15 Ma en un Banda embayment jurásico dentro del margen australiano; tamaño de la anomalía mayor que el área del embayment → incluye litosfera subcontinental delaminada; tear prominente al norte bajo Buru y Seram Oeste",
+        "conclusions": [
+          {
+            "text": "El rollback de la losa Banda comenzó ~15 Ma cuando el límite norte del Banda embayment se alineó con la trinchera Java; el tamaño de la anomalía de alta velocidad excede el área de la corteza oceánica jurásica del embayment, indicando que la losa incluye litosfera subcontinental delaminada del margen australiano circundante",
+            "type": "genesis",
+            "geodyn_implication": "El Banda embayment era una bahía oceánica jurásica dentro del margen continental australiano; cuando la trinchera Java avanzó sobre este embayment, el rollback creó el arco volcánico curvo. Las Fosas de Timor y Seram NO son trincheras de subducción simples sino expresiones topográficas de la flexión del margen bajo la carga de la colisión",
+            "confidence": "high",
+            "figure_ref": "Fig. 10, 11"
+          },
+          {
+            "text": "Existe un tear prominente en el lado norte de la losa Banda bajo Buru y Seram Oeste, que se estrecha hacia el este; este tear se propagó hacia el este a medida que el rollback avanzó en el Banda embayment",
+            "type": "slab_geometry",
+            "geodyn_implication": "El tear norte de la losa Banda corresponde a la zona de fallas de strike-slip en el oeste de Seram (Fig. 10B); la deformación superficial en Seram y Ambon registra la extensión extrema asociada al rollback (Pownall et al. 2013)",
+            "confidence": "high",
+            "figure_ref": "Fig. 10"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza actualizada respecto a Hua 2023 con información del tear norte y la geometría del embayment. Georeferenciada de Fig. 4 y Fig. 10.",
+        "depth_range_km": "50-660",
+        "flat_section_km": 300,
+        "rollback_onset_ma": 15,
+        "slab_name": "Banda slab",
+        "includes_delaminated_continental": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            107.5,
+            -6.0
+          ],
+          [
+            107.5,
+            -10.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_hall2015_01",
+        "name": "Perfil West Java — sección losa Sunda",
+        "full_name": "Sección N-S West Java (perfil B en Fig. 5) — sismicidad y estimación del tope de la losa; arc-trench gap ~285 km; sin gap sísmico evidente (Hall & Spakman 2015, Fig. 5B)",
+        "category": "cross_section",
+        "section_type": "structural_interpretation",
+        "section_label": "West Java (Fig. 5B)",
+        "depth_range_km": "0-700",
+        "length_km": 500,
+        "orientation_deg": 180,
+        "image_file": "hall_2015_fig5B_west_java.png",
+        "image_caption": "Profiles across the slab subducted beneath Java. B: West Java, arc-trench gap 285 km, estimate of top of slab shown.",
+        "key_features_in_section": [
+          "Arc-trench gap ~285 km",
+          "Losa dipping N sin gap sísmico",
+          "Estimación del tope de la losa (línea roja en el original)",
+          "Sismicidad continua hasta ~600 km de profundidad"
+        ],
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Losa West Java sin gap sísmico; arc-trench gap ~285 km; subducción casi ortogonal ~7 cm/año",
+        "conclusions": [
+          {
+            "text": "La losa bajo West Java es continua sin gaps sísmicos significativos; dip ~20° en la zona somera aumentando a ~60-70° en profundidad",
+            "type": "slab_geometry",
+            "geodyn_implication": "Referencia para comparar con los segmentos con agujeros en Java Este y Sumbawa",
+            "confidence": "high",
+            "figure_ref": "Fig. 5B"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Posición del perfil estimada de Fig. 5A (~107.5°E, N-S)."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.5,
+            -6.5
+          ],
+          [
+            112.5,
+            -10.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_hall2015_02",
+        "name": "Perfil East Java — slab hole 250–500 km",
+        "full_name": "Sección N-S East Java (perfil C en Fig. 5) — muestra el gap sísmico entre 250–500 km interpretado como agujero en la losa; arc-trench gap ~300 km; asociado al inicio de K-volcanismo (Hall & Spakman 2015, Fig. 5C, 5E)",
+        "category": "cross_section",
+        "section_type": "structural_interpretation",
+        "section_label": "East Java (Fig. 5C)",
+        "depth_range_km": "0-700",
+        "length_km": 500,
+        "orientation_deg": 180,
+        "image_file": "hall_2015_fig5C_east_java.png",
+        "image_caption": "Profiles across the slab subducted beneath Java. C: East Java, arc-trench gap 300 km, prominent aseismic gap below 250 km interpreted as slab hole.",
+        "key_features_in_section": [
+          "Arc-trench gap ~300 km",
+          "Gap sísmico prominente entre 250–500 km — slab hole",
+          "K-volcanismo (triángulo magenta) al norte del arco calc-alcalino (triángulo rojo)",
+          "Estimación de posición del tope de la losa (línea roja)",
+          "Reanudación de sismicidad por debajo del gap (la losa continúa por debajo del hueco)"
+        ],
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Gap sísmico 250–500 km bajo Java Este con ~400 km along-strike; formado ~8 Ma por entrada de plateau bouyante en la trinchera",
+        "conclusions": [
+          {
+            "text": "El gap sísmico bajo Java Este es el agujero en la losa más grande de la región; su formación a ~8 Ma explica el cese del volcanismo calc-alcalino y el inicio del K-volcanismo en la zona",
+            "type": "slab_geometry",
+            "geodyn_implication": "Implicancias para riesgo sísmico: la discontinuidad en la losa puede generar estrés concentrado en los bordes del agujero; el paso del hueco bajo el arco cambió el régimen volcánico documentado geológicamente",
+            "confidence": "high",
+            "figure_ref": "Fig. 5C, 5E"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Posición estimada de Fig. 5A (~112.5°E, N-S)."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.5,
+            -8.0
+          ],
+          [
+            124.5,
+            -1.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_hall2015_03",
+        "name": "Perfil NNW-SSE Bahía de Gorontalo — losas Celebes/Sula/Sangihe",
+        "full_name": "Sección NNW-SSE a través de la Bahía de Gorontalo (análoga a perfiles D/E en Fig. 13) — muestra la losa Celebes dipping S desde la NST, la losa Sula sub-vertical, y la losa Sangihe cortada oblicuamente en la zona de transición (Hall & Spakman 2015, Fig. 13D/E)",
+        "category": "cross_section",
+        "section_type": "tomographic",
+        "section_label": "Gorontalo Bay NNW-SSE (Fig. 13D/E)",
+        "depth_range_km": "0-1200",
+        "length_km": 800,
+        "orientation_deg": 150,
+        "image_file": "hall_2015_fig13DE_gorontalo.png",
+        "image_caption": "NNW-SSE slices crossing Gorontalo Bay which cut the south-dipping Celebes slab and the sub-vertical Sula slab (south-dipping and overturned in the west, steeply north-dipping further east). The Sangihe slab is cut very obliquely in the transition zone.",
+        "key_features_in_section": [
+          "Losa Celebes dipping S desde NST hasta ~200 km",
+          "Losa Sula sub-vertical (Cel y Sula etiquetados en original)",
+          "Losa Sangihe (Sang) cortada oblicuamente en la zona de transición",
+          "Anomalías de baja velocidad entre las losas — material caliente de la cuña",
+          "Extensión de la losa Sula hasta ~400 km total"
+        ],
+        "source_apa": "Hall, R., & Spakman, W. (2015). Mantle structure and tectonic history of SE Asia. Tectonophysics, 658, 14-45. https://doi.org/10.1016/j.tecto.2015.07.003",
+        "source_short": "Hall & Spakman (2015)",
+        "paper_finding": "Triple sistema de losas bajo la Bahía de Gorontalo: Celebes (S-dipping, ~200 km), Sula (sub-vertical, ~400 km), Sangihe (oblicua, hasta MTZ)",
+        "conclusions": [
+          {
+            "text": "Las secciones NNW-SSE a través de la Bahía de Gorontalo revelan tres losas distintas coexistiendo en el mismo volumen del manto, confirmando la interpretación del triple sistema Celebes-Sula-Sangihe",
+            "type": "slab_geometry",
+            "geodyn_implication": "La coexistencia de tres losas en este volumen es gedinámicamente única y explica la complejidad sísmica extrema de la Bahía de Gorontalo; el volcán Una-Una está posicionado directamente sobre la interacción Celebes-Sula",
+            "confidence": "medium",
+            "figure_ref": "Fig. 13D, 13E"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Posición aproximada del perfil georeferenciada de Fig. 13A (cartoon 3D con las losas). Los perfiles D/E en el paper no tienen coordenadas explícitas en los ejes."
+      }
+    }
+  ]
+}

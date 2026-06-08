@@ -1,0 +1,450 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+    "extraction_date": "2026-05-18",
+    "extractor": "Claude paper-extractor v3",
+    "region": "Banda subduction zone / Indonesia oriental",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": [
+      "subduction_zone",
+      "cross_section",
+      "anisotropy"
+    ],
+    "figures_used": [
+      "Fig. 1a",
+      "Fig. 2",
+      "Fig. 3"
+    ],
+    "sections_present": [
+      "A-A'",
+      "B-B'"
+    ],
+    "comprehension_summary": "Primera tomografía anisótropa 3D P+S del sistema Banda. Revela flujo mantélico trench-parallel en la cuña del arco Banda (extrusión lateral por curvatura 180° de la losa) y flujo semi-toroidal en el borde norte de la losa escapando por el gap Banda-Molucca. La doble subducción del Mar de Molucas es asimétrica: Sangihe llega a la MTZ, Halmahera solo a ~250–300 km.",
+    "main_conclusions": [
+      "La losa Banda (Indo-Australiana) muestra curvatura de 180° con estructura 'spoon shape' en la MTZ a ~450 km — [subduction_zone_hua2023_01]",
+      "Doble subducción asimétrica del Mar de Molucas: Sangihe hasta MTZ (~20–30 Ma), Halmahera hasta ~250–300 km (~10 Ma, ~3 cm/yr) — [subduction_zone_hua2023_02, _03]",
+      "Flujo mantélico trench-parallel en cuña Banda >100 km: extrusión lateral causada por curvatura extrema de la losa, único respecto a Japón/Cascadia/Alaska — [anisotropy_hua2023_01]",
+      "Patrón semi-toroidal en borde norte de la losa Banda: flujo escapa hacia NE por gap Banda-Molucca — [anisotropy_hua2023_02]",
+      "Fossil anisotropy NW-SE en losa bajo Java-Sumba: LPO de dorsal meso-oceánica preservada — [anisotropy_hua2023_03]"
+    ],
+    "resolution_note": "Resolución lateral de anisotropía ~100 km. Estructuras sub-100 km no confiables. Profundidad máxima fiable ~400 km con datos locales.",
+    "data_availability": "Modelos tomográficos disponibles en https://doi.org/10.5281/zenodo.8245536"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            108.5,
+            -7.5
+          ],
+          [
+            112.0,
+            -9.0
+          ],
+          [
+            114.5,
+            -9.5
+          ],
+          [
+            118.0,
+            -10.0
+          ],
+          [
+            120.5,
+            -10.2
+          ],
+          [
+            122.5,
+            -10.0
+          ],
+          [
+            124.5,
+            -10.5
+          ],
+          [
+            126.5,
+            -10.8
+          ],
+          [
+            128.5,
+            -9.5
+          ],
+          [
+            130.0,
+            -6.5
+          ],
+          [
+            131.5,
+            -4.0
+          ],
+          [
+            132.0,
+            -2.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "subduction_zone_hua2023_01",
+        "name": "Banda Slab — subducción Indo-Australiana 180° curved",
+        "full_name": "Losa Indo-Australiana (Banda Slab) — zona de subducción con curvatura 180°, alta velocidad 50–400 km, estancada en MTZ a ~450 km (Hua et al. 2023, Fig. 1a, Fig. 3 perfil B-B')",
+        "category": "subduction_zone",
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "Alta velocidad Vp y Vs a lo largo del arco Java-Banda a profundidades 50–400 km; losa estancada en MTZ con estructura 'spoon shape' a ~450 km donde contactan las ramas del Timor Trough y Seram Trough",
+        "conclusions": [
+          {
+            "text": "La losa Indo-Australiana es claramente detectable como anomalía de alta velocidad a lo largo del arco Banda curvo entre 50 y 400 km de profundidad, con la losa estancada en la MTZ formando una estructura tipo 'spoon shape' a ~450 km",
+            "type": "slab_geometry",
+            "geodyn_implication": "La curvatura de 180° de la losa es única globalmente y controla el patrón de flujo mantélico del sistema; la geometría de cuchara resulta de la inversión de polaridad de subducción entre Timor Trough (subducción norte) y Seram Trough (subducción sur)",
+            "confidence": "high",
+            "figure_ref": "Fig. 2, Fig. 3 perfil B-B'"
+          },
+          {
+            "text": "El borde occidental de la litosfera continental subductada se localiza cerca del centro de la isla de Flores, donde la losa oceánica Indo-Australiana transiciona a litosfera continental australiana",
+            "type": "slab_geometry",
+            "geodyn_implication": "Este límite oceánico-continental en la losa controla el cambio de régimen sísmico y volcánico a lo largo del arco; consistente con Fichtner et al. (2010) y datos isotópicos He-Sr-Nd (Elburg et al. 2004, 2005)",
+            "confidence": "high",
+            "figure_ref": "Fig. 1a, Fig. 3 perfil B-B'"
+          },
+          {
+            "text": "La losa bajo la zona de Banda Sea a 250 km de profundidad muestra FVDs perpendiculares a la trinchera (trench-normal), posiblemente resultantes de fuerzas externas o eventos térmicos que modificaron la LPO mineral durante el plegamiento de la losa",
+            "type": "fossil_anisotropy",
+            "geodyn_implication": "La formación del arco volcánico curvo de 180° se atribuye a extrusión y plegamiento de la losa por fuerzas externas (Bowin et al. 1980); estas fuerzas modificaron la anisotropía fósil de la litosfera",
+            "confidence": "medium",
+            "figure_ref": "Fig. 2 (250 km Vp aniso)"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza georeferenciada de Fig. 1a del paper (mapa tectónico) trazando el frente del arco volcánico / zona de subducción. Incluye segmento de colisión continental (Timor) y subducción invertida (Seram).",
+        "depth_range_km": "50-400",
+        "slab_type": "curved_oceanic_to_continental",
+        "curvature_deg": 180,
+        "mtz_stagnation": true,
+        "spoon_shape_depth_km": 450
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            124.0,
+            4.0
+          ],
+          [
+            124.5,
+            2.5
+          ],
+          [
+            125.0,
+            1.0
+          ],
+          [
+            125.2,
+            0.0
+          ],
+          [
+            125.5,
+            -1.0
+          ],
+          [
+            126.0,
+            -2.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "subduction_zone_hua2023_02",
+        "name": "Sangihe Trench — subducción Mar de Molucas hacia el oeste",
+        "full_name": "Fosa de Sangihe — subducción del Mar de Molucas hacia el oeste bajo Sulawesi-Sangihe. Activa desde ~20–30 Ma, losa extendiéndose hasta la MTZ (Hua et al. 2023, Fig. 3 perfil A-A')",
+        "category": "subduction_zone",
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "Alta velocidad dipping westward bajo Sangihe; losa continúa hasta la MTZ. Sistema activo desde ~20–30 Ma con >1.000 km de convergencia total",
+        "conclusions": [
+          {
+            "text": "La doble subducción del Mar de Molucas es fuertemente asimétrica: la losa de Sangihe (activa ~20–30 Ma, >1.000 km convergencia) se extiende hasta la MTZ, mientras la de Halmahera (activa ~10 Ma, ~300 km, ~3 cm/yr) solo alcanza ~250–300 km de profundidad",
+            "type": "slab_geometry",
+            "geodyn_implication": "La asimetría refleja diferentes historias de subducción; simulaciones numéricas (Király et al. 2018) sugieren que diferente tensión de placa en cada lado genera movimiento hacia el lado de mayor convergencia, produciendo la asimetría. Sistema análogo al Adriático (Apennino-Dinárides)",
+            "confidence": "high",
+            "figure_ref": "Fig. 3 perfil A-A'"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza georeferenciada de Fig. 1a. La fosa de Sangihe no está individualmente etiquetada en Fig. 1 pero su posición se infiere del contexto tectónico y la distribución de sismicidad (Fig. 1b).",
+        "onset_ma": "20-30",
+        "convergence_total_km": 1000,
+        "depth_extent_km": 660,
+        "dip_direction": "W"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            128.5,
+            2.0
+          ],
+          [
+            128.8,
+            0.5
+          ],
+          [
+            129.0,
+            -0.5
+          ],
+          [
+            129.5,
+            -2.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "subduction_zone_hua2023_03",
+        "name": "Halmahera Trench — subducción Mar de Molucas hacia el este",
+        "full_name": "Fosa de Halmahera — subducción del Mar de Molucas hacia el este bajo Halmahera. Activa desde ~10 Ma, losa limitada a ~250–300 km (Hua et al. 2023, Fig. 3 perfil A-A')",
+        "category": "subduction_zone",
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "Alta velocidad dipping eastward bajo Halmahera; losa se extiende solo hasta ~250–300 km de profundidad. Inicio de subducción ~10 Ma, ~300 km convergencia a ~3 cm/yr",
+        "conclusions": [
+          {
+            "text": "La losa bajo Halmahera se extiende solo hasta ~250–300 km, en contraste con Sangihe que alcanza la MTZ; la subducción inició ~10 Ma produciendo ~300 km de convergencia a ~3 cm/yr",
+            "type": "slab_geometry",
+            "geodyn_implication": "La menor profundidad de la losa de Halmahera refleja su historia de subducción más corta. La asimetría del sistema crea un espacio geodinámico único donde el arco Halmahera y el arco Sangihe están en colisión arco-arco activa",
+            "confidence": "high",
+            "figure_ref": "Fig. 3 perfil A-A'"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Georeferenciada de Fig. 1a y distribución de sismicidad Fig. 1b.",
+        "onset_ma": 10,
+        "convergence_total_km": 300,
+        "convergence_rate_cmyr": 3,
+        "depth_extent_km": 275,
+        "dip_direction": "E"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            123.0,
+            1.5
+          ],
+          [
+            131.0,
+            1.5
+          ]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_hua2023_01",
+        "name": "Perfil A-A' — tomografía Vp/Vs Mar de Molucas",
+        "full_name": "Sección vertical A-A' — tomografía isotrópica Vp y Vs, ~E-W a través del Mar de Molucas mostrando la doble subducción asimétrica Sangihe-Halmahera (Hua et al. 2023, Fig. 3)",
+        "category": "cross_section",
+        "section_type": "tomographic",
+        "section_label": "A-A'",
+        "depth_range_km": "0-500",
+        "length_km": 900,
+        "orientation_deg": 90,
+        "image_file": "hua_2023_fig3_seccion_AA.png",
+        "image_caption": "Vertical cross-sections of isotropic Vp and Vs tomography along profile A-A'. Open circles: background seismicity ±30 km. Red triangles: active volcanoes.",
+        "key_features_in_section": [
+          "Losa Mar de Molucas alta velocidad dipping westward bajo Sangihe (hasta MTZ ~660 km)",
+          "Losa Mar de Molucas dipping eastward bajo Halmahera (hasta ~250–300 km)",
+          "Doble subducción asimétrica claramente visible: etiqueta 'Double-side subduction' en el panel",
+          "Baja velocidad en cuña mantélica entre ambas losas (material caliente)",
+          "Volcanes Gunung Ruang y Gamalama sobre las respectivas cuñas",
+          "Discontinuidad de 410 km marcada con línea punteada"
+        ],
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "Doble subducción asimétrica del Mar de Molucas: Sangihe dipping W hasta MTZ, Halmahera dipping E hasta ~250–300 km",
+        "conclusions": [
+          {
+            "text": "La sección A-A' confirma la asimetría de la doble subducción del Mar de Molucas: Sangihe llega a la MTZ mientras Halmahera solo alcanza ~250–300 km",
+            "type": "slab_geometry",
+            "geodyn_implication": "La asimetría de profundidad entre ambas losas es causada por las diferentes historias y tasas de subducción (Király et al. 2018). La losa de Sangihe es la más profunda del 'Philippine mobile belt' con >1.000 km de convergencia acumulada",
+            "confidence": "high",
+            "figure_ref": "Fig. 3 perfil A-A'"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Posición de la línea de perfil georeferenciada de Fig. 1a (línea roja superior, ~E-W). Orientación y extremos aproximados."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            128.5,
+            0.5
+          ],
+          [
+            128.5,
+            -11.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_hua2023_02",
+        "name": "Perfil B-B' — tomografía Vp/Vs Mar de Banda (N-S)",
+        "full_name": "Sección vertical B-B' — tomografía isotrópica Vp y Vs, ~N-S a través del Mar de Banda mostrando la estructura 'spoon shape' de la losa Banda e inversión de polaridad de subducción (Hua et al. 2023, Fig. 3)",
+        "category": "cross_section",
+        "section_type": "tomographic",
+        "section_label": "B-B'",
+        "depth_range_km": "0-500",
+        "length_km": 1300,
+        "orientation_deg": 180,
+        "image_file": "hua_2023_fig3_seccion_BB.png",
+        "image_caption": "Vertical cross-sections of isotropic Vp and Vs tomography along profile B-B'. Open circles: background seismicity ±30 km. Red triangles: active volcanoes. 'Spoon shape' label visible in Vs panel.",
+        "key_features_in_section": [
+          "Banda slab alta velocidad dipping northward en el segmento Timor Trough (sur)",
+          "Banda slab dipping southward en el segmento Seram Trough (norte)",
+          "Las dos ramas de la losa contactan a ~450 km formando estructura 'spoon shape' en la MTZ",
+          "Baja velocidad en el interior del arco Banda (Mar de Banda) — upwelling caliente",
+          "Volcán Teon sobre cuña mantélica de baja velocidad",
+          "Transición litosfera oceánica-continental visible en el sur del perfil"
+        ],
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "Inversión de polaridad de subducción en el arco Banda: subducción norte bajo Timor Trough y sur bajo Seram Trough, contactando a ~450 km en estructura 'spoon shape' en la MTZ",
+        "conclusions": [
+          {
+            "text": "La inversión de polaridad de la losa Banda genera una estructura 'spoon shape' donde las dos ramas contactan a ~450 km en la MTZ; la losa completa está estancada dentro de la MTZ según tomografías de gran escala",
+            "type": "slab_geometry",
+            "geodyn_implication": "La estructura de cuchara es única globalmente y resulta de la colisión arco-continente (Australia) con el arco Banda. El estancamiento en la MTZ es consistente con Wei et al. (2022) y Widiyantoro & Hilst (1997)",
+            "confidence": "high",
+            "figure_ref": "Fig. 3 perfil B-B'"
+          }
+        ],
+        "coord_quality": "approximate",
+        "extraction_notes": "Posición del perfil georeferenciada de Fig. 1a (línea roja inferior, ~N-S a ~128.5°E). Extremos aproximados."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5,
+          -5.5
+        ]
+      },
+      "properties": {
+        "id": "anisotropy_hua2023_01",
+        "name": "Flujo trench-parallel — cuña mantélica Banda >100 km",
+        "full_name": "Anisotropía trench-parallel en anomalías de baja velocidad de la cuña mantélica del arco Banda, profundidades >100 km — flujo lateral extruido por curvatura extrema de la losa (Hua et al. 2023, Fig. 2)",
+        "category": "anisotropy",
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "FVDs paralelas a la trinchera en baja velocidad >100 km bajo el Mar de Banda; orientación ~E-W a NW-SE siguiendo el strike del arco. Patrón opuesto a zonas de subducción normales (Japón, Cascadia, Alaska) que muestran FVDs trench-normal",
+        "conclusions": [
+          {
+            "text": "Las FVDs trench-parallel en la cuña mantélica del arco Banda a profundidades >100 km reflejan flujo mantélico lateral causado por la subducción de la losa Banda con curvatura de 180°; el material astenosférico es extruido lateralmente por el espacio limitado en la cuña",
+            "type": "flow_direction",
+            "geodyn_implication": "Este patrón es fundamentalmente diferente al corner flow trench-normal de zonas de subducción normales. La curvatura extrema de la losa fuerza un flujo de extrusión lateral único, confirmando que la geometría de la losa controla el patrón de convección mantélica. Consistente con Di Leo et al. (2012) por splitting pero Hua et al. (2023) lo resuelve en profundidad por primera vez",
+            "confidence": "high",
+            "figure_ref": "Fig. 2 (150 km, 250 km Vs aniso)"
+          }
+        ],
+        "fast_axis_orientation": "trench-parallel (E-W a NW-SE siguiendo strike del arco)",
+        "fast_axis_type": "trench_parallel",
+        "depth_km": 150,
+        "depth_range_km": "100-300",
+        "velocity_context": "low_velocity_zone",
+        "interpretation": "asthenospheric_flow",
+        "flow_style": "lateral_extrusion",
+        "coord_quality": "approximate",
+        "extraction_notes": "Centroide del área de baja velocidad del Mar de Banda. Las FVDs individuales en Fig. 2 no tienen coordenadas publicadas; posición estimada del centroide del patrón visible en Fig. 2 a 150 km y 250 km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.5,
+          -0.5
+        ]
+      },
+      "properties": {
+        "id": "anisotropy_hua2023_02",
+        "name": "Flujo semi-toroidal — borde norte losa Banda / gap Banda-Molucca",
+        "full_name": "Patrón semi-toroidal de FVDs en el borde norte de la losa Banda — flujo mantélico extruido escapando hacia el NE a través del gap entre la losa Banda y la losa del Mar de Molucas (Hua et al. 2023, Fig. 2)",
+        "category": "anisotropy",
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "FVDs NE-SW en anomalía de baja velocidad al norte de la losa Banda y este de la losa del Mar de Molucas, con patrón semi-toroidal alrededor del borde norte del arco Banda. Vp y Vs muestran un gap entre la losa Banda y la losa del Mar de Molucas",
+        "conclusions": [
+          {
+            "text": "El patrón semi-toroidal de FVDs alrededor del borde norte de la losa Banda representa flujo mantélico extruido desde el arco Banda que escapa hacia el NE a través del gap entre la losa Banda y la losa del Mar de Molucas",
+            "type": "flow_direction",
+            "geodyn_implication": "El flujo toroidal alrededor del borde de losa es análogo a los detectados en Cascadia (Eakin et al. 2010; Zhao & Hua 2021) y Kamchatka (Jiang et al. 2009; Zhao et al. 2021). La interacción entre losas genera este escape de material mantélico, controlando la dinámica del manto en toda la región NE del sistema",
+            "confidence": "medium",
+            "figure_ref": "Fig. 2 (150 km, 250 km Vp/Vs aniso), Fig. 4b"
+          }
+        ],
+        "fast_axis_orientation": "NE-SW (~40-50°)",
+        "fast_axis_type": "semi_toroidal",
+        "depth_km": 150,
+        "depth_range_km": "100-300",
+        "velocity_context": "low_velocity_zone",
+        "interpretation": "asthenospheric_flow",
+        "flow_style": "toroidal_slab_edge",
+        "slab_gap": "Banda-Molucca gap",
+        "coord_quality": "approximate",
+        "extraction_notes": "Centroide estimado del patrón semi-toroidal visible en Fig. 2 a 150 km. Las FVDs individuales no tienen coordenadas publicadas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.0,
+          -9.0
+        ]
+      },
+      "properties": {
+        "id": "anisotropy_hua2023_03",
+        "name": "Fossil anisotropy — losa Indo-Australiana bajo Java-Sumba",
+        "full_name": "Fossil anisotropy NW-SE en la losa Indo-Australiana bajo Java y Sumba — FVDs perpendiculares a los isocrones de la placa, adquiridas en la dorsal meso-oceánica (Hua et al. 2023, Fig. 2)",
+        "category": "anisotropy",
+        "source_apa": "Hua, Y., Zhao, D., & Xu, Y.-G. (2023). P and S wave anisotropic tomography of the Banda subduction zone. Geophysical Research Letters, 50, e2023GL105611. https://doi.org/10.1029/2023GL105611",
+        "source_short": "Hua et al. (2023)",
+        "paper_finding": "FVDs NW-SE dentro de la losa subductada bajo Java y Sumba, perpendiculares a los isocrones de la placa; interpretadas como fossil anisotropy adquirida en la dorsal meso-oceánica e incorporada a la losa durante la subducción",
+        "conclusions": [
+          {
+            "text": "Las FVDs NW-SE dentro de la losa bajo Java y Sumba representan fossil anisotropy de la litosfera oceánica adquirida en la dorsal meso-oceánica, no modificada por la subducción en este segmento",
+            "type": "fossil_anisotropy",
+            "geodyn_implication": "La subducción no ha borrado la LPO relíctica de la litosfera oceánica en el segmento Java-Sumba. Patrón similar a la losa Pacífica bajo Alaska (Gou et al. 2019; Tian & Zhao 2012) y la losa Cocos bajo Costa Rica (Rabbel et al. 2011)",
+            "confidence": "high",
+            "figure_ref": "Fig. 2 (150 km, 250 km Vp aniso)"
+          }
+        ],
+        "fast_axis_orientation": "NW-SE (~135°)",
+        "fast_axis_type": "fossil_ridge_fabric",
+        "depth_km": 150,
+        "depth_range_km": "100-300",
+        "velocity_context": "high_velocity_zone",
+        "interpretation": "fossil_anisotropy",
+        "flow_style": "mid_ocean_ridge_fabric",
+        "coord_quality": "approximate",
+        "extraction_notes": "Centroide estimado del área bajo Java-Sumba donde las FVDs NW-SE son visibles en Fig. 2 a 150 km y 250 km."
+      }
+    }
+  ]
+}

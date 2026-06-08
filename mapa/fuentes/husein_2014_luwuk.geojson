@@ -1,0 +1,329 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Husein, S., Novian, M. I., & Barianto, D. H. (2014). Geological structures and tectonic reconstruction of Luwuk, East Sulawesi. Proceedings of the Indonesian Petroleum Association, 38th Annual Convention & Exhibition (IPA 14-G-137).",
+    "extraction_date": "2026-05-29",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "LOCAL",
+    "region": "East Arm Sulawesi — Luwuk area (Banggai Peninsula)",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["fault", "fold_thrust_belt", "ophiolite", "metamorphic_complex"],
+    "comprehension_summary": "Field mapping + satellite imagery identifies three structural compartments in Luwuk: (N) extensional block-faulting on Balantak Ophiolite; (C) NW-vergent thin-skinned thrust-fold belt (Salodik Anticlinorium + Batui/Salodik Thrust); (S) gravitational Kemumu rock slides. Revises previous SE-vergent thick-skinned model. Two tectonic pulses: (1) NW compression from North Banda Sea opening → Balantak Fault initiation; (2) Late Pliocene NE push via Sorong Fault activation → basin inversion, Salodik fold-thrust belt formation. Uplift rate 1.84 mm/yr (0.35 Ma terrace).",
+    "main_conclusions": [
+      "Batui/Salodik Thrust is thin-skinned and NW-vergent, not thick-skinned SE-vergent as previously assumed — revises Luwuk thrust-fold belt model",
+      "Balantak Fault is the eastern onland continuation of Batui Thrust reinterpreted as dextral strike-slip fault (Siuna Fault of Rusmana et al.)",
+      "Two-pulse tectonic uplift: (1) NW compression from N Banda Sea opening → Balantak Fault; (2) Late Pliocene NE push via Sorong Fault → Salodik Anticlinorium inversion",
+      "Siuna Valley is a transtensional rift (large strike-slip + normal) along Balantak Fault — Gulf of Poh opening since Late Miocene",
+      "ESO (East Sulawesi Ophiolite) obducted southward over Banggai-Sula in Late Neogene (not Early-Mid Miocene as previously thought)",
+      "Wekuli Fault = structural contact between ESO and Pompangeo metamorphic complex (both Cretaceous age)",
+      "Plio-Pleistocene coastal terraces at elevation up to 400 m asl; uplift rate ~1.84 mm/yr at 0.35 Ma reef terrace",
+      "Luwuk sinistral fault (NW-SE) and Poh dextral fault (NNW-SSE) form linked transtensional system with Biak block faults"
+    ],
+    "total_features": 7,
+    "figures_used": ["Fig. 5 (simplified geologic map)", "Fig. 8 (Pagimana ophiolite)", "Fig. 9 (Siuna Valley)", "Fig. 11 (Balantak Ophiolite contact)"]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.400, -0.950],
+          [122.550, -1.050],
+          [122.630, -1.210],
+          [122.720, -1.350],
+          [122.800, -1.450]
+        ]
+      },
+      "properties": {
+        "id": "fault_husein_2014_1",
+        "name": "Batui/Salodik Thrust — NW-vergent thin-skinned",
+        "full_name": "Batui-Salodik Thrust — thin-skinned NW-vergent thrust-fold belt, Luwuk East Arm (Husein et al. 2014)",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "husein_2014_luwuk",
+        "canonical_id": "canon_205",
+        "kinematics": "thrust",
+        "vergence": "NW",
+        "depth_class": "superficial",
+        "iugs_symbol": "thrust",
+        "thin_skinned": true,
+        "revision_of": "Previous thick-skinned SE-vergent model (Rusmana et al. 1993, Surono et al. 1993)",
+        "source_apa": "Husein et al. (2014). IPA 14-G-137, Proc. IPA 38th Conv.",
+        "source_short": "Husein et al. (2014)",
+        "paper_finding": "Thin-skinned NW-vergent thrust (basement uninvolved); forms central compressional compartment; key structure of Salodik fold-thrust belt formed during Late Pliocene inversion",
+        "coord_quality": "approximate",
+        "extraction_notes": "Traza derivada de posición geográfica de Luwuk [122.79,-1.03] y Batui [122.63,-1.21] — localidades mencionadas en el texto. Trazo NW-SE aproximado siguiendo el frente de cabalgamiento.",
+        "conclusions": [
+          {
+            "text": "Batui/Salodik Thrust is thin-skinned (basement uninvolved) with NW vergence, not thick-skinned SE-vergent as previously modeled — fundamental revision of the Luwuk thrust-fold belt",
+            "type": "kinematics",
+            "geodyn_implication": "La vergencia NW del cinturón de Luwuk implica que la compresión viene del SE (avance de Banggai-Sula), no del NW — contrario a los modelos anteriores de frente orogénico hacia el SE",
+            "confidence": "high",
+            "figure_ref": "Fig. 5, Discussion p.5"
+          },
+          {
+            "text": "Salodik fold-thrust belt formed during Late Pliocene NE-ward compression driven by Sorong Fault activation pushing Banggai-Sula",
+            "type": "genesis",
+            "geodyn_implication": "Activación del Sorong Fault en el Plioceno Tardío como trigger de la deformación compresional en el brazo este de Sulawesi — vincula la tectónica regional (Sorong) con la deformación local (Batui Thrust)",
+            "confidence": "high",
+            "figure_ref": "Discussion p.5-6"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.630, -1.210],
+          [122.720, -1.050],
+          [122.800, -0.920],
+          [122.900, -0.820],
+          [123.050, -0.750]
+        ]
+      },
+      "properties": {
+        "id": "fault_husein_2014_2",
+        "name": "Balantak Fault — dextral strike-slip (Siuna Fault)",
+        "full_name": "Balantak Fault (= Siuna Fault sensu Rusmana 1993) — dextral strike-slip transtensional, East Arm Sulawesi",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "husein_2014_luwuk",
+        "canonical_id": "canon_1933",
+        "kinematics": "dextral",
+        "depth_class": "superficial",
+        "iugs_symbol": "strike_slip_dextral",
+        "also_known_as": "Siuna Fault (Rusmana et al. 1993)",
+        "tectonic_setting": "Transtensional — large strike-slip with normal component; controls opening of Gulf of Poh (Siuna Valley)",
+        "source_apa": "Husein et al. (2014). IPA 14-G-137, Proc. IPA 38th Conv.",
+        "source_short": "Husein et al. (2014)",
+        "paper_finding": "Eastern segment of Batui Thrust reinterpreted as dextral strike-slip fault; Siuna Valley is transtensional rift opening Gulf of Poh since Late Miocene; NW-SE compression kinematic analysis from sheared gabbro at Pagimana",
+        "coord_quality": "approximate",
+        "extraction_notes": "La Balantak Fault conecta hacia el SW con el frente del Batui Thrust en área de Batui [122.63,-1.21] y se extiende NE hacia el Balantak Peninsula. Posición derivada del texto y descripciones de afloramientos (Pagimana [122.03,-0.71], Siuna Village [~122.85,-0.82]).",
+        "conclusions": [
+          {
+            "text": "Balantak Fault is dextral strike-slip (not thrust as previously interpreted); controls transtensional Siuna Valley rift opening since Late Miocene",
+            "type": "kinematics",
+            "geodyn_implication": "La Balantak Fault forma el límite entre el compartimento extensional N (sobre ofiolita) y el compresional central — controla la tectónica de bloque del extremo NE del brazo este",
+            "confidence": "high",
+            "figure_ref": "Fig. 5, Fig. 9, p.3-4"
+          },
+          {
+            "text": "Kinematic analysis of sheared gabbro at Pagimana shows SE-NW compression and NE-SW extension — consistent with NE extension of Siuna rifting",
+            "type": "kinematics",
+            "geodyn_implication": "La ofiolita Balantak actúa como bloque rígido que partición la deformación entre thrust (SW) y transtensión (NE) durante el avance de Banggai-Sula",
+            "confidence": "medium",
+            "figure_ref": "Fig. 8, p.4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.750, -0.950],
+          [122.820, -1.000],
+          [122.830, -1.060]
+        ]
+      },
+      "properties": {
+        "id": "fault_husein_2014_3",
+        "name": "Luwuk Sinistral Fault — NW-SE left-lateral",
+        "full_name": "Luwuk Sinistral Fault — NW-SE trending left-lateral strike-slip, Luwuk Town",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "husein_2014_luwuk",
+        "canonical_id": null,
+        "kinematics": "sinistral",
+        "depth_class": "superficial",
+        "iugs_symbol": "strike_slip_sinistral",
+        "source_apa": "Husein et al. (2014). IPA 14-G-137, Proc. IPA 38th Conv.",
+        "source_short": "Husein et al. (2014)",
+        "paper_finding": "Left-lateral strike-slip fault trending NW-SE south of Luwuk town; cuts Plio-Pleistocene reef terraces, Tertiary Poh Formation, Eo-Oligocene Salodik Formation and Paleogene ultramafics",
+        "coord_quality": "approximate",
+        "extraction_notes": "Localizada al sur de Luwuk [122.79,-1.03]. Longitud y trazo cortos — localidad conocida pero traza exacta no coordinada en el texto.",
+        "conclusions": [
+          {
+            "text": "Luwuk sinistral fault (NW-SE) cross-cuts multiple formation ages up to Plio-Pleistocene — indicates recent activity",
+            "type": "kinematics",
+            "geodyn_implication": "Componente sinistral localizada en Luwuk Town — posible peligrosidad sísmica local en área urbana",
+            "confidence": "medium",
+            "figure_ref": "Fig. 5, p.4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.650, -0.900],
+          [122.700, -0.960],
+          [122.740, -1.020]
+        ]
+      },
+      "properties": {
+        "id": "fault_husein_2014_4",
+        "name": "Wekuli Fault — ESO / Pompangeo contact",
+        "full_name": "Wekuli Fault — NNW-SSE structural contact East Sulawesi Ophiolite / Pompangeo Complex",
+        "category": "fault",
+        "layer_type": "fault",
+        "source": "husein_2014_luwuk",
+        "canonical_id": null,
+        "kinematics": "unknown",
+        "depth_class": "superficial",
+        "geological_contact": "East Sulawesi Ophiolite (E) vs Pompangeo Metamorphic Complex (W) — both Cretaceous age",
+        "source_apa": "Husein et al. (2014). IPA 14-G-137, Proc. IPA 38th Conv.",
+        "source_short": "Husein et al. (2014)",
+        "paper_finding": "Wekuli Fault is NNW extension of Tomori Bay linear valley; marks ESO/Pompangeo contact; both Cretaceous age (Simandjuntak et al. 1997)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Posicionada como extensión NNW del Tomori Bay (Gulf of Tolo) hacia el norte, aproximadamente en la transición ESO-Pompangeo al oeste de Luwuk.",
+        "conclusions": [
+          {
+            "text": "Wekuli Fault separates ESO from Pompangeo complex — both Cretaceous; fault is structural contact, kinematics undetermined from this study",
+            "type": "genesis",
+            "geodyn_implication": "La falla Wekuli marca el límite tectónico entre la ofiolita y el complejo metamórfico — potencial zona de discontinuidad sismogénica en profundidad",
+            "confidence": "low",
+            "figure_ref": "Text p.8"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.450, -0.850],
+          [122.750, -0.850],
+          [122.850, -1.050],
+          [122.750, -1.250],
+          [122.500, -1.250],
+          [122.350, -1.050],
+          [122.450, -0.850]
+        ]]
+      },
+      "properties": {
+        "id": "fold_husein_2014_5",
+        "name": "Salodik Anticlinorium — NW-vergent inversion structure",
+        "full_name": "Salodik Anticlinorium — asymmetric anticline, NW-vergent, central compressional compartment, Luwuk",
+        "category": "fold_thrust_belt",
+        "layer_type": "fold_thrust_belt",
+        "source": "husein_2014_luwuk",
+        "canonical_id": null,
+        "vergence": "NW",
+        "depth_class": "superficial",
+        "geometry_type": "asymmetric anticline",
+        "fold_limbs": "steep N forelimb, gentle S backlimb",
+        "involves": "Tertiary carbonates (Salodik Fm, Poh Fm) and Miocene clastics",
+        "source_apa": "Husein et al. (2014). IPA 14-G-137, Proc. IPA 38th Conv.",
+        "source_short": "Husein et al. (2014)",
+        "paper_finding": "Major anticlinorium with asymmetric profile (steep N, gentle S); S-shaped parasitic folds in northern limb indicate NW tectonic transport; formed by Late Pliocene inversion driven by Sorong Fault activation",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono amplio sobre el área de estudio de Luwuk. El anticlinorio comprende el dominio central entre Luwuk y Pagimana.",
+        "conclusions": [
+          {
+            "text": "Salodik Anticlinorium is Late Pliocene basin inversion structure driven by NE-ward compression via Sorong Fault — key structural trap for hydrocarbons (Tomori PSC gas field)",
+            "type": "genesis",
+            "geodyn_implication": "La inversión del Plioceno Tardío en el brazo este es el resultado directo de la activación del Sistema Sorong — vincula la tectónica de gran escala (Sorong) con la formación de trampas de HC en el brazo este",
+            "confidence": "high",
+            "figure_ref": "Fig. 5, Discussion p.5-6"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [122.000, -0.600],
+          [123.200, -0.600],
+          [123.500, -1.200],
+          [122.800, -1.500],
+          [121.800, -1.200],
+          [122.000, -0.600]
+        ]]
+      },
+      "properties": {
+        "id": "ophiolite_husein_2014_6",
+        "name": "East Sulawesi Ophiolite (ESO) — brazo este Sulawesi",
+        "full_name": "East Sulawesi Ophiolite Complex — Late Cretaceous, obducted over Banggai-Sula in Late Neogene",
+        "category": "ophiolite",
+        "layer_type": "structure",
+        "source": "husein_2014_luwuk",
+        "canonical_id": "canon_eso",
+        "formation_age": "Late Cretaceous (Late Cretaceous-Paleogene ultramafics)",
+        "obduction_age": "Late Neogene (Late Pliocene)",
+        "obduction_direction": "southward over Banggai-Sula microcontinent",
+        "composition": "highly sheared gabbro + basalt + magnesite veins (Pagimana outcrop)",
+        "depth_class": "superficial",
+        "source_apa": "Husein et al. (2014). IPA 14-G-137, Proc. IPA 38th Conv.",
+        "source_short": "Husein et al. (2014)",
+        "paper_finding": "ESO thrusted southward over Banggai-Sula in Late Neogene; Pagimana outcrop: highly sheared gabbro+basalt with magnesite veins along fault planes; initial inversion of Balantak Ophiolites at Late Miocene",
+        "coord_quality": "approximate",
+        "extraction_notes": "Polígono regional del ESO sobre el brazo este de Sulawesi. Límite sur aproximado (frente de cabalgamiento). El ESO cubre la mayor parte del brazo este al norte del Batui Thrust.",
+        "conclusions": [
+          {
+            "text": "ESO obducted southward over Banggai-Sula in Late Neogene (Late Pliocene), not Middle Miocene as previously assumed — later timing revises the collision model",
+            "type": "genesis",
+            "geodyn_implication": "La obducción tardía del ESO implica que la colisión Banggai-Sula con el brazo este es más joven (~5-6 Ma, consistent con literatura), con consecuencias para el ritmo de alzamiento y la madurez del sistema de HC",
+            "confidence": "medium",
+            "figure_ref": "Abstract, Introduction, Discussion"
+          },
+          {
+            "text": "Late Miocene initial inversion of Balantak Ophiolites; high-angle reverse fault contact ESO/Poh Formation observed in outcrop (Fig. 11)",
+            "type": "genesis",
+            "geodyn_implication": "Dos fases de deformación en el ESO: inversión inicial Mioceno Tardío (Balantak Fault initiation) + compresión principal Plioceno Tardío (Sorong Fault) — complejo historial de deformación polifásico",
+            "confidence": "medium",
+            "figure_ref": "Fig. 11, p.6"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [122.630, -1.210],
+          [122.430, -0.900]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_husein_2014_7",
+        "name": "Perfil N-S — Luwuk a Pagimana",
+        "full_name": "Perfil geológico N-S transecting East Arm from Luwuk to Pagimana (Husein et al. 2014)",
+        "category": "cross_section",
+        "layer_type": "structure",
+        "source": "husein_2014_luwuk",
+        "depth_class": "cortical",
+        "section_label": "N-S Luwuk-Pagimana",
+        "section_type": "geological",
+        "depth_range_km": [0, 10],
+        "orientation": "N-S",
+        "image_file": null,
+        "key_features_in_section": ["Batui/Salodik Thrust", "Salodik Anticlinorium", "ESO contact", "Wekuli Fault", "Three structural compartments"],
+        "source_apa": "Husein et al. (2014). IPA 14-G-137, Proc. IPA 38th Conv.",
+        "source_short": "Husein et al. (2014)",
+        "paper_finding": "N-S and E-W transecting sections from field mapping document three structural compartments: N extensional (ophiolite), C compressional thrust-fold (carbonates), S gravitational (molasse)",
+        "coord_quality": "approximate",
+        "extraction_notes": "Sección mencionada en metodología ('transecting north-south section and east-west section of Luwuk'). Traza aproximada Luwuk-Pagimana siguiendo el eje del estudio.",
+        "conclusions": [
+          {
+            "text": "Three structural compartments documented: N extensional (Balantak Ophiolite block-faulting), C compressional (Salodik Anticlinorium NW-vergent thrust), S gravitational (Kemumu rock slides)",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La compartimentación estructural del brazo este refleja la geometría compleja de la colisión con Banggai-Sula — distintos mecanismos en km de distancia",
+            "confidence": "high",
+            "figure_ref": "Fig. 5, Discussion p.5"
+          }
+        ]
+      }
+    }
+  ]
+}

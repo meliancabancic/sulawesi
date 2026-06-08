@@ -1,0 +1,180 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_paper": "Jayadi, H., Santosa, B. J., Warnana, D. D., Zulfakriza, Z., Jamroni, R., Supendi, P., Rosalia, S., Muttaqy, F., Rachman, G., Putra, A. S., Wijaya, A. D., & Meidji, I. U. (2023). A preliminary tomography inversion study on the Palu Koro Fault, Central Sulawesi using BMKG seismic network. IOP Conference Series: Earth and Environmental Science, 1227, 012032. https://doi.org/10.1088/1755-1315/1227/1/012032",
+    "extraction_date": "2026-05-30",
+    "extractor": "Claude paper-extractor v4",
+    "paper_scale": "REGIONAL",
+    "region": "Palu Koro Fault — Central Sulawesi (tomografía P-wave local)",
+    "coordinate_system": "EPSG:4326",
+    "categories_present": ["cross_section", "structure"],
+    "comprehension_summary": "Estudio PRELIMINAR de tomografía sísmica P-wave (SIMULPS12) alrededor de la Falla Palu-Koro usando 20 estaciones BMKG y 2850 terremotos locales (2010-2019). Resultado principal: anomalía Vp negativa (baja velocidad, rojo) en 5-25 km de profundidad alrededor de la PKF, interpretada como zona de sedimentos deformados y alta porosidad — zona sismogénica. Anomalías positivas (alta Vp) en West Sulawesi Mandala (Mamuju) y East Sulawesi Mandala (Poso) interpretadas como estructuras ultra-alcalinas. Checkerboard test muestra buena resolución a 10-30 km de profundidad.",
+    "main_conclusions": [
+      "Anomalía Vp negativa (baja velocidad) alrededor de la PKF a 5-25 km de profundidad — zona de sedimentos deformados con alta porosidad, consistente con hipocentros relocalizados a ~20 km (Supendi et al. 2020)",
+      "Anomalía Vp positiva (alta velocidad) entre zonas débiles: West Sulawesi Mandala (Mamuju) y East Sulawesi Mandala (Poso) — estructuras ultra-alcalinas de diferente generación",
+      "Checkerboard test muestra buena resolución en la zona PKF a 10-30 km de profundidad",
+      "ADVERTENCIA: Estudio PRELIMINAR (conference proceedings). Resultados a confirmar con análisis completo incluyendo estructura Vs y Vp/Vs."
+    ],
+    "total_features": 3,
+    "figures_used": ["Fig. 1 (sismicidad Sulawesi + estaciones BMKG)", "Fig. 2a (sección vertical Vp C-C' W-E)"],
+    "scientific_warnings": [
+      "Estudio PRELIMINAR — no revisado completamente. Citar con nota 'resultados preliminares'.",
+      "Las secciones verticales (Fig. 2a-2e) no tienen ejes lat/lon — solo distancia en km. No georeferenciables directamente.",
+      "La traza del perfil C-C' no se muestra en mapa con coordenadas — posición inferida por contexto geográfico de la PKF.",
+      "Solo tomografía Vp — falta Vs y Vp/Vs para interpretación completa."
+    ],
+    "bibliography": {
+      "jayadi_2023_pkf_tomo": {
+        "apa": "Jayadi, H., et al. (2023). A preliminary tomography inversion study on the Palu Koro Fault, Central Sulawesi using BMKG seismic network. IOP Conference Series: Earth and Environmental Science, 1227, 012032. https://doi.org/10.1088/1755-1315/1227/1/012032",
+        "short": "Jayadi et al. (2023)",
+        "journal": "IOP Conference Series: Earth and Environmental Science",
+        "year": 2023,
+        "doi": "10.1088/1755-1315/1227/1/012032",
+        "paper_scale": "REGIONAL",
+        "topic": "Tomografía P-wave local, Palu Koro Fault, estructura de velocidad Vp",
+        "region": "PKF — Central Sulawesi",
+        "categories_extracted": ["cross_section", "structure"],
+        "geojson_file": "jayadi_2023_pkf_tomo.geojson"
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [119.300, -0.200],
+          [119.500, -0.400],
+          [119.700, -0.600],
+          [119.900, -0.800],
+          [120.100, -1.000],
+          [120.300, -1.200]
+        ]
+      },
+      "properties": {
+        "id": "cross_section_jayadi2023_1",
+        "name": "Perfil C-C' — tomografía Vp W-E, PKF Central Sulawesi",
+        "full_name": "Perfil tomográfico vertical C-C' (dirección W-E) a través de la Falla Palu-Koro — Jayadi et al. (2023)",
+        "category": "cross_section",
+        "layer_type": "structure",
+        "source": "jayadi_2023_pkf_tomo",
+        "depth_class": "cortical",
+        "section_label": "C-C'",
+        "section_type": "tomographic_Vp",
+        "depth_range_km": [0, 160],
+        "orientation": "W-E",
+        "image_file": null,
+        "key_features_in_section": [
+          "Anomalía Vp negativa (roja) en PKF — 5-25 km",
+          "Anomalía Vp positiva (azul) en West Sulawesi Mandala (Mamuju)",
+          "Hipocenter relocation — círculos blancos a ~20 km"
+        ],
+        "source_apa": "Jayadi et al. (2023). IOP Conf. Ser.: Earth Environ. Sci., 1227, 012032. doi:10.1088/1755-1315/1227/1/012032",
+        "source_short": "Jayadi et al. (2023)",
+        "paper_finding": "Sección W-E a través de PKF. Anomalía negativa Vp 5-25 km alrededor de la falla. Checkerboard test OK a 10-30 km. 20 estaciones BMKG, 2010-2019.",
+        "coord_quality": "inferred",
+        "extraction_notes": "La traza C-C' no se muestra en un mapa con coordenadas en el paper. Posición inferida: sección W-E atravesando la traza de la PKF en el área de Palu (~119.9°E). Orientación W-E confirmada por texto ('west-east direction'). ±20 km de precisión en el posicionamiento.",
+        "conclusions": [
+          {
+            "text": "Anomalía Vp negativa (baja velocidad) alrededor de la PKF a 5-25 km de profundidad — interpretada como zona de sedimentos deformados con alta porosidad y porcentaje de fluido elevado",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La zona de baja velocidad Vp en la PKF a 5-25 km define la zona de cizalla activa — correlaciona con la profundidad de hipocentros relocalizados (~20 km) y con el plano de ruptura del Mw 7.5 de 2018",
+            "confidence": "medium",
+            "figure_ref": "Fig. 2a"
+          },
+          {
+            "text": "Anomalía Vp positiva en West Sulawesi Mandala (Mamuju) y East Sulawesi Mandala (Poso) — estructuras ultra-alcalinas de diferente generación geológica",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La heterogeneidad lateral de Vp refleja la naturaleza compuesta de Sulawesi: bloque occidental (Mandala Oeste, afinidad Sundaland) vs. bloque oriental (Mandala Este, afinidad Ofiolitica/Continental). La PKF es el límite entre estas anomalías.",
+            "confidence": "low",
+            "figure_ref": "Fig. 2a, Discussion"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [118.500, 1.500],
+          [121.500, 1.500],
+          [121.500, -2.500],
+          [118.500, -2.500],
+          [118.500, 1.500]
+        ]]
+      },
+      "properties": {
+        "id": "structure_jayadi2023_2",
+        "name": "Área de estudio — tomografía PKF, 20 estaciones BMKG",
+        "full_name": "Área de cobertura de la red sísmica BMKG usada en la tomografía PKF (Jayadi et al. 2023)",
+        "category": "structure",
+        "layer_type": "structure",
+        "source": "jayadi_2023_pkf_tomo",
+        "depth_class": "cortical",
+        "n_stations": 20,
+        "n_earthquakes": 2850,
+        "n_phases_P": 22319,
+        "period": "2010-2019",
+        "magnitude_range": "Mw 3.0–7.4",
+        "depth_range_km": "1–160",
+        "method": "SIMULPS12 P-wave travel time tomography",
+        "grid_km": "20x20 km horizontal, 10 km vertical",
+        "source_apa": "Jayadi et al. (2023). IOP Conf. Ser.: Earth Environ. Sci., 1227, 012032. doi:10.1088/1755-1315/1227/1/012032",
+        "source_short": "Jayadi et al. (2023)",
+        "paper_finding": "20 estaciones BMKG en Sulawesi, 2850 sismos 2010-2019, 22319 fases P. Grid 20×20 km. Modelo inicial AK135.",
+        "coord_quality": "approximate",
+        "extraction_notes": "Área estimada de la cobertura de la red de 20 estaciones BMKG en Sulawesi, inferida de Fig. 1 (mapa de sismicidad). ±50 km de precisión en bordes.",
+        "conclusions": [
+          {
+            "text": "La red de 20 estaciones BMKG cubre Sulawesi central con buena resolución en la zona PKF (10-30 km de profundidad). Checkerboard test valida la resolución en esa banda.",
+            "type": "other",
+            "geodyn_implication": "La cobertura de la red BMKG es suficiente para resolver estructuras a escala cortical (~20 km), pero insuficiente para manto superior sin teleseísmica adicional.",
+            "confidence": "high",
+            "figure_ref": "Fig. 2b-2e (tests de resolución)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.500, 0.600],
+          [120.300, 0.600],
+          [120.300, -1.500],
+          [119.500, -1.500],
+          [119.500, 0.600]
+        ]]
+      },
+      "properties": {
+        "id": "structure_jayadi2023_3",
+        "name": "Zona anomalía Vp negativa — PKF 5-25 km profundidad",
+        "full_name": "Zona de anomalía Vp negativa (baja velocidad) alrededor de la PKF — 5-25 km de profundidad (Jayadi et al. 2023)",
+        "category": "structure",
+        "layer_type": "structure",
+        "source": "jayadi_2023_pkf_tomo",
+        "depth_class": "cortical",
+        "anomaly_type": "negative_Vp",
+        "depth_range_km": [5, 25],
+        "interpretation": "Zona de sedimentos deformados con alta porosidad — zona sismogénica de la PKF",
+        "source_apa": "Jayadi et al. (2023). IOP Conf. Ser.: Earth Environ. Sci., 1227, 012032. doi:10.1088/1755-1315/1227/1/012032",
+        "source_short": "Jayadi et al. (2023)",
+        "paper_finding": "Low Vp anomaly (red) around PKF at 5-25 km depth. Corroborates hypocenter relocation depth of ~20 km (Supendi et al. 2020). High porosity, deformed sediments.",
+        "coord_quality": "inferred",
+        "extraction_notes": "Polígono aproximado de la zona de anomalía negativa Vp alrededor de la PKF, inferido de Fig. 2a. La figura solo muestra sección vertical W-E sin mapa horizontal con coordenadas. Posición estimada siguiendo la traza de la PKF. ±30 km de precisión.",
+        "conclusions": [
+          {
+            "text": "Zona de baja velocidad Vp (5-25 km) alrededor de la PKF — zona sismogénica con sedimentos deformados y alta porosidad. Consistente con profundidad de hipocentros relocalizados a ~20 km.",
+            "type": "tectonic_setting",
+            "geodyn_implication": "La zona de baja Vp define la zona de falla activa en profundidad — el movimiento sinistral de 35-45 mm/año ocurre dentro de esta banda de debilidad cortical. La alta porosidad facilita la propagación de fluidos y puede influir en el acoplamiento sísmico de la falla.",
+            "confidence": "medium",
+            "figure_ref": "Fig. 2a, Conclusions"
+          }
+        ]
+      }
+    }
+  ]
+}

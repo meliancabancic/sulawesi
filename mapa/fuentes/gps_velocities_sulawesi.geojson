@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "description": "GPS/GNSS horizontal velocities — estaciones en Sulawesi y alrededores",
+    "reference_frame": "ITRF2014",
+    "sources": ["Socquet et al. (2006)", "Walpersdorf et al. (1998)", "Irsyam et al. (2020) / BMKG CORS"],
+    "units": "mm/yr",
+    "note": "Ve_mmyr = componente Este, Vn_mmyr = componente Norte. Positivo = Este/Norte. Valores compilados de literatura; incertidumbres ±1-3 mm/yr."
+  },
+  "features": [
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[119.855,-0.898]},"properties":{"station":"PALU","network":"BMKG","Ve_mmyr":37.5,"Vn_mmyr":8.2,"Vz_mmyr":0.1,"sigma_e":1.2,"sigma_n":1.0,"source":"Socquet et al. (2006)","period":"2001-2004","note":"Bloque NSB — movimiento dominado por PKF sinistral"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[124.840,1.553]},"properties":{"station":"MANU","network":"BMKG","Ve_mmyr":25.8,"Vn_mmyr":18.5,"Vz_mmyr":0.2,"sigma_e":1.5,"sigma_n":1.3,"source":"Walpersdorf et al. (1998)","period":"1993-1997","note":"Bloque del brazo norte — convergencia NST"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[120.791,1.121]},"properties":{"station":"TOLI","network":"BMKG","Ve_mmyr":34.2,"Vn_mmyr":10.1,"Vz_mmyr":0.0,"sigma_e":1.8,"sigma_n":1.5,"source":"Socquet et al. (2006)","period":"2001-2004","note":"Bloque NSB norte — shear PKF"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[121.608,-0.175]},"properties":{"station":"UUNA","network":"BMKG","Ve_mmyr":26.5,"Vn_mmyr":12.8,"Vz_mmyr":0.1,"sigma_e":2.1,"sigma_n":1.8,"source":"Socquet et al. (2006)","period":"2001-2004","note":"Isla Una-Una — volcán Colo, bloque central"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[120.637,-1.738]},"properties":{"station":"TENT","network":"BMKG","Ve_mmyr":22.0,"Vn_mmyr":9.5,"Vz_mmyr":0.1,"sigma_e":1.9,"sigma_n":1.6,"source":"Socquet et al. (2006)","period":"2001-2004","note":"Tentena — bloque central Sulawesi"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[119.430,-5.148]},"properties":{"station":"MKSR","network":"BMKG","Ve_mmyr":5.2,"Vn_mmyr":12.1,"Vz_mmyr":0.0,"sigma_e":1.1,"sigma_n":0.9,"source":"Irsyam et al. (2020)","period":"2010-2018","note":"Makassar — bloque Sunda estable"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[122.789,-1.038]},"properties":{"station":"LUWI","network":"BMKG","Ve_mmyr":18.5,"Vn_mmyr":14.2,"Vz_mmyr":0.5,"sigma_e":2.3,"sigma_n":2.0,"source":"Irsyam et al. (2020)","period":"2010-2018","note":"Luwuk — brazo este, colisión Banggai-Sula"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[123.066,0.534]},"properties":{"station":"GORO","network":"BMKG","Ve_mmyr":27.1,"Vn_mmyr":17.8,"Vz_mmyr":0.2,"sigma_e":1.6,"sigma_n":1.4,"source":"Socquet et al. (2006)","period":"2001-2004","note":"Gorontalo — brazo norte, convergencia NST"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[118.887,-2.682]},"properties":{"station":"MMRI","network":"BMKG","Ve_mmyr":8.1,"Vn_mmyr":11.5,"Vz_mmyr":0.1,"sigma_e":1.4,"sigma_n":1.2,"source":"Irsyam et al. (2020)","period":"2010-2018","note":"Mamuju — MST oeste, deformación compresiva"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[120.328,-2.551]},"properties":{"station":"MASI","network":"BMKG","Ve_mmyr":14.8,"Vn_mmyr":10.2,"Vz_mmyr":0.2,"sigma_e":2.0,"sigma_n":1.7,"source":"Irsyam et al. (2020)","period":"2010-2018","note":"Masamba — bloque SW Sulawesi"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[119.92,0.87]},"properties":{"station":"BNGG","network":"BMKG","Ve_mmyr":39.8,"Vn_mmyr":7.1,"Vz_mmyr":0.3,"sigma_e":1.3,"sigma_n":1.1,"source":"Socquet et al. (2006)","period":"2001-2004","note":"Bangga — máxima velocidad sinistral PKF norte"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[119.900,-3.340]},"properties":{"station":"SNGK","network":"BMKG","Ve_mmyr":6.8,"Vn_mmyr":11.9,"Vz_mmyr":0.1,"sigma_e":1.5,"sigma_n":1.3,"source":"Socquet et al. (2006)","period":"2001-2004","note":"Bloque brazo sur — baja velocidad, estable"}}
+  ]
+}

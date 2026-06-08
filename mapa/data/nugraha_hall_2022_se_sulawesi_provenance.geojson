@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "nugraha_hall_2022_se_sulawesi_provenance",
+    "source": "Nugraha & Hall (2022)",
+    "title": "Neogene sediment provenance and paleogeography of SE Sulawesi, Indonesia",
+    "journal": "Basin Research",
+    "volume": "34",
+    "pages": "1714-1730",
+    "doi": "10.1111/bre.12682",
+    "year_published": 2022,
+    "authors": ["Nugraha, A.M.S.", "Hall, R."],
+    "study_area": "SE Arm of Sulawesi — Bungku, Pandua, Langkowala and Eemoiko Formations (Neogene stratigraphy)",
+    "method": "Heavy mineral analysis, detrital zircon U-Pb geochronology, sandstone petrography (QFL, QmFLt), 2D seismic interpretation (Bone Gulf); 44 thin sections, 7 heavy mineral samples, 6 zircon U-Pb samples",
+    "conclusions": [
+      "Three provenance shifts in Neogene SE Sulawesi tied to tectonic events:",
+      "(1) Early Miocene (~18 Ma): Carbonates → ophiolitic siliciclastics (Bungku Fm) — marks ESO emplacement and Sula Spur/North Arm collision; first ophiolitic grains in ~18 Ma carbonates give new precise age constraint for ESO uplift",
+      "(2) Late Miocene: Increasing blueschist/metamorphic detritus in Pandua Formation (glaucophane, lawsonite, garnet) — exhumation of Oligo-Miocene subduction zone material (Pompangeo, Mekongga, Rumbia complexes); ESO remained dominant source through Upper Miocene",
+      "(3) Mio-Pliocene: Ophiolite-rich Pandua → quartz-rich fluvial Langkowala Formation; uplift of Mekongga/Rumbia metamorphics bounded by Kolaka and Lawanopo Faults blocked ophiolitic sediment pathway from north; linked to Banda rollback extension 6.5-3.5 Ma (Hinschberger et al. 2005) and N. Sulawesi subduction rollback ~5 Ma",
+      "SE Sulawesi is unusual: typical collision molasse modified by major extension driven by rollback of both Banda and North Sulawesi subduction zones — both still active",
+      "Meluhu Formation: MDA revised to Early Jurassic (youngest zircons 200-175 Ma), extending it beyond Late Triassic previously assumed",
+      "SE Sulawesi was basin margin/sediment source for thick Miocene sediments in Buton and eastern Bone Basins"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.5, -3.5]
+      },
+      "properties": {
+        "id": "nugraha_2022_eso_emplacement",
+        "category": "geophysical_point",
+        "name": "East Sulawesi Ophiolite (ESO) — Emplacement Timing ~18 Ma",
+        "anomaly_type": "tectonic_terrane",
+        "emplacement_age_Ma": 18,
+        "ophiolite_age_range_Ma": [16, 137],
+        "interpretation": "The East Sulawesi Ophiolite (ESO) covers the East Arm and parts of SE Arm with ultramafic/mafic rocks. K-Ar and Ar-Ar dating suggest Cretaceous (79-137 Ma), Palaeogene (64-28 Ma), and Neogene (16-23 Ma) ages. Emplacement by collision of the Sula Platform (Australian-origin continental fragment) with the North Sulawesi volcanic arc is constrained to ~18 Ma (Early Miocene) by the first occurrence of ophiolitic grains (serpentine, olivine, chrome spinel) in Lower Miocene carbonates of the Bungku Formation (~18 Ma, from biostratigraphy). The collision caused significant localized uplift of the ESO and initiation of clastic sedimentation across SE Sulawesi. Previously, ophiolitic material was found only in the East Arm; SE Sulawesi and Buton acted as the Miocene basin margin receiving erosional products from the uplifted ophiolite.",
+        "source_region": "East Arm; SE Arm (dismembered portions); Kabaena, Buton, Wowoni Islands",
+        "source_figure": "Figures 1, 2, 8a",
+        "source_short": "Nugraha & Hall 2022",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.5, -3.8]
+      },
+      "properties": {
+        "id": "nugraha_2022_mekongga_rumbia_blueschist",
+        "category": "geophysical_point",
+        "name": "Mekongga-Rumbia Metamorphic Complexes — Blueschist Exhumation (Late Miocene–Pliocene)",
+        "anomaly_type": "metamorphic_exhumation",
+        "exhumation_onset_Ma": 10,
+        "exhumation_age_range_Ma": [10, 3.5],
+        "metamorphic_grade": "HP-LT blueschist (glaucophane, lawsonite) + high-T (kyanite, sillimanite, staurolite)",
+        "interpretation": "Glaucophane- and lawsonite-bearing blueschists of the Mekongga and Rumbia metamorphic complexes (SE Arm) were progressively exhumed during the Late Miocene and Pliocene. Their erosional products (glaucophane, lawsonite, garnet in heavy minerals) appear first in the Pandua Formation (~10-6 Ma MDA) and increase into the Langkowala Formation. Exhumation driven by extensional tectonics linked to Banda rollback (South Banda Basin opening 6.5-3.5 Ma; Hinschberger et al. 2005) and North Sulawesi subduction rollback (~5 Ma). Isotopic ages of Eastern Sulawesi Metamorphic Complex (ESMC) blueschists indicate Oligo-Miocene subduction-related metamorphism (Helmers et al. 1989; Mawaleda et al. 2018; Parkinson 1996). The progressive unroofing from blueschist to high-grade metamorphic rocks (kyanite, sillimanite) in the upper Langkowala Formation records deepening exhumation of the Rumbia/Mekongga complexes. Uplift bounded by the Kolaka and Lawanopo Faults in the central SE Arm ultimately blocked the ophiolitic sediment pathway from the north, explaining the provenance shift to quartz-dominated Langkowala deposits.",
+        "tectonic_driver": "Banda rollback extension 6.5-3.5 Ma + North Sulawesi subduction rollback ~5 Ma",
+        "bounding_faults": ["Kolaka Fault", "Lawanopo Fault"],
+        "source_figure": "Figures 2, 7, 8b-e",
+        "source_short": "Nugraha & Hall 2022",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.0, -4.0]
+      },
+      "properties": {
+        "id": "nugraha_2022_kendari_basin",
+        "category": "geophysical_point",
+        "name": "Kendari Basin (SE Sulawesi) — Neogene Sedimentary History",
+        "anomaly_type": "basin",
+        "interpretation": "The Kendari Basin in SE Sulawesi preserves a record of the Neogene tectonic evolution in its Celebes Molasse stratigraphy: (1) Lower Miocene Bungku Formation (carbonates → ophiolite-rich clastics, collision onset ~18 Ma); (2) Upper Miocene Pandua Formation (ultramafic + blueschist debris, blueschist exhumation); (3) Uppermost Miocene–Pleistocene Langkowala Formation (quartz-dominated fluvial, Mio-Pliocene unconformity marks SE Sulawesi becoming subaerial); (4) Pliocene Eemoiko Formation (transgressive shallow marine carbonates, post-uplift subsidence). A 2D seismic line from W Bone Gulf shows well-preserved clinoforms correlated with onshore stratigraphy. The Mio-Pliocene unconformity observed in seismic data records the regional uplift and subsequent extension event.",
+        "stratigraphy": {
+          "bungku_fm_age": "Early Miocene (~18 Ma)",
+          "pandua_fm_mda_ma": 6,
+          "langkowala_fm_mda_ma": 6.8,
+          "mio_pliocene_unconformity": "~6.5-5 Ma"
+        },
+        "source_figure": "Figures 2, 3, 8",
+        "source_short": "Nugraha & Hall 2022",
+        "approx": true
+      }
+    }
+  ]
+}

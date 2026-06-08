@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "id": "serhalawan_chen_2024_sulawesi_seismotectonics",
+    "source": "Serhalawan & Chen (2024)",
+    "title": "Seismotectonics of Sulawesi, Indonesia",
+    "journal": "Tectonophysics",
+    "volume": "883",
+    "article": "230366",
+    "doi": "10.1016/j.tecto.2024.230366",
+    "year_published": 2024,
+    "authors": ["Serhalawan, Y.", "Chen, P.-F."],
+    "study_area": "Sulawesi Island and surrounding offshore — shallow earthquakes <60 km depth",
+    "method": "Seismicity distribution analysis (ISC-EHB 1964-2019 + BMKG 2020-Jul 2022) and focal mechanism analysis (GCMT 1976-Aug 2022); magnitude homogenization to Mw-GCMT; Mc(BMKG)=3.8, min(ISC-EHB)=4.3; five coherent seismotectonic regions; UU-P07 P-wave tomography for interpretation context",
+    "conclusions": [
+      "Five seismotectonic regions: (I) NST interplate thrust + seismic gap at 121-121.7°E; (II) PKF left-lateral + 2018 Mw 7.6 Palu; (III) MST + Mamasa zone extension; (IV) Banggai-Sula collision, most complex seismicity; (V) Matano-Tolo-SE Arm fault system",
+      "NST seismic gap at 121-121.7°E: no Mw≥6.5 interplate earthquakes historically; no rupture from adjacent large events; could be aseismic coupling zone, slow-slip region, or future large-earthquake nucleation site",
+      "2018 Mw 7.6 Palu earthquake filled seismic deficiency gap of PKF and triggered overall seismicity increase in Sulawesi in 6 specific zones (Mamasa, Tolo Bay, MST Central, MST Mamuju, East Arm-Togian, Matano fault); Coulomb stress increase explains most triggered zones",
+      "PKF northernmost offshore segment: low seismicity attributed to location beyond high MKB-NSB relative motion zone; PKF connects to NST, not NE Borneo (Tiranda & Hall 2024)",
+      "MST has 5 segments; MST-Mamuju (Mw 6.7 in 1984 + 2021 Mw 6.2 partial rupture) and MST-Somba (Mw 7.1 in 1969, silent since 1970) are highest-risk; Mamasa zone = extensional swarms related to Late Miocene magmatism (~7-6 Ma, Banda rollback)",
+      "Region IV (Banggai-Sula collision): largest EQ in study = 1998 Mw 7.7 (South Sula fault); 2000 Mw 7.5 on Peleng fault (NE-SW left-lateral); 2019 Mw 6.8 Tolo Bay = off-coast SW continuation of Peleng fault (previously unidentified); Batui thrust = low seismicity",
+      "Region V: 2001 Mw 7.5 (19 Oct) = Tamponas Fault Zone western segment, likely right-lateral reactivation (was left-lateral); Lawanopo and Kolaka faults have very low seismicity (Rahmadani 2022: Lawanopo ~0.1 mm/yr); Tolo thrust = future subduction zone candidate (Hall 2018) but currently low seismicity",
+      "Latest Miocene collision (~5 Ma; Banggai-Sula vs East Arm) is the primary driver for present-day seismotectonics: initiated NST subduction, formed CSFS (PKF + Matano), drove clockwise/CCW block rotations"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.35, 1.2]
+      },
+      "properties": {
+        "id": "serhalawan_2024_nst_seismic_gap",
+        "category": "geophysical_point",
+        "name": "North Sulawesi Trench Seismic Gap (121°–121.7°E)",
+        "anomaly_type": "seismic_gap",
+        "gap_longitude_range": [121.0, 121.7],
+        "interpretation": "Notably low interplate (thrust) earthquake seismicity near the center of the North Sulawesi Trench (NST) between ~121°E and 121.7°E, contrasting with large interplate events (Mw≥6.5) on both the eastern and western flanks. Historical and instrumental records (ISC Bulletin, USGS, BMKG) also show no Mw≥6.5 events in this zone. The rupture asperities of adjacent large earthquakes (1996 Mw 7.9, 2008 Mw 7.3, 1991 Mw 7.5, 1990 Mw 7.6) do not extend into this zone. Three interpretations are possible: (1) a locked coupling gap analogous to the Shumagin Gap (Alaska-Aleutian), implying significant strain accumulation and risk of future large earthquake; (2) aseismic behavior by slow-slip events (cf. Guerrero Gap, Mexico); (3) creeping segment. Future geodetic studies are needed to discriminate. On the eastern side of this gap, the maximum depth of the Celebes slab is near the center of the NST, not at the western end (highest convergence rate) — Song et al. (2022) attribute this to the Sangihe slab limiting growth space on the east.",
+        "adjacent_large_events": ["1996 Mw 7.9 (west)", "2008 Mw 7.3 (west)", "1991 Mw 7.5 (east)", "1990 Mw 7.6 (east)"],
+        "source_figure": "Figure 4",
+        "source_short": "Serhalawan & Chen 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.9, -0.9]
+      },
+      "properties": {
+        "id": "serhalawan_2024_palu_2018_triggering",
+        "category": "earthquake",
+        "name": "2018 Mw 7.6 Palu Earthquake — PKF Seismic Gap Filled + Sulawesi-Wide Triggering",
+        "magnitude": 7.6,
+        "date": "2018-09-28",
+        "fault": "Palu-Koro Fault (Donggala segment; primarily southward-propagating rupture)",
+        "mechanism": "left-lateral strike-slip",
+        "interpretation": "The 2018 Mw 7.6 Palu earthquake on 28 September filled the long-standing seismic deficiency of the Palu-Koro Fault (PKF), which has one of the highest slip rates in Indonesia (32-45 mm/yr) but had produced only ~5 Mw>6 events since 1964 in the GCMT catalog. The rupture was dominated by southward propagation with a primary asperity inland south of Palu Beach. Additionally, the 1996 Mw 7.9 Minahassa thrust significantly increased Coulomb stress at the Palu hypocenter, priming it for rupture. Most critically, the event triggered seismicity increases in 6 specific zones across Sulawesi: (1) Mamasa zone swarm (Nov 2018, +11 events, 1.21e+25 dyne-cm); (2) Tolo Bay zone (Apr-Jun 2019, +21 events, largest Mw 6.8); (3) MST Central area (2020, +8 events); (4) MST-Mamuju (2021 Mamuju-Majene Mw 5.7+6.3, partial rupture of MST); (5) East Arm-Togian Ridge (2021, +10 events); (6) Matano fault zone (2020). Coulomb stress transfer (Wibowo et al. 2020) explains most triggered zones. The PKF northernmost segment (offshore NW Sulawesi) shows low seismicity, interpreted as being beyond the high MKB-NSB relative motion zone; it connects to the NST rather than extending to NE Borneo.",
+        "pkf_slip_rate_mmyr": [32, 45],
+        "triggered_zones": ["Mamasa zone", "Tolo Bay", "MST Central", "MST-Mamuju", "East Arm-Togian Ridge", "Matano fault"],
+        "source_figure": "Figures 5, 10",
+        "source_short": "Serhalawan & Chen 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.8, -2.8]
+      },
+      "properties": {
+        "id": "serhalawan_2024_mamasa_zone_extension",
+        "category": "geophysical_point",
+        "name": "Mamasa Zone — Extensional Swarm (Late Miocene Magmatism; Banda Rollback)",
+        "anomaly_type": "extension",
+        "interpretation": "The Mamasa zone in the interior of the South Arm exhibits swarm-type seismicity characterized by simultaneous normal and strike-slip mechanisms. This extensional setting is consistent with a Late Miocene intermediate-felsic magmatic event (~7-6 Ma), linked to extension driven by Banda slab rollback (Zhang et al. 2020). The UU-P07 tomography model shows low-velocity perturbations densely covering this zone (A-A' profile), consistent with the extensional normal-type swarm behavior. The November 2018 Mamasa swarm, occurring ~1 month after the Palu Mw 7.6 earthquake, is interpreted as triggered by positive Coulomb stress change transferred by the Palu event (Wibowo et al. 2020). A few remaining earthquakes with right-lateral strike-slip mechanisms may be controlled by the N-S trending Masupu fault.",
+        "magmatic_age_Ma": [6, 7],
+        "tectonic_driver": "Banda slab rollback extension",
+        "triggered_by": "2018 Mw 7.6 Palu earthquake (Coulomb stress)",
+        "source_figure": "Figures 6, 9",
+        "source_short": "Serhalawan & Chen 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.5, -1.3]
+      },
+      "properties": {
+        "id": "serhalawan_2024_banggai_sula_collision_seismicity",
+        "category": "geophysical_point",
+        "name": "Banggai-Sula Collision Zone — Most Complex Seismicity in Sulawesi (Region IV)",
+        "anomaly_type": "tectonic_terrane",
+        "interpretation": "Region IV, the site of the latest Miocene collision (~5 Ma) between the Banggai-Sula microcontinent and the East Arm, exhibits the most complex seismicity patterns in the study area. Key observations: (1) 1998 Mw 7.7 earthquake (29 Nov) — largest event in the study area, likely on the South Sula fault accommodating westward translation of the Banggai-Sula microcontinent; (2) 2000 Mw 7.5 (4 May) — strike-slip, interpreted as left-lateral rupture of the NE-SW trending Peleng fault (aftershock distribution NE-SW, consistent with Peleng left-lateral geometry); (3) 2019 Mw 6.8 Tolo Bay (12 Apr) — strike-slip cluster with NE-SW trend, interpreted as the previously unidentified off-coast SW continuation of the Peleng fault; (4) Batui Thrust — surprisingly low seismicity, no GCMT solutions, last M≥5 events in 1964, 1966, 1981; (5) Una-Una Island seismicity — related to active volcanism; Una-Una volcano formed from crustal thinning/extensional tectonics (Banda rollback), not Celebes Sea subduction, consistent with normal-type focal mechanisms and low-velocity tomography anomaly (B-B' profile). The collision drove clockwise rotation of Northern Blocks (NSB, Manado) and CCW rotation of Southern Blocks (Makassar, East Sula, Banda Sea).",
+        "largest_event": "1998 Mw 7.7 (South Sula fault)",
+        "notable_events": ["2000 Mw 7.5 Peleng fault", "2019 Mw 6.8 Tolo Bay (new fault segment)"],
+        "low_seismicity": ["Batui Thrust", "Una-Una (seismic, volcanic)"],
+        "collision_age_Ma": 5,
+        "source_figure": "Figures 7, 9",
+        "source_short": "Serhalawan & Chen 2024",
+        "approx": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [124.0, -4.2]
+      },
+      "properties": {
+        "id": "serhalawan_2024_tamponas_fz_2001",
+        "category": "earthquake",
+        "name": "2001 Mw 7.5 Tamponas Fault Zone — Right-Lateral Reactivation (North Banda Sea)",
+        "magnitude": 7.5,
+        "date": "2001-10-19",
+        "fault": "Tamponas Fault Zone (TFZ) western segment, North Banda Sea",
+        "mechanism": "strike-slip (right-lateral reactivation inferred)",
+        "interpretation": "The 19 October 2001 Mw 7.5 earthquake in the North Banda Sea is the largest event in Region V. The centroid location and N-S trending aftershock distribution place the true fault plane at the western segment of the Tamponas Fault Zone (TFZ). This would require reactivation of the TFZ western segment from its previous left-lateral kinematics to right-lateral strike-slip — a significant finding implying fault reactivation driven by the current stress regime. An alternative interpretation (the off-coast continuation of the Lawanopo fault) is rejected based on the aftershock pattern. Other key observations in Region V: Matano fault Mw 6.1 events in 1980 and 2011 (~7 mm/yr slip rate, Rahmadani 2022); Lawanopo fault very low seismicity (only 0.1 mm/yr geodetic slip rate, Rahmadani 2022); Kolaka fault seismicity only near center with normal-type mechanisms; Tolo thrust low seismicity despite being a future subduction zone candidate (Hall 2018).",
+        "banda_sea_fault_system": "Tamponas Fault Zone (TFZ) — North Banda Sea Basin",
+        "reactivation_kinematics": "left-lateral → right-lateral",
+        "source_figure": "Figure 8",
+        "source_short": "Serhalawan & Chen 2024",
+        "approx": true
+      }
+    }
+  ]
+}

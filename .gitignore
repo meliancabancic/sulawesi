@@ -1,0 +1,33 @@
+# Datos crudos grandes (regenerables desde fuentes externas)
+tmp/
+Slab2Distribute_Mar2018*/
+jan76_dec17.ndk.txt
+
+# Grillas numpy INAGEOID (110 MB — regenerables con el script)
+mapa/fuentes/inageoid2020_full_grid.npy
+mapa/fuentes/inageoid2020_north_strip.npy
+mapa/fuentes/inageoid2020_sulawesi_grid.npy
+
+# GCMT catálogos crudos (regenerables desde globalcmt.org)
+mapa/fuentes/gcmt_jan76_dec20.ndk
+mapa/fuentes/gcmt_2021_2025.ndk
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# SQLite temporales (el .db principal SÍ se versiona)
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Scripts temporales
+mapa/clean_verif.py
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
