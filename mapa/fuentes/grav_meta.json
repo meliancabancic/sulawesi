@@ -1,0 +1,1 @@
+{"bouguer": {"shape": [601, 701], "transform": [0.05, 0.0, 104.975, 0.0, 0.05, -15.025], "nodata": null, "crs": "EPSG:4326"}, "freeair": {"shape": [601, 701], "transform": [0.05, 0.0, 104.975, 0.0, 0.05, -15.025], "nodata": null, "crs": "EPSG:4326"}}
