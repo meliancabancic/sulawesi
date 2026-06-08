@@ -1,6 +1,7 @@
 # Datos crudos grandes (regenerables desde fuentes externas)
 tmp/
 Slab2Distribute_Mar2018*/
+Slab2Distribute_Mar2018.tar.gz
 jan76_dec17.ndk.txt
 
 # Grillas numpy INAGEOID (110 MB — regenerables con el script)
