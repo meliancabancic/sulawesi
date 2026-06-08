@@ -2135,7 +2135,27 @@ function serhalawanStyleFn(f, resolution){
     return new ol.style.Style({image:new ol.style.Circle({radius:r,fill:new ol.style.Fill({color:c}),stroke:new ol.style.Stroke({color:'rgba(255,255,255,0.9)',width:1.5})})});
   }
   if(cat==='cross_section'){
-    return new ol.style.Style({stroke:new ol.style.Stroke({color:'#7060b0',width:1.8,lineDash:[6,4]})});
+    const nm=f.get('feat_name')||'';
+    const parts=nm.split(' — ');
+    const letters=parts[0]||nm;
+    const am=(parts[1]||'').match(/(\w+) et al\. \((\d{4})\)/);
+    const abbr=am?am[1].slice(0,3)+am[2].slice(2):'';
+    const label=abbr?letters+' '+abbr:letters;
+    const geom=f.getGeometry();
+    const styles=[new ol.style.Style({stroke:new ol.style.Stroke({color:'#7060b0',width:1.8,lineDash:[6,4]})})];
+    if(geom&&label){
+      const mid=geom.getCoordinateAt(0.5);
+      styles.push(new ol.style.Style({
+        geometry:new ol.geom.Point(mid),
+        text:new ol.style.Text({
+          text:label,font:'bold 11px monospace',
+          fill:new ol.style.Fill({color:'#c8b8ff'}),
+          stroke:new ol.style.Stroke({color:'rgba(8,8,8,0.9)',width:3}),
+          offsetY:-10,textAlign:'center',
+        })
+      }));
+    }
+    return styles;
   }
   return new ol.style.Style({stroke:new ol.style.Stroke({color:'rgba(140,140,140,0.5)',width:1})});
 }
