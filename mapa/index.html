@@ -1534,8 +1534,53 @@ const CANON_KIN={
       },
     ]
   },
-  'canon_1919':{sym:'subduction',sub_flip:false}, // Philippine Trench
-  'canon_1934':{sym:'subduction',sub_flip:true},  // Banda SZ — coords W→E, dientes al N
+  'canon_1919':{sym:'subduction',sub_flip:false, // Philippine Trench / Cotabato
+    adopta:{
+      desc:'La Placa del Mar de Filipinas subduce hacia el oeste bajo el Philippine Mobile Belt. La Fosa de Cotabato (sur de Mindanao, ~6.500 m) es la terminación meridional del sistema y el límite norte que condiciona la cinemática del extremo NE de Sulawesi. La oblicuidad de la convergencia genera la Philippine Fault Zone — falla transcurrente dextral de ~1.300 km que acomoda la componente paralela al arco (~25–35 mm/año). El bloque Manado (norte de Sulawesi) registra rotación horaria inducida por esta convergencia.',
+      data:[
+        {lbl:'Polaridad',val:'W-dipping — Philippine Sea Plate subduce hacia el oeste'},
+        {lbl:'Tasa convergencia',val:'~80 mm/año (Socquet et al. 2006)'},
+        {lbl:'Philippine Fault Zone',val:'Dextral, ~25–35 mm/año slip'},
+        {lbl:'Profundidad máx. sismicidad',val:'~200 km (segmento Cotabato)'},
+        {lbl:'Influencia en Sulawesi',val:'Rotación horaria bloque Manano; componente compresiva NE'},
+      ],
+      refs:[
+        {ref:'Socquet et al. (2006)',title:'Microblock rotations and fault coupling in SE Asia triple junction (Sulawesi, Indonesia)',journal:'JGR: Solid Earth, 111(B8). doi:10.1029/2005JB003963',find:'Placa Filipinas: convergencia ~80 mm/año oblicua hacia el W. Philippine Fault Zone acomoda componente trench-parallel. Bloque Manado (norte Sulawesi) rota en sentido horario por efecto de la convergencia oblicua.'},
+        {ref:'GEM Foundation (2023)',title:'GEM Global Active Faults Database',journal:'github.com/GEMScienceTools/gem-global-active-faults',find:'Fosa de Cotabato y sistema de subducción de Filipinas — zonas de subducción activas cuaternarias. Traza canónica utilizada en este mapa.'},
+      ]
+    },
+    debate:[
+      {desc:'Continuidad N-S del sistema: la Fosa de Cotabato (S Mindanao) y la Philippine Trench (E Filipinas) son frecuentemente tratadas como un sistema continuo, pero la geometría del slab y las tasas de convergencia difieren entre segmentos. El segmento Cotabato es menos estudiado que el Philippine Trench propiamente dicho.',refs:[
+        {ref:'Socquet et al. (2006)',title:'Microblock rotations and fault coupling in SE Asia triple junction',journal:'JGR: Solid Earth, 111(B8). doi:10.1029/2005JB003963',find:'Modelo GPS diferencia el bloque Mindanao del Philippine Mobile Belt; la cinemática del segmento Cotabato es difícil de separar del movimiento del bloque Mindanao.'},
+      ]},
+    ]
+  },
+  'canon_1934':{sym:'subduction',sub_flip:true, // Banda SZ — coords W→E, dientes al N
+    adopta:{
+      desc:'La Placa Indo-Australiana subduce hacia el norte bajo el Arco de Banda (Arco interno) y el bloque Sunda. La losa Banda tiene una curvatura excepcional de ~180° (spoon-shape), está confinada al manto superior con una sección subhorizontal a profundidad intermedia, e incluye material oceánico y subcontinental delaminado. El rollback del arco desde el Mioceno Medio (~15 Ma) generó la extensión del Mar de Banda y la apertura de la cuenca trasarco.',
+      data:[
+        {lbl:'Polaridad',val:'N-dipping — Indo-Australiana subduce hacia el norte'},
+        {lbl:'Tasa convergencia',val:'~6–7 cm/año (hacia el NNE)'},
+        {lbl:'Curvatura del arco',val:'~180° (spoon-shape, única en el mundo)'},
+        {lbl:'Profundidad máx. slab',val:'~600+ km (Hall & Spakman 2015)'},
+        {lbl:'Inicio rollback',val:'~15 Ma (Mioceno Medio)'},
+        {lbl:'Inversión de polaridad',val:'Timor: N-dipping / Seram: S-dipping (Hua et al. 2023)'},
+      ],
+      refs:[
+        {ref:'Hall & Spakman (2015)',title:'Mantle structure and tectonic history of SE Asia',journal:'Tectonophysics, 658, 14–45. doi:10.1016/j.tecto.2015.07.003',find:'Losa Banda confinada al manto superior; sección plana a profundidad intermedia incluye litósfera subcontinental delaminada. Tear prominente bajo Buru y Seram Oeste. Rollback en Banda embayment jurásico desde el Mioceno Medio.'},
+        {ref:'Hua et al. (2023)',title:'P and S wave anisotropic tomography of the Banda subduction zone',journal:'Geophysical Research Letters, 50, e2023GL105611. doi:10.1029/2023GL105611',find:'Perfil B-B\' N-S: inversión de polaridad entre Timor (subducción N) y Seram (subducción S). Las dos ramas de la losa se unen en la zona de transición del manto formando estructura en cuña.'},
+      ]
+    },
+    debate:[
+      {desc:'Naturaleza del material subductado: la losa Banda incluye tanto litósfera oceánica como material continental delaminado de la margen australiana. Hall & Spakman (2015) identifican litósfera subcontinental en la sección subhorizontal a ~200–400 km; Hua et al. (2023) interpreta la inversión de polaridad Timor/Seram como dos ramas del mismo slab o como una discontinuidad mayor.',refs:[
+        {ref:'Hall & Spakman (2015)',title:'Mantle structure and tectonic history of SE Asia',journal:'Tectonophysics, 658, 14–45. doi:10.1016/j.tecto.2015.07.003',find:'Sección plana a ~200–400 km: posible litósfera subcontinental australiana delaminada. El rollback en cuña embayment genera geometría de slab anómala respecto a otros arcos.'},
+        {ref:'Hua et al. (2023)',title:'P and S wave anisotropic tomography of the Banda subduction zone',journal:'Geophysical Research Letters, 50, e2023GL105611. doi:10.1029/2023GL105611',find:'Dos ramas de la losa en contacto en la MTZ: ambigüedad sobre si representan un slab continuo con inversión de buzamiento o dos estructuras separadas.'},
+      ]},
+      {desc:'Estado actual de la subducción: hay debate sobre si la subducción activa de litósfera oceánica ha cesado (slab remnant) o continúa con material subcontinental australiano colisionando activamente. El frente de colisión Timor-Tanimbar documenta el avance de la margen australiana al arco.',refs:[
+        {ref:'Hall & Spakman (2015)',title:'Mantle structure and tectonic history of SE Asia',journal:'Tectonophysics, 658, 14–45. doi:10.1016/j.tecto.2015.07.003',find:'Rollback Banda embayment: proceso activo o en transición a colisión. Análisis cinemático sugiere desaceleración del rollback por aproximación de litósfera continental australiana.'},
+      ]},
+    ]
+  },
 };
 const _canonPolyCache=new Map();
 function mergedGeomStyleFn(f, resolution){
