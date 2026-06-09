@@ -3579,13 +3579,15 @@ async function openCanonicalPanel(featId, fallbackFn){
       }
 
       if(debate.debate?.length){
-        html+=`<div class="psec" style="color:#f97316;border-color:#f9731640">En debate</div>`;
+        html+=`<button onclick="const b=document.getElementById('canon-debate-block');const op=b.style.display!=='none';b.style.display=op?'none':'block';this.querySelector('.dbtn-arrow').textContent=op?'▶':'▼';this.style.background=op?'rgba(249,115,22,0.08)':'rgba(249,115,22,0.18)'" style="width:100%;text-align:left;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.35);border-radius:4px;padding:6px 10px;cursor:pointer;font-family:monospace;font-size:.65rem;color:#f97316;margin:8px 0 4px;display:flex;align-items:center;gap:7px"><span class="dbtn-arrow">▶</span>En debate<span style="margin-left:auto;background:rgba(249,115,22,0.22);border-radius:3px;padding:1px 6px;font-size:.6rem">${debate.debate.length}</span></button>`;
+        html+=`<div id="canon-debate-block" style="display:none">`;
         debate.debate.forEach((d,i)=>{
           html+=`<div style="margin-bottom:10px;padding:6px 8px;background:rgba(249,115,22,0.06);border-radius:4px;border-left:3px solid #f97316">
             <div style="font-size:.63rem;color:var(--text);line-height:1.6;margin-bottom:5px">${d.desc}</div>`;
           d.refs?.forEach(r=>html+=renderPaper(r));
           html+=`</div>`;
         });
+        html+=`</div>`;
       }
     }
 
