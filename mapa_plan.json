@@ -1,7 +1,7 @@
 {
   "meta": {
     "descripcion": "Plan de trabajo del mapa tectónico — organizado por sección de la monografía",
-    "last_updated": "2026-06-03 — checklist aplicado: fuentes, flip thrusts, sub_flip subduccion, interactividad mergedGeomLayer",
+    "last_updated": "2026-06-09 — S8 descartada del alcance",
     "checklist_por_cambio": {
       "descripcion": "Verificar ante CADA modificación al mapa, sin excepción",
       "items": [
@@ -1932,7 +1932,7 @@
           "id": "metamorphic_grade",
           "nombre": "Grado metamórfico (facies)",
           "tipo": "polygon_layer",
-          "nota": "Mismas geometrías que S7 metamorphic_complexes, distinta atribución visual. Un VectorLayer con fill coloreado por facies.",
+          "nota": "S8 eliminada del alcance de la monografia — decision de sesion 2026-06-09",
           "escala_color": {
             "UHP / Eclogita": "#1a0533",
             "Blueschist HP": "#1f4e79",
@@ -1970,7 +1970,7 @@
             }
           ],
           "popup": "nombre, facies, P estimada (GPa), T estimada (°C), edad (Ma), referencia",
-          "estado": "pendiente_datos"
+          "estado": "descartado"
         }
       ],
       "canonicals_requeridos": [
@@ -2653,6 +2653,13 @@
         "secciones": [
           "s6"
         ]
+      },
+      {
+        "id": "fe_canon_debates_fix",
+        "titulo": "Fix CANON_KIN vs CANONICAL_DEBATES — paneles Sangihe, Halmahera, Philippine Trench, Banda SZ",
+        "descripcion": "Detectado en auditoría: adopta+debate de canon_369, canon_805, canon_1919, canon_1934 estaban en CANON_KIN (rendering) en vez de CANONICAL_DEBATES (panel). Fix: limpiar CANON_KIN (solo sym+sub_flip), trasladar contenido a CANONICAL_DEBATES. Debate de polaridad Hall & Spakman (2015) prepend a debate[] de canon_369 y canon_805. Entries nuevos para canon_1919 (Philippine Trench/Cotabato) y canon_1934 (Banda SZ) creados en CANONICAL_DEBATES.",
+        "estado": "implementado",
+        "nota_completado": "Script Python fix_canon_debates.py. CANON_KIN limpio (0 adopta:). canon_1919 y canon_1934 en CD. Debate polaridad Sangihe/Halmahera prepended. 2026-06-09"
       }
     ]
   },
