@@ -6227,7 +6227,7 @@ map.on('singleclick', e => { if(map._editModeActive) e.stopPropagation(); });
 
 // ── Welcome overlay (fe_ux1) ────────────────────────────────────────────
 (function(){
-  const LS_KEY='sulawesi_welcome_dismissed_v1';
+  const LS_KEY='sulawesi_welcome_dismissed_v2';
   const overlay=document.getElementById('welcome-overlay');
   if(!overlay)return;
   if(localStorage.getItem(LS_KEY)==='1'){overlay.classList.add('hidden');return;}
@@ -6235,7 +6235,7 @@ map.on('singleclick', e => { if(map._editModeActive) e.stopPropagation(); });
 function dismissWelcome(permanent){
   const overlay=document.getElementById('welcome-overlay');
   if(!overlay)return;
-  if(permanent)localStorage.setItem('sulawesi_welcome_dismissed_v1','1');
+  if(permanent)localStorage.setItem('sulawesi_welcome_dismissed_v2','1');
   overlay.classList.add('hidden');
   if(typeof activateSection==='function') activateSection('1');
 }
