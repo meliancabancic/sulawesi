@@ -273,6 +273,7 @@ body{font-family:monospace;background:var(--bg);color:var(--text)}
       <div class="lr" data-t="satellite" id="lr-sentinel"><div class="lchk on" id="chk-satellite">✓</div><span>Sentinel-2</span><span id="sentinel-lock" style="font-size:.55rem;color:var(--dim);margin-left:4px" title="Activá GEBCO para poder apagar Sentinel">🔒</span><span onclick="event.stopPropagation();openPanel('sentinel_src')" style="cursor:pointer;color:var(--dim);font-size:.65rem;flex-shrink:0" title="Fuente">ⓘ</span></div>
       <div class="lr" data-t="gebco_color"><div class="lchk" id="chk-gebco_color"></div><span>GEBCO Batimetría</span><span onclick="event.stopPropagation();openPanel('gebco_src')" style="cursor:pointer;color:var(--dim);font-size:.65rem;flex-shrink:0" title="Fuente">ⓘ</span></div>
       <div class="lr" data-t="esri_hybrid"><div class="lchk" id="chk-esri_hybrid"></div><span>ESRI Hybrid</span><span onclick="event.stopPropagation();openPanel('esri_hybrid_src')" style="cursor:pointer;color:var(--dim);font-size:.65rem;flex-shrink:0" title="Fuente">ⓘ</span></div>
+      <div class="lr" data-t="open_topo"><div class="lchk" id="chk-open_topo"></div><span>OpenTopoMap</span></div>
       <div class="lsep"></div>
       <!-- S1 -->
       <div class="lcat">S1 — Descripción general</div>
@@ -893,6 +894,7 @@ function newFaultStyleFn(feature, resolution) {
 const esriSat=new ol.layer.Tile({source:new ol.source.XYZ({url:'https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2021_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg',maxZoom:14,attributions:'Sentinel-2 cloudless 2021 © EOX IT Services GmbH (CC BY 4.0)'})});
 
 const gebcoColor=new ol.layer.Tile({visible:false,opacity:0.7,source:new ol.source.TileWMS({url:'https://wms.gebco.net/2024/mapserv?',params:{'LAYERS':'GEBCO_2024_2','VERSION':'1.3.0','FORMAT':'image/png'},attributions:'GEBCO 2024'})});
+const openTopoLayer=new ol.layer.Tile({visible:false,source:new ol.source.XYZ({urls:['https://a.tile.opentopomap.org/{z}/{x}/{y}.png','https://b.tile.opentopomap.org/{z}/{x}/{y}.png','https://c.tile.opentopomap.org/{z}/{x}/{y}.png'],maxZoom:17,attributions:'© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM | © <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)'})});
 const esriHybridBase=new ol.layer.Tile({visible:false,source:new ol.source.XYZ({url:'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',maxZoom:18,attributions:'Esri, Maxar, Earthstar Geographics'})});
 const esriHybridLabels=new ol.layer.Tile({visible:false,zIndex:15,source:new ol.source.XYZ({url:'https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',maxZoom:18,attributions:'Esri'})});
 const gravExtent=ol.proj.transformExtent([104.975,-15.025,140.025,15.025],'EPSG:4326','EPSG:3857');
@@ -2299,7 +2301,7 @@ const map=new ol.Map({
   target:'map',
   layers:[
     // Raster base
-    esriSat,esriHybridBase,gebcoColor,esriHybridLabels,gravBouguerLayer,gravFreeairLayer,heightAnomLayer,
+    esriSat,openTopoLayer,esriHybridBase,gebcoColor,esriHybridLabels,gravBouguerLayer,gravFreeairLayer,heightAnomLayer,
     refBaillieLayer,refSocquetLayer,refWalpersdorfLayer,refSatyanaIpaLayer,refSuronoLayer,
     refSerhalawanLayer,refCiptaLayer,refJibranLayer,refNatawLayer,refNatawInlandLayer,refNataw2020Layer,refGreenfieldLayer,refJayadiLayer,
     refHuaLayer,refCaoLayer,refYuanLayer,refHeryandokoLayer,refLiuLayer,refDileoLayer,refLestariLayer,
@@ -3684,6 +3686,7 @@ const layerObjs={
   // Fondo
   satellite:   esriSat,
   esri_hybrid: multiLayer([esriHybridBase,esriHybridLabels]),
+  open_topo:   openTopoLayer,
   gebco_color: gebcoColor,
   // Base tectónica
   canon_labels: canonLabelLayer,
@@ -4067,36 +4070,24 @@ document.querySelectorAll('.lr').forEach(row=>{
     const chk=document.getElementById('chk-'+key);
     if(!lyr||!chk)return;
 
-    // Mutex Sentinel: solo apagable si GEBCO o ESRI Hybrid está activo
+    const _altBaseOn=()=>gebcoColor.getVisible()||esriHybridBase.getVisible()||openTopoLayer.getVisible();
+    const _forceSentinel=()=>{esriSat.setVisible(true);const sc=document.getElementById('chk-satellite');if(sc){sc.classList.add('on');sc.textContent='✓';}};
+    const _offSentinel=()=>{esriSat.setVisible(false);const sc=document.getElementById('chk-satellite');if(sc){sc.classList.remove('on');sc.textContent='';}};
+    // Mutex Sentinel: solo apagable si hay otro fondo activo
     if(key==='satellite'&&lyr.getVisible()){
-      const gebcoOn=gebcoColor.getVisible();
-      const hybridOn=esriHybridBase.getVisible();
-      if(!gebcoOn&&!hybridOn)return;
+      if(!_altBaseOn())return;
     }
-    // Mutex ESRI Hybrid: al activar, apagar Sentinel; al apagar, forzar Sentinel si no hay otro fondo
-    if(key==='esri_hybrid'){
+    // Mutex bases alternativas: al activar apagan Sentinel; al apagar lo restauran si no hay otro
+    if((key==='esri_hybrid'||key==='open_topo')){
       if(!lyr.getVisible()){
-        // Se está activando → apagar Sentinel
-        esriSat.setVisible(false);
-        const sc=document.getElementById('chk-satellite');
-        if(sc){sc.classList.remove('on');sc.textContent='';}
+        _offSentinel();
       } else {
-        // Se está apagando → si no hay otro fondo, activar Sentinel
-        const gebcoOn=gebcoColor.getVisible();
-        if(!gebcoOn){
-          esriSat.setVisible(true);
-          const sc=document.getElementById('chk-satellite');
-          if(sc){sc.classList.add('on');sc.textContent='✓';}
-        }
+        if(!gebcoColor.getVisible()&&!esriHybridBase.getVisible()&&!openTopoLayer.getVisible())_forceSentinel();
       }
     }
-    // Mutex GEBCO: si se apaga y Sentinel está OFF, forzar Sentinel ON
+    // Mutex GEBCO: si se apaga y no hay otro fondo, activar Sentinel
     if(key==='gebco_color'&&lyr.getVisible()){
-      if(!esriSat.getVisible()&&!esriHybridBase.getVisible()){
-        esriSat.setVisible(true);
-        const sc=document.getElementById('chk-satellite');
-        if(sc){sc.classList.add('on');sc.textContent='✓';}
-      }
+      if(!esriSat.getVisible()&&!esriHybridBase.getVisible()&&!openTopoLayer.getVisible())_forceSentinel();
     }
 
     const v=lyr.getVisible();lyr.setVisible(!v);
